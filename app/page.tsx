@@ -2,6 +2,7 @@ import { activeInterests, loadEvents, monthHighlights } from "@/lib/events";
 import { addDays, formatDateKo, todayKey } from "@/lib/kst";
 import { ScheduleBrowser } from "@/components/ScheduleBrowser";
 import { buildPreviewEvents } from "@/lib/preview-events";
+import { isCuratedEvent } from "@/lib/curation";
 
 /** 크롤러가 events.json 을 갈아끼우면 최대 10분 뒤 반영된다. */
 export const revalidate = 600;
@@ -22,7 +23,7 @@ export default function Home() {
   );
   const featured = monthHighlights(upcoming, 1)[0] ?? upcoming[0];
   const categories = activeInterests(upcoming);
-  const curated = upcoming.filter((event) => event.hype >= 70);
+  const curated = upcoming.filter(isCuratedEvent);
   const curatedCount = curated.length;
   const liveCount = curated.filter((event) => event.status === "진행중").length;
 

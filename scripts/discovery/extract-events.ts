@@ -119,7 +119,7 @@ export async function extractEventsFromFeeds(
           }),
         },
       ],
-      text: { format: zodTextFormat(extractionSchema, "matchday_events") },
+      text: { format: zodTextFormat(extractionSchema, "dpmbros_feed_events") },
       max_output_tokens: 5_000,
     });
 

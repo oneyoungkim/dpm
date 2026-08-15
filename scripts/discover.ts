@@ -8,6 +8,7 @@ import {
 } from "./discovery/candidate-schema";
 import { extractEventsFromFeeds } from "./discovery/extract-events";
 import { fetchAllOfficialFeeds } from "./discovery/official-feeds";
+import { discoverEventsFromWeb } from "./discovery/web-search";
 
 const DEFAULT_FORWARD_DAYS = 550;
 
@@ -43,7 +44,7 @@ async function main() {
 
   const out = join(process.cwd(), "data", "candidates.json");
   const previous = readCandidates(out);
-  console.log(`\n[MATCHDAY DISCOVERY] 공식 피드 → 이벤트 후보 (기존 ${previous.events.length}건)\n`);
+  console.log(`\n[DPMBROS DISCOVERY] 공식 피드·웹 검색 → 이벤트 후보 (기존 ${previous.events.length}건)\n`);
 
   if (!feedsOnly && !process.env.OPENAI_API_KEY) {
     console.log("OPENAI_API_KEY 없음 — 기존 후보를 보존하고 AI 발견 단계를 건너뛴다.\n");
@@ -56,12 +57,20 @@ async function main() {
     console.log("--feeds-only 라서 AI 호출과 파일 쓰기는 하지 않았다.\n");
     return;
   }
-  if (items.length === 0) throw new Error("공식 피드를 한 건도 가져오지 못해 후보 파일을 보존한다");
-
   const from = todayKey();
   const to = addDays(from, forwardDays);
-  const discovered = await extractEventsFromFeeds(items, from, to);
-  console.log(`AI 추출·코드 검증 통과 ${discovered.length}건 (${from} ~ ${to})`);
+  const feedEvents = items.length > 0 ? await extractEventsFromFeeds(items, from, to) : [];
+  let webEvents: EventCandidate[] = [];
+  try {
+    webEvents = await discoverEventsFromWeb(from, to);
+  } catch (error) {
+    console.warn(`웹 검색 발견 실패 — 공식 RSS 결과로 계속: ${error instanceof Error ? error.message : error}`);
+  }
+  const discovered = [...feedEvents, ...webEvents];
+  console.log(
+    `AI 추출·코드 검증 통과 ${discovered.length}건 ` +
+      `(RSS ${feedEvents.length} · 웹 ${webEvents.length}, ${from} ~ ${to})`,
+  );
 
   const retained = previous.events.filter((event) => {
     const key = event.startsAt.slice(0, 10);

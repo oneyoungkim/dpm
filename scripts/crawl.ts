@@ -7,6 +7,7 @@ import { interestCategoryOf } from "../lib/interests";
 import { crawlNaverSports } from "./sources/naver-sports";
 import { crawlNaverEsports } from "./sources/naver-esports";
 import { crawlFighting } from "./sources/fighting";
+import { crawlBlackCombat } from "./sources/blackcombat";
 import { loadManual } from "./sources/manual";
 import { loadCandidates } from "./sources/candidates";
 
@@ -40,12 +41,13 @@ async function main() {
   const from = addDays(today, -LOOKBACK_DAYS);
   const to = addDays(today, forward);
 
-  console.log(`\n[MATCHDAY] 수집 구간 ${from} ~ ${to}\n`);
+  console.log(`\n[DPMBROS] 수집 구간 ${from} ~ ${to}\n`);
 
   const jobs: Array<{ name: string; run: () => Promise<SportEvent[]> }> = [
     { name: "네이버 스포츠", run: () => crawlNaverSports(from, to) },
     { name: "네이버 e스포츠", run: () => crawlNaverEsports(from, to) },
     { name: "격투기", run: () => crawlFighting(from, to) },
+    { name: "블랙컴뱃", run: () => crawlBlackCombat(from, to) },
     { name: "외부 이벤트 후보", run: async () => loadCandidates(from, to) },
     { name: "수동 입력", run: async () => loadManual(from, to) },
   ];

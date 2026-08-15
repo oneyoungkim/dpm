@@ -39,3 +39,30 @@ export async function fetchJson<T>(
   }
   return null;
 }
+
+export async function fetchText(
+  url: string,
+  headers: Record<string, string> = {},
+): Promise<string | null> {
+  for (let attempt = 1; attempt <= RETRIES; attempt++) {
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml", ...headers },
+        signal: ac.signal,
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.text();
+    } catch (err) {
+      const last = attempt === RETRIES;
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`   ! ${last ? "포기" : "재시도"} (${attempt}/${RETRIES}) ${msg}\n     ${url}`);
+      if (last) return null;
+      await sleep(attempt * 1000);
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  return null;
+}

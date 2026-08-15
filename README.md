@@ -26,16 +26,18 @@ npm run dev       # http://localhost:3000
 ```
 scripts/
   crawl.ts              모든 소스를 긁어 data/events.json 하나로 합침
-  discover.ts           공식 RSS → AI 구조화 → 검증된 이벤트 후보 병합
+  discover.ts           공식 RSS·웹 검색 → AI 구조화 → 검증된 이벤트 후보 병합
   http.ts               재시도·타임아웃 공용 fetch
   discovery/
     official-feeds.ts   Apple·Samsung·PlayStation·Xbox 공식 RSS 수집
     extract-events.ts   날짜가 명시된 이벤트만 Structured Outputs로 추출
+    web-search.ts       웹·커뮤니티에서 후보 발견 후 공식 출처로 재검증
     candidate-schema.ts 후보 파일의 런타임 스키마와 타입
   sources/
     naver-sports.ts     KBO·MLB·NPB·K리그·EPL·라리가·세리에A·분데스·MLS·농구·배구
     naver-esports.ts    LCK / LCK CL / 롤드컵 / MSI / 발로란트 / 오버워치
     fighting.ts         UFC (위키피디아 일정표 + TheSportsDB 시각 보정)
+    blackcombat.ts      블랙컴뱃 공식 EVENT 페이지 수집
     manual.ts           data/manual.json 오버레이 (아시안게임 등 API 없는 이벤트)
 
 lib/
@@ -57,7 +59,8 @@ data/
 ### 데이터 흐름
 
 ```
-공식 RSS ──► AI 구조화 ──► 코드 검증 ──► data/candidates.json
+공식 RSS ──► AI 구조화 ────────────────┐
+웹·커뮤니티 ─► AI 검색 ─► 공식 출처 검증 ─┼──► data/candidates.json
                                                 │
 스포츠 크롤러 ──────────────────────────────────┼──► data/events.json ──► 화면 / API
                                                 │
@@ -81,7 +84,9 @@ data/
 
 - **70점 이상** → `필수시청` (강조 테두리)
 - **50점 이상** → `추천`
-- **70점 미만** → 기본 화면에서 숨김, "모든 일정"에서만 노출
+- **70점 미만** → 기본 화면에서 숨김. 단, UFC·블랙컴뱃·ROAD FC는 핵심 레이더로 유지
+
+내 관심사·저장함·직접 선택한 카테고리에서는 하이프 점수로 일정을 숨기지 않는다.
 
 테이블은 전부 취향이라 계속 손보라고 데이터로 분리해뒀다.
 새 리그를 넣으면 `LEAGUE_BASE` 에 한 줄 추가하면 되고, 없으면 기본값 20으로 떨어진다.
@@ -100,12 +105,14 @@ data/
 | 네이버 e스포츠 API | LCK, 롤드컵, MSI, 발로란트, 오버워치 | 월 단위 조회 |
 | Wikipedia (List of UFC events) | UFC 전체 일정 | 날짜만 확정, 시각은 `timeTbd` |
 | TheSportsDB (무료 키) | UFC 임박 대회 시각 보정 | 무료 티어는 응답 건수 제한이 커서 보정용으로만 |
-| `data/manual.json` | 아시안게임, 국내 격투기 단체 등 | 손으로 입력, 크롤 결과보다 우선 |
+| BLACK COMBAT 공식 EVENT | 블랙컴뱃 넘버링·라이즈·블랙컵 등 | 날짜·장소 자동 수집, 시각은 `timeTbd` |
+| `data/manual.json` | 아시안게임, API 없는 이벤트 | 손으로 입력, 크롤 결과보다 우선 |
 | `data/candidates.json` | 게임·테크·빅 이벤트 후보 | API/RSS/AI 정규화 결과, 출처 URL 필수 |
 | Apple Newsroom RSS | Apple 행사·제품 발표 | 공식 도메인 원문만 허용 |
 | Samsung Global Newsroom RSS | Galaxy Unpacked·제품 발표 | 공식 도메인 원문만 허용 |
 | PlayStation Blog RSS | 게임 출시·쇼케이스 | 공식 도메인 원문만 허용 |
 | Xbox Wire RSS | 게임 출시·Xbox 쇼케이스 | 공식 도메인 원문만 허용 |
+| OpenAI Web search | 격투기·빅 스포츠·모터스포츠·게임·테크 후보 | 커뮤니티는 단서로만 사용, 공식 URL 재검증 필수 |
 
 **비공식 엔드포인트를 쓴다.** 언제든 스키마가 바뀌거나 막힐 수 있다.
 그래서 소스 하나가 죽어도 나머지는 계속 수집되고(`crawl.ts`의 try/catch),
@@ -118,10 +125,13 @@ data/
 
 ### 비스포츠 이벤트 후보
 
-`npm run discover`는 공식 RSS를 읽은 뒤, OpenAI Structured Outputs로 본문에 날짜가
+`npm run discover`는 공식 RSS와 웹 검색을 사용해, OpenAI Structured Outputs로 날짜가
 **명시된** 미래 이벤트만 `data/candidates.json`에 병합한다. AI 출력은 곧바로 게시하지 않는다.
 코드가 원문 URL·공식 도메인·날짜 범위·카테고리·신뢰도·스키마를 다시 검사한다.
 `confidence: "rumored"`이거나 출처 URL이 없는 후보는 게시하지 않는다.
+
+에펨코리아 같은 커뮤니티는 누락된 후보를 찾는 레이더로만 쓴다. 최종 `sourceUrl`은 검색 과정에서
+실제로 확인한 주최사·리그·제조사 공식 도메인이어야 하며, 이 조건을 통과하지 못하면 버린다.
 
 AI가 필요한 곳은 자연어 공지의 날짜·행사명 정규화뿐이다. 이미 구조화된 스포츠 일정은
 기존 API/크롤러를 그대로 사용한다. 이 하이브리드가 비용과 환각 위험을 함께 줄인다.
@@ -148,7 +158,7 @@ Repository secret으로 등록한다. 키가 없으면 발견 단계는 성공 �
 
 `.github/workflows/crawl.yml` 이 매일 1번(KST 06시) 아래 순서로 실행한다.
 
-1. 공식 RSS에서 이벤트 후보 발견 및 `data/candidates.json` 갱신
+1. 공식 RSS와 AI 웹 검색에서 이벤트 후보 발견 및 `data/candidates.json` 갱신
 2. 스포츠 크롤과 후보를 합쳐 `data/events.json` 갱신
 3. 두 JSON에 실제 변경이 있을 때만 커밋
 
@@ -203,7 +213,8 @@ GET /api/events?sport=야구,e스포츠&minHype=70&from=2026-08-20&to=2026-08-31
 ## 알려진 한계
 
 - **UFC 개시 시각**: 위키피디아엔 날짜만 있어 대부분 `시간 미정`으로 뜬다. 임박한 대회만 TheSportsDB로 보정된다.
-- **국내 격투기(블랙컴뱃·로드FC)**: 공개 API가 없다. `data/manual.json` 에 손으로 넣어야 한다.
+- **블랙컴뱃 개시 시각**: 공식 EVENT 페이지에 날짜·장소만 있어 `시간 미정`으로 표시한다.
+- **ROAD FC**: 안정적인 공개 일정 API가 없어 AI 검색의 공식 출처 검증과 `data/manual.json`을 함께 쓴다.
 - **NBA·V리그·KBL**: 어댑터는 붙어 있지만 비시즌엔 네이버가 일정을 안 내려줘 0건이다. 시즌 시작하면 자동으로 채워진다.
 - **UEFA 챔피언스리그**: 네이버가 조추첨 후에야 일정을 올린다. `categoryName` 에 "챔피언스"가 들어오면 자동으로 `ucl` 가중치를 먹도록 해뒀다.
 - **팀명 매칭이 부분 문자열 기반**이다. 같은 뿌리의 2군/유스 팀이 1군 점수를 먹을 수 있다.

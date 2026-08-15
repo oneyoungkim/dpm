@@ -37,6 +37,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_EVENT_MODEL: gpt-5.4-nano-2026-03-17
+          DISCOVERY_WEB_SEARCH: "1"
         run: npm run discover
 
       - name: 크롤 실행
@@ -44,7 +45,7 @@ jobs:
 
       - name: 변경분 커밋
         run: |
-          git config user.name "matchday-bot"
+          git config user.name "dpmbros-bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/candidates.json data/events.json
           # 스코어 하나 안 바뀐 시간대에는 빈 커밋을 만들지 않는다

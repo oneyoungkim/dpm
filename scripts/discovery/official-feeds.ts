@@ -1,5 +1,7 @@
 import { XMLParser } from "fast-xml-parser";
 
+const BOT_UA = "DPMBrosBot/0.2 (+https://github.com/oneyoungkim/dpm)";
+
 export interface OfficialFeed {
   id: string;
   name: string;
@@ -134,7 +136,7 @@ export async function fetchOfficialFeed(source: OfficialFeed, limit = 8): Promis
   const response = await fetch(source.feedUrl, {
     headers: {
       accept: "application/atom+xml, application/rss+xml, application/xml, text/xml;q=0.9",
-      "user-agent": "MatchdayBot/0.1 (+https://github.com/matchday)",
+      "user-agent": BOT_UA,
     },
     signal: AbortSignal.timeout(20_000),
   });

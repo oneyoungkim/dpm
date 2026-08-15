@@ -5,10 +5,10 @@ import type { InterestCategory, SportEvent } from "@/lib/types";
 import { INTEREST_CATEGORIES } from "@/lib/types";
 import { diffDays } from "@/lib/kst";
 import { DEFAULT_INTERESTS, INTEREST_STYLE, interestCategoryOf } from "@/lib/interests";
+import { isCuratedEvent } from "@/lib/curation";
 import { EventCard } from "./EventCard";
 import { InterestPicker } from "./InterestPicker";
 
-const HIGHLIGHT_MIN_HYPE = 70;
 const SAVED_STORAGE_KEY = "matchday.saved.v1";
 const LEGACY_ALARM_KEY = "matchday.alarms.v1";
 const INTEREST_STORAGE_KEY = "matchday.interests.v1";
@@ -166,7 +166,11 @@ export function ScheduleBrowser({
     if (view === "saved") result = result.filter((event) => saved.has(event.id));
     if (view === "mine") result = result.filter((event) => interests.has(interestCategoryOf(event)));
     if (category) result = result.filter((event) => interestCategoryOf(event) === category);
-    if (!showAll) result = result.filter((event) => event.hype >= HIGHLIGHT_MIN_HYPE);
+    // 저장함·내 관심사·직접 고른 카테고리는 사용자의 명시적 선택이므로
+    // 하이프 점수로 다시 숨기지 않는다. 기본 피드만 선별 규칙을 적용한다.
+    if (!showAll && view === "curated" && category === null) {
+      result = result.filter(isCuratedEvent);
+    }
     return result.sort(
       (a, b) => a.dateKey.localeCompare(b.dateKey) || b.hype - a.hype || a.startsAt.localeCompare(b.startsAt),
     );
@@ -403,7 +407,7 @@ export function ScheduleBrowser({
       <div className="all-events-toggle">
         <div>
           <strong>{showAll ? "전체 판 보기" : "선별 모드"}</strong>
-          <span>{showAll ? "수집된 모든 신호를 펼쳤습니다." : "기대도 70 이상의 강한 신호만 보여드립니다."}</span>
+          <span>{showAll ? "수집된 모든 신호를 펼쳤습니다." : "강한 신호와 핵심 격투기 일정을 보여드립니다."}</span>
         </div>
         <button type="button" onClick={() => setShowAll((value) => !value)} aria-pressed={showAll}>
           {showAll ? "선별 모드" : "전체 판 보기"}
