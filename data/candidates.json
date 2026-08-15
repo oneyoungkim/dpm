@@ -1,6 +1,41 @@
 {
-  "generatedAt": "2026-08-15T15:27:32.158Z",
+  "generatedAt": "2026-08-15T21:12:44.630Z",
   "events": [
+    {
+      "id": "cd9d42302d2631edca49",
+      "title": "Free Play Days – Gears of War: E-Day Open Beta, Sunderfolk and Asdivine Cross",
+      "category": "게임",
+      "tags": [
+        "Free Play Days",
+        "open beta"
+      ],
+      "series": "Free Play Days",
+      "startsAt": "2026-08-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/13/template-free-play-days-08-13-2026/",
+      "reason": "Gears of War: E-Day 오픈 베타가 8월 17일에 종료된다고 안내돼 있습니다."
+    },
+    {
+      "id": "e590bcd98ae182418c1e",
+      "title": "Next Week on XBOX: New Games for August 17 to 21",
+      "category": "게임",
+      "tags": [
+        "release dates subject to change"
+      ],
+      "series": "Next Week on XBOX",
+      "startsAt": "2026-08-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/14/next-week-on-xbox-new-games-for-august-17-to-21/",
+      "reason": "공식 주간 코너에서 8월 17일부터 21일까지의 신규 라인업을 안내합니다."
+    },
     {
       "id": "cc6d9542d72210d99d77",
       "title": "UFC 새크라멘토: Hernandez vs Rodrigues",
@@ -18,6 +53,26 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/pivotal-middleweight-bout-between-anthony-hernandez-and-gregory-rodrigues-headlines-ufc-return",
       "reason": "UFC 공식 기사에 ‘2026년 8월 22일(토) Golden 1 Center’ 개최가 명시됨. 시간 표기는 없어서 KST 12:00으로 처리."
+    },
+    {
+      "id": "fd167563666d6dd24c7a",
+      "title": "Samsung To Showcase Latest Gaming Innovations at Gamescom 2026",
+      "category": "게임",
+      "tags": [
+        "쇼케이스",
+        "Gamescom 2026",
+        "Koelnmesse",
+        "게임 혁신"
+      ],
+      "series": "Gamescom",
+      "startsAt": "2026-08-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
+      "reason": "Samsung이 Gamescom 2026(8월 26~30일)에서 최신 게임 혁신을 선보일 계획이다."
     },
     {
       "id": "8e0fb9af56da567c7404",
