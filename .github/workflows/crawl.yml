@@ -5,8 +5,8 @@ name: 일정 수집
 # 대신 여기서 주기적으로 긁어 커밋 → 배포가 자동으로 갱신되는 구조.
 on:
   schedule:
-    # KST 06:00 / 12:00 / 18:00 / 23:00 (UTC 기준)
-    - cron: "0 21,3,9,14 * * *"
+    # 매일 KST 06:00 (전날 UTC 21:00)
+    - cron: "0 21 * * *"
   workflow_dispatch:
     inputs:
       days:

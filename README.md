@@ -144,7 +144,7 @@ Repository secret으로 등록한다. 키가 없으면 발견 단계는 성공 �
 
 ## 자동 수집
 
-`.github/workflows/crawl.yml` 이 하루 4번(KST 06/12/18/23시) 아래 순서로 실행한다.
+`.github/workflows/crawl.yml` 이 매일 1번(KST 06시) 아래 순서로 실행한다.
 
 1. 공식 RSS에서 이벤트 후보 발견 및 `data/candidates.json` 갱신
 2. 스포츠 크롤과 후보를 합쳐 `data/events.json` 갱신
