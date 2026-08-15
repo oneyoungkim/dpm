@@ -43,7 +43,7 @@ export default function Home() {
         <a href="#top" className="wordmark" aria-label="도파민브로스 처음으로">
           DPMBROS<span className="wordmark-dot" />
         </a>
-        <p className="header-tagline">남자들이 기다리는 날</p>
+        <p className="header-tagline">도파민브로스</p>
         <div className="header-date">
           <span className="header-live"><i aria-hidden /> SIGNAL ON</span>
           <span>KST</span>

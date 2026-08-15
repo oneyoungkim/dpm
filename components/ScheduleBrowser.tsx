@@ -238,11 +238,7 @@ export function ScheduleBrowser({
           <div className="hero-manifesto">
             <div>
               <p className="eyebrow">THE REDLINE / NEXT 30 DAYS</p>
-              <h1 id="spotlight-title">
-                남자들이 기다리는 날은
-                <br />
-                <span>따로 있다.</span>
-              </h1>
+              <h1 id="spotlight-title">도파민브로스</h1>
             </div>
             <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />달력에 빨간 줄 그을 순간만.</p>
           </div>
