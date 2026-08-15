@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-08-15T15:20:59.286Z",
+  "generatedAt": "2026-08-15T15:24:15.132Z",
   "events": [
+    {
+      "id": "eea7785b92703ba56d40",
+      "title": "PFL 8/16 FINALS 등 8월 이벤트(공식 이벤트 목록)",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "FINALS"
+      ],
+      "series": "PFL Events",
+      "startsAt": "2026-08-16",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/events",
+      "reason": "PFL 공식 이벤트 목록 페이지에 8월 ‘FINALS’ 항목들이 존재하나, 페이지 뷰 구간에서 정확한 ‘8/16’ 항목의 일자 문구를 전부 확정하기 어려워 ‘expected’ 처리. 공식 목록에서 8/16 확정 문구를 추가로 확인한 뒤 confirmed로 승격 필요."
+    },
     {
       "id": "37745585f078d33f0c38",
       "title": "PFL 6: Atlantic City(8/16)",
@@ -52,24 +70,23 @@
       "reason": "삼성이 Gamescom 2026(8월 26~30일)에서 게이밍 혁신을 전시한다고 발표했다."
     },
     {
-      "id": "0075f61a70aa45683a98",
-      "title": "Apple, MLB announce September “Friday Night Baseball” schedule",
-      "category": "빅 스포츠",
+      "id": "f71a877ff57cfd75f3ed",
+      "title": "UFC 상하이: 8/28 ROAD TO UFC, 8/29 FIGHT NIGHT",
+      "category": "격투기",
       "tags": [
-        "MLB",
-        "야구",
-        "Apple TV",
-        "Friday Night Baseball"
+        "UFC",
+        "MMA",
+        "상하이"
       ],
-      "series": "Friday Night Baseball (September)",
-      "startsAt": "2026-09-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
+      "series": "UFC Returns To Shanghai",
+      "startsAt": "2026-08-28",
+      "timeTbd": false,
+      "eventMode": "scheduled",
       "datePrecision": "date",
       "confidence": "confirmed",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/08/apple-mlb-announce-september-friday-night-baseball-schedule/",
-      "reason": "MLB와 Apple이 ‘Friday Night Baseball’ 9월 편성 일정을 발표했지만 구체적 날짜·시간은 본문에 없다."
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
+      "reason": "UFC 공식 기사에 8/28 ROAD TO UFC Season 5(금), 8/29 UFC Fight Night Shanghai(토) 개최가 명시됨. (KST 환산은 별도 표기 없이 ‘날짜’ 기준으로만 수록)"
     },
     {
       "id": "bde78a927208b7a58c38",
