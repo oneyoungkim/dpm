@@ -1,1 +1,59 @@
-{"generatedAt":null,"events":[]}
+{
+  "generatedAt": "2026-08-15T14:29:43.586Z",
+  "events": [
+    {
+      "id": "8e0fb9af56da567c7404",
+      "title": "Samsung, Gamescom 2026에서 최신 게이밍 혁신을 선보임(8월 26~30일)",
+      "category": "테크",
+      "tags": [],
+      "series": "Gamescom 2026",
+      "startsAt": "2026-08-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
+      "reason": "삼성이 Gamescom 2026(8월 26~30일)에서 게이밍 혁신을 전시한다고 발표했다."
+    },
+    {
+      "id": "bde78a927208b7a58c38",
+      "title": "Marvel’s Wolverine: PS5 런치 일정(9월 15일) 딥다이브 공개",
+      "category": "게임",
+      "tags": [
+        "Marvel’s Wolverine",
+        "PS5",
+        "런치"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-09-15T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
+      "reason": "글에서 Marvel’s Wolverine이 9월 15일 출시된다고 명시하고 이를 기준으로 딥다이브가 안내된다."
+    },
+    {
+      "id": "36e0f2c20ff8d9c6eebe",
+      "title": "Ghost of Yōtei Complete Edition: PS5 10월 2일 출시",
+      "category": "게임",
+      "tags": [
+        "Ghost of Yōtei",
+        "Complete Edition",
+        "PS5",
+        "출시"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-10-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
+      "reason": "Ghost of Yōtei Complete Edition이 10월 2일 PS5에 제공된다고 공식적으로 안내한다."
+    }
+  ]
+}
