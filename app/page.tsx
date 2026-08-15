@@ -40,8 +40,8 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <a href="#top" className="wordmark" aria-label="Matchday 처음으로">
-          MATCHDAY<span className="wordmark-dot" />
+        <a href="#top" className="wordmark" aria-label="도파민브로스 처음으로">
+          DPMBROS<span className="wordmark-dot" />
         </a>
         <p className="header-tagline">남자들이 기다리는 날</p>
         <div className="header-date">
@@ -70,7 +70,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div>
-          <span className="wordmark footer-wordmark">MATCHDAY.</span>
+          <span className="wordmark footer-wordmark">DPMBROS.</span>
           <p>달력에 빨간 줄 그을 순간만.</p>
         </div>
         <div className="footer-meta">

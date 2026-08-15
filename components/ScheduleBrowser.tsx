@@ -203,7 +203,7 @@ export function ScheduleBrowser({
   const handleShare = async (event: SportEvent) => {
     const days = diffDays(today, event.dateKey);
     const dday = event.status === "진행중" ? "LIVE" : days === 0 ? "TODAY" : `D-${days}`;
-    const text = `${event.title} — ${dday}\n${event.series ?? event.league} · Matchday`;
+    const text = `${event.title} — ${dday}\n${event.series ?? event.league} · DPMBROS`;
     try {
       if (navigator.share) await navigator.share({ title: event.title, text, url: window.location.href });
       else await navigator.clipboard.writeText(`${text}\n${window.location.href}`);
@@ -256,7 +256,7 @@ export function ScheduleBrowser({
             featured
           />
           <div className="signal-ticker" aria-label="다가오는 이벤트 요약">
-            <span className="ticker-label"><i aria-hidden /> MATCHDAY SIGNAL</span>
+            <span className="ticker-label"><i aria-hidden /> DPMBROS SIGNAL</span>
             <span><strong>{curatedCount}</strong> CURATED</span>
             <span><strong>{liveCount}</strong> LIVE NOW</span>
             <span><strong>30</strong> DAYS AHEAD</span>

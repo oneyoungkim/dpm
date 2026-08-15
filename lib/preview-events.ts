@@ -42,7 +42,7 @@ export function buildPreviewEvents(today: string): SportEvent[] {
       eventMode: event.mode ?? "scheduled",
       datePrecision: event.timeTbd ? "date" : "time",
       confidence: "expected",
-      source: "Matchday 관심사 미리보기",
+      source: "DPMBROS 관심사 미리보기",
       preview: true,
     };
   };
