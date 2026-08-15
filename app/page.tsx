@@ -11,8 +11,9 @@ export default function Home() {
   const data = loadEvents();
   const today = todayKey();
   const lastDay = addDays(today, 30);
+  // 명시적으로 켤 때만 예시 데이터를 섞는다. 배포 기본값은 실제 수집 결과만.
   const previewEvents =
-    process.env.MATCHDAY_PREVIEW_EVENTS === "0" ? [] : buildPreviewEvents(today);
+    process.env.MATCHDAY_PREVIEW_EVENTS === "1" ? buildPreviewEvents(today) : [];
   const allEvents = [...data.events, ...previewEvents];
   const upcoming = allEvents.filter(
     (event) =>

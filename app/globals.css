@@ -375,7 +375,7 @@ a:focus-visible {
 }
 
 .section-heading {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -403,8 +403,7 @@ a:focus-visible {
 
 .feature-card {
   position: relative;
-  min-height: 570px;
-  padding: 34px;
+  padding: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 28px;
@@ -425,13 +424,17 @@ a:focus-visible {
   mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
+/*
+  카드 높이가 내용에 따라 짧아졌으므로 글로우도 같이 줄인다.
+  560px 고정이면 짧은 카드를 통째로 물들여 본문 대비를 깎아먹는다.
+*/
 .feature-glow {
   position: absolute;
-  top: -170px;
-  right: -120px;
+  top: -38%;
+  right: -18%;
   z-index: -2;
-  width: 560px;
-  height: 560px;
+  width: min(52%, 330px);
+  aspect-ratio: 1;
   border-radius: 50%;
   opacity: 0.24;
   filter: blur(90px);
@@ -486,17 +489,26 @@ a:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+/* 8px #818890 은 히어로 글로우 위에서 사실상 안 보였다. 대비를 올린다. */
 .hype-score small {
-  color: #818890;
-  font-size: 8px;
+  color: #b3b9be;
+  font-size: 9px;
+  font-weight: 800;
   letter-spacing: 0.13em;
 }
 
+/*
+  정상 흐름이다. 예전엔 absolute라서 카드가 min-height 없이는 높이를 못 가졌고,
+  그 min-height가 모바일에서 화면 하나를 통째로 먹는 빈 공간을 만들었다.
+  이제 카드 높이는 내용이 정한다.
+*/
 .feature-content {
-  position: absolute;
-  inset: 102px 34px 34px;
+  position: relative;
+  z-index: 4;
+  padding: 26px 34px 30px;
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 
 .feature-status {
@@ -521,14 +533,14 @@ a:focus-visible {
 }
 
 .feature-league {
-  margin: 11px 0 0;
+  margin: 0;
   color: #9da4ab;
   font-size: 12px;
   font-weight: 650;
 }
 
 .feature-matchup {
-  margin: auto 0;
+  margin: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
@@ -668,7 +680,7 @@ a:focus-visible {
 }
 
 .time-rail {
-  padding-top: 75px;
+  padding-top: 34px;
   border-right: 1px solid var(--line);
   color: #626970;
   font-family: Arial, Helvetica, sans-serif;
@@ -694,7 +706,7 @@ a:focus-visible {
 
 .time-content {
   min-width: 0;
-  padding: 70px 0 80px 50px;
+  padding: 30px 0 34px 28px;
 }
 
 .event-grid {
@@ -703,12 +715,13 @@ a:focus-visible {
   gap: 12px;
 }
 
+/* 높이는 내용이 정한다. 고정 높이를 주면 짧은 카드가 빈 공간을 떠안는다. */
 .event-card {
   min-width: 0;
-  min-height: 330px;
-  padding: 24px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
+  gap: 9px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background: var(--surface);
@@ -752,7 +765,7 @@ a:focus-visible {
 }
 
 .event-meta {
-  margin-top: 34px;
+  margin-top: 0;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -762,7 +775,7 @@ a:focus-visible {
 }
 
 .compact-matchup {
-  margin: 15px 0 30px;
+  margin: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
@@ -785,10 +798,10 @@ a:focus-visible {
 .event-title {
   min-width: 0;
   color: var(--text);
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(15px, 1.6vw, 19px);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.045em;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
   overflow-wrap: anywhere;
 }
 
@@ -800,24 +813,32 @@ a:focus-visible {
 }
 
 .event-title {
-  margin: 15px 0 30px;
+  margin: 0;
 }
 
 .event-card-copy {
-  margin-top: auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
+/* 이유 한 줄은 정보지 장식이 아니다. 두 줄까지만 허용하고 그 뒤는 자른다. */
 .event-reason {
-  min-height: 1.5em;
-  margin: 8px 0 20px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   color: #d5d7d8;
   font-size: 13px;
   font-weight: 650;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .event-card .card-actions {
-  padding-top: 18px;
+  margin-top: 2px;
+  padding-top: 11px;
   border-top: 1px solid var(--line);
 }
 
@@ -881,8 +902,7 @@ a:focus-visible {
 }
 
 .site-footer {
-  min-height: 210px;
-  padding: 48px 0 70px;
+  padding: 32px 0 44px;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -949,11 +969,17 @@ a:focus-visible {
   backdrop-filter: blur(10px);
 }
 
+/*
+  패널 전체를 스크롤시키면 저장 버튼이 화면 밖으로 밀려 안 보인다.
+  머리말과 발문은 고정하고 가운데 목록만 스크롤한다.
+*/
 .interest-panel {
   width: min(820px, 100%);
-  max-height: min(820px, calc(100vh - 48px));
+  max-height: min(820px, calc(100svh - 48px));
   padding: 34px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: 28px;
   background:
@@ -963,6 +989,7 @@ a:focus-visible {
 }
 
 .interest-panel-head {
+  flex: 0 0 auto;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -977,8 +1004,10 @@ a:focus-visible {
   margin: 0;
   font-size: clamp(30px, 5vw, 48px);
   font-weight: 850;
-  line-height: 1;
+  line-height: 1.06;
   letter-spacing: -0.065em;
+  /* 한글은 단어 중간에서 끊으면 안 읽힌다 */
+  word-break: keep-all;
 }
 
 .interest-panel-head p:last-child {
@@ -988,18 +1017,23 @@ a:focus-visible {
 }
 
 .interest-close {
+  flex: 0 0 auto;
   min-height: 38px;
-  padding: 0 13px;
+  padding: 0 15px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: transparent;
   color: #8d949a;
   cursor: pointer;
   font-size: 11px;
+  /* 줄바꿈되면 "닫 / 기" 두 줄로 깨진다 */
+  white-space: nowrap;
 }
 
 .interest-grid {
+  flex: 1 1 auto;
   margin-top: 30px;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 9px;
@@ -1072,6 +1106,7 @@ a:focus-visible {
 }
 
 .interest-panel-foot {
+  flex: 0 0 auto;
   margin-top: 26px;
   padding-top: 22px;
   display: flex;
@@ -1198,17 +1233,14 @@ a:focus-visible {
   }
 
   .feature-card {
-    min-height: 550px;
-    padding: 24px;
+    padding: 0;
     border-radius: 22px;
   }
 
-  .feature-content {
-    inset: 86px 24px 24px;
-  }
-
+  /* inset은 .feature-content가 absolute이던 시절의 잔재다.
+     지금은 relative라서 inset을 주면 요소가 통째로 밀려 카드 밖으로 넘친다. */
   .feature-matchup {
-    margin: 45px 0 auto;
+    margin: 0;
     grid-template-columns: 1fr;
     gap: 13px;
     align-items: start;
@@ -1258,14 +1290,6 @@ a:focus-visible {
     font-size: 29px;
   }
 
-  .event-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .event-card {
-    min-height: 310px;
-  }
-
   .interest-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1305,17 +1329,27 @@ a:focus-visible {
   }
 
   .interest-panel {
-    max-height: calc(100vh - 24px);
-    padding: 24px 18px 18px;
+    max-height: calc(100svh - 24px);
+    padding: 20px 16px 16px;
     border-radius: 22px;
+  }
+
+  .interest-panel-head h2 {
+    font-size: 26px;
+  }
+
+  .interest-panel-head p:last-child {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .interest-panel-foot {
+    margin-top: 14px;
+    padding-top: 14px;
   }
 
   .interest-panel-head {
     gap: 15px;
-  }
-
-  .interest-panel-head h2 {
-    font-size: 32px;
   }
 
   .interest-grid {
@@ -1323,17 +1357,8 @@ a:focus-visible {
     gap: 7px;
   }
 
-  .interest-option {
-    min-height: 100px;
-    padding: 14px;
-  }
-
   .interest-option strong {
     font-size: 12px;
-  }
-
-  .feature-card {
-    min-height: 570px;
   }
 
   .feature-kicker {

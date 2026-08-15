@@ -111,12 +111,11 @@ body::before {
 }
 
 .hero-manifesto {
-  min-height: 390px;
-  padding: 88px 0 50px;
+  padding: 44px 0 26px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 330px;
   align-items: end;
-  gap: 50px;
+  gap: 40px;
 }
 
 .hero-manifesto .eyebrow {
@@ -150,7 +149,6 @@ body::before {
 }
 
 .feature-card {
-  min-height: min(690px, 72svh);
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 3px;
@@ -169,9 +167,10 @@ body::before {
     repeating-linear-gradient(0deg, transparent 0 42px, rgba(255, 255, 255, 0.024) 42px 43px);
 }
 
+/* 글로우가 세면 그 위의 HYPE 숫자와 키커가 안 읽힌다. 분위기는 남기되 대비를 우선한다. */
 .feature-glow {
-  opacity: 0.62;
-  filter: blur(60px);
+  opacity: 0.34;
+  filter: blur(72px);
 }
 
 .feature-scanlines {
@@ -206,12 +205,13 @@ body::before {
   box-shadow: 0 0 16px 4px var(--accent);
 }
 
+/* 배경 텍스처지 읽을 글자가 아니다. 액션 버튼 뒤로 깔리므로 더 옅게 둔다. */
 .feature-ghost {
   top: auto;
   right: 1.5%;
-  bottom: -8%;
-  color: rgba(199, 255, 22, 0.075);
-  font-size: clamp(170px, 34vw, 510px);
+  bottom: -20%;
+  color: rgba(199, 255, 22, 0.035);
+  font-size: clamp(110px, 19vw, 260px);
   font-weight: 950;
   line-height: 0.75;
   letter-spacing: -0.13em;
@@ -241,22 +241,17 @@ body::before {
 }
 
 .feature-content {
-  z-index: 4;
-  inset: 71px 0 0;
-  min-height: calc(min(690px, 72svh) - 71px);
-  padding: clamp(40px, 5vw, 70px) clamp(30px, 6vw, 86px) 38px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-items: center;
+  padding: clamp(24px, 3vw, 38px) clamp(20px, 4vw, 54px) clamp(22px, 2.6vw, 32px);
+  gap: clamp(12px, 1.6vw, 20px);
 }
 
 .feature-status {
   align-self: start;
   color: var(--signal);
   font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(62px, 9vw, 132px);
+  font-size: clamp(46px, 6.6vw, 96px);
   font-weight: 950;
-  line-height: 0.8;
+  line-height: 0.82;
   letter-spacing: -0.08em;
   text-shadow: 0 0 30px rgba(199, 255, 22, 0.16);
   animation: countdown-in 900ms 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -268,9 +263,8 @@ body::before {
   box-shadow: 0 0 0 8px rgba(255, 36, 56, 0.14), 0 0 24px var(--accent);
 }
 
+/* 흐름 안에 둔다. absolute + top 고정이 카드 한가운데 빈 구멍을 만들던 원인이었다. */
 .feature-league {
-  position: absolute;
-  top: clamp(132px, 18vw, 192px);
   color: #9aa1a5;
   font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 11px;
@@ -281,8 +275,8 @@ body::before {
 
 .feature-matchup {
   width: 100%;
-  padding: 80px 0 30px;
-  gap: clamp(24px, 6vw, 90px);
+  padding: 0;
+  gap: clamp(20px, 4vw, 64px);
 }
 
 .feature-team {
@@ -300,7 +294,8 @@ body::before {
 
 .feature-title {
   max-width: 980px;
-  padding: 88px 0 30px;
+  margin: 0;
+  padding: 0;
   text-wrap: balance;
 }
 
@@ -512,7 +507,7 @@ body::before {
 }
 
 .timeline {
-  padding-top: 76px;
+  padding-top: 30px;
 }
 
 .time-section {
@@ -534,7 +529,7 @@ body::before {
 }
 
 .section-heading h2 {
-  font-size: clamp(34px, 4.6vw, 62px);
+  font-size: clamp(26px, 3.2vw, 44px);
   font-weight: 930;
   letter-spacing: -0.065em;
 }
@@ -549,7 +544,6 @@ body::before {
 }
 
 .event-card {
-  min-height: 360px;
   border-radius: 2px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 44%),
@@ -590,9 +584,10 @@ body::before {
   letter-spacing: -0.055em;
 }
 
+/* 카드가 얇아진 만큼 제목도 같이 내린다. 밀도가 올라가면 큰 글씨는 오히려 안 읽힌다. */
 .event-title {
-  font-size: clamp(25px, 3vw, 38px);
-  line-height: 1.03;
+  font-size: clamp(17px, 1.8vw, 22px);
+  line-height: 1.18;
 }
 
 .event-reason {
@@ -660,6 +655,22 @@ body::before {
   box-shadow: inset 3px 0 0 var(--signal);
 }
 
+/* 아직 일정이 안 잡힌 카테고리. 존재는 알리되 고를 수는 없게 둔다. */
+.interest-option-pending {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.interest-option-pending:hover {
+  transform: none;
+  border-color: var(--line);
+}
+
+.interest-option-pending .interest-check {
+  color: var(--muted);
+  background: transparent;
+}
+
 .interest-check,
 .interest-save {
   border-radius: 2px;
@@ -700,75 +711,108 @@ body::before {
   .site-shell { width: min(100% - 30px, 760px); }
   .header-tagline { display: none; }
   .hero-manifesto {
-    min-height: 320px;
-    padding: 66px 0 38px;
+    padding: 30px 0 20px;
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 18px;
   }
-  .hero-manifesto h1 { font-size: clamp(48px, 11.5vw, 84px); }
-  .hero-deck { max-width: 440px; }
-  .feature-card { min-height: 650px; }
-  .feature-content { min-height: 579px; }
+  .hero-manifesto h1 { font-size: clamp(42px, 9.5vw, 68px); }
+  .hero-deck { max-width: 440px; padding-top: 14px; }
   .feature-matchup { gap: 24px; }
-  .feature-team strong, .feature-title { font-size: clamp(38px, 8.5vw, 68px); }
+  .feature-team strong, .feature-title { font-size: clamp(32px, 6.4vw, 52px); }
   .ticker-copy { display: none; }
   .discovery-controls { margin-inline: -15px; }
   .feed-tabs, .filter-bar { padding-inline: 15px; }
-  .event-grid { grid-template-columns: 1fr; }
-  .event-card { min-height: 330px; }
+  /* 태블릿 폭에서는 2열이 여전히 읽을 만하다. 1열로 떨구면 스크롤만 길어진다. */
+  .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .timeline { padding-top: 22px; }
+  .time-content { padding: 24px 0 26px 20px; }
 }
 
 @media (max-width: 560px) {
   .site-shell { width: calc(100% - 22px); }
-  .site-header { height: 60px; }
+  .site-header { height: 56px; }
   .header-date { gap: 7px; font-size: 10px; }
   .header-date .header-live { display: none; }
-  .hero-manifesto {
-    min-height: 310px;
-    padding: 56px 0 32px;
-  }
-  .hero-manifesto h1 { font-size: clamp(45px, 14vw, 68px); line-height: 0.91; }
-  .hero-deck { padding-left: 14px; font-size: 13px; }
-  .feature-card { min-height: calc(100svh - 88px); max-height: 780px; }
-  .feature-topline { padding: 19px 18px; }
-  .feature-content {
-    inset: 57px 0 0;
-    min-height: calc(100svh - 146px);
-    max-height: 720px;
-    padding: 40px 20px 24px;
-  }
-  .feature-status { font-size: clamp(67px, 23vw, 104px); }
-  .feature-league { top: 132px; left: 20px; max-width: calc(100% - 40px); }
+
+  /* 히어로는 한 화면 안에서 끝난다. 스크롤 두 번 해야 피드가 나오면 안 된다. */
+  .hero-manifesto { padding: 22px 0 16px; gap: 14px; }
+  .hero-manifesto h1 { font-size: clamp(38px, 11vw, 54px); line-height: 0.92; }
+  .hero-deck { padding: 12px 0 0 12px; font-size: 12.5px; line-height: 1.6; }
+
+  .feature-topline { padding: 14px 16px; }
+  .feature-content { padding: 18px 16px 18px; gap: 11px; }
+  .feature-status { font-size: clamp(52px, 15vw, 72px); }
   .feature-matchup {
-    padding-top: 84px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    gap: 12px;
   }
-  .feature-team { flex-direction: column; align-items: flex-start; gap: 9px; }
+  .feature-team { flex-direction: column; align-items: flex-start; gap: 8px; }
   .feature-team-away { align-items: flex-end; }
-  .feature-team strong { font-size: clamp(26px, 8.8vw, 42px); }
-  .feature-title { padding-top: 96px; font-size: clamp(36px, 11vw, 54px); }
-  .team-mark-large, .team-fallback.team-mark-large { width: 42px; height: 42px; }
-  .feature-bottom { align-items: stretch; gap: 22px; }
-  .feature-reason { font-size: 14px; }
+  .feature-team strong { font-size: clamp(23px, 7.2vw, 34px); }
+  .feature-title { font-size: clamp(28px, 8.4vw, 42px); }
+  .team-mark-large, .team-fallback.team-mark-large { width: 38px; height: 38px; }
+  .feature-bottom { flex-direction: column; align-items: stretch; gap: 14px; padding-top: 14px; }
+  .feature-reason { font-size: 13.5px; }
   .feature-bottom .card-actions { width: 100%; }
   .feature-bottom .action-button { flex: 1; }
-  .signal-ticker { margin-inline: 0; padding-inline: 14px; gap: 17px; }
-  .signal-ticker span:nth-of-type(3) { display: none; }
+
+  /* 잘라내는 대신 두 줄로 접는다. 마지막 항목이 화면 밖으로 밀리던 문제. */
+  .signal-ticker {
+    margin-inline: 0;
+    padding: 10px 14px;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  /* shell 여백이 11px이라 -15px로 빼면 화면 밖으로 4px 넘친다. */
+  .discovery-controls { margin-inline: -11px; }
+  .feed-tabs, .filter-bar { padding-inline: 11px; }
+
   .feed-tabs { overflow-x: auto; }
   .feed-tab, .edit-interests { flex: 0 0 auto; }
-  .radar-callout { grid-template-columns: 38px 1fr; padding: 16px; }
+  .radar-callout { grid-template-columns: 38px 1fr; padding: 14px; margin: 16px 0 2px; }
   .radar-callout em { grid-column: 2; }
   .radar-icon { width: 36px; height: 36px; }
-  .time-section { grid-template-columns: 24px minmax(0, 1fr); gap: 8px; }
-  .timeline { padding-top: 50px; }
-  .section-heading { align-items: end; }
-  .section-heading h2 { font-size: 38px; }
+
+  .time-section { grid-template-columns: 22px minmax(0, 1fr); gap: 6px; }
+  .timeline { padding-top: 18px; }
+  .time-rail { padding-top: 20px; }
+  .time-content { padding: 18px 0 20px 12px; }
+  .section-heading { margin-bottom: 10px; align-items: end; }
+  .section-heading h2 { font-size: 26px; }
   .section-heading > p { max-width: 90px; }
-  .event-card { min-height: 320px; padding: 20px; }
+
+  /* 좁은 화면에선 1열. 대신 카드가 얇아져서 한 화면에 3~4개가 들어온다. */
+  .event-grid { grid-template-columns: 1fr; gap: 8px; }
+  .event-card { padding: 13px 14px; gap: 7px; }
+
+  /*
+    가로 3열(홈|VS|원정)은 390px에서 팀 이름이 3줄로 접혀 카드가 100px씩 부푼다.
+    스코어보드처럼 한 줄에 한 팀씩 세우면 절반 높이에 더 잘 읽힌다.
+  */
+  .compact-matchup {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .compact-matchup > div,
+  .compact-matchup > div:last-child {
+    flex-direction: row;
+    text-align: left;
+  }
+  .compact-matchup > span {
+    display: none;
+  }
+
+  /* 피드 카드에서만 줄인다. 히어로 버튼은 원래 크기를 유지한다. */
+  .event-card .action-button { min-height: 32px; padding: 0 11px; }
+  .event-card .card-actions { padding-top: 9px; }
+  .event-card .event-reason { -webkit-line-clamp: 1; }
+  .event-card .verification-line { margin-top: 0; }
   .interest-grid { grid-template-columns: 1fr 1fr; }
-  .interest-option { min-height: 112px; padding: 14px; }
+  .interest-option { min-height: 84px; padding: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

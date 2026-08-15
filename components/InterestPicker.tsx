@@ -7,12 +7,15 @@ import { INTEREST_CATEGORIES, type InterestCategory } from "@/lib/types";
 export function InterestPicker({
   open,
   selected,
+  available,
   onToggle,
   onSave,
   onClose,
 }: {
   open: boolean;
   selected: Set<InterestCategory>;
+  /** 지금 실제로 일정이 잡힌 카테고리. 나머지는 골라도 빈 레이더가 되므로 잠근다. */
+  available: Set<InterestCategory>;
   onToggle: (category: InterestCategory) => void;
   onSave: () => void;
   onClose: () => void;
@@ -55,22 +58,34 @@ export function InterestPicker({
 
         <div className="interest-grid">
           {INTEREST_CATEGORIES.map((category) => {
-            const active = selected.has(category);
+            const ready = available.has(category);
+            const active = ready && selected.has(category);
             const style = INTEREST_STYLE[category];
+            const className = [
+              "interest-option",
+              active ? "interest-option-active" : "",
+              ready ? "" : "interest-option-pending",
+            ]
+              .filter(Boolean)
+              .join(" ");
             return (
               <button
                 key={category}
                 type="button"
-                onClick={() => onToggle(category)}
+                onClick={() => ready && onToggle(category)}
                 aria-pressed={active}
-                className={active ? "interest-option interest-option-active" : "interest-option"}
+                disabled={!ready}
+                title={ready ? undefined : "아직 수집된 일정이 없습니다"}
+                className={className}
               >
                 <span className="interest-option-top">
                   <i className={style.dot} aria-hidden />
                   <strong>{category}</strong>
-                  <span className="interest-check" aria-hidden>{active ? "✓" : "+"}</span>
+                  <span className="interest-check" aria-hidden>
+                    {ready ? (active ? "✓" : "+") : "—"}
+                  </span>
                 </span>
-                <small>{style.description}</small>
+                <small>{ready ? style.description : "준비 중"}</small>
               </button>
             );
           })}

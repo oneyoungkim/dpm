@@ -3,7 +3,10 @@ import type { InterestCategory, Sport, SportEvent } from "./types";
 
 /**
  * 자동 수집 소스를 붙이기 전 관심사 UX를 검증하기 위한 상대 날짜 예시.
- * preview 플래그가 있어 실제 일정과 구분되며 MATCHDAY_PREVIEW_EVENTS=0으로 한번에 끌 수 있다.
+ *
+ * 기본은 꺼짐이다. 예전엔 켜짐이 기본이라 배포된 사이트의 MAIN EVENT 자리에
+ * 실제로 열리지 않는 경기가 올라갔다. 일정 사이트에서 그건 치명적이다.
+ * 로컬에서 관심사 UI를 볼 때만 MATCHDAY_PREVIEW_EVENTS=1 로 켠다.
  */
 export function buildPreviewEvents(today: string): SportEvent[] {
   const make = (
