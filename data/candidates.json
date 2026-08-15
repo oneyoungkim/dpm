@@ -1,41 +1,6 @@
 {
-  "generatedAt": "2026-08-15T15:24:15.132Z",
+  "generatedAt": "2026-08-15T15:27:32.158Z",
   "events": [
-    {
-      "id": "eea7785b92703ba56d40",
-      "title": "PFL 8/16 FINALS 등 8월 이벤트(공식 이벤트 목록)",
-      "category": "격투기",
-      "tags": [
-        "PFL",
-        "FINALS"
-      ],
-      "series": "PFL Events",
-      "startsAt": "2026-08-16",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/events",
-      "reason": "PFL 공식 이벤트 목록 페이지에 8월 ‘FINALS’ 항목들이 존재하나, 페이지 뷰 구간에서 정확한 ‘8/16’ 항목의 일자 문구를 전부 확정하기 어려워 ‘expected’ 처리. 공식 목록에서 8/16 확정 문구를 추가로 확인한 뒤 confirmed로 승격 필요."
-    },
-    {
-      "id": "37745585f078d33f0c38",
-      "title": "PFL 6: Atlantic City(8/16)",
-      "category": "격투기",
-      "tags": [
-        "PFL"
-      ],
-      "series": "PFL",
-      "startsAt": "2026-08-16T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/events",
-      "reason": "PFL 공식 ‘events’ 페이지에 ‘Thu, Aug 16 – PFL 6’가 명시됨. 시간 표기가 있어도 KST 기준 시간 확정 불가라 date로만 처리(KST 12:00)."
-    },
     {
       "id": "cc6d9542d72210d99d77",
       "title": "UFC 새크라멘토: Hernandez vs Rodrigues",
@@ -70,25 +35,6 @@
       "reason": "삼성이 Gamescom 2026(8월 26~30일)에서 게이밍 혁신을 전시한다고 발표했다."
     },
     {
-      "id": "f71a877ff57cfd75f3ed",
-      "title": "UFC 상하이: 8/28 ROAD TO UFC, 8/29 FIGHT NIGHT",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "상하이"
-      ],
-      "series": "UFC Returns To Shanghai",
-      "startsAt": "2026-08-28",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
-      "reason": "UFC 공식 기사에 8/28 ROAD TO UFC Season 5(금), 8/29 UFC Fight Night Shanghai(토) 개최가 명시됨. (KST 환산은 별도 표기 없이 ‘날짜’ 기준으로만 수록)"
-    },
-    {
       "id": "bde78a927208b7a58c38",
       "title": "Marvel’s Wolverine: PS5 런치 일정(9월 15일) 딥다이브 공개",
       "category": "게임",
@@ -106,45 +52,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
       "reason": "글에서 Marvel’s Wolverine이 9월 15일 출시된다고 명시하고 이를 기준으로 딥다이브가 안내된다."
-    },
-    {
-      "id": "be0e8b73eb5349bd1156",
-      "title": "Ghost of Yōtei Complete Edition Comes to PS5 October 1",
-      "category": "게임",
-      "tags": [
-        "Ghost of Yōtei",
-        "Complete Edition",
-        "PS5"
-      ],
-      "series": "Ghost of Yōtei",
-      "startsAt": "2026-10-01T00:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/12/ghost-of-yotei-complete-edition-comes-to-ps5-october-1/",
-      "reason": "본문에 ‘PS5 October 1’로 명시된 Ghost of Yōtei Complete Edition의 출시/배포 일정입니다."
-    },
-    {
-      "id": "3f10c668e8610e4ef11c",
-      "title": "(For Southeast Asia) Ghost of Yōtei Complete Edition Comes to PS5 October 2",
-      "category": "게임",
-      "tags": [
-        "Ghost of Yōtei",
-        "Complete Edition",
-        "PS5",
-        "동남아"
-      ],
-      "series": "Ghost of Yōtei",
-      "startsAt": "2026-10-02T00:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
-      "reason": "본문에 ‘October 2’로 명시된 동남아 대상 Ghost of Yōtei Complete Edition의 PS5 출시 일정입니다."
     },
     {
       "id": "36e0f2c20ff8d9c6eebe",
