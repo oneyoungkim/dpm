@@ -29,6 +29,35 @@ function arg(name: string): string | undefined {
   return i >= 0 ? process.argv[i + 1] : undefined;
 }
 
+function combatFamily(event: SportEvent): string | null {
+  if (event.category !== "격투기" && event.sport !== "격투기") return null;
+  const text = `${event.leagueKey} ${event.league} ${event.series ?? ""} ${event.source}`.toLowerCase();
+  if (/ufc/.test(text)) return "ufc";
+  if (/black.?combat|블랙컴뱃/.test(text)) return "blackcombat";
+  if (/road.?fc/.test(text)) return "roadfc";
+  if (/\bone\b/.test(text)) return "one";
+  if (/\bpfl\b/.test(text)) return "pfl";
+  return null;
+}
+
+function normalizedTitle(event: SportEvent): string {
+  const matchup = event.title.match(/([^:()]+\s+vs\.?\s+[^:()]+)/i)?.[1] ?? event.title;
+  return matchup.toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
+}
+
+function duplicatesExistingCandidate(candidate: SportEvent, existing: Iterable<SportEvent>): boolean {
+  if (!candidate.id.startsWith("candidate:")) return false;
+  const family = combatFamily(candidate);
+  if (!family) return false;
+  const title = normalizedTitle(candidate);
+  for (const event of existing) {
+    if (event.dateKey !== candidate.dateKey || combatFamily(event) !== family) continue;
+    const other = normalizedTitle(event);
+    if (title === other || title.includes(other) || other.includes(title)) return true;
+  }
+  return false;
+}
+
 async function main() {
   const dry = process.argv.includes("--dry");
   const forward = Number(arg("days") ?? DEFAULT_FORWARD_DAYS);
@@ -73,7 +102,10 @@ async function main() {
   // 병합 — 뒤에 오는 소스가 이긴다. jobs 순서상 수동 입력이 마지막이라 최우선.
   const byId = new Map<string, SportEvent>();
   for (const batch of collected) {
-    for (const e of batch) byId.set(e.id, e);
+    for (const e of batch) {
+      if (duplicatesExistingCandidate(e, byId.values())) continue;
+      byId.set(e.id, e);
+    }
   }
 
   const verifiedAt = new Date().toISOString();

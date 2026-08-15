@@ -53,6 +53,8 @@ const LEAGUE_BASE: Record<string, number> = {
   boxing: 34,
   blackcombat: 42,
   roadfc: 32,
+  one: 48,
+  pfl: 44,
 
   // 기타
   asiangames: 58,

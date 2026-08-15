@@ -8,6 +8,8 @@ const RADAR_PRIORITY_LEAGUES = new Set([
   "ufc_fight_night",
   "blackcombat",
   "roadfc",
+  "one",
+  "pfl",
 ]);
 
 export function isCuratedEvent(event: Pick<SportEvent, "hype" | "leagueKey">): boolean {

@@ -4,7 +4,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 import { INTEREST_CATEGORIES } from "../../lib/types";
 import { dateKey } from "../../lib/kst";
-import { eventCandidateSchema, type EventCandidate } from "./candidate-schema";
+import { eventCandidateSchema, hasMissingDateEvidence, type EventCandidate } from "./candidate-schema";
 
 const OFFICIAL_SOURCES: Record<string, string> = {
   "ufc.com": "UFC",
@@ -121,6 +121,7 @@ function normalize(
   const source = sourceUrl ? officialSource(sourceUrl) : null;
   if (!sourceUrl || !source || !sources.has(sourceUrl)) return null;
   if (raw.confidence === "rumored" || Number.isNaN(Date.parse(raw.startsAt))) return null;
+  if (hasMissingDateEvidence(raw.reason)) return null;
   const key = dateKey(new Date(raw.startsAt));
   if (key < from || key > to) return null;
 

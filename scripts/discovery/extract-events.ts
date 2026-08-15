@@ -4,7 +4,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 import { INTEREST_CATEGORIES } from "../../lib/types";
 import { dateKey } from "../../lib/kst";
-import { eventCandidateSchema, type EventCandidate } from "./candidate-schema";
+import { eventCandidateSchema, hasMissingDateEvidence, type EventCandidate } from "./candidate-schema";
 import { OFFICIAL_FEEDS, type FeedItem } from "./official-feeds";
 
 const extractedEventSchema = z.object({
@@ -58,6 +58,7 @@ function normalizeExtracted(
   const item = itemByUrl.get(raw.sourceItemUrl);
   if (!item || !allowedSourceUrl(item, raw.sourceItemUrl)) return null;
   if (raw.confidence === "rumored" || Number.isNaN(Date.parse(raw.startsAt))) return null;
+  if (hasMissingDateEvidence(raw.reason)) return null;
   const key = dateKey(new Date(raw.startsAt));
   if (key < from || key > to) return null;
 

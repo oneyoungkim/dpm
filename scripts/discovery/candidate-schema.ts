@@ -25,3 +25,11 @@ export const candidatesFileSchema = z.object({
 
 export type EventCandidate = z.infer<typeof eventCandidateSchema>;
 export type CandidatesFile = z.infer<typeof candidatesFileSchema>;
+
+/** 모델의 설명이 스스로 "날짜 근거 없음"이라고 말하면 구조가 유효해도 게시하지 않는다. */
+export function hasMissingDateEvidence(reason?: string): boolean {
+  if (!reason) return false;
+  return /구체적.{0,12}날짜.{0,20}(?:없|명시되지|확인되지)|날짜.{0,20}(?:없|명시되지|확정되지)|specific date.{0,20}(?:not|missing)|date.{0,20}not specified/i.test(
+    reason,
+  );
+}

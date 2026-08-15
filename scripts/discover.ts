@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { addDays, todayKey } from "../lib/kst";
 import {
   candidatesFileSchema,
+  hasMissingDateEvidence,
   type CandidatesFile,
   type EventCandidate,
 } from "./discovery/candidate-schema";
@@ -66,7 +67,9 @@ async function main() {
   } catch (error) {
     console.warn(`웹 검색 발견 실패 — 공식 RSS 결과로 계속: ${error instanceof Error ? error.message : error}`);
   }
-  const discovered = [...feedEvents, ...webEvents];
+  const discovered = [...feedEvents, ...webEvents].filter(
+    (event) => !hasMissingDateEvidence(event.reason),
+  );
   console.log(
     `AI 추출·코드 검증 통과 ${discovered.length}건 ` +
       `(RSS ${feedEvents.length} · 웹 ${webEvents.length}, ${from} ~ ${to})`,
@@ -74,7 +77,7 @@ async function main() {
 
   const retained = previous.events.filter((event) => {
     const key = event.startsAt.slice(0, 10);
-    return key >= addDays(from, -14) && key <= to;
+    return key >= addDays(from, -14) && key <= to && !hasMissingDateEvidence(event.reason);
   });
   const merged = new Map(retained.map((event) => [event.id, event]));
   for (const event of discovered) merged.set(event.id, event);

@@ -12,6 +12,21 @@ const SPORT_BY_CATEGORY: Partial<Record<InterestCategory, Sport>> = {
   농구: "농구",
 };
 
+function leagueKeyOf(candidate: EventCandidate): string {
+  if (candidate.category !== "격투기") return `candidate-${candidate.category}`;
+  const text = `${candidate.source} ${candidate.series} ${candidate.title}`.toLowerCase();
+  if (/black\s*combat|블랙컴뱃/.test(text)) return "blackcombat";
+  if (/road\s*fc/.test(text)) return "roadfc";
+  if (/one championship|\bone\b/.test(text)) return "one";
+  if (/\bpfl\b/.test(text)) return "pfl";
+  if (/\bufc\b/.test(text)) {
+    return /fight night|파이트 나이트|ufc\s+[^\d]/i.test(candidate.title)
+      ? "ufc_fight_night"
+      : "ufc_numbered";
+  }
+  return "candidate-격투기";
+}
+
 export function candidateToEvent(candidate: EventCandidate, from: string, to: string): SportEvent | null {
   if (!candidate.id || !candidate.title || !candidate.series || !candidate.sourceUrl) return null;
   if (candidate.confidence === "rumored") return null;
@@ -27,7 +42,7 @@ export function candidateToEvent(candidate: EventCandidate, from: string, to: st
     tags: candidate.tags,
     series: candidate.series,
     league: candidate.series,
-    leagueKey: `candidate-${candidate.category}`,
+    leagueKey: leagueKeyOf(candidate),
     title: candidate.title,
     startsAt: candidate.startsAt,
     timeTbd: candidate.timeTbd,
