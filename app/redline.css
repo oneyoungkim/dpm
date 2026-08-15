@@ -655,18 +655,12 @@ body::before {
   box-shadow: inset 3px 0 0 var(--signal);
 }
 
-/* 아직 일정이 안 잡힌 카테고리. 존재는 알리되 고를 수는 없게 둔다. */
-.interest-option-pending {
-  opacity: 0.4;
-  cursor: not-allowed;
+/* 현재 30일 일정은 없지만 미리 관심사로 저장할 수 있다. */
+.interest-option-empty:not(.interest-option-active) {
+  opacity: 0.58;
 }
 
-.interest-option-pending:hover {
-  transform: none;
-  border-color: var(--line);
-}
-
-.interest-option-pending .interest-check {
+.interest-option-empty:not(.interest-option-active) .interest-check {
   color: var(--muted);
   background: transparent;
 }

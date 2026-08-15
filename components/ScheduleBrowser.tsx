@@ -62,15 +62,9 @@ function useSavedEvents() {
   return { saved, toggleSaved };
 }
 
-function useInterests(available: InterestCategory[]) {
-  // 일정이 하나도 없는 카테고리를 기본값으로 켜두면 첫 화면이 빈 레이더가 된다.
-  // 추천 관심사 중 실제로 데이터가 있는 것만 남기고, 하나도 안 남으면 있는 것 전부를 쓴다.
-  const fallback = useMemo(() => {
-    const usable = DEFAULT_INTERESTS.filter((item) => available.includes(item));
-    return usable.length > 0 ? usable : available;
-  }, [available]);
-
-  const [interests, setInterests] = useState<Set<InterestCategory>>(new Set(fallback));
+function useInterests() {
+  // 관심사는 현재 30일 일정과 무관하게 유지한다. 드문 대회도 미리 구독할 수 있어야 한다.
+  const [interests, setInterests] = useState<Set<InterestCategory>>(new Set(DEFAULT_INTERESTS));
   const [configured, setConfigured] = useState(false);
   const [ready, setReady] = useState(false);
 
@@ -130,7 +124,7 @@ export function ScheduleBrowser({
   const [pickerOpen, setPickerOpen] = useState(false);
   const [draftInterests, setDraftInterests] = useState<Set<InterestCategory>>(new Set(DEFAULT_INTERESTS));
   const { saved, toggleSaved } = useSavedEvents();
-  const { interests, configured, ready, saveInterests } = useInterests(activeCategories);
+  const { interests, configured, ready, saveInterests } = useInterests();
   const availableCategories = useMemo(() => new Set(activeCategories), [activeCategories]);
 
   useEffect(() => {

@@ -14,7 +14,7 @@ export function InterestPicker({
 }: {
   open: boolean;
   selected: Set<InterestCategory>;
-  /** 지금 실제로 일정이 잡힌 카테고리. 나머지는 골라도 빈 레이더가 되므로 잠근다. */
+  /** 향후 30일 안에 실제 일정이 잡힌 카테고리. 선택 제한이 아니라 상태 안내에만 쓴다. */
   available: Set<InterestCategory>;
   onToggle: (category: InterestCategory) => void;
   onSave: () => void;
@@ -59,12 +59,12 @@ export function InterestPicker({
         <div className="interest-grid">
           {INTEREST_CATEGORIES.map((category) => {
             const ready = available.has(category);
-            const active = ready && selected.has(category);
+            const active = selected.has(category);
             const style = INTEREST_STYLE[category];
             const className = [
               "interest-option",
               active ? "interest-option-active" : "",
-              ready ? "" : "interest-option-pending",
+              ready ? "" : "interest-option-empty",
             ]
               .filter(Boolean)
               .join(" ");
@@ -72,20 +72,21 @@ export function InterestPicker({
               <button
                 key={category}
                 type="button"
-                onClick={() => ready && onToggle(category)}
+                onClick={() => onToggle(category)}
                 aria-pressed={active}
-                disabled={!ready}
-                title={ready ? undefined : "아직 수집된 일정이 없습니다"}
+                title={ready ? undefined : "현재 30일 안에 수집된 일정이 없습니다"}
                 className={className}
               >
                 <span className="interest-option-top">
                   <i className={style.dot} aria-hidden />
                   <strong>{category}</strong>
                   <span className="interest-check" aria-hidden>
-                    {ready ? (active ? "✓" : "+") : "—"}
+                    {active ? "✓" : "+"}
                   </span>
                 </span>
-                <small>{ready ? style.description : "준비 중"}</small>
+                <small>
+                  {ready ? style.description : active ? "선택됨 · 일정 대기 중" : "현재 30일 일정 없음"}
+                </small>
               </button>
             );
           })}
