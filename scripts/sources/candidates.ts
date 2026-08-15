@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { dateKey } from "../../lib/kst";
 import type { InterestCategory, Sport, SportEvent } from "../../lib/types";
-import { candidatesFileSchema, type EventCandidate } from "../discovery/candidate-schema";
+import { candidatesFileSchema, hasWeakVerification, type EventCandidate } from "../discovery/candidate-schema";
 
 const SPORT_BY_CATEGORY: Partial<Record<InterestCategory, Sport>> = {
   축구: "축구",
@@ -68,6 +68,7 @@ export function loadCandidates(from: string, to: string): SportEvent[] {
       return [];
     }
     return parsed.data.events
+      .filter((candidate) => !hasWeakVerification(candidate))
       .map((candidate) => candidateToEvent(candidate, from, to))
       .filter((event): event is SportEvent => event !== null);
   } catch (error) {

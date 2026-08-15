@@ -4,7 +4,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
 import { INTEREST_CATEGORIES } from "../../lib/types";
 import { dateKey } from "../../lib/kst";
-import { eventCandidateSchema, hasMissingDateEvidence, type EventCandidate } from "./candidate-schema";
+import { eventCandidateSchema, hasWeakVerification, type EventCandidate } from "./candidate-schema";
 
 const OFFICIAL_SOURCES: Record<string, string> = {
   "ufc.com": "UFC",
@@ -121,7 +121,7 @@ function normalize(
   const source = sourceUrl ? officialSource(sourceUrl) : null;
   if (!sourceUrl || !source || !sources.has(sourceUrl)) return null;
   if (raw.confidence === "rumored" || Number.isNaN(Date.parse(raw.startsAt))) return null;
-  if (hasMissingDateEvidence(raw.reason)) return null;
+  if (hasWeakVerification({ ...raw, sourceUrl })) return null;
   const key = dateKey(new Date(raw.startsAt));
   if (key < from || key > to) return null;
 
@@ -165,7 +165,7 @@ export async function discoverEventsFromWeb(from: string, to: string): Promise<E
       {
         role: "system",
         content:
-          "너는 DPMBROS의 일정 탐색 편집자다. 웹과 커뮤니티 글은 후보를 찾는 단서일 뿐이며, 출력은 반드시 주최사·리그·제조사 공식 웹사이트에서 날짜를 재확인한 이벤트만 허용한다. 커뮤니티 URL, 뉴스 기사, 검색 결과 URL은 sourceUrl로 쓰지 않는다. 공식 페이지에 날짜가 명시되지 않으면 제외하고 추측하지 않는다. 소문은 rumored로 표시한다. 시간 미정이면 해당 날짜 12:00:00+09:00로 적고 timeTbd=true, datePrecision=date로 둔다. 제목은 모바일 카드에 맞게 80자 이내 한국어로 간결하게 쓴다.",
+          "너는 DPMBROS의 일정 탐색 편집자다. 웹과 커뮤니티 글은 후보를 찾는 단서일 뿐이며, 출력은 반드시 주최사·리그·제조사 공식 웹사이트에서 날짜를 재확인한 이벤트만 허용한다. 커뮤니티 URL, 뉴스 기사, 검색 결과 URL은 sourceUrl로 쓰지 않는다. 여러 해가 섞인 /events 같은 목록 페이지가 아니라 연도와 날짜가 명시된 개별 행사·공지 페이지를 sourceUrl로 쓴다. 한 출력은 정확히 한 이벤트만 나타내며, 서로 다른 날짜나 행사를 제목 하나로 합치지 않는다. 공식 페이지에 연도와 날짜가 명시되지 않으면 제외하고 추측하지 않는다. 소문은 rumored로 표시한다. 시간 미정이면 해당 날짜 12:00:00+09:00로 적고 timeTbd=true, datePrecision=date로 둔다. 제목은 모바일 카드에 맞게 80자 이내 한국어로 간결하게 쓴다.",
       },
       {
         role: "user",
