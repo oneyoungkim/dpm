@@ -17,10 +17,10 @@ type FeedView = "curated" | "mine" | "saved";
 type BucketKey = "today" | "tomorrow" | "week" | "later";
 
 const BUCKETS: Array<{ key: BucketKey; index: string; label: string; description: string; limit: number }> = [
-  { key: "today", index: "01", label: "오늘", description: "지금 가장 가까운 순간", limit: 6 },
-  { key: "tomorrow", index: "02", label: "내일", description: "하루 먼저 체크하기", limit: 6 },
-  { key: "week", index: "03", label: "이번 주", description: "7일 안에 벌어질 일", limit: 10 },
-  { key: "later", index: "04", label: "그 이후", description: "30일 안의 큰 약속", limit: 12 },
+  { key: "today", index: "01", label: "오늘", description: "지금 터지는 것", limit: 6 },
+  { key: "tomorrow", index: "02", label: "내일", description: "다음 신호", limit: 6 },
+  { key: "week", index: "03", label: "이번 주", description: "7일 안의 메인 이벤트", limit: 10 },
+  { key: "later", index: "04", label: "그 이후", description: "레이더에 잡힌 다음 순간", limit: 12 },
 ];
 
 function bucketFor(event: SportEvent, today: string): BucketKey {
@@ -105,11 +105,15 @@ export function ScheduleBrowser({
   today,
   activeCategories,
   featuredId,
+  curatedCount,
+  liveCount,
 }: {
   events: SportEvent[];
   today: string;
   activeCategories: InterestCategory[];
   featuredId?: string;
+  curatedCount: number;
+  liveCount: number;
 }) {
   const [view, setView] = useState<FeedView>("curated");
   const [category, setCategory] = useState<InterestCategory | null>(null);
@@ -122,10 +126,7 @@ export function ScheduleBrowser({
   const { interests, configured, ready, saveInterests } = useInterests();
 
   useEffect(() => {
-    if (ready && !configured) {
-      setDraftInterests(new Set(DEFAULT_INTERESTS));
-      setPickerOpen(true);
-    } else if (ready && configured) {
+    if (ready && configured) {
       setView("mine");
     }
   }, [configured, ready]);
@@ -232,6 +233,38 @@ export function ScheduleBrowser({
 
   return (
     <>
+      {featured ? (
+        <section id="top" className="spotlight" aria-labelledby="spotlight-title">
+          <div className="hero-manifesto">
+            <div>
+              <p className="eyebrow">THE REDLINE / NEXT 30 DAYS</p>
+              <h1 id="spotlight-title">
+                남자들이 기다리는 날은
+                <br />
+                <span>따로 있다.</span>
+              </h1>
+            </div>
+            <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />달력에 빨간 줄 그을 순간만.</p>
+          </div>
+          <EventCard
+            event={featured}
+            today={today}
+            saved={saved.has(featured.id)}
+            onToggleSaved={toggleSaved}
+            onShare={handleShare}
+            shared={sharedId === featured.id}
+            featured
+          />
+          <div className="signal-ticker" aria-label="다가오는 이벤트 요약">
+            <span className="ticker-label"><i aria-hidden /> MATCHDAY SIGNAL</span>
+            <span><strong>{curatedCount}</strong> CURATED</span>
+            <span><strong>{liveCount}</strong> LIVE NOW</span>
+            <span><strong>30</strong> DAYS AHEAD</span>
+            <span className="ticker-copy">SPORTS / GAME / TECH / BIG MOMENTS</span>
+          </div>
+        </section>
+      ) : null}
+
       <div className="discovery-controls">
         <div className="feed-tabs" role="tablist" aria-label="피드 보기 방식">
           <button
@@ -241,7 +274,7 @@ export function ScheduleBrowser({
             onClick={() => chooseView("curated")}
             className={view === "curated" ? "feed-tab feed-tab-active" : "feed-tab"}
           >
-            전체 추천
+            지금 뜨는 것
           </button>
           <button
             type="button"
@@ -250,7 +283,7 @@ export function ScheduleBrowser({
             onClick={() => chooseView("mine")}
             className={view === "mine" ? "feed-tab feed-tab-active" : "feed-tab"}
           >
-            내 관심사 <span>{interests.size}</span>
+            내 레이더 <span>{interests.size}</span>
           </button>
           <button
             type="button"
@@ -262,7 +295,7 @@ export function ScheduleBrowser({
             기대 중 <span>{saved.size}</span>
           </button>
           <button type="button" className="edit-interests" onClick={openInterestPicker}>
-            관심사 편집
+            관심사 조정
           </button>
         </div>
 
@@ -292,6 +325,17 @@ export function ScheduleBrowser({
         </nav>
       </div>
 
+      {ready && !configured && (
+        <button type="button" className="radar-callout" onClick={openInterestPicker}>
+          <span className="radar-icon" aria-hidden><i /></span>
+          <span>
+            <small>PERSONAL RADAR</small>
+            <strong>원하는 것만 더 세게 받아보세요.</strong>
+          </span>
+          <em>내 레이더 켜기 →</em>
+        </button>
+      )}
+
       {previewCount > 0 && (
         <div className="preview-banner" role="note">
           <span>PREVIEW</span>
@@ -299,41 +343,20 @@ export function ScheduleBrowser({
         </div>
       )}
 
-      {featured ? (
-        <section className="spotlight" aria-labelledby="spotlight-title">
-          <div className="section-heading section-heading-spotlight">
-            <div>
-              <span>{view === "mine" ? "FOR YOU" : view === "saved" ? "YOUR WATCHLIST" : "SPOTLIGHT"}</span>
-              <h2 id="spotlight-title">
-                {view === "mine" ? "당신이 기다릴 순간" : view === "saved" ? "가장 먼저 확인할 것" : "가장 기다려지는 순간"}
-              </h2>
-            </div>
-            <p>{view === "mine" ? `${interests.size}개 관심사를 기준으로 골랐습니다.` : "기대도와 날짜를 함께 반영한 이번 달의 픽"}</p>
-          </div>
-          <EventCard
-            event={featured}
-            today={today}
-            saved={saved.has(featured.id)}
-            onToggleSaved={toggleSaved}
-            onShare={handleShare}
-            shared={sharedId === featured.id}
-            featured
-          />
-        </section>
-      ) : (
+      {!featured ? (
         <section className="empty-state compact-empty">
           <p className="eyebrow">NOTHING HERE YET</p>
           <h2>{emptyTitle}</h2>
-          <p>{view === "mine" ? "관심사를 더 선택하거나 전체 추천을 확인해보세요." : "마음에 드는 카드에서 ‘+ 기대 중’을 눌러 모아보세요."}</p>
+          <p>{view === "mine" ? "관심사를 더 선택하거나 지금 뜨는 것을 확인해보세요." : "마음에 드는 카드에서 ‘기대 걸기’를 눌러 모아보세요."}</p>
           <button
             type="button"
             onClick={view === "mine" ? openInterestPicker : () => chooseView("curated")}
             className="empty-action"
           >
-            {view === "mine" ? "관심사 다시 선택" : "전체 추천 보기"}
+            {view === "mine" ? "관심사 다시 선택" : "지금 뜨는 것 보기"}
           </button>
         </section>
-      )}
+      ) : null}
 
       {featured && (
         <div className="timeline">
@@ -383,11 +406,11 @@ export function ScheduleBrowser({
 
       <div className="all-events-toggle">
         <div>
-          <strong>{showAll ? "모든 일정을 보는 중" : "큐레이션 모드"}</strong>
-          <span>{showAll ? "기대도와 관계없이 수집된 일정을 표시합니다." : "기대도 70 이상의 이벤트만 보여드립니다."}</span>
+          <strong>{showAll ? "전체 판 보기" : "선별 모드"}</strong>
+          <span>{showAll ? "수집된 모든 신호를 펼쳤습니다." : "기대도 70 이상의 강한 신호만 보여드립니다."}</span>
         </div>
         <button type="button" onClick={() => setShowAll((value) => !value)} aria-pressed={showAll}>
-          {showAll ? "추천만 보기" : "모든 일정"}
+          {showAll ? "선별 모드" : "전체 판 보기"}
         </button>
       </div>
 

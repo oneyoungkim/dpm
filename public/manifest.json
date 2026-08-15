@@ -1,11 +1,11 @@
 {
-  "name": "MATCHDAY — 오늘 뭐 봄?",
+  "name": "MATCHDAY — 남자들이 기다리는 날",
   "short_name": "MATCHDAY",
-  "description": "축구·야구·LCK·UFC 한 달 스케줄을 한 화면에.",
+  "description": "결승전, 대작 출시, 신제품 발표. 달력에 빨간 줄 그을 순간만.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#08090b",
-  "theme_color": "#08090b",
+  "background_color": "#050607",
+  "theme_color": "#050607",
   "lang": "ko",
   "icons": [
     {

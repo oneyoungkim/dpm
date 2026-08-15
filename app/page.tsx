@@ -43,37 +43,16 @@ export default function Home() {
         <a href="#top" className="wordmark" aria-label="Matchday 처음으로">
           MATCHDAY<span className="wordmark-dot" />
         </a>
+        <p className="header-tagline">남자들이 기다리는 날</p>
         <div className="header-date">
+          <span className="header-live"><i aria-hidden /> SIGNAL ON</span>
           <span>KST</span>
           {formatDateKo(today)}
         </div>
       </header>
 
-      <section id="top" className="intro" aria-labelledby="intro-title">
-        <div>
-          <p className="eyebrow">THE NEXT 30 DAYS</p>
-          <h1 id="intro-title">
-            앞으로 30일,
-            <br />
-            <span>기다릴 만한 것만.</span>
-          </h1>
-        </div>
-        <div className="intro-note">
-          <p>스포츠, 게임, 테크, 큰 발표까지.</p>
-          <p>당신이 기다릴 순간만 골라드립니다.</p>
-          <div className="intro-stats" aria-label="다가오는 이벤트 요약">
-            <span>
-              <strong>{curatedCount}</strong> CURATED
-            </span>
-            <span>
-              <strong>{liveCount}</strong> LIVE NOW
-            </span>
-          </div>
-        </div>
-      </section>
-
       {allEvents.length === 0 ? (
-        <section className="empty-state">
+        <section id="top" className="empty-state">
           <p className="eyebrow">NO EVENTS YET</p>
           <h2>아직 수집된 일정이 없습니다.</h2>
           <p>일정이 업데이트되면 앞으로 30일의 추천 이벤트가 이곳에 나타납니다.</p>
@@ -84,13 +63,15 @@ export default function Home() {
           today={today}
           activeCategories={categories}
           featuredId={featured?.id}
+          curatedCount={curatedCount}
+          liveCount={liveCount}
         />
       )}
 
       <footer className="site-footer">
         <div>
           <span className="wordmark footer-wordmark">MATCHDAY.</span>
-          <p>기다릴 게 있다는 건 꽤 좋은 일입니다.</p>
+          <p>달력에 빨간 줄 그을 순간만.</p>
         </div>
         <div className="footer-meta">
           <p>모든 일정은 한국 시간(KST) 기준</p>

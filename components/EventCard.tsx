@@ -35,6 +35,13 @@ function ddayLabel(event: SportEvent, today: string) {
   return `D-${days}`;
 }
 
+function verificationLabel(event: SportEvent) {
+  if (event.preview) return "레이더 미리보기";
+  if (event.confidence === "rumored") return "확인 중";
+  if (event.confidence === "expected") return "예상 일정";
+  return "공식 확정";
+}
+
 function EventActions({
   event,
   saved,
@@ -56,7 +63,7 @@ function EventActions({
         aria-pressed={saved}
         className={saved ? "action-button action-button-active" : "action-button"}
       >
-        {saved ? "기대 중" : "+ 기대 중"}
+        {saved ? "기대 중 ✓" : "기대 걸기"}
       </button>
       <button
         type="button"
@@ -97,13 +104,15 @@ export function EventCard({
     return (
       <article className="feature-card">
         <div className={`feature-glow ${style.bar}`} aria-hidden />
+        <div className="feature-scanlines" aria-hidden />
+        <div className="feature-redline" aria-hidden />
         <div className="feature-ghost" aria-hidden>
           {dayLabel}
         </div>
         <div className="feature-topline">
           <span className="feature-kicker">
             <i className={style.dot} aria-hidden />
-            NEXT BIG MOMENT
+            MAIN EVENT // {eventCategory}
           </span>
           <span className="hype-score">
             <small>HYPE</small> {event.hype}
@@ -142,6 +151,9 @@ export function EventCard({
               <p className="feature-reason">{event.hypeReason || "이번 달, 놓치면 아쉬운 순간."}</p>
               <p className="feature-time">
                 {formatDateKo(event.dateKey)} · {event.timeTbd ? "시간 미정" : formatTimeKo(event.startsAt)} KST
+              </p>
+              <p className="verification-line">
+                <span>{verificationLabel(event)}</span> {event.source}
               </p>
             </div>
             <EventActions
@@ -196,6 +208,9 @@ export function EventCard({
           {formatDateKo(event.dateKey).replace(/ \(.\)$/, "")} · {event.timeTbd ? "시간 미정" : formatTimeKo(event.startsAt)}
         </p>
         <p className="event-reason">{event.hypeReason || event.round || "기억해 둘 만한 다음 경기."}</p>
+        <p className="verification-line">
+          <span>{verificationLabel(event)}</span> {event.source}
+        </p>
       </div>
 
       <EventActions
