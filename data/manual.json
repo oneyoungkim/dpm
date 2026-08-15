@@ -1,0 +1,66 @@
+{
+  "_readme": [
+    "크롤러가 못 잡는 이벤트를 손으로 채우는 파일. 국내 격투기 단체(블랙컴뱃/로드FC),",
+    "국제 종합대회, 국가대표 A매치처럼 공개 API가 없는 것들이 여기 들어간다.",
+    "필수: id, sport, league, leagueKey, title, startsAt(+09:00), status.",
+    "시각이 아직 안 나왔으면 startsAt은 그날 00:00으로 두고 timeTbd: true 를 준다.",
+    "여기 적힌 항목은 크롤 결과보다 우선한다(같은 id면 덮어씀).",
+    "sport: 야구 | 축구 | e스포츠 | 격투기 | 농구 | 배구 | 기타"
+  ],
+  "events": [
+    {
+      "id": "manual-ag2026-opening",
+      "sport": "기타",
+      "league": "아시안게임",
+      "leagueKey": "asiangames",
+      "title": "2026 아이치·나고야 아시안게임 개회식",
+      "startsAt": "2026-09-19T00:00:00+09:00",
+      "timeTbd": true,
+      "status": "예정",
+      "venue": "일본 아이치현",
+      "round": "개회식",
+      "link": "https://www.olympics.com/ko/news/team-korea-key-events-100-days-to-go-until-aichi-nagoya-asian-games-2026",
+      "source": "수동 입력"
+    },
+    {
+      "id": "manual-ag2026-mfootball-g1",
+      "sport": "축구",
+      "league": "아시안게임 남자축구",
+      "leagueKey": "korea_nt",
+      "title": "대한민국 남자축구 조별예선 1차전",
+      "startsAt": "2026-09-15T00:00:00+09:00",
+      "timeTbd": true,
+      "status": "예정",
+      "round": "조별예선",
+      "link": "https://www.olympics.com/ko/news/football-team-korea-squads-fixtures-asian-games-2026",
+      "source": "수동 입력"
+    },
+    {
+      "id": "manual-ag2026-mfootball-g2",
+      "sport": "축구",
+      "league": "아시안게임 남자축구",
+      "leagueKey": "korea_nt",
+      "title": "대한민국 남자축구 조별예선 2차전",
+      "startsAt": "2026-09-22T00:00:00+09:00",
+      "timeTbd": true,
+      "status": "예정",
+      "round": "조별예선",
+      "link": "https://www.olympics.com/ko/news/football-team-korea-squads-fixtures-asian-games-2026",
+      "source": "수동 입력"
+    },
+    {
+      "id": "manual-ag2026-baseball-open",
+      "sport": "야구",
+      "league": "아시안게임 야구",
+      "leagueKey": "asiangames",
+      "title": "아시안게임 야구 개막",
+      "startsAt": "2026-09-21T00:00:00+09:00",
+      "timeTbd": true,
+      "status": "예정",
+      "venue": "오카자키 중앙종합공원 야구장",
+      "round": "조별예선",
+      "link": "https://www.olympics.com/ko/news/baseball-group-draw-schedules-asian-games-aichi-nagoya-2026",
+      "source": "수동 입력"
+    }
+  ]
+}

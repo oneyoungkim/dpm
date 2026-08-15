@@ -1,0 +1,52 @@
+name: 일정 수집
+
+# 크롤 결과(data/events.json)를 레포에 커밋한다.
+# 서버리스 배포는 파일시스템이 읽기 전용이라 런타임에 크롤할 수 없다.
+# 대신 여기서 주기적으로 긁어 커밋 → 배포가 자동으로 갱신되는 구조.
+on:
+  schedule:
+    # KST 06:00 / 12:00 / 18:00 / 23:00 (UTC 기준)
+    - cron: "0 21,3,9,14 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "앞으로 며칠치를 수집할지"
+        required: false
+        default: "35"
+
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: 공식 피드에서 이벤트 후보 발견
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_EVENT_MODEL: gpt-5.4-nano-2026-03-17
+        run: npm run discover
+
+      - name: 크롤 실행
+        run: npm run crawl -- --days ${{ inputs.days || '35' }}
+
+      - name: 변경분 커밋
+        run: |
+          git config user.name "matchday-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/candidates.json data/events.json
+          # 스코어 하나 안 바뀐 시간대에는 빈 커밋을 만들지 않는다
+          git diff --staged --quiet || git commit -m "chore: 일정 갱신 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
