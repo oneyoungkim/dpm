@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T21:12:44.630Z",
+  "generatedAt": "2026-08-16T21:11:29.407Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -76,18 +76,18 @@
     },
     {
       "id": "8e0fb9af56da567c7404",
-      "title": "Samsung, Gamescom 2026에서 최신 게이밍 혁신을 선보임(8월 26~30일)",
-      "category": "테크",
+      "title": "Samsung To Showcase Latest Gaming Innovations at Gamescom 2026",
+      "category": "게임",
       "tags": [],
       "series": "Gamescom 2026",
       "startsAt": "2026-08-26T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
-      "reason": "삼성이 Gamescom 2026(8월 26~30일)에서 게이밍 혁신을 전시한다고 발표했다."
+      "reason": "Samsung이 Gamescom 2026(8월 26-30)에서 최신 게임 혁신을 선보일 예정이라고 밝혔습니다."
     },
     {
       "id": "bde78a927208b7a58c38",
