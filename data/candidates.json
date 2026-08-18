@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T21:11:29.407Z",
+  "generatedAt": "2026-08-18T21:14:32.100Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -127,6 +127,24 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
       "reason": "Ghost of Yōtei Complete Edition이 10월 2일 PS5에 제공된다고 공식적으로 안내한다."
+    },
+    {
+      "id": "18dfecc844f71709b149",
+      "title": "Phantom Blade Zero State of Play: Phantom Blade Zero is set to release on October 29",
+      "category": "게임",
+      "tags": [
+        "출시",
+        "State of Play"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-10-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/",
+      "reason": "원문에서 Phantom Blade Zero의 출시일이 10월 29일로 명시되어 있어 해당 날짜의 일정만 추출했다."
     }
   ]
 }
