@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T21:14:32.100Z",
+  "generatedAt": "2026-08-20T21:18:53.820Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -35,6 +35,45 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/08/14/next-week-on-xbox-new-games-for-august-17-to-21/",
       "reason": "공식 주간 코너에서 8월 17일부터 21일까지의 신규 라인업을 안내합니다."
+    },
+    {
+      "id": "d105a4249b5862033051",
+      "title": "UFC BJJ Opens 1차 대회(라스베이거스) 8/22 개최",
+      "category": "격투기",
+      "tags": [
+        "ufc",
+        "ufc bjj",
+        "jiu-jitsu",
+        "토너먼트"
+      ],
+      "series": "UFC BJJ Opens",
+      "startsAt": "2026-08-22T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-bjj-announces-launch-ufc-bjj-opens",
+      "reason": "UFC 공식 공지에서 ‘2026년 8월 22일(토) 라스베이거스에서 첫 대회’로 명시되어 있음."
+    },
+    {
+      "id": "4d27b18006c03d205eac",
+      "title": "UFC Fight Night: Hernandez vs Rodrigues 8/22",
+      "category": "격투기",
+      "tags": [
+        "ufc",
+        "fight night",
+        "herandez vs rodrigues"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-08-22T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://jp.ufc.com/news/pivotal-middleweight-bout-between-anthony-hernandez-and-gregory-rodrigues-headlines-ufc-return",
+      "reason": "UFC 공식 공지에서 ‘2026년 8월 22일(토) Sacramento Golden 1 Center’ 개최로 명시되어 있음."
     },
     {
       "id": "cc6d9542d72210d99d77",
@@ -88,6 +127,80 @@
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
       "reason": "Samsung이 Gamescom 2026(8월 26-30)에서 최신 게임 혁신을 선보일 예정이라고 밝혔습니다."
+    },
+    {
+      "id": "e3ef3a6899a221097f35",
+      "title": "[Invitation] Galaxy Event August 2026",
+      "category": "테크",
+      "tags": [
+        "Galaxy Event",
+        "Galaxy S26",
+        "Samsung Electronics"
+      ],
+      "series": "Galaxy Event August 2026",
+      "startsAt": "2026-08-27T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
+      "reason": "원문에 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 행사 일정을 추출했습니다."
+    },
+    {
+      "id": "faac0c4d395310852de4",
+      "title": "Road to UFC Season 5 준결승 8/28(상하이)",
+      "category": "격투기",
+      "tags": [
+        "ufc",
+        "road to ufc",
+        "season 5"
+      ],
+      "series": "Road to UFC Season 5 (Semifinals)",
+      "startsAt": "2026-08-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
+      "reason": "UFC 공식 공지에서 ‘2026년 8월 28일(금) ROAD TO UFC Season 5 준결승’로 명시되어 있음."
+    },
+    {
+      "id": "04a8f820d4f9fb556582",
+      "title": "ONE Fight Night 47 9/4(방콕)",
+      "category": "격투기",
+      "tags": [
+        "one championship",
+        "one fight night 47"
+      ],
+      "series": "ONE Fight Night 47",
+      "startsAt": "2026-09-04T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/four-blockbuster-mma-and-submission-grappling-bouts-booked-for-one-fight-night-47",
+      "reason": "ONE 공식 기사에서 ‘2026년 9월 4일(금) Lumpinee Stadium, Bangkok’ 개최로 명시되어 있음."
+    },
+    {
+      "id": "24ac726fd3768e3f5053",
+      "title": "Code Vein II Mask of Idris DLC launches September 9",
+      "category": "게임",
+      "tags": [
+        "DLC",
+        "Code Vein II"
+      ],
+      "series": "Code Vein II",
+      "startsAt": "2026-09-09T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/20/code-vein-ii-mask-of-idris-dlc-launches-september-9/",
+      "reason": "Code Vein II의 Mask of Idris DLC가 2026년 9월 9일에 출시된다고 발표했다."
     },
     {
       "id": "bde78a927208b7a58c38",
@@ -145,6 +258,24 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/",
       "reason": "원문에서 Phantom Blade Zero의 출시일이 10월 29일로 명시되어 있어 해당 날짜의 일정만 추출했다."
+    },
+    {
+      "id": "cded676c81901fd50833",
+      "title": "(For Southeast Asia) Pulse Elevate wireless speakers launch November 12, 2026",
+      "category": "테크",
+      "tags": [
+        "Pulse Elevate",
+        "무선 스피커"
+      ],
+      "series": "Pulse Elevate",
+      "startsAt": "2026-11-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/18/20260818-speaker/",
+      "reason": "(SE 아시아) Pulse Elevate 무선 스피커가 2026년 11월 12일에 출시된다고 업데이트했다."
     }
   ]
 }
