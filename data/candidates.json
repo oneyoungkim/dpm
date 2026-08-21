@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T21:18:53.820Z",
+  "generatedAt": "2026-08-21T21:14:37.257Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -133,19 +133,19 @@
       "title": "[Invitation] Galaxy Event August 2026",
       "category": "테크",
       "tags": [
-        "Galaxy Event",
+        "Galaxy Event August 2026",
         "Galaxy S26",
-        "Samsung Electronics"
+        "삼성전자"
       ],
       "series": "Galaxy Event August 2026",
       "startsAt": "2026-08-27T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "release-window",
+      "eventMode": "scheduled",
       "datePrecision": "date",
-      "confidence": "expected",
+      "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "원문에 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 행사 일정을 추출했습니다."
+      "reason": "원문에 ‘8월 27일’ Galaxy Event August 2026 행사를 연다고 명시되어 있습니다."
     },
     {
       "id": "faac0c4d395310852de4",
@@ -165,6 +165,48 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
       "reason": "UFC 공식 공지에서 ‘2026년 8월 28일(금) ROAD TO UFC Season 5 준결승’로 명시되어 있음."
+    },
+    {
+      "id": "1f42fe6f5c1909040071",
+      "title": "ROAD TO UFC 시즌5: 8/28 상하이 세미파이널",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "ROAD TO UFC",
+        "시즌 5",
+        "상하이"
+      ],
+      "series": "ROAD TO UFC 시즌 5 세미파이널",
+      "startsAt": "2026-08-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
+      "reason": "UFC 공식 공지에서 2026년 8월 28일(금) ROAD TO UFC SEASON 5 세미파이널이 열린다고 명시."
+    },
+    {
+      "id": "75c0ff684c94f35e4fea",
+      "title": "UFC 상하이: 8/29 UFC 파이트 나이트 샹하이",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "UFC Fight Night",
+        "상하이",
+        "중국"
+      ],
+      "series": "UFC Fight Night 상하이",
+      "startsAt": "2026-08-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
+      "reason": "UFC 공식 공지에서 2026년 8월 29일(토) UFC FIGHT NIGHT SHANGHAI가 열린다고 명시."
     },
     {
       "id": "04a8f820d4f9fb556582",
