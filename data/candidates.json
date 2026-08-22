@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T21:14:37.257Z",
+  "generatedAt": "2026-08-22T21:12:59.279Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -133,19 +133,19 @@
       "title": "[Invitation] Galaxy Event August 2026",
       "category": "테크",
       "tags": [
-        "Galaxy Event August 2026",
+        "Galaxy Event",
         "Galaxy S26",
-        "삼성전자"
+        "초청"
       ],
       "series": "Galaxy Event August 2026",
       "startsAt": "2026-08-27T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "원문에 ‘8월 27일’ Galaxy Event August 2026 행사를 연다고 명시되어 있습니다."
+      "reason": "원문에 ‘Galaxy Event August 2026’ 개최일(8월 27일)이 명시되어 있어 해당 날짜를 일정으로 추출했습니다."
     },
     {
       "id": "faac0c4d395310852de4",
@@ -228,12 +228,9 @@
     },
     {
       "id": "24ac726fd3768e3f5053",
-      "title": "Code Vein II Mask of Idris DLC launches September 9",
+      "title": "Code Vein II: Mask of Idris DLC launches September 9",
       "category": "게임",
-      "tags": [
-        "DLC",
-        "Code Vein II"
-      ],
+      "tags": [],
       "series": "Code Vein II",
       "startsAt": "2026-09-09T12:00:00+09:00",
       "timeTbd": true,
@@ -242,7 +239,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/20/code-vein-ii-mask-of-idris-dlc-launches-september-9/",
-      "reason": "Code Vein II의 Mask of Idris DLC가 2026년 9월 9일에 출시된다고 발표했다."
+      "reason": "공식 포스트에서 Code Vein II 'Mask of Idris' DLC 출시일이 9월 9일로 명시되어 있습니다."
     },
     {
       "id": "bde78a927208b7a58c38",
@@ -305,19 +302,16 @@
       "id": "cded676c81901fd50833",
       "title": "(For Southeast Asia) Pulse Elevate wireless speakers launch November 12, 2026",
       "category": "테크",
-      "tags": [
-        "Pulse Elevate",
-        "무선 스피커"
-      ],
+      "tags": [],
       "series": "Pulse Elevate",
       "startsAt": "2026-11-12T12:00:00+09:00",
       "timeTbd": true,
       "eventMode": "release-window",
       "datePrecision": "date",
-      "confidence": "confirmed",
+      "confidence": "expected",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/18/20260818-speaker/",
-      "reason": "(SE 아시아) Pulse Elevate 무선 스피커가 2026년 11월 12일에 출시된다고 업데이트했다."
+      "reason": "본문에서 SE 아시아 대상 Pulse Elevate 무선 스피커의 출시일이 11월 12일(2026)로 제시되어 있습니다."
     }
   ]
 }
