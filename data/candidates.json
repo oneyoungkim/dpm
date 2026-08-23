@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T21:12:59.279Z",
+  "generatedAt": "2026-08-23T21:12:49.635Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -94,6 +94,41 @@
       "reason": "UFC 공식 기사에 ‘2026년 8월 22일(토) Golden 1 Center’ 개최가 명시됨. 시간 표기는 없어서 KST 12:00으로 처리."
     },
     {
+      "id": "67368cc750ff15a90184",
+      "title": "Modern Warfare 4 Open Beta: Everything You Need to Know",
+      "category": "게임",
+      "tags": [
+        "베타주말",
+        "쇼케이스"
+      ],
+      "series": "Call of Duty: Modern Warfare 4",
+      "startsAt": "2026-08-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/21/modern-warfare-4-open-beta-everything-you-need-to-know/",
+      "reason": "오픈 배타 관련 안내 글이지만 본문에 특정 시작일(일자)이 없어, 8/24~8/28 구간 내 공개 창만 일정으로 추출했습니다."
+    },
+    {
+      "id": "9294031b8ae12cf5da62",
+      "title": "Next Week on XBOX: New Games for August 24 to 28",
+      "category": "게임",
+      "tags": [
+        "쇼케이스"
+      ],
+      "series": "Next Week on XBOX",
+      "startsAt": "2026-08-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/21/next-week-on-xbox-new-games-for-august-24-to-28/",
+      "reason": "해당 주간 안내 글에서 8월 24일부터 8월 28일까지의 차주 신규 게임을 다루는 일정이 공개돼 있습니다."
+    },
+    {
       "id": "fd167563666d6dd24c7a",
       "title": "Samsung To Showcase Latest Gaming Innovations at Gamescom 2026",
       "category": "게임",
@@ -133,19 +168,19 @@
       "title": "[Invitation] Galaxy Event August 2026",
       "category": "테크",
       "tags": [
-        "Galaxy Event",
+        "Galaxy Event August 2026",
         "Galaxy S26",
-        "초청"
+        "초청장"
       ],
       "series": "Galaxy Event August 2026",
       "startsAt": "2026-08-27T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "release-window",
+      "eventMode": "live-trigger",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "원문에 ‘Galaxy Event August 2026’ 개최일(8월 27일)이 명시되어 있어 해당 날짜를 일정으로 추출했습니다."
+      "reason": "원문에 2026년 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 있습니다."
     },
     {
       "id": "faac0c4d395310852de4",
@@ -227,6 +262,25 @@
       "reason": "ONE 공식 기사에서 ‘2026년 9월 4일(금) Lumpinee Stadium, Bangkok’ 개최로 명시되어 있음."
     },
     {
+      "id": "30cd7e2dc51fefc8b3fd",
+      "title": "UFC 파리 2026: 9/5 ACCOR ARENA",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "파리"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-09-05T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-returns-paris-must-see-night-action-september-5-accor-arena",
+      "reason": "공식 UFC 기사에서 2026년 9월 5일 UFC 파리 개최를 명시."
+    },
+    {
       "id": "24ac726fd3768e3f5053",
       "title": "Code Vein II: Mask of Idris DLC launches September 9",
       "category": "게임",
@@ -240,6 +294,25 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/20/code-vein-ii-mask-of-idris-dlc-launches-september-9/",
       "reason": "공식 포스트에서 Code Vein II 'Mask of Idris' DLC 출시일이 9월 9일로 명시되어 있습니다."
+    },
+    {
+      "id": "79aa59408006b406f605",
+      "title": "ONE The Inner Circle 30: 9/11 럼피니 벨 디펜스",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "무에타이",
+        "The Inner Circle"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-09-11T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/rambolek-to-make-first-defense-of-one-bantamweight-muay-thai-world-title-against-yod-iq-at-the-inner-circle-30",
+      "reason": "공식 ONE 기사에서 2026년 9월 11일 The Inner Circle 30 개최를 명시."
     },
     {
       "id": "bde78a927208b7a58c38",
