@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T21:12:49.635Z",
+  "generatedAt": "2026-08-24T21:20:16.816Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -165,7 +165,7 @@
     },
     {
       "id": "e3ef3a6899a221097f35",
-      "title": "[Invitation] Galaxy Event August 2026",
+      "title": "Galaxy Event August 2026(‘Galaxy Event August 2026’ 개최)",
       "category": "테크",
       "tags": [
         "Galaxy Event August 2026",
@@ -175,12 +175,12 @@
       "series": "Galaxy Event August 2026",
       "startsAt": "2026-08-27T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "live-trigger",
+      "eventMode": "scheduled",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "원문에 2026년 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 있습니다."
+      "reason": "초청장에 2026년 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 있습니다."
     },
     {
       "id": "faac0c4d395310852de4",
@@ -242,6 +242,26 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
       "reason": "UFC 공식 공지에서 2026년 8월 29일(토) UFC FIGHT NIGHT SHANGHAI가 열린다고 명시."
+    },
+    {
+      "id": "e9d67db254886562301d",
+      "title": "블랙컵 4강: 일본 vs 미국 8/29",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "블랙컵",
+        "세미파이널",
+        "Bucheon"
+      ],
+      "series": "BLACK COMBAT BLACK CUP SERIES",
+      "startsAt": "2026-08-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "블랙컴뱃 공식 이벤트 목록에 2026년 8월 29일 일정이 명시됨."
     },
     {
       "id": "04a8f820d4f9fb556582",
@@ -315,6 +335,26 @@
       "reason": "공식 ONE 기사에서 2026년 9월 11일 The Inner Circle 30 개최를 명시."
     },
     {
+      "id": "a48d4a4e1f359fbbd039",
+      "title": "NOCHE UFC, 9/12 글렌데일에서 개최",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Noche UFC",
+        "Glendale"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/noche-ufc-take-place-september-12-ufc-returns-glendale-arizona",
+      "reason": "UFC 공식 공지에 2026년 9월 12일(토) 개최로 명시됨."
+    },
+    {
       "id": "bde78a927208b7a58c38",
       "title": "Marvel’s Wolverine: PS5 런치 일정(9월 15일) 딥다이브 공개",
       "category": "게임",
@@ -352,6 +392,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
       "reason": "Ghost of Yōtei Complete Edition이 10월 2일 PS5에 제공된다고 공식적으로 안내한다."
+    },
+    {
+      "id": "d41925e39e07289923ed",
+      "title": "UFC 파이트 나이트: 버클리 vs 말로트 10/17",
+      "category": "격투기",
+      "tags": [
+        "UFC Fight Night",
+        "Edmonton",
+        "Buckley",
+        "Malott"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-10-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/pivotal-welterweight-bout-between-joaquin-buckley-and-mike-malott-headlines-ufc-return",
+      "reason": "UFC 공식 공지에 2026년 10월 17일(토) 개최로 명시됨."
     },
     {
       "id": "18dfecc844f71709b149",
