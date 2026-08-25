@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T21:20:16.816Z",
+  "generatedAt": "2026-08-25T21:18:44.758Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -165,22 +165,21 @@
     },
     {
       "id": "e3ef3a6899a221097f35",
-      "title": "Galaxy Event August 2026(‘Galaxy Event August 2026’ 개최)",
+      "title": "[Invitation] Galaxy Event August 2026",
       "category": "테크",
       "tags": [
-        "Galaxy Event August 2026",
         "Galaxy S26",
-        "초청장"
+        "Galaxy Event"
       ],
       "series": "Galaxy Event August 2026",
       "startsAt": "2026-08-27T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "live-trigger",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "초청장에 2026년 8월 27일 ‘Galaxy Event August 2026’ 개최가 명시되어 있습니다."
+      "reason": "삼성전자는 2026년 8월 27일 ‘Galaxy Event August 2026’을 개최해 Galaxy S26 제품군의 새로운 모델을 소개한다고 밝혔다."
     },
     {
       "id": "faac0c4d395310852de4",
@@ -282,6 +281,24 @@
       "reason": "ONE 공식 기사에서 ‘2026년 9월 4일(금) Lumpinee Stadium, Bangkok’ 개최로 명시되어 있음."
     },
     {
+      "id": "3c6b965fc3c464e00581",
+      "title": "Onimusha: Way of the Sword – PS5 출시(September 4)",
+      "category": "게임",
+      "tags": [
+        "PlayStation 5",
+        "출시"
+      ],
+      "series": "Onimusha: Way of the Sword",
+      "startsAt": "2026-09-04T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/25/onimusha-way-of-the-sword-interview-demo-update-detailed-new-trailer-revealed/",
+      "reason": "공식 글에서 Onimusha: Way of the Sword가 9월 4일 PS5에 출시된다고 안내한다."
+    },
+    {
       "id": "30cd7e2dc51fefc8b3fd",
       "title": "UFC 파리 2026: 9/5 ACCOR ARENA",
       "category": "격투기",
@@ -302,9 +319,12 @@
     },
     {
       "id": "24ac726fd3768e3f5053",
-      "title": "Code Vein II: Mask of Idris DLC launches September 9",
+      "title": "Code Vein II: Mask of Idris – DLC 출시(September 9)",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "DLC",
+        "출시"
+      ],
       "series": "Code Vein II",
       "startsAt": "2026-09-09T12:00:00+09:00",
       "timeTbd": true,
@@ -313,7 +333,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/20/code-vein-ii-mask-of-idris-dlc-launches-september-9/",
-      "reason": "공식 포스트에서 Code Vein II 'Mask of Idris' DLC 출시일이 9월 9일로 명시되어 있습니다."
+      "reason": "공식 글에서 Mask of Idris DLC가 9월 9일 출시된다고 발표한다."
     },
     {
       "id": "79aa59408006b406f605",
@@ -372,6 +392,39 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
       "reason": "글에서 Marvel’s Wolverine이 9월 15일 출시된다고 명시하고 이를 기준으로 딥다이브가 안내된다."
+    },
+    {
+      "id": "d556480f6c31523b66ae",
+      "title": "Into the Radius 2 – PS VR2 출시(September 24)",
+      "category": "게임",
+      "tags": [
+        "PS VR2",
+        "출시"
+      ],
+      "series": "Into the Radius 2",
+      "startsAt": "2026-09-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/24/vr-shooter-into-the-radius-2-hits-ps-vr2-september-24/",
+      "reason": "공식 글에서 Into the Radius 2가 9월 24일 PS VR2에 출시된다고 명시한다."
+    },
+    {
+      "id": "1e427dd23483678f0192",
+      "title": "The Witcher 3: Wild Hunt — Songs of the Past and Remastered 출시",
+      "category": "게임",
+      "tags": [],
+      "series": "The Witcher 3: Wild Hunt",
+      "startsAt": "2026-09-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/25/witcher-3-remastered-and-songs-of-the-past/",
+      "reason": "기사에서 9월 29일에 The Witcher 3: Wild Hunt의 Songs of the Past와 Remastered가 제공된다고 명시한다."
     },
     {
       "id": "36e0f2c20ff8d9c6eebe",
