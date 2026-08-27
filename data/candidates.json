@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T21:18:44.758Z",
+  "generatedAt": "2026-08-27T00:21:20.858Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -222,6 +222,47 @@
       "reason": "UFC 공식 공지에서 2026년 8월 28일(금) ROAD TO UFC SEASON 5 세미파이널이 열린다고 명시."
     },
     {
+      "id": "5fee15551dd59189ab16",
+      "title": "ROAD FC 078 2026년 8월 29일 개최",
+      "category": "격투기",
+      "tags": [
+        "ROAD FC",
+        "격투기",
+        "국내",
+        "ROAD FC 078",
+        "2026-08-29"
+      ],
+      "series": "ROAD FC",
+      "startsAt": "2026-08-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ROAD FC",
+      "sourceUrl": "https://roadfc.com/main/em/em.php",
+      "reason": "공식 경기/이벤트 페이지에 2026년 08.29 토요일(일자 명시)로 표기되어 미래 일정임을 재확인."
+    },
+    {
+      "id": "42f084b5926791231219",
+      "title": "UFC 상하이 2026년 8월 29일(현지) 개최",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "UFC Fight Night",
+        "상하이",
+        "2026-08-29"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-08-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/",
+      "reason": "공식 홈 화면에서 ‘2026년 8월 29일 UFC Fight Night: Nurmagomedov vs Song in Shanghai’ 관련 게시가 확인되나, 해당 스니펫만으로 정확한 현지/한국 시간 표기를 확정하긴 어려워 날짜만(시간 미정) 이벤트로 반영."
+    },
+    {
       "id": "75c0ff684c94f35e4fea",
       "title": "UFC 상하이: 8/29 UFC 파이트 나이트 샹하이",
       "category": "격투기",
@@ -261,6 +302,24 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php",
       "reason": "블랙컴뱃 공식 이벤트 목록에 2026년 8월 29일 일정이 명시됨."
+    },
+    {
+      "id": "fdfba89f3a74511a47f8",
+      "title": "PlayStation Plus 9월 월간 게임 제공 시작",
+      "category": "게임",
+      "tags": [
+        "PlayStation Plus",
+        "월간 게임"
+      ],
+      "series": "PlayStation Plus Monthly Games for September",
+      "startsAt": "2026-09-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/26/playstation-plus-monthly-games-for-september-sniper-elite-resistance-mlb-the-show-26-wobbly-life-chained-echoes/",
+      "reason": "해당 글은 9월 월간 게임이 화요일부터 제공된다고 하나, 날짜가 본문에 구체적으로 제공되지 않습니다."
     },
     {
       "id": "04a8f820d4f9fb556582",
@@ -498,6 +557,41 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/18/20260818-speaker/",
       "reason": "본문에서 SE 아시아 대상 Pulse Elevate 무선 스피커의 출시일이 11월 12일(2026)로 제시되어 있습니다."
+    },
+    {
+      "id": "36177cad125c7709ed1a",
+      "title": "METRO 2039 Isn&#8217;t Kidding Around",
+      "category": "게임",
+      "tags": [],
+      "series": "METRO 2039",
+      "startsAt": "2027-02-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/26/metro-2039-preview/",
+      "reason": "원문에서 METRO 2039가 2027년 2월에 출시 예정이라고 언급합니다(일자는 미기재)."
+    },
+    {
+      "id": "54f4d9f6923378949b79",
+      "title": "ONE, 카타르 첫 시리즈 이벤트 2027년 3월 26일",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "카타르",
+        "2027-03-26",
+        "출범 이벤트"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
+      "reason": "공식 보도자료에 ‘2027년 3월 26일(Friday, March 26, 2027)’ 첫 이벤트 개최 일자가 명시되어 미래 일정으로 재확인."
     }
   ]
 }
