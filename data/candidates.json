@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T00:21:20.858Z",
+  "generatedAt": "2026-08-28T05:01:55.147Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -302,6 +302,26 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php",
       "reason": "블랙컴뱃 공식 이벤트 목록에 2026년 8월 29일 일정이 명시됨."
+    },
+    {
+      "id": "a37daf3620972e3b81c9",
+      "title": "블랙컵 4강(미국 vs 일본) 2026-08-29",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "블랙컵",
+        "MMA",
+        "4강"
+      ],
+      "series": "BLACK COMBAT BLACK CUP",
+      "startsAt": "2026-08-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/blackcup.php",
+      "reason": "주최사 공식 페이지에서 ‘다음경기 2026-08-29’ 및 상대(TEAM JAPAN) 표기가 확인됨."
     },
     {
       "id": "fdfba89f3a74511a47f8",
