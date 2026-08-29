@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T02:56:48.930Z",
+  "generatedAt": "2026-08-29T22:56:13.798Z",
   "events": [
     {
       "id": "cd9d42302d2631edca49",
@@ -395,6 +395,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/four-blockbuster-mma-and-submission-grappling-bouts-booked-for-one-fight-night-47",
       "reason": "ONE 공식 기사에서 ‘2026년 9월 4일(금) Lumpinee Stadium, Bangkok’ 개최로 명시되어 있음."
+    },
+    {
+      "id": "148c890ec049bd54bfaa",
+      "title": "ONE Fight Night 47(Prime Video) 개최: 9월 4일",
+      "category": "격투기",
+      "tags": [
+        "ONE",
+        "MMA",
+        "Submission Grappling",
+        "Lumpinee Stadium"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-09-04T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/four-blockbuster-mma-and-submission-grappling-bouts-booked-for-one-fight-night-47",
+      "reason": "ONE Championship 공식 기사에서 ONE Fight Night 47이 2026년 9월 4일(금)로 명시됨(시간은 ‘U.S. primetime’ 중심이라 KST 고정 시간 미제공)."
     },
     {
       "id": "3c6b965fc3c464e00581",
