@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T00:12:57.501Z",
+  "generatedAt": "2026-09-01T22:55:04.335Z",
   "events": [
     {
       "id": "d105a4249b5862033051",
@@ -363,6 +363,24 @@
       "reason": "공식 글에서 Young Suns의 1.0 런치 일정을 9월 1일로 명시해 발표했습니다."
     },
     {
+      "id": "e8264149553dd0519e7c",
+      "title": "State of Play & State of Play Japan return on September 3",
+      "category": "e스포츠",
+      "tags": [
+        "State of Play",
+        "State of Play Japan"
+      ],
+      "series": "State of Play",
+      "startsAt": "2026-09-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/31/state-of-play-state-of-play-japan-return-on-september-3/",
+      "reason": "공식 블로그에서 9월 3일에 State of Play 및 State of Play Japan 방송이 돌아온다고 공지했다."
+    },
+    {
       "id": "04a8f820d4f9fb556582",
       "title": "ONE Fight Night 47 9/4(방콕)",
       "category": "격투기",
@@ -495,6 +513,25 @@
       "reason": "UFC 공식 공지에 2026년 9월 12일(토) 개최로 명시됨."
     },
     {
+      "id": "165f1f1900662555d0b8",
+      "title": "Marvel’s Wolverine: Details on Logan’s mutant abilities, game features, and more",
+      "category": "게임",
+      "tags": [
+        "Marvel’s Wolverine",
+        "Feature Trailer",
+        "September 15"
+      ],
+      "series": "Marvel’s Wolverine",
+      "startsAt": "2026-09-15T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/08/28/marvels-wolverine-details-on-logans-mutant-abilities-game-features-and-more/",
+      "reason": "공식 글에서 Marvel’s Wolverine이 9월 15일에 ‘coming’이라고 언급해 해당 날짜의 공개/출시 시점을 기대 일정으로 추출했다."
+    },
+    {
       "id": "bde78a927208b7a58c38",
       "title": "Marvel’s Wolverine: PS5 런치 일정(9월 15일) 딥다이브 공개",
       "category": "게임",
@@ -585,6 +622,49 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
       "reason": "Ghost of Yōtei Complete Edition이 10월 2일 PS5에 제공된다고 공식적으로 안내한다."
+    },
+    {
+      "id": "6f033dbe8cf63138cd9a",
+      "title": "ONE Fight Night 48: Erdogan vs. Elliott (10/2)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Prime Video",
+        "Lumpinee Stadium",
+        "태국"
+      ],
+      "series": "ONE Fight Night 48",
+      "startsAt": "2026-10-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/onefightnight48",
+      "reason": "공식 ONE 이벤트 페이지에 ‘Friday, October 2’로 개최일이 명시됨."
+    },
+    {
+      "id": "10d0f44f1a9d8075556c",
+      "title": "ONE SAMURAI 4 (10/17)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Muay Thai",
+        "kickboxing",
+        "Ariake Arena",
+        "일본"
+      ],
+      "series": "ONE SAMURAI 4",
+      "startsAt": "2026-10-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-samurai-4",
+      "reason": "공식 ONE 이벤트 페이지에 ‘On Saturday, October 17’로 개최일이 명시됨."
     },
     {
       "id": "d41925e39e07289923ed",
