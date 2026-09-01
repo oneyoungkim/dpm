@@ -1,41 +1,6 @@
 {
-  "generatedAt": "2026-08-29T22:56:13.798Z",
+  "generatedAt": "2026-09-01T00:12:57.501Z",
   "events": [
-    {
-      "id": "cd9d42302d2631edca49",
-      "title": "Free Play Days – Gears of War: E-Day Open Beta, Sunderfolk and Asdivine Cross",
-      "category": "게임",
-      "tags": [
-        "Free Play Days",
-        "open beta"
-      ],
-      "series": "Free Play Days",
-      "startsAt": "2026-08-17T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/13/template-free-play-days-08-13-2026/",
-      "reason": "Gears of War: E-Day 오픈 베타가 8월 17일에 종료된다고 안내돼 있습니다."
-    },
-    {
-      "id": "e590bcd98ae182418c1e",
-      "title": "Next Week on XBOX: New Games for August 17 to 21",
-      "category": "게임",
-      "tags": [
-        "release dates subject to change"
-      ],
-      "series": "Next Week on XBOX",
-      "startsAt": "2026-08-17T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/14/next-week-on-xbox-new-games-for-august-17-to-21/",
-      "reason": "공식 주간 코너에서 8월 17일부터 21일까지의 신규 라인업을 안내합니다."
-    },
     {
       "id": "d105a4249b5862033051",
       "title": "UFC BJJ Opens 1차 대회(라스베이거스) 8/22 개최",
@@ -379,6 +344,25 @@
       "reason": "해당 글은 9월 월간 게임이 화요일부터 제공된다고 하나, 날짜가 본문에 구체적으로 제공되지 않습니다."
     },
     {
+      "id": "b380be646e8cef20b8f9",
+      "title": "Young Suns 1.0 런치",
+      "category": "게임",
+      "tags": [
+        "Young Suns",
+        "1.0",
+        "런치"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-09-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/08/31/rebuilding-better-together-for-the-1-0-launch-of-young-suns/",
+      "reason": "공식 글에서 Young Suns의 1.0 런치 일정을 9월 1일로 명시해 발표했습니다."
+    },
+    {
       "id": "04a8f820d4f9fb556582",
       "title": "ONE Fight Night 47 9/4(방콕)",
       "category": "격투기",
@@ -546,6 +530,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/24/vr-shooter-into-the-radius-2-hits-ps-vr2-september-24/",
       "reason": "공식 글에서 Into the Radius 2가 9월 24일 PS VR2에 출시된다고 명시한다."
+    },
+    {
+      "id": "4128d4b9b555244f9012",
+      "title": "ONE Friday Fights 126 (9/26)",
+      "category": "격투기",
+      "tags": [
+        "MMA",
+        "Muay Thai",
+        "kickboxing",
+        "ONE Championship"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-09-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-126",
+      "reason": "공식 ONE 이벤트 페이지에 ‘ONE Friday Fights 126’이 ‘September 26’로 명시되어 있으며, 행사가 해당 날짜에 개최된다고 안내합니다."
     },
     {
       "id": "1e427dd23483678f0192",
