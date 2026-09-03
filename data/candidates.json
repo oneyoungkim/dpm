@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T22:54:51.132Z",
+  "generatedAt": "2026-09-03T22:56:12.648Z",
   "events": [
     {
       "id": "d105a4249b5862033051",
@@ -644,6 +644,23 @@
       "reason": "기사에서 9월 29일에 The Witcher 3: Wild Hunt의 Songs of the Past와 Remastered가 제공된다고 명시한다."
     },
     {
+      "id": "73564e48613c88656513",
+      "title": "Gran Turismo 7 Spec IV update launching in two parts later this year",
+      "category": "게임",
+      "tags": [
+        "업데이트"
+      ],
+      "series": "Gran Turismo 7",
+      "startsAt": "2026-10-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/gran-turismo-7-spec-iv-update-launching-in-two-parts-later-this-year/",
+      "reason": "Gran Turismo 7 Spec IV 업데이트가 올해 10월에 첫 번째 파트로 제공된다고 설명합니다."
+    },
+    {
       "id": "36e0f2c20ff8d9c6eebe",
       "title": "Ghost of Yōtei Complete Edition: PS5 10월 2일 출시",
       "category": "게임",
@@ -722,6 +739,25 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-friday-fights-127",
       "reason": "공식 이벤트 상세 페이지에 'on October 3'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
+    },
+    {
+      "id": "3932d1583766c40be32f",
+      "title": "Sneaky Sasquatch transforms Subway Surfers+ (available through October 7)",
+      "category": "게임",
+      "tags": [
+        "Apple Arcade",
+        "Sneaky Sasquatch",
+        "Subway Surfers+"
+      ],
+      "series": "Sneaky Sasquatch × Subway Surfers+",
+      "startsAt": "2026-10-07T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/08/exciting-updates-for-sneaky-sasquatch-come-to-apple-arcade/",
+      "reason": "공개된 안내에 따르면 해당 콘텐츠는 10월 7일까지 제공된다."
     },
     {
       "id": "10d0f44f1a9d8075556c",
@@ -818,6 +854,24 @@
       "reason": "본문에서 SE 아시아 대상 Pulse Elevate 무선 스피커의 출시일이 11월 12일(2026)로 제시되어 있습니다."
     },
     {
+      "id": "1cdcdc8dfae073d1eca5",
+      "title": "First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
+      "category": "게임",
+      "tags": [
+        "게임 출시",
+        "컨트롤러"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
+      "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
+    },
+    {
       "id": "2e10113c7173f179528e",
       "title": "Pre-Order Grand Theft Auto VI Now. Coming to XBOX Series X|S November 19, 2026",
       "category": "게임",
@@ -846,6 +900,40 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/08/27/dumpster-gang-chaotic-raccoon-co-op/",
       "reason": "기사 제목에 ‘December 2026’로만 표기되어 있어 월 기준으로 12월 1일로 처리한다."
+    },
+    {
+      "id": "ad0f5ccbfd2279dbae69",
+      "title": "Fate/Extra Record launches Jan 28 2027 on PS5 & PS4",
+      "category": "게임",
+      "tags": [
+        "게임 출시"
+      ],
+      "series": "Fate/Extra Record",
+      "startsAt": "2027-01-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/fate-extra-record-launches-jan-28-2027-on-ps5-ps4/",
+      "reason": "Fate/Extra Record가 2027년 1월 28일 PS4와 PS5에 출시된다고 안내합니다."
+    },
+    {
+      "id": "90615d4087fd77cc865b",
+      "title": "Until Dawn 2 launches January 28",
+      "category": "게임",
+      "tags": [
+        "게임 출시"
+      ],
+      "series": "Until Dawn 2",
+      "startsAt": "2027-01-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/until-dawn-2-launches-january-28/",
+      "reason": "Until Dawn 2가 2027년 1월 28일 PS5에 출시된다고 안내합니다."
     },
     {
       "id": "36177cad125c7709ed1a",
@@ -881,6 +969,23 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
       "reason": "공식 보도자료에 ‘2027년 3월 26일(Friday, March 26, 2027)’ 첫 이벤트 개최 일자가 명시되어 미래 일정으로 재확인."
+    },
+    {
+      "id": "024f9bdd333c694257e8",
+      "title": "Final Fantasy VII Revelation launches on PS5 April 8, 2027",
+      "category": "게임",
+      "tags": [
+        "게임 출시"
+      ],
+      "series": "Final Fantasy VII Revelation",
+      "startsAt": "2027-04-08T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/final-fantasy-vii-revelation-launches-on-ps5-april-8-2027/",
+      "reason": "Final Fantasy VII Revelation이 2027년 4월 8일 PS5에 출시된다고 확정합니다."
     }
   ]
 }
