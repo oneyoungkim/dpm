@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T22:56:12.648Z",
+  "generatedAt": "2026-09-04T22:38:33.666Z",
   "events": [
     {
       "id": "d105a4249b5862033051",
@@ -475,6 +475,27 @@
       "reason": "공식 UFC 기사에서 2026년 9월 5일 UFC 파리 개최를 명시."
     },
     {
+      "id": "35ad9dcfce453a474c15",
+      "title": "UFC 파이트 나이트 훅커 vs 파르나스 9/5",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "미국",
+        "라스베이거스?",
+        "파리",
+        "MMA"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-09-05T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-05-2026?page=1",
+      "reason": "공식 UFC 이벤트 페이지에 2026-09-05 개최일이 명시되어 있음(시간은 페이지 표기 기반으로 한국시간 변환이 필요하나, 본 페이지에 EDT 기준 시간이 있어도 한국시간 카드 표기를 위해 날짜만 확정)."
+    },
+    {
       "id": "24ac726fd3768e3f5053",
       "title": "Code Vein II: Mask of Idris – DLC 출시(September 9)",
       "category": "게임",
@@ -533,6 +554,27 @@
       "reason": "기사 본문에서 BlizzCon 2026이 9월 12일과 13일에 열린다고 언급합니다."
     },
     {
+      "id": "9398842377b4f4cd0bf7",
+      "title": "NOCHE UFC 실바 vs 델가도 9/12",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "NOCHE UFC",
+        "글렌데일",
+        "애리조나",
+        "MMA"
+      ],
+      "series": "Noche UFC",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/noche-ufc-2026",
+      "reason": "공식 UFC Noche UFC 전용 페이지에 2026년 9월 12일(토) 개최가 명시되어 있음."
+    },
+    {
       "id": "a48d4a4e1f359fbbd039",
       "title": "NOCHE UFC, 9/12 글렌데일에서 개최",
       "category": "격투기",
@@ -551,6 +593,25 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/noche-ufc-take-place-september-12-ufc-returns-glendale-arizona",
       "reason": "UFC 공식 공지에 2026년 9월 12일(토) 개최로 명시됨."
+    },
+    {
+      "id": "e942ef94bfcffca2cd64",
+      "title": "NOCHE UFC: 실바 vs 델가도 (공식 이벤트 페이지)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "Noche UFC",
+        "Desert Diamond Arena"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+      "reason": "공식 UFC 이벤트 페이지에 2026-09-12 개최일이 명시되어 있음. (이미지/카테고리상 동일 이벤트로, 해당 페이지 기준으로 날짜 재확인)"
     },
     {
       "id": "165f1f1900662555d0b8",
@@ -627,6 +688,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-friday-fights-126",
       "reason": "공식 ONE 이벤트 페이지에 ‘ONE Friday Fights 126’이 ‘September 26’로 명시되어 있으며, 행사가 해당 날짜에 개최된다고 안내합니다."
+    },
+    {
+      "id": "9acf4a3a47998709c639",
+      "title": "UFC 파이트 나이트 로자스 주니어 vs 바르셀로스 9/26",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "라스베이거스",
+        "Meta APEX"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-09-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+      "reason": "공식 UFC 이벤트 페이지에 2026-09-26(토) 개최가 명시되어 있음."
     },
     {
       "id": "1e427dd23483678f0192",
@@ -870,6 +951,25 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
       "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
+    },
+    {
+      "id": "cee18014c5542bf5d076",
+      "title": "First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
+      "category": "게임",
+      "tags": [
+        "Grand Theft Auto VI",
+        "DualSense",
+        "출시"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-gta/",
+      "reason": "Grand Theft Auto VI가 11월 19일 출시된다고 본문에서 명시되어 있습니다."
     },
     {
       "id": "2e10113c7173f179528e",
