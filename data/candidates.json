@@ -1,63 +1,6 @@
 {
-  "generatedAt": "2026-09-04T22:38:33.666Z",
+  "generatedAt": "2026-09-05T22:29:13.594Z",
   "events": [
-    {
-      "id": "d105a4249b5862033051",
-      "title": "UFC BJJ Opens 1차 대회(라스베이거스) 8/22 개최",
-      "category": "격투기",
-      "tags": [
-        "ufc",
-        "ufc bjj",
-        "jiu-jitsu",
-        "토너먼트"
-      ],
-      "series": "UFC BJJ Opens",
-      "startsAt": "2026-08-22T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-bjj-announces-launch-ufc-bjj-opens",
-      "reason": "UFC 공식 공지에서 ‘2026년 8월 22일(토) 라스베이거스에서 첫 대회’로 명시되어 있음."
-    },
-    {
-      "id": "4d27b18006c03d205eac",
-      "title": "UFC Fight Night: Hernandez vs Rodrigues 8/22",
-      "category": "격투기",
-      "tags": [
-        "ufc",
-        "fight night",
-        "herandez vs rodrigues"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-08-22T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://jp.ufc.com/news/pivotal-middleweight-bout-between-anthony-hernandez-and-gregory-rodrigues-headlines-ufc-return",
-      "reason": "UFC 공식 공지에서 ‘2026년 8월 22일(토) Sacramento Golden 1 Center’ 개최로 명시되어 있음."
-    },
-    {
-      "id": "cc6d9542d72210d99d77",
-      "title": "UFC 새크라멘토: Hernandez vs Rodrigues",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "Fight Night"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-08-22T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/pivotal-middleweight-bout-between-anthony-hernandez-and-gregory-rodrigues-headlines-ufc-return",
-      "reason": "UFC 공식 기사에 ‘2026년 8월 22일(토) Golden 1 Center’ 개최가 명시됨. 시간 표기는 없어서 KST 12:00으로 처리."
-    },
     {
       "id": "67368cc750ff15a90184",
       "title": "Modern Warfare 4 Open Beta: Everything You Need to Know",
@@ -593,6 +536,27 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/noche-ufc-take-place-september-12-ufc-returns-glendale-arizona",
       "reason": "UFC 공식 공지에 2026년 9월 12일(토) 개최로 명시됨."
+    },
+    {
+      "id": "7cbaef6d4d6d7f110a4b",
+      "title": "Noche UFC: Silva vs Delgado (9/12)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Noche UFC",
+        "글렌데일",
+        "시우다드 멕시코"
+      ],
+      "series": "UFC Noche UFC 2026",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/noche-ufc-2026?page=1",
+      "reason": "UFC 공식 Noche UFC 2026 페이지에서 ‘Saturday, September 12’로 일자가 명시됨."
     },
     {
       "id": "e942ef94bfcffca2cd64",
