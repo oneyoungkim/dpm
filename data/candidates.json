@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T22:29:13.594Z",
+  "generatedAt": "2026-09-06T22:33:52.785Z",
   "events": [
     {
       "id": "67368cc750ff15a90184",
@@ -805,6 +805,26 @@
       "reason": "공개된 안내에 따르면 해당 콘텐츠는 10월 7일까지 제공된다."
     },
     {
+      "id": "0b583512c83bcad8f6fb",
+      "title": "Sneaky Sasquatch transforms Subway Surfers+ with the charm and aesthetic of the hit open-world Apple Arcade game (October 7까지)",
+      "category": "게임",
+      "tags": [
+        "Apple Arcade",
+        "Sneaky Sasquatch",
+        "Subway Surfers+",
+        "업데이트"
+      ],
+      "series": "Apple Newsroom",
+      "startsAt": "2026-10-07T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/08/exciting-updates-for-sneaky-sasquatch-come-to-apple-arcade/",
+      "reason": "공식 기사에서 10월 7일까지 해당 게임 연동/테마 업데이트가 진행된다고 안내한다."
+    },
+    {
       "id": "10d0f44f1a9d8075556c",
       "title": "ONE SAMURAI 4 (10/17)",
       "category": "격투기",
@@ -920,20 +940,16 @@
       "id": "cee18014c5542bf5d076",
       "title": "First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
       "category": "게임",
-      "tags": [
-        "Grand Theft Auto VI",
-        "DualSense",
-        "출시"
-      ],
+      "tags": [],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
+      "timeTbd": false,
       "eventMode": "release-window",
-      "datePrecision": "date",
+      "datePrecision": "time",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-gta/",
-      "reason": "Grand Theft Auto VI가 11월 19일 출시된다고 본문에서 명시되어 있습니다."
+      "reason": "Grand Theft Auto VI의 출시일이 2026년 11월 19일로 제시됐다."
     },
     {
       "id": "2e10113c7173f179528e",
