@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T23:10:20.319Z",
+  "generatedAt": "2026-09-08T23:04:06.025Z",
   "events": [
     {
       "id": "fd167563666d6dd24c7a",
@@ -524,6 +524,26 @@
       "reason": "UFC 공식 Noche UFC 2026 페이지에서 ‘Saturday, September 12’로 일자가 명시됨."
     },
     {
+      "id": "784d7d36e826b96fa855",
+      "title": "Noche UFC: 실바 vs 델가도 (9/12)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Noche UFC",
+        "미국"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+      "reason": "UFC 공식 이벤트 페이지에 2026-09-12(현지 시간 표기 포함)로 행사 일정이 명시되어 있음."
+    },
+    {
       "id": "e942ef94bfcffca2cd64",
       "title": "NOCHE UFC: 실바 vs 델가도 (공식 이벤트 페이지)",
       "category": "격투기",
@@ -579,6 +599,29 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
       "reason": "글에서 Marvel’s Wolverine이 9월 15일 출시된다고 명시하고 이를 기준으로 딥다이브가 안내된다."
+    },
+    {
+      "id": "2073448a37f641359186",
+      "title": "Call of Duty: Black Ops 7 and Warzone Season 06 launches The Haunting",
+      "category": "게임",
+      "tags": [
+        "Call of Duty: Black Ops 7",
+        "Warzone",
+        "The Haunting",
+        "Season 06",
+        "새 업데이트",
+        "신규 맵",
+        "신규 모드"
+      ],
+      "series": "Call of Duty",
+      "startsAt": "2026-09-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/",
+      "reason": "Call of Duty: Black Ops 7과 Warzone의 Season 06 업데이트 ‘The Haunting’이 9월 17일 공개된다고 안내합니다."
     },
     {
       "id": "d556480f6c31523b66ae",
@@ -924,6 +967,26 @@
       "reason": "본문에서 SE 아시아 대상 Pulse Elevate 무선 스피커의 출시일이 11월 12일(2026)로 제시되어 있습니다."
     },
     {
+      "id": "cee18014c5542bf5d076",
+      "title": "(For Southeast Asia) First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
+      "category": "게임",
+      "tags": [
+        "Grand Theft Auto VI",
+        "Limited-Edition DualSense",
+        "PS 컨트롤러",
+        "출시"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-gta/",
+      "reason": "Grand Theft Auto VI가 11월 19일 출시된다고 본문에 언급되어 해당 날짜의 출시 이벤트를 추출합니다."
+    },
+    {
       "id": "1cdcdc8dfae073d1eca5",
       "title": "First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
       "category": "게임",
@@ -940,21 +1003,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
       "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
-    },
-    {
-      "id": "cee18014c5542bf5d076",
-      "title": "Grand Theft Auto VI Limited-Edition DualSense controllers (GTA VI launch date)",
-      "category": "게임",
-      "tags": [],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-gta/",
-      "reason": "Grand Theft Auto VI가 11월 19일에 출시된다고 언급되었다."
     },
     {
       "id": "2e10113c7173f179528e",
@@ -1004,6 +1052,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 49이 12월 11일(동부시간 기준 21:00)로 명시."
+    },
+    {
+      "id": "5e2bbf68f5c68e3f25c6",
+      "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
+      "category": "게임",
+      "tags": [
+        "Until Dawn 2",
+        "PS5",
+        "출시",
+        "2027년 1월 28일"
+      ],
+      "series": "Until Dawn",
+      "startsAt": "2027-01-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-ud/",
+      "reason": "Until Dawn 2가 PS5용으로 2027년 1월 28일 출시된다고 명시되어 있습니다."
     },
     {
       "id": "ad0f5ccbfd2279dbae69",
@@ -1073,6 +1141,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
       "reason": "공식 보도자료에 ‘2027년 3월 26일(Friday, March 26, 2027)’ 첫 이벤트 개최 일자가 명시되어 미래 일정으로 재확인."
+    },
+    {
+      "id": "8027962d52a7ce6f5c57",
+      "title": "ONE: ONE x Visit Qatar 첫 이벤트(3/26, 도하)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "사우디/카타르",
+        "Muay Thai",
+        "MMA"
+      ],
+      "series": "ONE",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/training-never-betrays-you-ryujin-nasukawa-reflects-on-stunning-one-debut-victory-over-thongpoon",
+      "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
       "id": "024f9bdd333c694257e8",
