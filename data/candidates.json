@@ -1,41 +1,6 @@
 {
-  "generatedAt": "2026-09-08T23:04:06.025Z",
+  "generatedAt": "2026-09-09T22:50:56.312Z",
   "events": [
-    {
-      "id": "fd167563666d6dd24c7a",
-      "title": "Samsung To Showcase Latest Gaming Innovations at Gamescom 2026",
-      "category": "게임",
-      "tags": [
-        "쇼케이스",
-        "Gamescom 2026",
-        "Koelnmesse",
-        "게임 혁신"
-      ],
-      "series": "Gamescom",
-      "startsAt": "2026-08-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "live-trigger",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
-      "reason": "Samsung이 Gamescom 2026(8월 26~30일)에서 최신 게임 혁신을 선보일 계획이다."
-    },
-    {
-      "id": "8e0fb9af56da567c7404",
-      "title": "Samsung To Showcase Latest Gaming Innovations at Gamescom 2026",
-      "category": "게임",
-      "tags": [],
-      "series": "Gamescom 2026",
-      "startsAt": "2026-08-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-to-showcase-latest-gaming-innovations-at-gamescom-2026",
-      "reason": "Samsung이 Gamescom 2026(8월 26-30)에서 최신 게임 혁신을 선보일 예정이라고 밝혔습니다."
-    },
     {
       "id": "e3ef3a6899a221097f35",
       "title": "[Invitation] Galaxy Event August 2026",
@@ -524,6 +489,26 @@
       "reason": "UFC 공식 Noche UFC 2026 페이지에서 ‘Saturday, September 12’로 일자가 명시됨."
     },
     {
+      "id": "c07a41e5e8b1638b2457",
+      "title": "Noche UFC: Silva vs Delgado (9/12)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "격투기",
+        "Noche UFC",
+        "미국"
+      ],
+      "series": "UFC Noche UFC",
+      "startsAt": "2026-09-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/noche-ufc-2026",
+      "reason": "UFC 공식 페이지 검색 결과에 2026년 9월 12일 행사(메인 이벤트)가 명시되어 있으나, 본문 접근(403)으로 시간대/정확 시간 확인은 실패해 timeTbd=true 처리."
+    },
+    {
       "id": "784d7d36e826b96fa855",
       "title": "Noche UFC: 실바 vs 델가도 (9/12)",
       "category": "격투기",
@@ -605,13 +590,11 @@
       "title": "Call of Duty: Black Ops 7 and Warzone Season 06 launches The Haunting",
       "category": "게임",
       "tags": [
-        "Call of Duty: Black Ops 7",
+        "Call of Duty",
+        "Black Ops 7",
         "Warzone",
-        "The Haunting",
         "Season 06",
-        "새 업데이트",
-        "신규 맵",
-        "신규 모드"
+        "The Haunting"
       ],
       "series": "Call of Duty",
       "startsAt": "2026-09-17T12:00:00+09:00",
@@ -621,7 +604,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/",
-      "reason": "Call of Duty: Black Ops 7과 Warzone의 Season 06 업데이트 ‘The Haunting’이 9월 17일 공개된다고 안내합니다."
+      "reason": "공식 글에서 Black Ops 7과 Warzone Season 06의 The Haunting이 9월 17일 출시(업데이트)된다고 안내합니다."
     },
     {
       "id": "d556480f6c31523b66ae",
@@ -812,6 +795,25 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-friday-fights-127",
       "reason": "공식 이벤트 상세 페이지에 'on October 3'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
+    },
+    {
+      "id": "91e4236f02f097b6c190",
+      "title": "Plan for Emergence Day Today With the Full Gears of War: E-Day Achievements List",
+      "category": "게임",
+      "tags": [
+        "Gears of War: E-Day",
+        "Emergence Begins",
+        "업적"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-10-06T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/09/plan-for-emergence-day-today-with-the-full-gears-of-war-e-day-achievements-list/",
+      "reason": "원문에 Emergence Begins가 10월 6일로 명시되어 있어 해당 날짜의 행사/진행을 일정으로 추출했다."
     },
     {
       "id": "3932d1583766c40be32f",
@@ -1072,6 +1074,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-ud/",
       "reason": "Until Dawn 2가 PS5용으로 2027년 1월 28일 출시된다고 명시되어 있습니다."
+    },
+    {
+      "id": "f7c46337fafa1fcc7fb4",
+      "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
+      "category": "게임",
+      "tags": [
+        "Until Dawn 2",
+        "PS5",
+        "출시",
+        "January 28, 2027"
+      ],
+      "series": "Until Dawn 2",
+      "startsAt": "2027-01-28T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-ud/",
+      "reason": "공식 글에서 Until Dawn 2가 PS5에서 2027년 1월 28일 출시된다고 명시합니다."
     },
     {
       "id": "ad0f5ccbfd2279dbae69",
