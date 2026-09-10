@@ -1,24 +1,6 @@
 {
-  "generatedAt": "2026-09-09T22:50:56.312Z",
+  "generatedAt": "2026-09-10T22:51:39.840Z",
   "events": [
-    {
-      "id": "e3ef3a6899a221097f35",
-      "title": "[Invitation] Galaxy Event August 2026",
-      "category": "테크",
-      "tags": [
-        "Galaxy S26",
-        "Galaxy Event"
-      ],
-      "series": "Galaxy Event August 2026",
-      "startsAt": "2026-08-27T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "live-trigger",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/invitation-galaxy-event-august-2026",
-      "reason": "삼성전자는 2026년 8월 27일 ‘Galaxy Event August 2026’을 개최해 Galaxy S26 제품군의 새로운 모델을 소개한다고 밝혔다."
-    },
     {
       "id": "faac0c4d395310852de4",
       "title": "Road to UFC Season 5 준결승 8/28(상하이)",
