@@ -1,46 +1,6 @@
 {
-  "generatedAt": "2026-09-10T22:51:39.840Z",
+  "generatedAt": "2026-09-11T22:53:53.198Z",
   "events": [
-    {
-      "id": "faac0c4d395310852de4",
-      "title": "Road to UFC Season 5 준결승 8/28(상하이)",
-      "category": "격투기",
-      "tags": [
-        "ufc",
-        "road to ufc",
-        "season 5"
-      ],
-      "series": "Road to UFC Season 5 (Semifinals)",
-      "startsAt": "2026-08-28T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
-      "reason": "UFC 공식 공지에서 ‘2026년 8월 28일(금) ROAD TO UFC Season 5 준결승’로 명시되어 있음."
-    },
-    {
-      "id": "1f42fe6f5c1909040071",
-      "title": "ROAD TO UFC 시즌5: 8/28 상하이 세미파이널",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "ROAD TO UFC",
-        "시즌 5",
-        "상하이"
-      ],
-      "series": "ROAD TO UFC 시즌 5 세미파이널",
-      "startsAt": "2026-08-28T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
-      "reason": "UFC 공식 공지에서 2026년 8월 28일(금) ROAD TO UFC SEASON 5 세미파이널이 열린다고 명시."
-    },
     {
       "id": "5fee15551dd59189ab16",
       "title": "ROAD FC 078 2026년 8월 29일 개최",
@@ -530,6 +490,21 @@
       "reason": "공식 UFC 이벤트 페이지에 2026-09-12 개최일이 명시되어 있음. (이미지/카테고리상 동일 이벤트로, 해당 페이지 기준으로 날짜 재확인)"
     },
     {
+      "id": "360e7f148d813b21d363",
+      "title": "Next Week on XBOX: New Games for September 14 to 18",
+      "category": "게임",
+      "tags": [],
+      "series": "Next Week on XBOX",
+      "startsAt": "2026-09-14T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/11/next-week-on-xbox-new-games-for-september-14-to-18/",
+      "reason": "기사에서 9월 14일부터 9월 18일까지의 다음 주 라인업을 예고한다."
+    },
+    {
       "id": "165f1f1900662555d0b8",
       "title": "Marvel’s Wolverine: Details on Logan’s mutant abilities, game features, and more",
       "category": "게임",
@@ -587,6 +562,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/",
       "reason": "공식 글에서 Black Ops 7과 Warzone Season 06의 The Haunting이 9월 17일 출시(업데이트)된다고 안내합니다."
+    },
+    {
+      "id": "c8615615cfce8476fd79",
+      "title": "Control Resonant’s expanded Assist Mode 공개(September 24 launch)",
+      "category": "게임",
+      "tags": [
+        "PlayStation Blog",
+        "Control Resonant",
+        "Assist Mode",
+        "출시"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-09-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/10/play-your-way-with-control-resonants-expanded-assist-mode/",
+      "reason": "원문에서 Control Resonant의 9월 24일 런칭(출시)을 명시합니다."
     },
     {
       "id": "d556480f6c31523b66ae",
@@ -1127,6 +1122,25 @@
       "reason": "원문에서 METRO 2039가 2027년 2월에 출시 예정이라고 언급합니다(일자는 미기재)."
     },
     {
+      "id": "d8d60ea69f51adc8f3ef",
+      "title": "Muramasa: Revenant Blades 출시(2027년 2월 4일)",
+      "category": "게임",
+      "tags": [
+        "PlayStation Blog",
+        "Muramasa: Revenant Blades",
+        "출시"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2027-02-04T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/10/muramasa-revenant-blades-launches-february-4-2027/",
+      "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
+    },
+    {
       "id": "54f4d9f6923378949b79",
       "title": "ONE, 카타르 첫 시리즈 이벤트 2027년 3월 26일",
       "category": "격투기",
@@ -1167,6 +1181,25 @@
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
+      "id": "dd0a32b34a26cd8a6a9b",
+      "title": "ONE 174 (4/3)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE 174",
+        "MMA"
+      ],
+      "series": "ONE Championship Numbered Events",
+      "startsAt": "2027-04-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
+      "reason": "ONE 공식 보도자료에 ‘4月3日 – ONE 174’가 명시되어 있으나, 시간은 미기재라서 해당 날짜 12:00(+09:00)로 표기."
+    },
+    {
       "id": "024f9bdd333c694257e8",
       "title": "Final Fantasy VII Revelation launches on PS5 April 8, 2027",
       "category": "게임",
@@ -1182,6 +1215,25 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/final-fantasy-vii-revelation-launches-on-ps5-april-8-2027/",
       "reason": "Final Fantasy VII Revelation이 2027년 4월 8일 PS5에 출시된다고 확정합니다."
+    },
+    {
+      "id": "1fd12874178b4277983e",
+      "title": "ONE 175 (4/29, 도쿄 아리아케)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE 175",
+        "도쿄"
+      ],
+      "series": "ONE Championship Numbered Events",
+      "startsAt": "2027-04-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
+      "reason": "ONE 공식 보도자료에 ‘4月29日 – ONE 175／東京・有明アリーナ(日本)’로 날짜가 명시됨(시간 미기재)."
     }
   ]
 }
