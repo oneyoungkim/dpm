@@ -1,130 +1,6 @@
 {
-  "generatedAt": "2026-09-11T22:53:53.198Z",
+  "generatedAt": "2026-09-12T22:43:36.480Z",
   "events": [
-    {
-      "id": "5fee15551dd59189ab16",
-      "title": "ROAD FC 078 2026년 8월 29일 개최",
-      "category": "격투기",
-      "tags": [
-        "ROAD FC",
-        "격투기",
-        "국내",
-        "ROAD FC 078",
-        "2026-08-29"
-      ],
-      "series": "ROAD FC",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ROAD FC",
-      "sourceUrl": "https://roadfc.com/main/em/em.php",
-      "reason": "공식 경기/이벤트 페이지에 2026년 08.29 토요일(일자 명시)로 표기되어 미래 일정임을 재확인."
-    },
-    {
-      "id": "42f084b5926791231219",
-      "title": "UFC 상하이 2026년 8월 29일(현지) 개최",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "상하이",
-        "2026-08-29"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/",
-      "reason": "공식 홈 화면에서 ‘2026년 8월 29일 UFC Fight Night: Nurmagomedov vs Song in Shanghai’ 관련 게시가 확인되나, 해당 스니펫만으로 정확한 현지/한국 시간 표기를 확정하긴 어려워 날짜만(시간 미정) 이벤트로 반영."
-    },
-    {
-      "id": "75c0ff684c94f35e4fea",
-      "title": "UFC 상하이: 8/29 UFC 파이트 나이트 샹하이",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "UFC Fight Night",
-        "상하이",
-        "중국"
-      ],
-      "series": "UFC Fight Night 상하이",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-returns-shanghai-august-28-29",
-      "reason": "UFC 공식 공지에서 2026년 8월 29일(토) UFC FIGHT NIGHT SHANGHAI가 열린다고 명시."
-    },
-    {
-      "id": "b7bacd64fe491c210edd",
-      "title": "블랙컴뱃 블랙컵 4강: 일본 vs 미국",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "블랙컵",
-        "4강",
-        "일본",
-        "미국",
-        "MMA"
-      ],
-      "series": "BLACK COMBAT BLACK CUP SERIES",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/eventDetail.php?eventSeq=293",
-      "reason": "공식 블랙컴뱃 이벤트 상세 페이지에 ‘블랙컵 4강: 일본 vs 미국’ 및 이벤트 일정(2026년 08월 29일)이 명시되어 있음."
-    },
-    {
-      "id": "e9d67db254886562301d",
-      "title": "블랙컵 4강: 일본 vs 미국 8/29",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "블랙컵",
-        "세미파이널",
-        "Bucheon"
-      ],
-      "series": "BLACK COMBAT BLACK CUP SERIES",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "블랙컴뱃 공식 이벤트 목록에 2026년 8월 29일 일정이 명시됨."
-    },
-    {
-      "id": "a37daf3620972e3b81c9",
-      "title": "블랙컵 4강(미국 vs 일본) 2026-08-29",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "블랙컵",
-        "MMA",
-        "4강"
-      ],
-      "series": "BLACK COMBAT BLACK CUP",
-      "startsAt": "2026-08-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/blackcup.php",
-      "reason": "주최사 공식 페이지에서 ‘다음경기 2026-08-29’ 및 상대(TEAM JAPAN) 표기가 확인됨."
-    },
     {
       "id": "9ea51014e2c08013aa92",
       "title": "Next Week on XBOX: New Games for August 31 to September 4",
@@ -493,16 +369,20 @@
       "id": "360e7f148d813b21d363",
       "title": "Next Week on XBOX: New Games for September 14 to 18",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "Next Week on XBOX",
+        "September 14",
+        "September 18"
+      ],
       "series": "Next Week on XBOX",
       "startsAt": "2026-09-14T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "release-window",
+      "eventMode": "scheduled",
       "datePrecision": "date",
-      "confidence": "expected",
+      "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/11/next-week-on-xbox-new-games-for-september-14-to-18/",
-      "reason": "기사에서 9월 14일부터 9월 18일까지의 다음 주 라인업을 예고한다."
+      "reason": "‘Next Week on XBOX’에서 9월 14일부터 9월 18일까지의 신규 게임을 다룬다고 2026년 9월 11일에 안내했습니다."
     },
     {
       "id": "165f1f1900662555d0b8",
@@ -997,6 +877,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L#new_tab",
       "reason": "공식 페이지 문구에 따라 2026년 11월 19일에 XBOX Series X|S로 출시된다."
+    },
+    {
+      "id": "591d2393e3a0acdd35a3",
+      "title": "블랙컴뱃 17: 2026-11-21 고척스카이돔 개최",
+      "category": "격투기",
+      "tags": [
+        "MMA",
+        "Black Combat",
+        "블랙컴뱃 17"
+      ],
+      "series": "블랙컴뱃 NUMBERING SERIES",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "블랙컴뱃 공식 이벤트 페이지에 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시되어 있음. 시각은 미기재라 timeTbd 처리."
     },
     {
       "id": "367163c6259b78ded723",
