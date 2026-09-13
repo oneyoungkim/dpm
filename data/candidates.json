@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:43:36.480Z",
+  "generatedAt": "2026-09-13T22:44:28.734Z",
   "events": [
     {
       "id": "9ea51014e2c08013aa92",
@@ -370,19 +370,19 @@
       "title": "Next Week on XBOX: New Games for September 14 to 18",
       "category": "게임",
       "tags": [
-        "Next Week on XBOX",
-        "September 14",
-        "September 18"
+        "Next Week on Xbox",
+        "September 14 to 18",
+        "신작"
       ],
       "series": "Next Week on XBOX",
       "startsAt": "2026-09-14T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/11/next-week-on-xbox-new-games-for-september-14-to-18/",
-      "reason": "‘Next Week on XBOX’에서 9월 14일부터 9월 18일까지의 신규 게임을 다룬다고 2026년 9월 11일에 안내했습니다."
+      "reason": "원문에서 9월 14일부터 18일까지의 신작 안내가 명시돼 있다."
     },
     {
       "id": "165f1f1900662555d0b8",
