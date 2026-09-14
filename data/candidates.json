@@ -1,21 +1,6 @@
 {
-  "generatedAt": "2026-09-13T22:44:28.734Z",
+  "generatedAt": "2026-09-14T23:36:15.503Z",
   "events": [
-    {
-      "id": "9ea51014e2c08013aa92",
-      "title": "Next Week on XBOX: New Games for August 31 to September 4",
-      "category": "게임",
-      "tags": [],
-      "series": "Next Week on XBOX",
-      "startsAt": "2026-08-31T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/28/next-week-on-xbox-new-games-for-august-31-to-september-4/",
-      "reason": "기사의 범위 표기에 따라 8월 31일부터 9월 4일 사이에 해당 주간 콘텐츠가 공개된다."
-    },
     {
       "id": "fdfba89f3a74511a47f8",
       "title": "PlayStation Plus 9월 월간 게임 제공 시작",
