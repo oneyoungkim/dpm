@@ -1,43 +1,6 @@
 {
-  "generatedAt": "2026-09-14T23:36:15.503Z",
+  "generatedAt": "2026-09-15T23:19:17.120Z",
   "events": [
-    {
-      "id": "fdfba89f3a74511a47f8",
-      "title": "PlayStation Plus 9월 월간 게임 제공 시작",
-      "category": "게임",
-      "tags": [
-        "PlayStation Plus",
-        "월간 게임"
-      ],
-      "series": "PlayStation Plus Monthly Games for September",
-      "startsAt": "2026-09-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/26/playstation-plus-monthly-games-for-september-sniper-elite-resistance-mlb-the-show-26-wobbly-life-chained-echoes/",
-      "reason": "해당 글은 9월 월간 게임이 화요일부터 제공된다고 하나, 날짜가 본문에 구체적으로 제공되지 않습니다."
-    },
-    {
-      "id": "b380be646e8cef20b8f9",
-      "title": "Young Suns 1.0 런치",
-      "category": "게임",
-      "tags": [
-        "Young Suns",
-        "1.0",
-        "런치"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-09-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/31/rebuilding-better-together-for-the-1-0-launch-of-young-suns/",
-      "reason": "공식 글에서 Young Suns의 1.0 런치 일정을 9월 1일로 명시해 발표했습니다."
-    },
     {
       "id": "e8264149553dd0519e7c",
       "title": "State of Play & State of Play Japan return on September 3",
