@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T23:19:17.120Z",
+  "generatedAt": "2026-09-16T23:24:47.408Z",
   "events": [
     {
       "id": "e8264149553dd0519e7c",
@@ -390,6 +390,43 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/",
       "reason": "공식 글에서 Black Ops 7과 Warzone Season 06의 The Haunting이 9월 17일 출시(업데이트)된다고 안내합니다."
+    },
+    {
+      "id": "4e8b2321cb9f1c1f2c57",
+      "title": "Sea of Thieves: Season 21, Talk Like a Pirate Day, New Rewards, Amazing Prizes and More! (Free Play Weekend 시작)",
+      "category": "게임",
+      "tags": [
+        "Sea of Thieves",
+        "Free Play Weekend",
+        "Talk Like a Pirate Day"
+      ],
+      "series": "Sea of Thieves",
+      "startsAt": "2026-09-17T15:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/16/sea-of-thieves-season-21-talk-like-a-pirate-day/",
+      "reason": "공식 안내에 따르면 Sea of Thieves의 Free Play Weekend가 9월 17일 15:00 UTC에 시작한다."
+    },
+    {
+      "id": "00aae23ea039a136db12",
+      "title": "Sea of Thieves: Season 21, Talk Like a Pirate Day, New Rewards, Amazing Prizes and More! (Free Play Weekend 종료)",
+      "category": "게임",
+      "tags": [
+        "Sea of Thieves",
+        "Free Play Weekend"
+      ],
+      "series": "Sea of Thieves",
+      "startsAt": "2026-09-21T17:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/16/sea-of-thieves-season-21-talk-like-a-pirate-day/",
+      "reason": "공식 안내에 따르면 Sea of Thieves의 Free Play Weekend가 9월 21일 17:00 UTC에 끝난다."
     },
     {
       "id": "c8615615cfce8476fd79",
@@ -1026,6 +1063,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/training-never-betrays-you-ryujin-nasukawa-reflects-on-stunning-one-debut-victory-over-thongpoon",
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
+    },
+    {
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (도하 복귀전)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE: Qatar",
+        "MMA",
+        "무에타이"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "ONE 공식 이벤트 페이지에 ‘Friday, March 26, 2027’ 날짜가 명시되어 있음. 시간은 미정이므로 12:00:00+09:00로 표기하고 timeTbd=true 처리."
     },
     {
       "id": "dd0a32b34a26cd8a6a9b",
