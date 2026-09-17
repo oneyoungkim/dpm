@@ -1,43 +1,6 @@
 {
-  "generatedAt": "2026-09-16T23:24:47.408Z",
+  "generatedAt": "2026-09-17T23:16:01.898Z",
   "events": [
-    {
-      "id": "e8264149553dd0519e7c",
-      "title": "State of Play & State of Play Japan return on September 3",
-      "category": "e스포츠",
-      "tags": [
-        "State of Play",
-        "State of Play Japan"
-      ],
-      "series": "State of Play",
-      "startsAt": "2026-09-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/31/state-of-play-state-of-play-japan-return-on-september-3/",
-      "reason": "공식 블로그에서 9월 3일에 State of Play 및 State of Play Japan 방송이 돌아온다고 공지했다."
-    },
-    {
-      "id": "57ba012a61bfbecf6cc3",
-      "title": "State of Play & State of Play Japan return on September 3",
-      "category": "게임",
-      "tags": [
-        "State of Play",
-        "State of Play Japan",
-        "쇼케이스"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-09-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/31/state-of-play-state-of-play-japan-return-on-september-3/",
-      "reason": "State of Play가 2026년 9월 3일에 방송된다고 명시되어 있다."
-    },
     {
       "id": "04a8f820d4f9fb556582",
       "title": "ONE Fight Night 47 9/4(방콕)",
@@ -695,6 +658,25 @@
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/08/exciting-updates-for-sneaky-sasquatch-come-to-apple-arcade/",
       "reason": "공식 기사에서 10월 7일까지 해당 게임 연동/테마 업데이트가 진행된다고 안내한다."
+    },
+    {
+      "id": "a7fab10e423186ea6f7a",
+      "title": "UFC 파이트 나이트: 2026-10-10(라스베이거스)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "UFC Fight Night"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-10-10T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+      "reason": "UFC 공식 이벤트 페이지에서 ‘Sat, Oct 10 / 8:00 PM EDT’로 2026년 10월 10일 개최가 명시."
     },
     {
       "id": "10d0f44f1a9d8075556c",
