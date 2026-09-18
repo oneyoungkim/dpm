@@ -1,62 +1,6 @@
 {
-  "generatedAt": "2026-09-17T23:16:01.898Z",
+  "generatedAt": "2026-09-18T22:55:35.570Z",
   "events": [
-    {
-      "id": "04a8f820d4f9fb556582",
-      "title": "ONE Fight Night 47 9/4(방콕)",
-      "category": "격투기",
-      "tags": [
-        "one championship",
-        "one fight night 47"
-      ],
-      "series": "ONE Fight Night 47",
-      "startsAt": "2026-09-04T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/news/four-blockbuster-mma-and-submission-grappling-bouts-booked-for-one-fight-night-47",
-      "reason": "ONE 공식 기사에서 ‘2026년 9월 4일(금) Lumpinee Stadium, Bangkok’ 개최로 명시되어 있음."
-    },
-    {
-      "id": "148c890ec049bd54bfaa",
-      "title": "ONE Fight Night 47(Prime Video) 개최: 9월 4일",
-      "category": "격투기",
-      "tags": [
-        "ONE",
-        "MMA",
-        "Submission Grappling",
-        "Lumpinee Stadium"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-09-04T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/news/four-blockbuster-mma-and-submission-grappling-bouts-booked-for-one-fight-night-47",
-      "reason": "ONE Championship 공식 기사에서 ONE Fight Night 47이 2026년 9월 4일(금)로 명시됨(시간은 ‘U.S. primetime’ 중심이라 KST 고정 시간 미제공)."
-    },
-    {
-      "id": "3c6b965fc3c464e00581",
-      "title": "Onimusha: Way of the Sword – PS5 출시(September 4)",
-      "category": "게임",
-      "tags": [
-        "PlayStation 5",
-        "출시"
-      ],
-      "series": "Onimusha: Way of the Sword",
-      "startsAt": "2026-09-04T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/25/onimusha-way-of-the-sword-interview-demo-update-detailed-new-trailer-revealed/",
-      "reason": "공식 글에서 Onimusha: Way of the Sword가 9월 4일 PS5에 출시된다고 안내한다."
-    },
     {
       "id": "30cd7e2dc51fefc8b3fd",
       "title": "UFC 파리 2026: 9/5 ACCOR ARENA",
@@ -897,6 +841,25 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 49이 12월 11일(동부시간 기준 21:00)로 명시."
+    },
+    {
+      "id": "e3522fabeca8cf29bc5d",
+      "title": "PFL Lyon: Lapilus vs McKee (12/19)",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "LDLC Arena",
+        "World Title"
+      ],
+      "series": "PFL",
+      "startsAt": "2026-12-19T00:00:00-05:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
+      "reason": "PFL 공식 뉴스에 PFL Lyon의 메인 이벤트가 2026-12-19 LDLC Arena에서 개최된다고 명시됨."
     },
     {
       "id": "5e2bbf68f5c68e3f25c6",
