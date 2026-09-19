@@ -1,46 +1,6 @@
 {
-  "generatedAt": "2026-09-18T22:55:35.570Z",
+  "generatedAt": "2026-09-19T22:34:46.734Z",
   "events": [
-    {
-      "id": "30cd7e2dc51fefc8b3fd",
-      "title": "UFC 파리 2026: 9/5 ACCOR ARENA",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "파리"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-09-05T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-returns-paris-must-see-night-action-september-5-accor-arena",
-      "reason": "공식 UFC 기사에서 2026년 9월 5일 UFC 파리 개최를 명시."
-    },
-    {
-      "id": "35ad9dcfce453a474c15",
-      "title": "UFC 파이트 나이트 훅커 vs 파르나스 9/5",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "미국",
-        "라스베이거스?",
-        "파리",
-        "MMA"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-09-05T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-05-2026?page=1",
-      "reason": "공식 UFC 이벤트 페이지에 2026-09-05 개최일이 명시되어 있음(시간은 페이지 표기 기반으로 한국시간 변환이 필요하나, 본 페이지에 EDT 기준 시간이 있어도 한국시간 카드 표기를 위해 날짜만 확정)."
-    },
     {
       "id": "24ac726fd3768e3f5053",
       "title": "Code Vein II: Mask of Idris – DLC 출시(September 9)",
@@ -412,6 +372,24 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
       "reason": "공식 UFC 이벤트 페이지에 2026-09-26(토) 개최가 명시되어 있음."
+    },
+    {
+      "id": "36b3a49a6db307fcfdf1",
+      "title": "Gears of War: E-Day pre-install begins on September 29 (PC specifications also revealed)",
+      "category": "게임",
+      "tags": [
+        "사전 설치",
+        "PC"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-09-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/17/gears-of-war-e-day-gone-gold-pre-install-pc-specs/",
+      "reason": "문서에서 Gears of War: E-Day의 프리-인스톨이 2026년 9월 29일부터 시작된다고 명시되어 있습니다."
     },
     {
       "id": "1e427dd23483678f0192",
@@ -822,6 +800,24 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/08/27/dumpster-gang-chaotic-raccoon-co-op/",
       "reason": "기사 제목에 ‘December 2026’로만 표기되어 있어 월 기준으로 12월 1일로 처리한다."
+    },
+    {
+      "id": "39caa61c0c01f620c4a1",
+      "title": "Hela: Of Mice & Magic will launch on Xbox Game Pass on December 1, 2026",
+      "category": "게임",
+      "tags": [
+        "Game Pass",
+        "출시"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-12-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/18/how-remedies-shape-progression-in-hela-of-mice-magic/",
+      "reason": "문서에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass day one으로 출시된다고 명시되어 있습니다."
     },
     {
       "id": "2cc6ac4df4297fc9a2f3",
