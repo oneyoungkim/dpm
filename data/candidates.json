@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T22:34:46.734Z",
+  "generatedAt": "2026-09-20T22:47:51.732Z",
   "events": [
     {
       "id": "24ac726fd3768e3f5053",
@@ -334,6 +334,26 @@
       "reason": "공식 글에서 Into the Radius 2가 9월 24일 PS VR2에 출시된다고 명시한다."
     },
     {
+      "id": "ad38a155ff66f59831f2",
+      "title": "UFC BJJ 11: Musumeci vs Mitchell (9/24)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "UFC BJJ",
+        "그래플링",
+        "9월"
+      ],
+      "series": "UFC BJJ 11",
+      "startsAt": "2026-09-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/featherweight-show-match-headlines-exciting-ufc-bjj-11-card-september-24",
+      "reason": "UFC 공식 기사에 ‘September 24’ 일정과 라이브(지역 시간대 표기)가 명시됨."
+    },
+    {
       "id": "4128d4b9b555244f9012",
       "title": "ONE Friday Fights 126 (9/26)",
       "category": "격투기",
@@ -641,6 +661,25 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/pivotal-welterweight-bout-between-joaquin-buckley-and-mike-malott-headlines-ufc-return",
       "reason": "UFC 공식 공지에 2026년 10월 17일(토) 개최로 명시됨."
+    },
+    {
+      "id": "c9eed3260dcd4ad5666b",
+      "title": "PFL Road to Dubai 스윕스테이크(Entry Period 2 종료 12/21 아님)",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "Road to Dubai",
+        "스윕스테이크"
+      ],
+      "series": "ROAD TO DUBAI SWEEPSTAKES",
+      "startsAt": "2026-10-20T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/roadtodubai-rules",
+      "reason": "공식 규정에 Entry Period 2 종료일(2026-10-20)이 명시됨. (개별 이벤트 참가/당첨 관련 오퍼링 성격)"
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
@@ -966,6 +1005,26 @@
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
     },
     {
+      "id": "2153b6072c1b70aa5cd1",
+      "title": "ONE Friday Fights 147 (3/20)",
+      "category": "격투기",
+      "tags": [
+        "ONE Friday Fights",
+        "무에타이",
+        "타이틀전",
+        "3월"
+      ],
+      "series": "ONE Friday Fights 147",
+      "startsAt": "2027-03-20T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/nong-o-to-face-asadula-imangazaliev-for-the-vacant-one-flyweight-muay-thai-world-title-at-one-friday-fights-147",
+      "reason": "ONE 공식 기사에 ‘March 20’ 개최일이 명시됨."
+    },
+    {
       "id": "54f4d9f6923378949b79",
       "title": "ONE, 카타르 첫 시리즈 이벤트 2027년 3월 26일",
       "category": "격투기",
@@ -1043,6 +1102,21 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE 공식 보도자료에 ‘4月3日 – ONE 174’가 명시되어 있으나, 시간은 미기재라서 해당 날짜 12:00(+09:00)로 표기."
+    },
+    {
+      "id": "baaff371be1fb5b0a363",
+      "title": "Final Fantasy VII Revelation hands-on report: Into the Whirlwind Maze where Sephiroth awaits",
+      "category": "게임",
+      "tags": [],
+      "series": "Final Fantasy VII",
+      "startsAt": "2027-04-08T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
+      "reason": "Final Fantasy VII Revelation이 2027년 4월 8일 PlayStation 5로 출시된다고 명시합니다."
     },
     {
       "id": "024f9bdd333c694257e8",
