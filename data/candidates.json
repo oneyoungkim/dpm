@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T22:47:51.732Z",
+  "generatedAt": "2026-09-21T23:44:19.087Z",
   "events": [
     {
       "id": "24ac726fd3768e3f5053",
@@ -294,6 +294,26 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/16/sea-of-thieves-season-21-talk-like-a-pirate-day/",
       "reason": "공식 안내에 따르면 Sea of Thieves의 Free Play Weekend가 9월 21일 17:00 UTC에 끝난다."
+    },
+    {
+      "id": "4613985d5232644bfaa8",
+      "title": "Control Resonant: How Remedy is going bigger and weirder with its paranatural horror sequel on September 24",
+      "category": "게임",
+      "tags": [
+        "Control",
+        "Control Resonant",
+        "Remedy",
+        "출시"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-09-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/18/control-resonant-how-remedy-is-going-bigger-and-weirder-with-its-paranatural-horror-sequel-on-september-24/",
+      "reason": "본문에서 9월 24일 출시(공개)로 명시돼 있어 해당 날짜로 추출했다."
     },
     {
       "id": "c8615615cfce8476fd79",
@@ -1117,6 +1137,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
       "reason": "Final Fantasy VII Revelation이 2027년 4월 8일 PlayStation 5로 출시된다고 명시합니다."
+    },
+    {
+      "id": "a72c883a1797e2e06f12",
+      "title": "Final Fantasy VII Revelation hands-on report: Into the Whirlwind Maze where Sephiroth awaits",
+      "category": "게임",
+      "tags": [
+        "Final Fantasy VII",
+        "Revelation",
+        "PS5",
+        "출시"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2027-04-08T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
+      "reason": "본문에서 2027년 4월 8일 출시가 명시돼 있어 해당 날짜로 추출했다."
     },
     {
       "id": "024f9bdd333c694257e8",
