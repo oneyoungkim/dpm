@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T23:44:19.087Z",
+  "generatedAt": "2026-09-22T23:23:16.560Z",
   "events": [
     {
       "id": "24ac726fd3768e3f5053",
@@ -414,6 +414,25 @@
       "reason": "공식 UFC 이벤트 페이지에 2026-09-26(토) 개최가 명시되어 있음."
     },
     {
+      "id": "47141a163a83c6f07eac",
+      "title": "UFC Fight Night: Rosas Jr. vs Barcelos (9/26)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Fight Night"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-09-26T20:00:00+00:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+      "reason": "UFC 공식 이벤트 페이지에 2026-09-26 및 시작 시간(EDT 표기)이 명시되어 있음."
+    },
+    {
       "id": "36b3a49a6db307fcfdf1",
       "title": "Gears of War: E-Day pre-install begins on September 29 (PC specifications also revealed)",
       "category": "게임",
@@ -445,6 +464,28 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/08/25/witcher-3-remastered-and-songs-of-the-past/",
       "reason": "기사에서 9월 29일에 The Witcher 3: Wild Hunt의 Songs of the Past와 Remastered가 제공된다고 명시한다."
+    },
+    {
+      "id": "3dc7e376b9d33bc3f1d1",
+      "title": "Gears of War: E-Day – Prepare for Emergence Day with Us in Los Angeles",
+      "category": "게임",
+      "tags": [
+        "Gears of War: E-Day",
+        "Emergence Day",
+        "Los Angeles takeover",
+        "Hollywood & Vine",
+        "원나잇 온리",
+        "체험"
+      ],
+      "series": "Gears of War: E-Day",
+      "startsAt": "2026-09-30T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/21/gears-of-war-e-day-emergence-la-event/",
+      "reason": "공식 글에서 2026년 9월 30일 LA에서 원나잇 온리 E-Day 테이크오버 행사를 연다고 명시했다."
     },
     {
       "id": "73564e48613c88656513",
