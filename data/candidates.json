@@ -1,24 +1,6 @@
 {
-  "generatedAt": "2026-09-22T23:23:16.560Z",
+  "generatedAt": "2026-09-23T23:20:35.264Z",
   "events": [
-    {
-      "id": "24ac726fd3768e3f5053",
-      "title": "Code Vein II: Mask of Idris – DLC 출시(September 9)",
-      "category": "게임",
-      "tags": [
-        "DLC",
-        "출시"
-      ],
-      "series": "Code Vein II",
-      "startsAt": "2026-09-09T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/20/code-vein-ii-mask-of-idris-dlc-launches-september-9/",
-      "reason": "공식 글에서 Mask of Idris DLC가 9월 9일 출시된다고 발표한다."
-    },
     {
       "id": "79aa59408006b406f605",
       "title": "ONE The Inner Circle 30: 9/11 럼피니 벨 디펜스",
@@ -316,6 +298,25 @@
       "reason": "본문에서 9월 24일 출시(공개)로 명시돼 있어 해당 날짜로 추출했다."
     },
     {
+      "id": "068b3b6e0a8dc4b6bd7f",
+      "title": "Control Resonant: How Remedy is going bigger and weirder with its paranatural horror sequel on September 24",
+      "category": "게임",
+      "tags": [
+        "Control Resonant",
+        "출시",
+        "PS5"
+      ],
+      "series": "Control",
+      "startsAt": "2026-09-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/18/control-resonant-how-remedy-is-going-bigger-and-weirder-with-its-paranatural-horror-sequel-on-september-24/",
+      "reason": "본문에 '9월 24일'에 Control Resonant가 출시된다고 명시되어 있으며 시간이 없어 12:00으로 표기했습니다."
+    },
+    {
       "id": "c8615615cfce8476fd79",
       "title": "Control Resonant’s expanded Assist Mode 공개(September 24 launch)",
       "category": "게임",
@@ -470,12 +471,12 @@
       "title": "Gears of War: E-Day – Prepare for Emergence Day with Us in Los Angeles",
       "category": "게임",
       "tags": [
-        "Gears of War: E-Day",
-        "Emergence Day",
-        "Los Angeles takeover",
-        "Hollywood & Vine",
-        "원나잇 온리",
-        "체험"
+        "E-Day",
+        "원나이트 온리",
+        "체험",
+        "이벤트",
+        "LA",
+        "Hollywood & Vine"
       ],
       "series": "Gears of War: E-Day",
       "startsAt": "2026-09-30T12:00:00+09:00",
@@ -485,7 +486,7 @@
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/21/gears-of-war-e-day-emergence-la-event/",
-      "reason": "공식 글에서 2026년 9월 30일 LA에서 원나잇 온리 E-Day 테이크오버 행사를 연다고 명시했다."
+      "reason": "해당 글에서 2026년 9월 30일(현지 기준) 할 원나이트 이벤트 개최가 명시되어 있다."
     },
     {
       "id": "73564e48613c88656513",
@@ -920,6 +921,27 @@
       "reason": "문서에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass day one으로 출시된다고 명시되어 있습니다."
     },
     {
+      "id": "4f317775550a11f5d602",
+      "title": "How Remedies Shape Progression in Hela: Of Mice & Magic",
+      "category": "게임",
+      "tags": [
+        "Hela: Of Mice & Magic",
+        "Game Pass",
+        "출시",
+        "Day one",
+        "브루잉 & 레미디스"
+      ],
+      "series": "Hela: Of Mice & Magic",
+      "startsAt": "2026-12-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/18/how-remedies-shape-progression-in-hela-of-mice-magic/",
+      "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
+    },
+    {
       "id": "2cc6ac4df4297fc9a2f3",
       "title": "ONE Fight Night 49 (12/11 일정)",
       "category": "격투기",
@@ -1066,6 +1088,26 @@
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
     },
     {
+      "id": "1657125ea0c6560295b8",
+      "title": "ONE, 카타르 2027년 3월부터 개최(공식 발표)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "카타르",
+        "MMA",
+        "Muay Thai"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
+      "reason": "ONE 공식 보도자료에서 ‘2027년 3월부터’ 카타르에서 ONE 이벤트를 개최한다고 명시했으나, 해당 페이지에 정확한 일자가 없어 ‘3월’ 수준으로는 확정 불가라서 날짜는 timeTbd 처리."
+    },
+    {
       "id": "2153b6072c1b70aa5cd1",
       "title": "ONE Friday Fights 147 (3/20)",
       "category": "격투기",
@@ -1168,16 +1210,20 @@
       "id": "baaff371be1fb5b0a363",
       "title": "Final Fantasy VII Revelation hands-on report: Into the Whirlwind Maze where Sephiroth awaits",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "Final Fantasy VII Revelation",
+        "출시",
+        "PS5"
+      ],
       "series": "Final Fantasy VII",
       "startsAt": "2027-04-08T12:00:00+09:00",
       "timeTbd": true,
       "eventMode": "release-window",
       "datePrecision": "date",
-      "confidence": "confirmed",
+      "confidence": "expected",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
-      "reason": "Final Fantasy VII Revelation이 2027년 4월 8일 PlayStation 5로 출시된다고 명시합니다."
+      "reason": "본문에 Final Fantasy VII Revelation의 출시일이 '2027년 4월 8일'로 명시되어 있으며 시간이 없어 12:00으로 표기했습니다."
     },
     {
       "id": "a72c883a1797e2e06f12",
