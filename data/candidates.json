@@ -1,148 +1,6 @@
 {
-  "generatedAt": "2026-09-25T23:42:19.735Z",
+  "generatedAt": "2026-09-26T23:14:54.979Z",
   "events": [
-    {
-      "id": "a74b5d6e715684248427",
-      "title": "BlizzCon 2026 Preview: We’re So Back! | Official XBOX Podcast",
-      "category": "e스포츠",
-      "tags": [
-        "BlizzCon",
-        "Blizzard",
-        "공식 XBOX Podcast",
-        "애너하임 컨벤션센터",
-        "온라인 중계"
-      ],
-      "series": "Official XBOX Podcast",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/02/blizzcon-2026-preview-were-so-back-official-xbox-podcast/",
-      "reason": "기사 본문에서 BlizzCon 2026이 9월 12일과 13일에 열린다고 언급합니다."
-    },
-    {
-      "id": "9398842377b4f4cd0bf7",
-      "title": "NOCHE UFC 실바 vs 델가도 9/12",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "NOCHE UFC",
-        "글렌데일",
-        "애리조나",
-        "MMA"
-      ],
-      "series": "Noche UFC",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/noche-ufc-2026",
-      "reason": "공식 UFC Noche UFC 전용 페이지에 2026년 9월 12일(토) 개최가 명시되어 있음."
-    },
-    {
-      "id": "a48d4a4e1f359fbbd039",
-      "title": "NOCHE UFC, 9/12 글렌데일에서 개최",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Noche UFC",
-        "Glendale"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/noche-ufc-take-place-september-12-ufc-returns-glendale-arizona",
-      "reason": "UFC 공식 공지에 2026년 9월 12일(토) 개최로 명시됨."
-    },
-    {
-      "id": "7cbaef6d4d6d7f110a4b",
-      "title": "Noche UFC: Silva vs Delgado (9/12)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Noche UFC",
-        "글렌데일",
-        "시우다드 멕시코"
-      ],
-      "series": "UFC Noche UFC 2026",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/noche-ufc-2026?page=1",
-      "reason": "UFC 공식 Noche UFC 2026 페이지에서 ‘Saturday, September 12’로 일자가 명시됨."
-    },
-    {
-      "id": "c07a41e5e8b1638b2457",
-      "title": "Noche UFC: Silva vs Delgado (9/12)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "격투기",
-        "Noche UFC",
-        "미국"
-      ],
-      "series": "UFC Noche UFC",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/noche-ufc-2026",
-      "reason": "UFC 공식 페이지 검색 결과에 2026년 9월 12일 행사(메인 이벤트)가 명시되어 있으나, 본문 접근(403)으로 시간대/정확 시간 확인은 실패해 timeTbd=true 처리."
-    },
-    {
-      "id": "784d7d36e826b96fa855",
-      "title": "Noche UFC: 실바 vs 델가도 (9/12)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Noche UFC",
-        "미국"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
-      "reason": "UFC 공식 이벤트 페이지에 2026-09-12(현지 시간 표기 포함)로 행사 일정이 명시되어 있음."
-    },
-    {
-      "id": "e942ef94bfcffca2cd64",
-      "title": "NOCHE UFC: 실바 vs 델가도 (공식 이벤트 페이지)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "Noche UFC",
-        "Desert Diamond Arena"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-09-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
-      "reason": "공식 UFC 이벤트 페이지에 2026-09-12 개최일이 명시되어 있음. (이미지/카테고리상 동일 이벤트로, 해당 페이지 기준으로 날짜 재확인)"
-    },
     {
       "id": "360e7f148d813b21d363",
       "title": "Next Week on XBOX: New Games for September 14 to 18",
@@ -623,6 +481,25 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-friday-fights-127",
       "reason": "공식 이벤트 상세 페이지에 'on October 3'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
+    },
+    {
+      "id": "caba1f7fdaebd58813d9",
+      "title": "UFC 320: Ankalaev vs Pereira 2 (10/4)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "PPV",
+        "MMA"
+      ],
+      "series": "UFC 320",
+      "startsAt": "2026-10-04T18:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-320",
+      "reason": "UFC 공식 이벤트 페이지에 날짜(10/4)와 행사 시간이 명시되어 있음."
     },
     {
       "id": "91e4236f02f097b6c190",
