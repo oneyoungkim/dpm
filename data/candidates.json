@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T23:14:54.979Z",
+  "generatedAt": "2026-09-27T23:29:48.575Z",
   "events": [
     {
       "id": "360e7f148d813b21d363",
@@ -443,6 +443,26 @@
       "reason": "공식 ONE 이벤트 페이지에 ‘Friday, October 2’로 개최일이 명시됨."
     },
     {
+      "id": "039fa9a811dc0f6ce0b4",
+      "title": "ONE Friday Fights 173 (10/2)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE Friday Fights",
+        "MMA",
+        "무에타이"
+      ],
+      "series": "ONE Friday Fights",
+      "startsAt": "2026-10-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/jp/events/one-friday-fights-173",
+      "reason": "공식 ONE 이벤트 페이지에서 ONE Friday Fights 173이 10월 2일에 개최되는 것으로 안내(다만 시간 표기는 ‘--’로 비어 있음)."
+    },
+    {
       "id": "d330da4d3f29c9868b14",
       "title": "ONE Fight Night 47 (10/2 일정)",
       "category": "격투기",
@@ -619,6 +639,27 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/pivotal-welterweight-bout-between-joaquin-buckley-and-mike-malott-headlines-ufc-return",
       "reason": "UFC 공식 공지에 2026년 10월 17일(토) 개최로 명시됨."
+    },
+    {
+      "id": "16e12f1659e674ac00a4",
+      "title": "ONE SAMURAI 4 (10/17)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE SAMURAI",
+        "MMA",
+        "키크복싱",
+        "무에타이"
+      ],
+      "series": "ONE SAMURAI",
+      "startsAt": "2026-10-17T15:30:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/jp/events/one-samurai-4",
+      "reason": "공식 ONE 이벤트 페이지에서 ONE SAMURAI 4가 ‘10월 17일 6:30 UTC’로 명시되어(한국시간으로 15:30) 미래 일정 요건 충족."
     },
     {
       "id": "c9eed3260dcd4ad5666b",
