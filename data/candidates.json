@@ -1,44 +1,6 @@
 {
-  "generatedAt": "2026-09-29T00:44:46.650Z",
+  "generatedAt": "2026-09-30T00:00:25.815Z",
   "events": [
-    {
-      "id": "165f1f1900662555d0b8",
-      "title": "Marvel’s Wolverine: Details on Logan’s mutant abilities, game features, and more",
-      "category": "게임",
-      "tags": [
-        "Marvel’s Wolverine",
-        "Feature Trailer",
-        "September 15"
-      ],
-      "series": "Marvel’s Wolverine",
-      "startsAt": "2026-09-15T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/28/marvels-wolverine-details-on-logans-mutant-abilities-game-features-and-more/",
-      "reason": "공식 글에서 Marvel’s Wolverine이 9월 15일에 ‘coming’이라고 언급해 해당 날짜의 공개/출시 시점을 기대 일정으로 추출했다."
-    },
-    {
-      "id": "bde78a927208b7a58c38",
-      "title": "Marvel’s Wolverine: PS5 런치 일정(9월 15일) 딥다이브 공개",
-      "category": "게임",
-      "tags": [
-        "Marvel’s Wolverine",
-        "PS5",
-        "런치"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-09-15T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
-      "reason": "글에서 Marvel’s Wolverine이 9월 15일 출시된다고 명시하고 이를 기준으로 딥다이브가 안내된다."
-    },
     {
       "id": "2073448a37f641359186",
       "title": "Call of Duty: Black Ops 7 and Warzone Season 06 launches The Haunting",
@@ -1064,6 +1026,25 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/10/muramasa-revenant-blades-launches-february-4-2027/",
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
+    },
+    {
+      "id": "8f702cd428b923ad7a08",
+      "title": "God of War Laufey pre-orders available starting September 29, editions detailed",
+      "category": "게임",
+      "tags": [
+        "PS5",
+        "출시",
+        "사전예약"
+      ],
+      "series": "God of War",
+      "startsAt": "2027-02-16T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/28/god-of-war-laufey-pre-orders-available-starting-september-29-editions-detailed/",
+      "reason": "공식 글에서 God of War Laufey의 PS5 출시일이 2027년 2월 16일로 명시됐다."
     },
     {
       "id": "1657125ea0c6560295b8",
