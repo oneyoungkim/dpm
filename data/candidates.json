@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T00:00:25.815Z",
+  "generatedAt": "2026-10-01T00:16:04.487Z",
   "events": [
     {
       "id": "2073448a37f641359186",
@@ -384,6 +384,26 @@
       "reason": "공식 이벤트 상세 페이지에 'Friday, October 2'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
     },
     {
+      "id": "c244a02fedc21ce80a24",
+      "title": "ONE Fight Night 48: Erdogan vs. Elliott",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Muay Thai",
+        "Prime Video"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-10-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/onefightnight48",
+      "reason": "공식 ONE 이벤트 페이지에 ‘Friday, October 2’로 차후 개최 일정이 명시되어 있음."
+    },
+    {
       "id": "6f033dbe8cf63138cd9a",
       "title": "ONE Fight Night 48: Erdogan vs. Elliott (10/2)",
       "category": "격투기",
@@ -465,6 +485,26 @@
       "reason": "공식 이벤트 상세 페이지에 'on October 3'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
     },
     {
+      "id": "a5bb1d10a623d2cc3aaf",
+      "title": "UFC 332: Silva vs Wang (Salt Lake City)",
+      "category": "격투기",
+      "tags": [
+        "UFC 332",
+        "MMA",
+        "Paramount+",
+        "CBS"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-10-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/updates-to-ufc-332-silva-vs-wang",
+      "reason": "UFC 공식 공지에서 ‘Saturday, October 3’ 개최와 지역(Delta Center, Salt Lake City)이 명시됨."
+    },
+    {
       "id": "caba1f7fdaebd58813d9",
       "title": "UFC 320: Ankalaev vs Pereira 2 (10/4)",
       "category": "격투기",
@@ -501,6 +541,27 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/09/plan-for-emergence-day-today-with-the-full-gears-of-war-e-day-achievements-list/",
       "reason": "원문에 Emergence Begins가 10월 6일로 명시되어 있어 해당 날짜의 행사/진행을 일정으로 추출했다."
+    },
+    {
+      "id": "5e3cb43cf18e4e2192c3",
+      "title": "PlayStation Plus Monthly Games for October: F1 25, Hunt: Showdown 1896, Earth Defense Force: World Brothers 2",
+      "category": "게임",
+      "tags": [
+        "PlayStation Plus",
+        "월간 게임",
+        "F1 25",
+        "Hunt: Showdown 1896",
+        "Earth Defense Force: World Brothers 2"
+      ],
+      "series": "PlayStation Plus",
+      "startsAt": "2026-10-06T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/30/playstation-plus-monthly-games-for-october-f1-25-hunt-showdown-1896-earth-defense-force-world-brothers-2/",
+      "reason": "해당 글에서 10월 월간 게임이 10월 6일부터 이용 가능하다고 안내한다."
     },
     {
       "id": "3932d1583766c40be32f",
