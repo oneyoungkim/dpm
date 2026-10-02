@@ -1,46 +1,6 @@
 {
-  "generatedAt": "2026-10-01T00:16:04.487Z",
+  "generatedAt": "2026-10-02T00:20:56.398Z",
   "events": [
-    {
-      "id": "2073448a37f641359186",
-      "title": "Call of Duty: Black Ops 7 and Warzone Season 06 launches The Haunting",
-      "category": "게임",
-      "tags": [
-        "Call of Duty",
-        "Black Ops 7",
-        "Warzone",
-        "Season 06",
-        "The Haunting"
-      ],
-      "series": "Call of Duty",
-      "startsAt": "2026-09-17T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/",
-      "reason": "공식 글에서 Black Ops 7과 Warzone Season 06의 The Haunting이 9월 17일 출시(업데이트)된다고 안내합니다."
-    },
-    {
-      "id": "4e8b2321cb9f1c1f2c57",
-      "title": "Sea of Thieves: Season 21, Talk Like a Pirate Day, New Rewards, Amazing Prizes and More! (Free Play Weekend 시작)",
-      "category": "게임",
-      "tags": [
-        "Sea of Thieves",
-        "Free Play Weekend",
-        "Talk Like a Pirate Day"
-      ],
-      "series": "Sea of Thieves",
-      "startsAt": "2026-09-17T15:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/16/sea-of-thieves-season-21-talk-like-a-pirate-day/",
-      "reason": "공식 안내에 따르면 Sea of Thieves의 Free Play Weekend가 9월 17일 15:00 UTC에 시작한다."
-    },
     {
       "id": "00aae23ea039a136db12",
       "title": "Sea of Thieves: Season 21, Talk Like a Pirate Day, New Rewards, Amazing Prizes and More! (Free Play Weekend 종료)",
@@ -620,6 +580,26 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
       "reason": "UFC 공식 이벤트 페이지에서 ‘Sat, Oct 10 / 8:00 PM EDT’로 2026년 10월 10일 개최가 명시."
+    },
+    {
+      "id": "6a6d682789e29945656b",
+      "title": "Invincible VS 오픈 베타 시작(10월 13일)",
+      "category": "게임",
+      "tags": [
+        "Invincible VS",
+        "Open Beta",
+        "DLC",
+        "Season 2"
+      ],
+      "series": "Invincible VS",
+      "startsAt": "2026-10-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/01/invincible-vs-open-beta-begins-october-13/",
+      "reason": "Invincible VS 오픈 베타가 10월 13일 시작된다고 안내되어 있습니다."
     },
     {
       "id": "10d0f44f1a9d8075556c",
