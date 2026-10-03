@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:04:16.685Z",
+  "generatedAt": "2026-10-03T23:26:28.594Z",
   "events": [
     {
       "id": "00aae23ea039a136db12",
@@ -488,9 +488,9 @@
       "title": "Next Week on XBOX: New Games for October 5 to 9",
       "category": "게임",
       "tags": [
-        "Next Week on XBOX",
+        "XBOX",
         "신규 게임",
-        "10월 5일~9일"
+        "주간 소개"
       ],
       "series": "Next Week on XBOX",
       "startsAt": "2026-10-05T12:00:00+09:00",
@@ -500,7 +500,7 @@
       "confidence": "expected",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/02/next-week-on-xbox-new-games-for-october-5-to-9/",
-      "reason": "10월 5일부터 9일까지의 신규 게임 일정을 다룬다고 예고한다."
+      "reason": "해당 글이 10월 5일~9일 사이 출시/출시예정 게임을 다룬다고 안내한다."
     },
     {
       "id": "91e4236f02f097b6c190",
@@ -881,6 +881,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L#new_tab",
       "reason": "공식 페이지 문구에 따라 2026년 11월 19일에 XBOX Series X|S로 출시된다."
+    },
+    {
+      "id": "803c6d4f989aa1ac712c",
+      "title": "블랙컴뱃 17: 11/21 고척스카이돔",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "미래 일정",
+        "한국 개최"
+      ],
+      "series": "블랙컴뱃",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php?page=10",
+      "reason": "공식 이벤트 목록에서 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)가 명시되어 있음."
     },
     {
       "id": "591d2393e3a0acdd35a3",
