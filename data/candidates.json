@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T23:26:28.594Z",
+  "generatedAt": "2026-10-04T23:42:46.641Z",
   "events": [
     {
       "id": "00aae23ea039a136db12",
@@ -487,11 +487,7 @@
       "id": "954c89a7b2c5db42c4e9",
       "title": "Next Week on XBOX: New Games for October 5 to 9",
       "category": "게임",
-      "tags": [
-        "XBOX",
-        "신규 게임",
-        "주간 소개"
-      ],
+      "tags": [],
       "series": "Next Week on XBOX",
       "startsAt": "2026-10-05T12:00:00+09:00",
       "timeTbd": true,
@@ -500,7 +496,7 @@
       "confidence": "expected",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/02/next-week-on-xbox-new-games-for-october-5-to-9/",
-      "reason": "해당 글이 10월 5일~9일 사이 출시/출시예정 게임을 다룬다고 안내한다."
+      "reason": "공식 ‘Next Week on XBOX’ 코너에서 10월 5일부터 9일까지 예정된 신작을 소개한다고 안내한다."
     },
     {
       "id": "91e4236f02f097b6c190",
@@ -618,6 +614,27 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
       "reason": "UFC 공식 이벤트 페이지에서 ‘Sat, Oct 10 / 8:00 PM EDT’로 2026년 10월 10일 개최가 명시."
+    },
+    {
+      "id": "a3ef983756181b10ddeb",
+      "title": "UFC 파이트 나이트: 앨런 vs 덩컨(10/10) 티켓 오픈",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Meta APEX",
+        "라스베이거스",
+        "티켓"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-10-10T20:00:00-04:00",
+      "timeTbd": false,
+      "eventMode": "release-window",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/tickets-sale-october-10-october-31-and-november-7-ufc-fight-night-events-meta-apex",
+      "reason": "UFC 공식 공지에서 2026-10-10 개최(메인카드 8:00 PM EDT) 및 Meta APEX 라스베이거스 일정이 명시되어 있음."
     },
     {
       "id": "6a6d682789e29945656b",
@@ -774,6 +791,27 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/01/return-to-fabletown-with-the-wolf-among-us-remastered-out-october-29/",
       "reason": "원문 제목에 ‘out October 29’로 특정된 The Wolf Among Us Remastered의 출시일(10월 29일)이 추출됩니다."
+    },
+    {
+      "id": "5987ad228053df570443",
+      "title": "UFC 파이트 나이트: 모이카노 vs 놀런(10/31)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "UFC Fight Night",
+        "라스베이거스",
+        "메인카드"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-10-31T20:00:00-04:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+      "reason": "UFC 공식 이벤트 페이지에 2026-10-31(현지 EDT) 개최와 메인카드 시간이 명시되어 있음."
     },
     {
       "id": "6e7215eefcf890f38124",
