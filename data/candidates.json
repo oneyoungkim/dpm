@@ -1,24 +1,6 @@
 {
-  "generatedAt": "2026-10-04T23:42:46.641Z",
+  "generatedAt": "2026-10-06T01:36:38.181Z",
   "events": [
-    {
-      "id": "00aae23ea039a136db12",
-      "title": "Sea of Thieves: Season 21, Talk Like a Pirate Day, New Rewards, Amazing Prizes and More! (Free Play Weekend 종료)",
-      "category": "게임",
-      "tags": [
-        "Sea of Thieves",
-        "Free Play Weekend"
-      ],
-      "series": "Sea of Thieves",
-      "startsAt": "2026-09-21T17:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/16/sea-of-thieves-season-21-talk-like-a-pirate-day/",
-      "reason": "공식 안내에 따르면 Sea of Thieves의 Free Play Weekend가 9월 21일 17:00 UTC에 끝난다."
-    },
     {
       "id": "4613985d5232644bfaa8",
       "title": "Control Resonant: How Remedy is going bigger and weirder with its paranatural horror sequel on September 24",
@@ -640,12 +622,7 @@
       "id": "6a6d682789e29945656b",
       "title": "Invincible VS Open Beta Begins October 13: What You Need to Know",
       "category": "게임",
-      "tags": [
-        "Invincible VS",
-        "오픈 베타",
-        "DLC 파이터",
-        "시즌 2"
-      ],
+      "tags": [],
       "series": "Invincible VS",
       "startsAt": "2026-10-13T12:00:00+09:00",
       "timeTbd": true,
@@ -654,7 +631,7 @@
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/01/invincible-vs-open-beta-begins-october-13/",
-      "reason": "Invincible VS 오픈 베타가 10월 13일 시작한다고 안내한다."
+      "reason": "원문에서 Invincible VS 오픈 베타가 2026년 10월 13일 시작된다고 명시한다."
     },
     {
       "id": "10d0f44f1a9d8075556c",
@@ -739,6 +716,21 @@
       "reason": "공식 규정에 Entry Period 2 종료일(2026-10-20)이 명시됨. (개별 이벤트 참가/당첨 관련 오퍼링 성격)"
     },
     {
+      "id": "ca72d90e6473a318af90",
+      "title": "Call of Duty: Modern Warfare 4 — DMZ mode (Forward Operating Base) 공개",
+      "category": "게임",
+      "tags": [],
+      "series": "Call of Duty: Modern Warfare 4",
+      "startsAt": "2026-10-23T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
+      "reason": "원문에 Modern Warfare 4 출시일(10월 23일)과 함께 DMZ 모드가 공개된다고 명시돼 있습니다."
+    },
+    {
       "id": "b0afe2eb3a68fc809ff9",
       "title": "Spooky cute puzzler Fangtopia launches on PS5 October 26",
       "category": "게임",
@@ -791,6 +783,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/01/return-to-fabletown-with-the-wolf-among-us-remastered-out-october-29/",
       "reason": "원문 제목에 ‘out October 29’로 특정된 The Wolf Among Us Remastered의 출시일(10월 29일)이 추출됩니다."
+    },
+    {
+      "id": "3708b19221c7da9f8494",
+      "title": "The Wolf Among Us Remastered — 10월 29일 출시",
+      "category": "게임",
+      "tags": [],
+      "series": "The Wolf Among Us Remastered",
+      "startsAt": "2026-10-29T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/01/return-to-fabletown-with-the-wolf-among-us-remastered-out-october-29/",
+      "reason": "원문에 The Wolf Among Us Remastered가 10월 29일 출시된다고 명시돼 있습니다."
     },
     {
       "id": "5987ad228053df570443",
@@ -866,6 +873,36 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/08/18/20260818-speaker/",
       "reason": "본문에서 SE 아시아 대상 Pulse Elevate 무선 스피커의 출시일이 11월 12일(2026)로 제시되어 있습니다."
+    },
+    {
+      "id": "5abd2290c98781204cfb",
+      "title": "Hello from Seattle: XBOX FanFest Comes Home November 12",
+      "category": "게임",
+      "tags": [],
+      "series": "XBOX FanFest",
+      "startsAt": "2026-11-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
+      "reason": "원문에서 XBOX FanFest가 2026년 11월 12일 열린다고 명시한다."
+    },
+    {
+      "id": "49ee3b1f9df52ac279b8",
+      "title": "Hello from Seattle: XBOX FanFest Comes Home November 12",
+      "category": "게임",
+      "tags": [],
+      "series": "25 years of Xbox",
+      "startsAt": "2026-11-15T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
+      "reason": "원문에서 Xbox 25주년 기념일이 2026년 11월 15일이라고 언급한다."
     },
     {
       "id": "cee18014c5542bf5d076",
