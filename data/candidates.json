@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T01:36:38.181Z",
+  "generatedAt": "2026-10-07T00:14:12.357Z",
   "events": [
     {
       "id": "4613985d5232644bfaa8",
@@ -888,6 +888,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
       "reason": "원문에서 XBOX FanFest가 2026년 11월 12일 열린다고 명시한다."
+    },
+    {
+      "id": "c3c64753ec834842c377",
+      "title": "Hello from Seattle: XBOX FanFest Comes Home November 12",
+      "category": "게임",
+      "tags": [
+        "XBOX FanFest",
+        "MoPOP",
+        "Seattle"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-11-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
+      "reason": "원문에 2026년 11월 12일 XBOX FanFest가 MoPOP에서 열린다고 명시되어 있다."
     },
     {
       "id": "49ee3b1f9df52ac279b8",
