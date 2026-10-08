@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T00:14:12.357Z",
+  "generatedAt": "2026-10-08T00:34:58.115Z",
   "events": [
     {
       "id": "4613985d5232644bfaa8",
@@ -717,9 +717,13 @@
     },
     {
       "id": "ca72d90e6473a318af90",
-      "title": "Call of Duty: Modern Warfare 4 — DMZ mode (Forward Operating Base) 공개",
+      "title": "Everything you need to know about DMZ mode in Call of Duty: Modern Warfare 4",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "DMZ 모드",
+        "출시",
+        "Call of Duty: Modern Warfare 4"
+      ],
       "series": "Call of Duty: Modern Warfare 4",
       "startsAt": "2026-10-23T12:00:00+09:00",
       "timeTbd": true,
@@ -728,7 +732,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
-      "reason": "원문에 Modern Warfare 4 출시일(10월 23일)과 함께 DMZ 모드가 공개된다고 명시돼 있습니다."
+      "reason": "공식 글에서 Call of Duty: Modern Warfare 4가 10월 23일 출시와 함께 DMZ 모드가 제공된다고 밝힙니다."
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
@@ -840,6 +844,25 @@
       "reason": "Prince St. Pizza에서 진행되는 ‘The Emergence Pie’ 한정 콜라보가 2026년 11월 1일까지라고 되어 있어 종료 시점을 이벤트 윈도우로 추출했다."
     },
     {
+      "id": "d71b8867b60d9ac17da8",
+      "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
+      "category": "게임",
+      "tags": [
+        "DLC",
+        "Year 1 Pass",
+        "Phoenix Cyclops"
+      ],
+      "series": "MARVEL Tōkon: Fighting Souls",
+      "startsAt": "2026-11-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/07/phoenix-cyclops-joins-marvel-tokon-fighting-souls-on-november-2/",
+      "reason": "공식 글에서 Phoenix Cyclops DLC 캐릭터가 11월 2일에 제공된다고 안내합니다."
+    },
+    {
       "id": "bbf966835aeed9bfe627",
       "title": "ONE Fight Night 48 (11/6 일정)",
       "category": "격투기",
@@ -858,6 +881,24 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 48이 11월 6일(동부시간 기준 21:00)로 명시."
+    },
+    {
+      "id": "ba7a9a4cb2229f958b89",
+      "title": "Warhammer Survivors launches November 10, new characters revealed",
+      "category": "게임",
+      "tags": [
+        "출시",
+        "신규 캐릭터"
+      ],
+      "series": "Warhammer Survivors",
+      "startsAt": "2026-11-10T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
+      "reason": "공식 글에서 Warhammer Survivors가 11월 10일 출시된다고 명시합니다."
     },
     {
       "id": "cded676c81901fd50833",
@@ -1235,6 +1276,27 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/10/muramasa-revenant-blades-launches-february-4-2027/",
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
+    },
+    {
+      "id": "1528be32b0f1bdb99db2",
+      "title": "UFC 파이트 나이트 시드니(2027) 2월 7일 개최",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "UFC Fight Night",
+        "호주",
+        "시드니"
+      ],
+      "series": "UFC Fight Night Sydney",
+      "startsAt": "2027-02-07T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
+      "reason": "UFC 공식 공지에 ‘Sunday 7 February 2027’로 개최일이 명시되어 있으며, 날짜가 미래 범위 내입니다."
     },
     {
       "id": "8f702cd428b923ad7a08",
