@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-10-08T00:34:58.115Z",
+  "generatedAt": "2026-10-09T00:49:48.519Z",
   "events": [
-    {
-      "id": "4613985d5232644bfaa8",
-      "title": "Control Resonant: How Remedy is going bigger and weirder with its paranatural horror sequel on September 24",
-      "category": "게임",
-      "tags": [
-        "Control",
-        "Control Resonant",
-        "Remedy",
-        "출시"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-09-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/18/control-resonant-how-remedy-is-going-bigger-and-weirder-with-its-paranatural-horror-sequel-on-september-24/",
-      "reason": "본문에서 9월 24일 출시(공개)로 명시돼 있어 해당 날짜로 추출했다."
-    },
-    {
-      "id": "068b3b6e0a8dc4b6bd7f",
-      "title": "Control Resonant: How Remedy is going bigger and weirder with its paranatural horror sequel on September 24",
-      "category": "게임",
-      "tags": [
-        "Control Resonant",
-        "출시",
-        "PS5"
-      ],
-      "series": "Control",
-      "startsAt": "2026-09-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/18/control-resonant-how-remedy-is-going-bigger-and-weirder-with-its-paranatural-horror-sequel-on-september-24/",
-      "reason": "본문에 '9월 24일'에 Control Resonant가 출시된다고 명시되어 있으며 시간이 없어 12:00으로 표기했습니다."
-    },
-    {
-      "id": "c8615615cfce8476fd79",
-      "title": "Control Resonant’s expanded Assist Mode 공개(September 24 launch)",
-      "category": "게임",
-      "tags": [
-        "PlayStation Blog",
-        "Control Resonant",
-        "Assist Mode",
-        "출시"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-09-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/10/play-your-way-with-control-resonants-expanded-assist-mode/",
-      "reason": "원문에서 Control Resonant의 9월 24일 런칭(출시)을 명시합니다."
-    },
-    {
-      "id": "d556480f6c31523b66ae",
-      "title": "Into the Radius 2 – PS VR2 출시(September 24)",
-      "category": "게임",
-      "tags": [
-        "PS VR2",
-        "출시"
-      ],
-      "series": "Into the Radius 2",
-      "startsAt": "2026-09-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/24/vr-shooter-into-the-radius-2-hits-ps-vr2-september-24/",
-      "reason": "공식 글에서 Into the Radius 2가 9월 24일 PS VR2에 출시된다고 명시한다."
-    },
-    {
-      "id": "ad38a155ff66f59831f2",
-      "title": "UFC BJJ 11: Musumeci vs Mitchell (9/24)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC BJJ",
-        "그래플링",
-        "9월"
-      ],
-      "series": "UFC BJJ 11",
-      "startsAt": "2026-09-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/featherweight-show-match-headlines-exciting-ufc-bjj-11-card-september-24",
-      "reason": "UFC 공식 기사에 ‘September 24’ 일정과 라이브(지역 시간대 표기)가 명시됨."
-    },
     {
       "id": "a5953d0b489bb73280f1",
       "title": "Minecraft LIVE Returns This Saturday",
@@ -596,6 +499,27 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
       "reason": "UFC 공식 이벤트 페이지에서 ‘Sat, Oct 10 / 8:00 PM EDT’로 2026년 10월 10일 개최가 명시."
+    },
+    {
+      "id": "cff8b12ef034b5529a55",
+      "title": "UFC 파이트 나이트: 앨런 vs 덩컨 (10/10)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "UFC Fight Night",
+        "Meta APEX",
+        "Las Vegas"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-10-10T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+      "reason": "UFC 공식 이벤트 페이지에 2026-10-10(현지 Sat, Oct 10) 개최가 명시되어 있음."
     },
     {
       "id": "a3ef983756181b10ddeb",
