@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T00:49:48.519Z",
+  "generatedAt": "2026-10-10T00:23:46.989Z",
   "events": [
     {
       "id": "a5953d0b489bb73280f1",
@@ -541,6 +541,21 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/tickets-sale-october-10-october-31-and-november-7-ufc-fight-night-events-meta-apex",
       "reason": "UFC 공식 공지에서 2026-10-10 개최(메인카드 8:00 PM EDT) 및 Meta APEX 라스베이거스 일정이 명시되어 있음."
+    },
+    {
+      "id": "dc0a4ff20d9b99df2396",
+      "title": "Next Week on XBOX: New Games for October 12 to 16",
+      "category": "게임",
+      "tags": [],
+      "series": "Next Week on XBOX",
+      "startsAt": "2026-10-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
+      "reason": "기사에서 10월 12일부터 10월 16일까지의 신규 게임을 다루는 주간 코너 일정을 안내합니다."
     },
     {
       "id": "6a6d682789e29945656b",
