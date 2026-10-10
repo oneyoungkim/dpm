@@ -1,82 +1,6 @@
 {
-  "generatedAt": "2026-10-10T00:23:46.989Z",
+  "generatedAt": "2026-10-10T23:58:47.814Z",
   "events": [
-    {
-      "id": "a5953d0b489bb73280f1",
-      "title": "Minecraft LIVE Returns This Saturday",
-      "category": "게임",
-      "tags": [
-        "Minecraft LIVE"
-      ],
-      "series": "Minecraft LIVE",
-      "startsAt": "2026-09-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/24/minecraft-live-returns-this-saturday/",
-      "reason": "본문에 'this Saturday'로만 되어 있어 해당 토요일 날짜만 추출해 시간을 미정으로 처리했다."
-    },
-    {
-      "id": "4128d4b9b555244f9012",
-      "title": "ONE Friday Fights 126 (9/26)",
-      "category": "격투기",
-      "tags": [
-        "MMA",
-        "Muay Thai",
-        "kickboxing",
-        "ONE Championship"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-09-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-126",
-      "reason": "공식 ONE 이벤트 페이지에 ‘ONE Friday Fights 126’이 ‘September 26’로 명시되어 있으며, 행사가 해당 날짜에 개최된다고 안내합니다."
-    },
-    {
-      "id": "9acf4a3a47998709c639",
-      "title": "UFC 파이트 나이트 로자스 주니어 vs 바르셀로스 9/26",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "라스베이거스",
-        "Meta APEX"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-09-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
-      "reason": "공식 UFC 이벤트 페이지에 2026-09-26(토) 개최가 명시되어 있음."
-    },
-    {
-      "id": "47141a163a83c6f07eac",
-      "title": "UFC Fight Night: Rosas Jr. vs Barcelos (9/26)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Fight Night"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-09-26T20:00:00+00:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
-      "reason": "UFC 공식 이벤트 페이지에 2026-09-26 및 시작 시간(EDT 표기)이 명시되어 있음."
-    },
     {
       "id": "5ef7fe0aa41c1df3895f",
       "title": "Free Play Days – PGA TOUR 2K25, The Escapists 2, Young Suns, and The Division 2",
@@ -556,6 +480,28 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
       "reason": "기사에서 10월 12일부터 10월 16일까지의 신규 게임을 다루는 주간 코너 일정을 안내합니다."
+    },
+    {
+      "id": "9a2b5fc4ba60438313e4",
+      "title": "Next Week on XBOX: New Games for October 12 to 16",
+      "category": "게임",
+      "tags": [
+        "Next Week on XBOX",
+        "October 12",
+        "October 13",
+        "October 14",
+        "October 15",
+        "October 16"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-10-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
+      "reason": "주간 코너에서 10월 12일~10월 16일 기간의 신작을 다룬다고 공지됐다(구체 출시일은 본문에 따로 명시되지 않음)."
     },
     {
       "id": "6a6d682789e29945656b",
