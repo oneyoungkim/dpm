@@ -1,27 +1,6 @@
 {
-  "generatedAt": "2026-10-10T23:58:47.814Z",
+  "generatedAt": "2026-10-12T00:07:00.438Z",
   "events": [
-    {
-      "id": "5ef7fe0aa41c1df3895f",
-      "title": "Free Play Days – PGA TOUR 2K25, The Escapists 2, Young Suns, and The Division 2",
-      "category": "게임",
-      "tags": [
-        "Free Play Days",
-        "PGA TOUR 2K25",
-        "The Escapists 2",
-        "Young Suns",
-        "The Division 2"
-      ],
-      "series": "Free Play Days",
-      "startsAt": "2026-09-27T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/24/free-play-days-09-24-2026/",
-      "reason": "Free Play Days가 9월 27일까지 진행된다고 명시되어 있다."
-    },
     {
       "id": "36b3a49a6db307fcfdf1",
       "title": "Gears of War: E-Day pre-install begins on September 29 (PC specifications also revealed)",
@@ -470,16 +449,20 @@
       "id": "dc0a4ff20d9b99df2396",
       "title": "Next Week on XBOX: New Games for October 12 to 16",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "주간 코너",
+        "신규 게임",
+        "출시 예정 안내"
+      ],
       "series": "Next Week on XBOX",
       "startsAt": "2026-10-12T12:00:00+09:00",
       "timeTbd": true,
       "eventMode": "scheduled",
       "datePrecision": "date",
-      "confidence": "confirmed",
+      "confidence": "expected",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
-      "reason": "기사에서 10월 12일부터 10월 16일까지의 신규 게임을 다루는 주간 코너 일정을 안내합니다."
+      "reason": "기사에서 10월 12일부터 16일까지 다룰 신규 게임 소식을 예고한다."
     },
     {
       "id": "9a2b5fc4ba60438313e4",
@@ -604,11 +587,7 @@
       "id": "ca72d90e6473a318af90",
       "title": "Everything you need to know about DMZ mode in Call of Duty: Modern Warfare 4",
       "category": "게임",
-      "tags": [
-        "DMZ 모드",
-        "출시",
-        "Call of Duty: Modern Warfare 4"
-      ],
+      "tags": [],
       "series": "Call of Duty: Modern Warfare 4",
       "startsAt": "2026-10-23T12:00:00+09:00",
       "timeTbd": true,
@@ -617,7 +596,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
-      "reason": "공식 글에서 Call of Duty: Modern Warfare 4가 10월 23일 출시와 함께 DMZ 모드가 제공된다고 밝힙니다."
+      "reason": "원문에 Call of Duty: Modern Warfare 4가 10월 23일 출시되며 DMZ 모드도 함께 출시된다고 명시되어 있습니다."
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
@@ -732,20 +711,16 @@
       "id": "d71b8867b60d9ac17da8",
       "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
       "category": "게임",
-      "tags": [
-        "DLC",
-        "Year 1 Pass",
-        "Phoenix Cyclops"
-      ],
+      "tags": [],
       "series": "MARVEL Tōkon: Fighting Souls",
       "startsAt": "2026-11-02T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "release-window",
+      "eventMode": "scheduled",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/07/phoenix-cyclops-joins-marvel-tokon-fighting-souls-on-november-2/",
-      "reason": "공식 글에서 Phoenix Cyclops DLC 캐릭터가 11월 2일에 제공된다고 안내합니다."
+      "reason": "원문에 DLC 캐릭터 Phoenix Cyclops가 11월 2일에 도착한다고 명시되어 있습니다."
     },
     {
       "id": "bbf966835aeed9bfe627",
@@ -771,19 +746,16 @@
       "id": "ba7a9a4cb2229f958b89",
       "title": "Warhammer Survivors launches November 10, new characters revealed",
       "category": "게임",
-      "tags": [
-        "출시",
-        "신규 캐릭터"
-      ],
+      "tags": [],
       "series": "Warhammer Survivors",
       "startsAt": "2026-11-10T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "release-window",
+      "eventMode": "scheduled",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
-      "reason": "공식 글에서 Warhammer Survivors가 11월 10일 출시된다고 명시합니다."
+      "reason": "원문에 Warhammer Survivors가 11월 10일에 출시된다고 명시되어 있습니다."
     },
     {
       "id": "cded676c81901fd50833",
