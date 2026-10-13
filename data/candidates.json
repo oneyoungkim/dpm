@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T00:07:00.438Z",
+  "generatedAt": "2026-10-13T02:19:22.930Z",
   "events": [
     {
       "id": "36b3a49a6db307fcfdf1",
@@ -502,6 +502,43 @@
       "reason": "원문에서 Invincible VS 오픈 베타가 2026년 10월 13일 시작된다고 명시한다."
     },
     {
+      "id": "aede05a57dbcd33cdb53",
+      "title": "PFL Chicago 2 (10/16)",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "MMA"
+      ],
+      "series": "PFL",
+      "startsAt": "2026-10-16T18:00:00-04:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/",
+      "reason": "PFL 공식 홈페이지 메인 영역에 PFL Chicago 2의 날짜/시간이 명시됨."
+    },
+    {
+      "id": "aeedd60a9066715792bf",
+      "title": "ONE SAMURAI 4 (10/17)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Kickboxing"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-10-17T06:30:00Z",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-samurai-4",
+      "reason": "ONE 공식 이벤트 페이지에 날짜/시간이 명시됨."
+    },
+    {
       "id": "10d0f44f1a9d8075556c",
       "title": "ONE SAMURAI 4 (10/17)",
       "category": "격투기",
@@ -587,7 +624,12 @@
       "id": "ca72d90e6473a318af90",
       "title": "Everything you need to know about DMZ mode in Call of Duty: Modern Warfare 4",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "Call of Duty: Modern Warfare 4",
+        "DMZ 모드",
+        "출시",
+        "October 23"
+      ],
       "series": "Call of Duty: Modern Warfare 4",
       "startsAt": "2026-10-23T12:00:00+09:00",
       "timeTbd": true,
@@ -596,7 +638,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
-      "reason": "원문에 Call of Duty: Modern Warfare 4가 10월 23일 출시되며 DMZ 모드도 함께 출시된다고 명시되어 있습니다."
+      "reason": "Call of Duty: Modern Warfare 4가 10월 23일 출시되며 DMZ 모드도 함께 출시된다고 안내되어 있습니다."
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
@@ -668,6 +710,25 @@
       "reason": "원문에 The Wolf Among Us Remastered가 10월 29일 출시된다고 명시돼 있습니다."
     },
     {
+      "id": "c0015e858ff4bd496d7b",
+      "title": "UFC Fight Night: Moicano vs Nolan (10/31)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Fight Night"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-10-31T20:00:00-04:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+      "reason": "UFC 공식 이벤트 페이지에 날짜/시간이 명시됨."
+    },
+    {
       "id": "5987ad228053df570443",
       "title": "UFC 파이트 나이트: 모이카노 vs 놀런(10/31)",
       "category": "격투기",
@@ -711,16 +772,21 @@
       "id": "d71b8867b60d9ac17da8",
       "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "MARVEL Tōkon: Fighting Souls",
+        "DLC 캐릭터",
+        "Phoenix Cyclops",
+        "Year 1 Pass"
+      ],
       "series": "MARVEL Tōkon: Fighting Souls",
       "startsAt": "2026-11-02T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/07/phoenix-cyclops-joins-marvel-tokon-fighting-souls-on-november-2/",
-      "reason": "원문에 DLC 캐릭터 Phoenix Cyclops가 11월 2일에 도착한다고 명시되어 있습니다."
+      "reason": "MARVEL Tōkon: Fighting Souls의 Year 1 Pass에 포함되는 DLC 캐릭터 Phoenix Cyclops가 11월 2일 공개된다고 안내되어 있습니다."
     },
     {
       "id": "bbf966835aeed9bfe627",
@@ -746,16 +812,20 @@
       "id": "ba7a9a4cb2229f958b89",
       "title": "Warhammer Survivors launches November 10, new characters revealed",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "Warhammer Survivors",
+        "출시",
+        "신규 캐릭터"
+      ],
       "series": "Warhammer Survivors",
       "startsAt": "2026-11-10T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
-      "reason": "원문에 Warhammer Survivors가 11월 10일에 출시된다고 명시되어 있습니다."
+      "reason": "Warhammer Survivors가 PS5에서 11월 10일 출시된다고 명시되어 있습니다."
     },
     {
       "id": "cded676c81901fd50833",
