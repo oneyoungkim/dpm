@@ -1,28 +1,6 @@
 {
-  "generatedAt": "2026-10-14T00:02:38.079Z",
+  "generatedAt": "2026-10-14T23:33:24.592Z",
   "events": [
-    {
-      "id": "3dc7e376b9d33bc3f1d1",
-      "title": "Gears of War: E-Day – Prepare for Emergence Day with Us in Los Angeles",
-      "category": "게임",
-      "tags": [
-        "E-Day",
-        "원나이트 온리",
-        "체험",
-        "이벤트",
-        "LA",
-        "Hollywood & Vine"
-      ],
-      "series": "Gears of War: E-Day",
-      "startsAt": "2026-09-30T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "live-trigger",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/21/gears-of-war-e-day-emergence-la-event/",
-      "reason": "해당 글에서 2026년 9월 30일(현지 기준) 할 원나이트 이벤트 개최가 명시되어 있다."
-    },
     {
       "id": "73564e48613c88656513",
       "title": "Gran Turismo 7 Spec IV update launching in two parts later this year",
