@@ -1,58 +1,6 @@
 {
-  "generatedAt": "2026-10-13T02:19:22.930Z",
+  "generatedAt": "2026-10-14T00:02:38.079Z",
   "events": [
-    {
-      "id": "36b3a49a6db307fcfdf1",
-      "title": "Gears of War: E-Day pre-install begins on September 29 (PC specifications also revealed)",
-      "category": "게임",
-      "tags": [
-        "사전 설치",
-        "PC"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-09-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/17/gears-of-war-e-day-gone-gold-pre-install-pc-specs/",
-      "reason": "문서에서 Gears of War: E-Day의 프리-인스톨이 2026년 9월 29일부터 시작된다고 명시되어 있습니다."
-    },
-    {
-      "id": "f05e08be91af2ebd0e97",
-      "title": "How Minecraft Dungeons II&#8217;s Interconnected World Makes Every Journey an Adventure",
-      "category": "게임",
-      "tags": [
-        "Minecraft Dungeons II",
-        "Sift",
-        "출시"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-09-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/28/how-minecraft-dungeons-iis-interconnected-world-makes-every-journey-an-adventure/",
-      "reason": "Minecraft Dungeons II의 새로운 차원 Sift가 2026년 9월 29일에 출시된다고 안내한다."
-    },
-    {
-      "id": "1e427dd23483678f0192",
-      "title": "The Witcher 3: Wild Hunt — Songs of the Past and Remastered 출시",
-      "category": "게임",
-      "tags": [],
-      "series": "The Witcher 3: Wild Hunt",
-      "startsAt": "2026-09-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/25/witcher-3-remastered-and-songs-of-the-past/",
-      "reason": "기사에서 9월 29일에 The Witcher 3: Wild Hunt의 Songs of the Past와 Remastered가 제공된다고 명시한다."
-    },
     {
       "id": "3dc7e376b9d33bc3f1d1",
       "title": "Gears of War: E-Day – Prepare for Emergence Day with Us in Los Angeles",
@@ -559,6 +507,28 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-samurai-4",
       "reason": "공식 ONE 이벤트 페이지에 ‘On Saturday, October 17’로 개최일이 명시됨."
+    },
+    {
+      "id": "ed9e5d60af23fce02d9b",
+      "title": "ONE SAMURAI 4, 10/17 도쿄 아리아케 개막",
+      "category": "격투기",
+      "tags": [
+        "ONE",
+        "ONE SAMURAI",
+        "MMA",
+        "무에타이",
+        "킥복싱",
+        "권투/타이틀전"
+      ],
+      "series": "ONE SAMURAI",
+      "startsAt": "2026-10-17T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-samurai-4",
+      "reason": "ONE 공식 이벤트 페이지에 ‘Oct 17 (Sat)’ 및 Ariake Arena, Tokyo 일정이 명시되어 한국 사용자 기준 미래 일정(2026-10-14~2028-04-16) 범위에 포함됨."
     },
     {
       "id": "d41925e39e07289923ed",
