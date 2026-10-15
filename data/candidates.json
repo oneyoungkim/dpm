@@ -1,23 +1,6 @@
 {
-  "generatedAt": "2026-10-14T23:33:24.592Z",
+  "generatedAt": "2026-10-15T23:25:56.030Z",
   "events": [
-    {
-      "id": "73564e48613c88656513",
-      "title": "Gran Turismo 7 Spec IV update launching in two parts later this year",
-      "category": "게임",
-      "tags": [
-        "업데이트"
-      ],
-      "series": "Gran Turismo 7",
-      "startsAt": "2026-10-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/gran-turismo-7-spec-iv-update-launching-in-two-parts-later-this-year/",
-      "reason": "Gran Turismo 7 Spec IV 업데이트가 올해 10월에 첫 번째 파트로 제공된다고 설명합니다."
-    },
     {
       "id": "36e0f2c20ff8d9c6eebe",
       "title": "Ghost of Yōtei Complete Edition: PS5 10월 2일 출시",
@@ -426,6 +409,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/01/invincible-vs-open-beta-begins-october-13/",
       "reason": "원문에서 Invincible VS 오픈 베타가 2026년 10월 13일 시작된다고 명시한다."
+    },
+    {
+      "id": "0a4382e4773216d291b6",
+      "title": "Open up to new possibilities with iPhone Duo",
+      "category": "테크",
+      "tags": [
+        "Apple",
+        "iPhone Duo",
+        "pre-order"
+      ],
+      "series": "iPhone Duo",
+      "startsAt": "2026-10-16T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/",
+      "reason": "원문에 10월 16일(금요일) 사전주문 시작이 명시되어 있습니다."
     },
     {
       "id": "aede05a57dbcd33cdb53",
