@@ -1,126 +1,6 @@
 {
-  "generatedAt": "2026-10-15T23:25:56.030Z",
+  "generatedAt": "2026-10-16T23:08:07.678Z",
   "events": [
-    {
-      "id": "36e0f2c20ff8d9c6eebe",
-      "title": "Ghost of Yōtei Complete Edition: PS5 10월 2일 출시",
-      "category": "게임",
-      "tags": [
-        "Ghost of Yōtei",
-        "Complete Edition",
-        "PS5",
-        "출시"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-10-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/12/20260813-goy/",
-      "reason": "Ghost of Yōtei Complete Edition이 10월 2일 PS5에 제공된다고 공식적으로 안내한다."
-    },
-    {
-      "id": "77c372356235278ec414",
-      "title": "ONE Fight Night 48: Erdogan vs Elliott",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "Prime Video"
-      ],
-      "series": "ONE Fight Night",
-      "startsAt": "2026-10-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/onefightnight48",
-      "reason": "공식 이벤트 상세 페이지에 'Friday, October 2'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
-    },
-    {
-      "id": "c244a02fedc21ce80a24",
-      "title": "ONE Fight Night 48: Erdogan vs. Elliott",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "Muay Thai",
-        "Prime Video"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-10-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/onefightnight48",
-      "reason": "공식 ONE 이벤트 페이지에 ‘Friday, October 2’로 차후 개최 일정이 명시되어 있음."
-    },
-    {
-      "id": "6f033dbe8cf63138cd9a",
-      "title": "ONE Fight Night 48: Erdogan vs. Elliott (10/2)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "Prime Video",
-        "Lumpinee Stadium",
-        "태국"
-      ],
-      "series": "ONE Fight Night 48",
-      "startsAt": "2026-10-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/onefightnight48",
-      "reason": "공식 ONE 이벤트 페이지에 ‘Friday, October 2’로 개최일이 명시됨."
-    },
-    {
-      "id": "039fa9a811dc0f6ce0b4",
-      "title": "ONE Friday Fights 173 (10/2)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "ONE Friday Fights",
-        "MMA",
-        "무에타이"
-      ],
-      "series": "ONE Friday Fights",
-      "startsAt": "2026-10-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/jp/events/one-friday-fights-173",
-      "reason": "공식 ONE 이벤트 페이지에서 ONE Friday Fights 173이 10월 2일에 개최되는 것으로 안내(다만 시간 표기는 ‘--’로 비어 있음)."
-    },
-    {
-      "id": "d330da4d3f29c9868b14",
-      "title": "ONE Fight Night 47 (10/2 일정)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "UFC 유사",
-        "MMA",
-        "태국"
-      ],
-      "series": "ONE Fight Night",
-      "startsAt": "2026-10-02T21:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
-      "reason": "ONE Championship이 2026년 1차 이벤트 일정 공지에서 ONE Fight Night 47을 10월 2일(동부시간 기준 21:00)로 명시."
-    },
     {
       "id": "14957dcd016f92ea6c4c",
       "title": "ONE Friday Fights 127",
@@ -552,6 +432,36 @@
       "reason": "공식 ONE 이벤트 페이지에서 ONE SAMURAI 4가 ‘10월 17일 6:30 UTC’로 명시되어(한국시간으로 15:30) 미래 일정 요건 충족."
     },
     {
+      "id": "aeaa3be42a8ab8072b2b",
+      "title": "DMZ Early Access Starts October 20",
+      "category": "게임",
+      "tags": [],
+      "series": "DMZ",
+      "startsAt": "2026-10-20T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/16/dmz-early-access-starts-october-20/",
+      "reason": "DMZ의 얼리 액세스가 2026년 10월 20일에 시작된다고 공지한다."
+    },
+    {
+      "id": "7206551555f86a3cf863",
+      "title": "Helldivers 2: Scope of Authority Premium Warbond launches Oct 20",
+      "category": "게임",
+      "tags": [],
+      "series": "Helldivers 2",
+      "startsAt": "2026-10-20T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/",
+      "reason": "공식 PlayStation Blog에서 Helldivers 2의 Scope of Authority Premium Warbond 출시일을 10월 20일로 발표했습니다."
+    },
+    {
       "id": "c9eed3260dcd4ad5666b",
       "title": "PFL Road to Dubai 스윕스테이크(Entry Period 2 종료 12/21 아님)",
       "category": "격투기",
@@ -589,6 +499,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
       "reason": "Call of Duty: Modern Warfare 4가 10월 23일 출시되며 DMZ 모드도 함께 출시된다고 안내되어 있습니다."
+    },
+    {
+      "id": "3ffdd9812ff50de73e57",
+      "title": "Modern Warfare 4 Launches October 23 as a Standalone Release",
+      "category": "게임",
+      "tags": [],
+      "series": "Modern Warfare 4",
+      "startsAt": "2026-10-23T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/15/modern-warfare-4-launches-october-23-as-a-standalone-release/",
+      "reason": "Modern Warfare 4가 2026년 10월 23일 단독 릴리스로 출시된다고 공지한다."
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
@@ -719,6 +644,27 @@
       "reason": "Prince St. Pizza에서 진행되는 ‘The Emergence Pie’ 한정 콜라보가 2026년 11월 1일까지라고 되어 있어 종료 시점을 이벤트 윈도우로 추출했다."
     },
     {
+      "id": "01cad19ab68bc77ed989",
+      "title": "Goobne ROAD FC 079 (2026년 11월 1일)",
+      "category": "격투기",
+      "tags": [
+        "ROAD FC",
+        "국내 개최",
+        "MMA",
+        "티켓",
+        "서울"
+      ],
+      "series": "ROAD FC",
+      "startsAt": "2026-11-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ROAD FC",
+      "sourceUrl": "https://roadfc.com/main/news/news_view.php?key=JTI1MjUzRElUTnhBVE0%3D",
+      "reason": "공식 ROAD FC 공지에서 ‘November 1’ 및 ‘Goobne ROAD FC 079’ 일정이 명시되어 있음."
+    },
+    {
       "id": "d71b8867b60d9ac17da8",
       "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
       "category": "게임",
@@ -737,6 +683,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/07/phoenix-cyclops-joins-marvel-tokon-fighting-souls-on-november-2/",
       "reason": "MARVEL Tōkon: Fighting Souls의 Year 1 Pass에 포함되는 DLC 캐릭터 Phoenix Cyclops가 11월 2일 공개된다고 안내되어 있습니다."
+    },
+    {
+      "id": "893000f539a85620fb68",
+      "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
+      "category": "게임",
+      "tags": [],
+      "series": "Escape Academy",
+      "startsAt": "2026-11-05T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
+      "reason": "공식 PlayStation Blog에서 Escape Academy 2: Back 2 School의 PS5 출시일을 11월 5일로 안내했습니다."
     },
     {
       "id": "bbf966835aeed9bfe627",
@@ -1276,23 +1237,25 @@
     },
     {
       "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (도하 복귀전)",
+      "title": "ONE: Qatar (2027년 3월 26일)",
       "category": "격투기",
       "tags": [
         "ONE Championship",
-        "ONE: Qatar",
         "MMA",
-        "무에타이"
+        "무에타이",
+        "킥복싱",
+        "서브미션 그래플링",
+        "중동"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 이벤트 페이지에 ‘Friday, March 26, 2027’ 날짜가 명시되어 있음. 시간은 미정이므로 12:00:00+09:00로 표기하고 timeTbd=true 처리."
+      "reason": "공식 ONE 이벤트 페이지에서 ‘Friday, March 26, 2027’ 개최가 명시되어 있음."
     },
     {
       "id": "dd0a32b34a26cd8a6a9b",
