@@ -1,46 +1,6 @@
 {
-  "generatedAt": "2026-10-16T23:08:07.678Z",
+  "generatedAt": "2026-10-17T22:46:52.533Z",
   "events": [
-    {
-      "id": "14957dcd016f92ea6c4c",
-      "title": "ONE Friday Fights 127",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "Muay Thai",
-        "Kickboxing",
-        "MMA"
-      ],
-      "series": "ONE Friday Fights",
-      "startsAt": "2026-10-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-127",
-      "reason": "공식 이벤트 상세 페이지에 'on October 3'로 개최일이 명시됨. 시간은 페이지에 고정 표기가 없어 12:00:00+09:00 기준 처리."
-    },
-    {
-      "id": "a5bb1d10a623d2cc3aaf",
-      "title": "UFC 332: Silva vs Wang (Salt Lake City)",
-      "category": "격투기",
-      "tags": [
-        "UFC 332",
-        "MMA",
-        "Paramount+",
-        "CBS"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-10-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/updates-to-ufc-332-silva-vs-wang",
-      "reason": "UFC 공식 공지에서 ‘Saturday, October 3’ 개최와 지역(Delta Center, Salt Lake City)이 명시됨."
-    },
     {
       "id": "caba1f7fdaebd58813d9",
       "title": "UFC 320: Ankalaev vs Pereira 2 (10/4)",
