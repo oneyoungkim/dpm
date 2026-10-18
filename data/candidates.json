@@ -1,25 +1,6 @@
 {
-  "generatedAt": "2026-10-17T22:46:52.533Z",
+  "generatedAt": "2026-10-18T22:41:02.134Z",
   "events": [
-    {
-      "id": "caba1f7fdaebd58813d9",
-      "title": "UFC 320: Ankalaev vs Pereira 2 (10/4)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "PPV",
-        "MMA"
-      ],
-      "series": "UFC 320",
-      "startsAt": "2026-10-04T18:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-320",
-      "reason": "UFC 공식 이벤트 페이지에 날짜(10/4)와 행사 시간이 명시되어 있음."
-    },
     {
       "id": "954c89a7b2c5db42c4e9",
       "title": "Next Week on XBOX: New Games for October 5 to 9",
@@ -419,7 +400,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/",
-      "reason": "공식 PlayStation Blog에서 Helldivers 2의 Scope of Authority Premium Warbond 출시일을 10월 20일로 발표했습니다."
+      "reason": "PlayStation Blog에 따르면 Helldivers 2의 Scope of Authority Premium Warbond가 2026년 10월 20일 출시됩니다."
     },
     {
       "id": "c9eed3260dcd4ad5666b",
@@ -658,6 +639,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
       "reason": "공식 PlayStation Blog에서 Escape Academy 2: Back 2 School의 PS5 출시일을 11월 5일로 안내했습니다."
+    },
+    {
+      "id": "47d1e6c25914195eaed4",
+      "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
+      "category": "게임",
+      "tags": [],
+      "series": "Escape Academy 2",
+      "startsAt": "2026-11-05T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
+      "reason": "PlayStation Blog에 따르면 Escape Academy 2: Back 2 School이 2026년 11월 5일 PS5로 출시됩니다."
     },
     {
       "id": "bbf966835aeed9bfe627",
@@ -1216,6 +1212,29 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "공식 ONE 이벤트 페이지에서 ‘Friday, March 26, 2027’ 개최가 명시되어 있음."
+    },
+    {
+      "id": "3ff610363964ac6c4b94",
+      "title": "ONE: Qatar (Aspire Dome)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "무에타이",
+        "킥복싱",
+        "서브미션 그래플링",
+        "카타르",
+        "도하"
+      ],
+      "series": "ONE",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "ONE 공식 이벤트 페이지에 2027-03-26(금) 도하 Aspire Dome 개최로 명시되어 있음."
     },
     {
       "id": "dd0a32b34a26cd8a6a9b",
