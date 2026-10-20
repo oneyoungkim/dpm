@@ -1,65 +1,6 @@
 {
-  "generatedAt": "2026-10-20T00:02:46.399Z",
+  "generatedAt": "2026-10-20T23:32:41.779Z",
   "events": [
-    {
-      "id": "91e4236f02f097b6c190",
-      "title": "Plan for Emergence Day Today With the Full Gears of War: E-Day Achievements List",
-      "category": "게임",
-      "tags": [
-        "Gears of War: E-Day",
-        "Emergence Begins",
-        "업적"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-10-06T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/09/plan-for-emergence-day-today-with-the-full-gears-of-war-e-day-achievements-list/",
-      "reason": "원문에 Emergence Begins가 10월 6일로 명시되어 있어 해당 날짜의 행사/진행을 일정으로 추출했다."
-    },
-    {
-      "id": "5e3cb43cf18e4e2192c3",
-      "title": "PlayStation Plus Monthly Games for October: F1 25, Hunt: Showdown 1896, Earth Defense Force: World Brothers 2",
-      "category": "게임",
-      "tags": [
-        "PlayStation Plus",
-        "월간 게임",
-        "F1 25",
-        "Hunt: Showdown 1896",
-        "Earth Defense Force: World Brothers 2"
-      ],
-      "series": "PlayStation Plus",
-      "startsAt": "2026-10-06T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/30/playstation-plus-monthly-games-for-october-f1-25-hunt-showdown-1896-earth-defense-force-world-brothers-2/",
-      "reason": "해당 글에서 10월 월간 게임이 10월 6일부터 이용 가능하다고 안내한다."
-    },
-    {
-      "id": "1bceb0072c9f67c88656",
-      "title": "PlayStation Plus Monthly Games for October: F1 25, Hunt: Showdown 1896, Earth Defense Force: World Brothers 2",
-      "category": "게임",
-      "tags": [
-        "PlayStation Plus",
-        "Monthly Games",
-        "October"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-10-06T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/30/playstation-plus-monthly-games-for-october-f1-25-hunt-showdown-1896-earth-defense-force-world-brothers-2/",
-      "reason": "원문에 ‘from Tuesday October 6’으로 시작 시점이 명시된 10월 PlayStation Plus 월간 게임 제공 개시일이 추출됩니다."
-    },
     {
       "id": "3932d1583766c40be32f",
       "title": "Sneaky Sasquatch transforms Subway Surfers+ (available through October 7)",
@@ -405,6 +346,24 @@
       "source": "PFL",
       "sourceUrl": "https://pflmma.com/roadtodubai-rules",
       "reason": "공식 규정에 Entry Period 2 종료일(2026-10-20)이 명시됨. (개별 이벤트 참가/당첨 관련 오퍼링 성격)"
+    },
+    {
+      "id": "58a804a12948a1ea518f",
+      "title": "Peak climbs its way onto PS5 October 22",
+      "category": "게임",
+      "tags": [
+        "PS5",
+        "출시"
+      ],
+      "series": "Peak",
+      "startsAt": "2026-10-22T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/15/peak-climbs-its-way-onto-ps5-october-22/",
+      "reason": "Peak가 PS5로 10월 22일 출시된다고 안내합니다."
     },
     {
       "id": "ca72d90e6473a318af90",
