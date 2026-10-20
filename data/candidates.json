@@ -1,21 +1,6 @@
 {
-  "generatedAt": "2026-10-18T22:41:02.134Z",
+  "generatedAt": "2026-10-20T00:02:46.399Z",
   "events": [
-    {
-      "id": "954c89a7b2c5db42c4e9",
-      "title": "Next Week on XBOX: New Games for October 5 to 9",
-      "category": "게임",
-      "tags": [],
-      "series": "Next Week on XBOX",
-      "startsAt": "2026-10-05T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/02/next-week-on-xbox-new-games-for-october-5-to-9/",
-      "reason": "공식 ‘Next Week on XBOX’ 코너에서 10월 5일부터 9일까지 예정된 신작을 소개한다고 안내한다."
-    },
     {
       "id": "91e4236f02f097b6c190",
       "title": "Plan for Emergence Day Today With the Full Gears of War: E-Day Achievements List",
@@ -400,7 +385,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/",
-      "reason": "PlayStation Blog에 따르면 Helldivers 2의 Scope of Authority Premium Warbond가 2026년 10월 20일 출시됩니다."
+      "reason": "공식 글에서 Helldivers 2의 Scope of Authority Premium Warbond가 10월 20일 출시된다고 밝힙니다."
     },
     {
       "id": "c9eed3260dcd4ad5666b",
@@ -850,6 +835,25 @@
       "reason": "블랙컴뱃 공식 이벤트 페이지에 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시되어 있음. 시각은 미기재라 timeTbd 처리."
     },
     {
+      "id": "c4db2af0a235f6097a88",
+      "title": "블랙컴뱃 17: VANTABLACK",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "MMA",
+        "글러브"
+      ],
+      "series": "BLACK COMBAT",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php?page=1",
+      "reason": "블랙컴뱃 공식 이벤트 페이지에 블랙컴뱃 17(2026년 11월 21일) 개최일이 명시됨(시간은 미기재)."
+    },
+    {
       "id": "91ae095b190b3e214ab6",
       "title": "Gears of War: E-Day x Liquid Death – Unlock a Legendary Pose and More",
       "category": "게임",
@@ -962,6 +966,26 @@
       "source": "PFL",
       "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
       "reason": "PFL 공식 뉴스에 PFL Lyon의 메인 이벤트가 2026-12-19 LDLC Arena에서 개최된다고 명시됨."
+    },
+    {
+      "id": "c6f47e7520af0c6a03b6",
+      "title": "ONE Fight Night 50 (ONE: X)",
+      "category": "격투기",
+      "tags": [
+        "ONE",
+        "MMA",
+        "무에타이",
+        "킥복싱"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-12-19T11:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "expected",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/onefightnight50",
+      "reason": "ONE 공식 이벤트 페이지에 ONE Fight Night 50의 2026-12-19(지역 UTC 표기 포함) 개최 일정이 명시돼 있음."
     },
     {
       "id": "5e2bbf68f5c68e3f25c6",
