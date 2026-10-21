@@ -1,45 +1,6 @@
 {
-  "generatedAt": "2026-10-20T23:32:41.779Z",
+  "generatedAt": "2026-10-21T23:48:31.487Z",
   "events": [
-    {
-      "id": "3932d1583766c40be32f",
-      "title": "Sneaky Sasquatch transforms Subway Surfers+ (available through October 7)",
-      "category": "게임",
-      "tags": [
-        "Apple Arcade",
-        "Sneaky Sasquatch",
-        "Subway Surfers+"
-      ],
-      "series": "Sneaky Sasquatch × Subway Surfers+",
-      "startsAt": "2026-10-07T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/08/exciting-updates-for-sneaky-sasquatch-come-to-apple-arcade/",
-      "reason": "공개된 안내에 따르면 해당 콘텐츠는 10월 7일까지 제공된다."
-    },
-    {
-      "id": "0b583512c83bcad8f6fb",
-      "title": "Sneaky Sasquatch transforms Subway Surfers+ with the charm and aesthetic of the hit open-world Apple Arcade game (October 7까지)",
-      "category": "게임",
-      "tags": [
-        "Apple Arcade",
-        "Sneaky Sasquatch",
-        "Subway Surfers+",
-        "업데이트"
-      ],
-      "series": "Apple Newsroom",
-      "startsAt": "2026-10-07T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/08/exciting-updates-for-sneaky-sasquatch-come-to-apple-arcade/",
-      "reason": "공식 기사에서 10월 7일까지 해당 게임 연동/테마 업데이트가 진행된다고 안내한다."
-    },
     {
       "id": "a7fab10e423186ea6f7a",
       "title": "UFC 파이트 나이트: 2026-10-10(라스베이거스)",
@@ -346,6 +307,27 @@
       "source": "PFL",
       "sourceUrl": "https://pflmma.com/roadtodubai-rules",
       "reason": "공식 규정에 Entry Period 2 종료일(2026-10-20)이 명시됨. (개별 이벤트 참가/당첨 관련 오퍼링 성격)"
+    },
+    {
+      "id": "1be5cb03885191678e9d",
+      "title": "Once Human’s Isles of Abyss expansion launches on PS5",
+      "category": "게임",
+      "tags": [
+        "Once Human",
+        "Isles of Abyss",
+        "PS5",
+        "확장팩",
+        "출시"
+      ],
+      "series": "Once Human",
+      "startsAt": "2026-10-22T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/21/once-humans-isles-of-abyss-expansion-launches-on-ps5-tomorrow/",
+      "reason": "PlayStation Blog에서 PS5용 Once Human ‘Isles of Abyss’ 확장팩이 10월 22일 출시된다고 안내했다."
     },
     {
       "id": "58a804a12948a1ea518f",
