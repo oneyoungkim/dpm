@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T23:48:31.487Z",
+  "generatedAt": "2026-10-22T23:46:46.576Z",
   "events": [
     {
       "id": "a7fab10e423186ea6f7a",
@@ -348,6 +348,21 @@
       "reason": "Peak가 PS5로 10월 22일 출시된다고 안내합니다."
     },
     {
+      "id": "386eebf02633363b4ec2",
+      "title": "Developers bring incredible new app experiences to iPhone Duo",
+      "category": "테크",
+      "tags": [],
+      "series": "iPhone Duo",
+      "startsAt": "2026-10-23T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
+      "reason": "기사에 '이번 주 금요일'부터 iPhone Duo 사용자가 앱과 게임을 볼 수 있다고 명시되어 있어 해당 날짜의 이벤트로 추출했습니다."
+    },
+    {
       "id": "ca72d90e6473a318af90",
       "title": "Everything you need to know about DMZ mode in Call of Duty: Modern Warfare 4",
       "category": "게임",
@@ -381,6 +396,21 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/15/modern-warfare-4-launches-october-23-as-a-standalone-release/",
       "reason": "Modern Warfare 4가 2026년 10월 23일 단독 릴리스로 출시된다고 공지한다."
+    },
+    {
+      "id": "17f3a310b3782d4102ed",
+      "title": "Formula 1® United States Grand Prix™ streams live on Apple TV this weekend",
+      "category": "테크",
+      "tags": [],
+      "series": "Formula 1",
+      "startsAt": "2026-10-24T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/10/formula-1-united-states-grand-prix-streams-live-on-apple-tv-this-weekend/",
+      "reason": "해당 주말(날짜 미명시) 미국 그랑프리가 Apple TV에서 라이브 스트리밍된다고 안내되어 있어 일정으로 추출했습니다."
     },
     {
       "id": "b0afe2eb3a68fc809ff9",
