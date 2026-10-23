@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T23:46:46.576Z",
+  "generatedAt": "2026-10-23T23:40:20.293Z",
   "events": [
     {
       "id": "a7fab10e423186ea6f7a",
@@ -753,6 +753,26 @@
       "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
     },
     {
+      "id": "efa8b6f611f1204ab4c9",
+      "title": "Grand Theft Auto VI 공식 런치 트레일러 공개 – 게임은 11월 19일 출시",
+      "category": "게임",
+      "tags": [
+        "공식 런치 트레일러",
+        "출시",
+        "Grand Theft Auto VI",
+        "Leonida"
+      ],
+      "series": "Xbox Wire",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+      "reason": "공식 런치 트레일러가 공개되며 게임이 11월 19일 도착(출시)한다고 명시되어 있다."
+    },
+    {
       "id": "2e10113c7173f179528e",
       "title": "Pre-Order Grand Theft Auto VI Now. Coming to XBOX Series X|S November 19, 2026",
       "category": "게임",
@@ -823,6 +843,25 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php?page=1",
       "reason": "블랙컴뱃 공식 이벤트 페이지에 블랙컴뱃 17(2026년 11월 21일) 개최일이 명시됨(시간은 미기재)."
+    },
+    {
+      "id": "1144342c0e351190993e",
+      "title": "블랙컴뱃 17: VANTABLACK (11/21)",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "MMA",
+        "국내대회"
+      ],
+      "series": "블랙컴뱃",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "공식 블랙컴뱃 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 일자가 2026년 11월 21일로 명시됨."
     },
     {
       "id": "91ae095b190b3e214ab6",
