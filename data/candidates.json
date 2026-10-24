@@ -1,67 +1,6 @@
 {
-  "generatedAt": "2026-10-23T23:40:20.293Z",
+  "generatedAt": "2026-10-24T22:47:32.901Z",
   "events": [
-    {
-      "id": "a7fab10e423186ea6f7a",
-      "title": "UFC 파이트 나이트: 2026-10-10(라스베이거스)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "UFC Fight Night"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-10-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "reason": "UFC 공식 이벤트 페이지에서 ‘Sat, Oct 10 / 8:00 PM EDT’로 2026년 10월 10일 개최가 명시."
-    },
-    {
-      "id": "cff8b12ef034b5529a55",
-      "title": "UFC 파이트 나이트: 앨런 vs 덩컨 (10/10)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "UFC Fight Night",
-        "Meta APEX",
-        "Las Vegas"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-10-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "reason": "UFC 공식 이벤트 페이지에 2026-10-10(현지 Sat, Oct 10) 개최가 명시되어 있음."
-    },
-    {
-      "id": "a3ef983756181b10ddeb",
-      "title": "UFC 파이트 나이트: 앨런 vs 덩컨(10/10) 티켓 오픈",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Meta APEX",
-        "라스베이거스",
-        "티켓"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-10-10T20:00:00-04:00",
-      "timeTbd": false,
-      "eventMode": "release-window",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/tickets-sale-october-10-october-31-and-november-7-ufc-fight-night-events-meta-apex",
-      "reason": "UFC 공식 공지에서 2026-10-10 개최(메인카드 8:00 PM EDT) 및 Meta APEX 라스베이거스 일정이 명시되어 있음."
-    },
     {
       "id": "dc0a4ff20d9b99df2396",
       "title": "Next Week on XBOX: New Games for October 12 to 16",
@@ -700,6 +639,27 @@
       "reason": "원문에 2026년 11월 12일 XBOX FanFest가 MoPOP에서 열린다고 명시되어 있다."
     },
     {
+      "id": "569373aece36734afd8f",
+      "title": "PFL 두바이(11월 14일): Nemkov vs Bilostenniy",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "MMA",
+        "PFL Dubai",
+        "Vadim Nemkov",
+        "Sergei Bilostenniy"
+      ],
+      "series": "PFL",
+      "startsAt": "2026-11-14T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/news/heavyweight-gold-on-the-line-as-vadim-nemkov-defends-his-pfl-world-title-against-sergei-bilostenniy-at-pfl-dubai",
+      "reason": "PFL 공식 뉴스 페이지에서 PFL Dubai 개최일(2026년 11월 14일, 토요일)이 명시됨."
+    },
+    {
       "id": "49ee3b1f9df52ac279b8",
       "title": "Hello from Seattle: XBOX FanFest Comes Home November 12",
       "category": "게임",
@@ -786,6 +746,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L#new_tab",
       "reason": "공식 페이지 문구에 따라 2026년 11월 19일에 XBOX Series X|S로 출시된다."
+    },
+    {
+      "id": "0190d14e2860871fba73",
+      "title": "블랙컴뱃 17 VANTABLACK(11월 21일)",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "MMA",
+        "고척스카이돔"
+      ],
+      "series": "BLACK COMBAT NUMBERING SERIES",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "공식 블랙컴뱃 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일(2026년 11월 21일)이 명시됨."
     },
     {
       "id": "803c6d4f989aa1ac712c",
