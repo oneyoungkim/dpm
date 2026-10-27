@@ -1,47 +1,6 @@
 {
-  "generatedAt": "2026-10-25T22:55:55.171Z",
+  "generatedAt": "2026-10-27T00:08:53.641Z",
   "events": [
-    {
-      "id": "dc0a4ff20d9b99df2396",
-      "title": "Next Week on XBOX: New Games for October 12 to 16",
-      "category": "게임",
-      "tags": [
-        "주간 코너",
-        "신규 게임",
-        "출시 예정 안내"
-      ],
-      "series": "Next Week on XBOX",
-      "startsAt": "2026-10-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
-      "reason": "기사에서 10월 12일부터 16일까지 다룰 신규 게임 소식을 예고한다."
-    },
-    {
-      "id": "9a2b5fc4ba60438313e4",
-      "title": "Next Week on XBOX: New Games for October 12 to 16",
-      "category": "게임",
-      "tags": [
-        "Next Week on XBOX",
-        "October 12",
-        "October 13",
-        "October 14",
-        "October 15",
-        "October 16"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-10-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
-      "reason": "주간 코너에서 10월 12일~10월 16일 기간의 신작을 다룬다고 공지됐다(구체 출시일은 본문에 따로 명시되지 않음)."
-    },
     {
       "id": "6a6d682789e29945656b",
       "title": "Invincible VS Open Beta Begins October 13: What You Need to Know",
@@ -460,14 +419,12 @@
     },
     {
       "id": "5987ad228053df570443",
-      "title": "UFC 파이트 나이트: 모이카노 vs 놀런(10/31)",
+      "title": "UFC 파이트 나이트: Moicano vs Nolan",
       "category": "격투기",
       "tags": [
         "UFC",
-        "MMA",
-        "UFC Fight Night",
-        "라스베이거스",
-        "메인카드"
+        "Fight Night",
+        "Meta APEX"
       ],
       "series": "UFC Fight Night",
       "startsAt": "2026-10-31T20:00:00-04:00",
@@ -477,7 +434,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "reason": "UFC 공식 이벤트 페이지에 2026-10-31(현지 EDT) 개최와 메인카드 시간이 명시되어 있음."
+      "reason": "UFC 공식 이벤트 상세 페이지에 날짜/시간(Oct 31, 8:00 PM EDT) 표기되어 있음."
     },
     {
       "id": "6e7215eefcf890f38124",
