@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T00:09:36.996Z",
+  "generatedAt": "2026-10-29T00:32:00.103Z",
   "events": [
     {
       "id": "0a4382e4773216d291b6",
@@ -384,6 +384,26 @@
       "reason": "원문에 The Wolf Among Us Remastered가 10월 29일 출시된다고 명시돼 있습니다."
     },
     {
+      "id": "9ee8d9b8844aa4de1339",
+      "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
+      "category": "게임",
+      "tags": [
+        "PlayStation 11.11 Power Deals",
+        "할인",
+        "PS5 주변기기",
+        "PS5 게임 디스크"
+      ],
+      "series": "PlayStation 11.11 Power Deals",
+      "startsAt": "2026-10-30T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/27/20261028-sale/",
+      "reason": "PlayStation 11.11 Power Deals 프로모션이 10월 30일부터 시작된다고 안내합니다."
+    },
+    {
       "id": "c0015e858ff4bd496d7b",
       "title": "UFC Fight Night: Moicano vs Nolan (10/31)",
       "category": "격투기",
@@ -404,12 +424,13 @@
     },
     {
       "id": "5987ad228053df570443",
-      "title": "UFC 파이트 나이트: Moicano vs Nolan",
+      "title": "UFC 파이트 나이트: 모이카노 vs 놀런 (10월 31일)",
       "category": "격투기",
       "tags": [
         "UFC",
-        "Fight Night",
-        "Meta APEX"
+        "UFC Fight Night",
+        "경기",
+        "라스베이거스"
       ],
       "series": "UFC Fight Night",
       "startsAt": "2026-10-31T20:00:00-04:00",
@@ -419,7 +440,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "reason": "UFC 공식 이벤트 상세 페이지에 날짜/시간(Oct 31, 8:00 PM EDT) 표기되어 있음."
+      "reason": "UFC 공식 이벤트 페이지에 개최일(Oct 31, 2026)과 시작시간(8:00 PM EDT)이 명시되어 있음."
     },
     {
       "id": "6e7215eefcf890f38124",
@@ -482,6 +503,26 @@
       "reason": "MARVEL Tōkon: Fighting Souls의 Year 1 Pass에 포함되는 DLC 캐릭터 Phoenix Cyclops가 11월 2일 공개된다고 안내되어 있습니다."
     },
     {
+      "id": "966161afa0b97fec86c8",
+      "title": "PlayStation Plus Monthly Games for November: Dead Island 2, Tomb Raider IV &#8211; VI Remastered, Monster Train 2",
+      "category": "게임",
+      "tags": [
+        "PlayStation Plus Monthly Games",
+        "Dead Island 2",
+        "Tomb Raider IV–VI Remastered",
+        "Monster Train 2"
+      ],
+      "series": "PlayStation Plus Monthly Games",
+      "startsAt": "2026-11-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/playstation-plus-monthly-games-for-november-dead-island-2-tomb-raider-iv-vi-remastered-monster-train-2/",
+      "reason": "PlayStation Plus 월간 게임이 11월 3일부터 11월 30일까지 플레이 가능하다고 안내합니다."
+    },
+    {
       "id": "893000f539a85620fb68",
       "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
       "category": "게임",
@@ -510,6 +551,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
       "reason": "PlayStation Blog에 따르면 Escape Academy 2: Back 2 School이 2026년 11월 5일 PS5로 출시됩니다."
+    },
+    {
+      "id": "f72be418be94b8e45a2a",
+      "title": "Modern Warfare 4 Season 1: Everything you need to know for November 6 launch",
+      "category": "게임",
+      "tags": [
+        "Modern Warfare 4",
+        "Season 1",
+        "Multiplayer",
+        "DMZ"
+      ],
+      "series": "Call of Duty: Modern Warfare 4",
+      "startsAt": "2026-11-06T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/modern-warfare-4-season-1-everything-you-need-to-know-for-november-6-launch/",
+      "reason": "Modern Warfare 4 시즌 1이 11월 6일에 공개된다고 안내합니다."
     },
     {
       "id": "bbf966835aeed9bfe627",
@@ -549,6 +610,23 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
       "reason": "Warhammer Survivors가 PS5에서 11월 10일 출시된다고 명시되어 있습니다."
+    },
+    {
+      "id": "858a690aa105f3c74df9",
+      "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
+      "category": "게임",
+      "tags": [
+        "PlayStation 11.11 Power Deals"
+      ],
+      "series": "PlayStation 11.11 Power Deals",
+      "startsAt": "2026-11-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/27/20261028-sale/",
+      "reason": "PlayStation 11.11 Power Deals 프로모션이 11월 12일에 종료된다고 안내합니다."
     },
     {
       "id": "cded676c81901fd50833",
@@ -598,6 +676,26 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
       "reason": "원문에 2026년 11월 12일 XBOX FanFest가 MoPOP에서 열린다고 명시되어 있다."
+    },
+    {
+      "id": "9f22757f1c1e9d6cb166",
+      "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
+      "category": "게임",
+      "tags": [
+        "Where Winds Meet",
+        "Hutuo Battlefield",
+        "내러티브 아크",
+        "글로벌 기념 업데이트"
+      ],
+      "series": "Where Winds Meet",
+      "startsAt": "2026-11-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
+      "reason": "Where Winds Meet의 Hutuo Battlefield 내러티브 아크가 11월 13일에 출시된다고 안내합니다."
     },
     {
       "id": "569373aece36734afd8f",
@@ -819,6 +917,24 @@
       "reason": "공식 블랙컴뱃 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 일자가 2026년 11월 21일로 명시됨."
     },
     {
+      "id": "9d77fbce2de657d80d47",
+      "title": "블랙컴뱃 17: VANTABLACK (11월 21일)",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "경기"
+      ],
+      "series": "BLACK COMBAT NUMBERING SERIES",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://blackcombat-official.com/event.php",
+      "reason": "블랙컴뱃 공식 이벤트 페이지에 2026년 11월 21일 일정이 명시되어 있음(시간은 미기재)."
+    },
+    {
       "id": "91ae095b190b3e214ab6",
       "title": "Gears of War: E-Day x Liquid Death – Unlock a Legendary Pose and More",
       "category": "게임",
@@ -839,6 +955,23 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/25/gears-of-war-e-day-liquid-death/",
       "reason": "해당 콜라보 이벤트가 11월 30일까지 진행된다고 명시되어 있다."
+    },
+    {
+      "id": "b8cd30695ac41fa44f8c",
+      "title": "PlayStation Plus Monthly Games for November: Dead Island 2, Tomb Raider IV &#8211; VI Remastered, Monster Train 2",
+      "category": "게임",
+      "tags": [
+        "PlayStation Plus Monthly Games"
+      ],
+      "series": "PlayStation Plus Monthly Games",
+      "startsAt": "2026-11-30T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/playstation-plus-monthly-games-for-november-dead-island-2-tomb-raider-iv-vi-remastered-monster-train-2/",
+      "reason": "PlayStation Plus 월간 게임의 제공 기간이 11월 30일에 종료된다고 안내합니다."
     },
     {
       "id": "367163c6259b78ded723",
@@ -893,6 +1026,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/18/how-remedies-shape-progression-in-hela-of-mice-magic/",
       "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
+    },
+    {
+      "id": "e2eb7c64e3a072e8c494",
+      "title": "Suit up as Astro Bot in Rayman Legends Retold",
+      "category": "게임",
+      "tags": [
+        "Rayman Legends Retold",
+        "Astro Bot costume",
+        "PS5"
+      ],
+      "series": "Rayman Legends Retold",
+      "startsAt": "2026-12-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/suit-up-as-astro-bot-in-rayman-legends-retold/",
+      "reason": "Rayman Legends Retold가 12월 3일에 출시된다고 안내합니다."
     },
     {
       "id": "2cc6ac4df4297fc9a2f3",
