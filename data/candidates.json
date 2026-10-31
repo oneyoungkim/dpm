@@ -1,43 +1,6 @@
 {
-  "generatedAt": "2026-10-30T00:30:26.251Z",
+  "generatedAt": "2026-10-31T00:15:30.646Z",
   "events": [
-    {
-      "id": "0a4382e4773216d291b6",
-      "title": "Open up to new possibilities with iPhone Duo",
-      "category": "테크",
-      "tags": [
-        "Apple",
-        "iPhone Duo",
-        "pre-order"
-      ],
-      "series": "iPhone Duo",
-      "startsAt": "2026-10-16T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/",
-      "reason": "원문에 10월 16일(금요일) 사전주문 시작이 명시되어 있습니다."
-    },
-    {
-      "id": "aede05a57dbcd33cdb53",
-      "title": "PFL Chicago 2 (10/16)",
-      "category": "격투기",
-      "tags": [
-        "PFL",
-        "MMA"
-      ],
-      "series": "PFL",
-      "startsAt": "2026-10-16T18:00:00-04:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/",
-      "reason": "PFL 공식 홈페이지 메인 영역에 PFL Chicago 2의 날짜/시간이 명시됨."
-    },
     {
       "id": "aeedd60a9066715792bf",
       "title": "ONE SAMURAI 4 (10/17)",
@@ -937,25 +900,6 @@
       "reason": "블랙컴뱃 공식 이벤트 페이지에 블랙컴뱃 17(2026년 11월 21일) 개최일이 명시됨(시간은 미기재)."
     },
     {
-      "id": "1144342c0e351190993e",
-      "title": "블랙컴뱃 17: VANTABLACK (11/21)",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "MMA",
-        "국내대회"
-      ],
-      "series": "블랙컴뱃",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "공식 블랙컴뱃 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 일자가 2026년 11월 21일로 명시됨."
-    },
-    {
       "id": "9d77fbce2de657d80d47",
       "title": "블랙컴뱃 17: VANTABLACK (11월 21일)",
       "category": "격투기",
@@ -972,6 +916,26 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://blackcombat-official.com/event.php",
       "reason": "블랙컴뱃 공식 이벤트 페이지에 2026년 11월 21일 일정이 명시되어 있음(시간은 미기재)."
+    },
+    {
+      "id": "1144342c0e351190993e",
+      "title": "블랙컴뱃 17: VANTABLACK 2026년 11월 21일",
+      "category": "격투기",
+      "tags": [
+        "BLACK COMBAT",
+        "MMA",
+        "고척스카이돔",
+        "서울"
+      ],
+      "series": "블랙컴뱃",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "공식 이벤트 페이지에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일이 ‘2026년 11월 21일’로 표기되어 있음."
     },
     {
       "id": "91ae095b190b3e214ab6",
