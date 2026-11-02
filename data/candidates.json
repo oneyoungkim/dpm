@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T23:52:08.973Z",
+  "generatedAt": "2026-11-02T00:02:48.876Z",
   "events": [
     {
       "id": "aeaa3be42a8ab8072b2b",
@@ -1097,6 +1097,25 @@
       "reason": "Until Dawn 2가 2027년 1월 28일 PS5에 출시된다고 안내합니다."
     },
     {
+      "id": "3ac8b8a81d44294f5d5b",
+      "title": "블랙컴뱃 16: 엑소더스 2027년 1월 31일",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "BLACK COMBAT 16",
+        "엑소더스"
+      ],
+      "series": "BLACK COMBAT 16: EXODUS",
+      "startsAt": "2027-01-31T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/eventDetail.php?eventSeq=285",
+      "reason": "블랙컴뱃 공식 상세 페이지의 ‘주요 일정’에 ‘1월 31일: 블랙컴뱃 16 넘버링 대회’가 명시되어 있음."
+    },
+    {
       "id": "36177cad125c7709ed1a",
       "title": "METRO 2039 Isn&#8217;t Kidding Around",
       "category": "게임",
@@ -1132,14 +1151,13 @@
     },
     {
       "id": "1528be32b0f1bdb99db2",
-      "title": "UFC 파이트 나이트 시드니(2027) 2월 7일 개최",
+      "title": "UFC 파이트 나이트 시드니 2027년 2월 7일",
       "category": "격투기",
       "tags": [
         "UFC",
-        "MMA",
         "UFC Fight Night",
-        "호주",
-        "시드니"
+        "시드니",
+        "파이트 나이트"
       ],
       "series": "UFC Fight Night Sydney",
       "startsAt": "2027-02-07T12:00:00+09:00",
@@ -1149,7 +1167,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 공지에 ‘Sunday 7 February 2027’로 개최일이 명시되어 있으며, 날짜가 미래 범위 내입니다."
+      "reason": "UFC 공식 공지에 ‘2027년 2월 7일(일)’ 개최가 명시되어 있음."
     },
     {
       "id": "f1b7a96065830bf0473a",
