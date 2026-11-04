@@ -1,55 +1,6 @@
 {
-  "generatedAt": "2026-11-02T00:02:48.876Z",
+  "generatedAt": "2026-11-04T00:58:50.015Z",
   "events": [
-    {
-      "id": "aeaa3be42a8ab8072b2b",
-      "title": "DMZ Early Access Starts October 20",
-      "category": "게임",
-      "tags": [],
-      "series": "DMZ",
-      "startsAt": "2026-10-20T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/16/dmz-early-access-starts-october-20/",
-      "reason": "DMZ의 얼리 액세스가 2026년 10월 20일에 시작된다고 공지한다."
-    },
-    {
-      "id": "7206551555f86a3cf863",
-      "title": "Helldivers 2: Scope of Authority Premium Warbond launches Oct 20",
-      "category": "게임",
-      "tags": [],
-      "series": "Helldivers 2",
-      "startsAt": "2026-10-20T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/",
-      "reason": "공식 글에서 Helldivers 2의 Scope of Authority Premium Warbond가 10월 20일 출시된다고 밝힙니다."
-    },
-    {
-      "id": "c9eed3260dcd4ad5666b",
-      "title": "PFL Road to Dubai 스윕스테이크(Entry Period 2 종료 12/21 아님)",
-      "category": "격투기",
-      "tags": [
-        "PFL",
-        "Road to Dubai",
-        "스윕스테이크"
-      ],
-      "series": "ROAD TO DUBAI SWEEPSTAKES",
-      "startsAt": "2026-10-20T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/roadtodubai-rules",
-      "reason": "공식 규정에 Entry Period 2 종료일(2026-10-20)이 명시됨. (개별 이벤트 참가/당첨 관련 오퍼링 성격)"
-    },
     {
       "id": "1be5cb03885191678e9d",
       "title": "Once Human’s Isles of Abyss expansion launches on PS5",
@@ -383,6 +334,24 @@
       "reason": "문서에서 PlayStation Plus 월간 게임이 11월 3일부터 이용 가능하다고 안내합니다."
     },
     {
+      "id": "8cc95efead19025e2220",
+      "title": "PlayStation Store’s Black Friday Deals 2026 (starting tomorrow, Wednesday November 4)",
+      "category": "게임",
+      "tags": [
+        "Black Friday",
+        "PlayStation Store deals"
+      ],
+      "series": "PlayStation Store Black Friday Deals",
+      "startsAt": "2026-11-04T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/03/playstations-black-friday-deals-2026/",
+      "reason": "공식 게시물에서 Black Friday Deals가 11월 4일(수)부터 시작된다고 안내합니다."
+    },
+    {
       "id": "893000f539a85620fb68",
       "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
       "category": "게임",
@@ -491,6 +460,45 @@
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 48이 11월 6일(동부시간 기준 21:00)로 명시."
     },
     {
+      "id": "0c4e3438f1a29486fe12",
+      "title": "UFC 파이트 나이트: Cortes Acosta vs Walker",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Fight Night",
+        "UFC Fight Pass/Paramount+"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-11-07T08:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+      "reason": "주최사 UFC 공식 이벤트 페이지에 2026-11-07(현지표기: Sat, Nov 7) 일정이 명시돼 있음."
+    },
+    {
+      "id": "cdd7b6c8daaae4e5e26b",
+      "title": "Grand Theft Auto VI pre-download begins November 10",
+      "category": "게임",
+      "tags": [
+        "PlayStation",
+        "pre-download",
+        "Grand Theft Auto VI"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-10T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
+      "reason": "공식 게시물에서 GTA VI 사전 다운로드가 11월 10일 시작된다고 안내합니다."
+    },
+    {
       "id": "ba7a9a4cb2229f958b89",
       "title": "Warhammer Survivors launches November 10, new characters revealed",
       "category": "게임",
@@ -574,6 +582,25 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
       "reason": "원문에 2026년 11월 12일 XBOX FanFest가 MoPOP에서 열린다고 명시되어 있다."
+    },
+    {
+      "id": "3d301ea1f46e6fc1275a",
+      "title": "‘90s style sci-fi horror Derelikt launches Nov 13 on PS5",
+      "category": "게임",
+      "tags": [
+        "Derelikt",
+        "launch",
+        "PS5"
+      ],
+      "series": "Derelikt",
+      "startsAt": "2026-11-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/02/90s-style-sci-fi-horror-derelikt-launches-nov-13-on-ps5/",
+      "reason": "공식 게시물에서 Derelikt가 PS5에 11월 13일 출시된다고 명시합니다."
     },
     {
       "id": "9f22757f1c1e9d6cb166",
@@ -668,6 +695,25 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
       "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
+    },
+    {
+      "id": "53b73d26fdf19895c950",
+      "title": "Grand Theft Auto VI launches November 19 on PlayStation 5",
+      "category": "게임",
+      "tags": [
+        "PlayStation 5",
+        "launch",
+        "Grand Theft Auto VI"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
+      "reason": "공식 게시물에서 GTA VI의 PS5 출시일이 11월 19일이라고 명시합니다."
     },
     {
       "id": "efa8b6f611f1204ab4c9",
@@ -814,6 +860,25 @@
       "reason": "블랙컴뱃 공식 이벤트 페이지에 블랙컴뱃 17(2026년 11월 21일) 개최일이 명시됨(시간은 미기재)."
     },
     {
+      "id": "1144342c0e351190993e",
+      "title": "블랙컴뱃 17: VANTABLACK",
+      "category": "격투기",
+      "tags": [
+        "블랙컴뱃",
+        "MMA",
+        "BLACK COMBAT NUMBERING SERIES"
+      ],
+      "series": "블랙컴뱃",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php",
+      "reason": "주최사(공식) 블랙컴뱃 사이트의 이벤트 리스트에서 블랙컴뱃 17 개최일이 2026-11-21로 명시돼 있음(시간 표기는 해당 리스트에 미표기)."
+    },
+    {
       "id": "9d77fbce2de657d80d47",
       "title": "블랙컴뱃 17: VANTABLACK (2026.11.21)",
       "category": "격투기",
@@ -832,24 +897,24 @@
       "reason": "공식 블랙컴뱃 이벤트 목록에서 행사명과 날짜(2026년 11월 21일)가 명시되어 있음."
     },
     {
-      "id": "1144342c0e351190993e",
-      "title": "블랙컴뱃 17: VANTABLACK 2026년 11월 21일",
+      "id": "e8d137be28d39e5a1a23",
+      "title": "UFC 파이트 나이트: Prochazka vs Stirling",
       "category": "격투기",
       "tags": [
-        "BLACK COMBAT",
+        "UFC",
         "MMA",
-        "고척스카이돔",
-        "서울"
+        "Fight Night",
+        "UFC Fight Pass/Paramount+"
       ],
-      "series": "블랙컴뱃",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
+      "series": "UFC Fight Night",
+      "startsAt": "2026-11-21T13:00:00+09:00",
+      "timeTbd": false,
       "eventMode": "scheduled",
-      "datePrecision": "date",
+      "datePrecision": "time",
       "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "공식 이벤트 페이지에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일이 ‘2026년 11월 21일’로 표기되어 있음."
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+      "reason": "주최사 UFC 공식 이벤트 페이지에 2026-11-21(현지표기: Sat, Nov 21) 일정이 명시돼 있음."
     },
     {
       "id": "91ae095b190b3e214ab6",
@@ -1189,6 +1254,26 @@
       "reason": "UFC 공식 뉴스에서 2027년 2월 7일(일) 시드니 Afterpay Arena에서 개최를 명시."
     },
     {
+      "id": "e592158e96263bd448da",
+      "title": "UFC 파이트 나이트 시드니: Salkilld vs Saint Denis",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "MMA",
+        "Fight Night",
+        "호주 시드니"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2027-02-07T14:00:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/sydney",
+      "reason": "주최사 UFC 공식 지역 페이지에 2027-02-07(일요일 7 February 2027) 개최가 명시돼 있음."
+    },
+    {
       "id": "8f702cd428b923ad7a08",
       "title": "God of War Laufey pre-orders available starting September 29, editions detailed",
       "category": "게임",
@@ -1288,28 +1373,6 @@
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
-      "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (2027년 3월 26일)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "무에타이",
-        "킥복싱",
-        "서브미션 그래플링",
-        "중동"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "공식 ONE 이벤트 페이지에서 ‘Friday, March 26, 2027’ 개최가 명시되어 있음."
-    },
-    {
       "id": "3ff610363964ac6c4b94",
       "title": "ONE: Qatar (Aspire Dome)",
       "category": "격투기",
@@ -1331,6 +1394,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "ONE 공식 이벤트 페이지에 2027-03-26(금) 도하 Aspire Dome 개최로 명시되어 있음."
+    },
+    {
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (ONE-Qatar)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Muay Thai",
+        "ONE Fight Night"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "주최사 ONE Championship 공식 이벤트 페이지에 2027-03-26(금요일, March 26, 2027) 날짜가 명시돼 있음(시간 표기는 별도 표기 없이 'Coming Soon')."
     },
     {
       "id": "6363673aa1c584cd12ca",
