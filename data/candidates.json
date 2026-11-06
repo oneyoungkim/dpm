@@ -1,45 +1,6 @@
 {
-  "generatedAt": "2026-11-04T00:58:50.015Z",
+  "generatedAt": "2026-11-06T01:17:01.667Z",
   "events": [
-    {
-      "id": "1be5cb03885191678e9d",
-      "title": "Once Human’s Isles of Abyss expansion launches on PS5",
-      "category": "게임",
-      "tags": [
-        "Once Human",
-        "Isles of Abyss",
-        "PS5",
-        "확장팩",
-        "출시"
-      ],
-      "series": "Once Human",
-      "startsAt": "2026-10-22T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/21/once-humans-isles-of-abyss-expansion-launches-on-ps5-tomorrow/",
-      "reason": "PlayStation Blog에서 PS5용 Once Human ‘Isles of Abyss’ 확장팩이 10월 22일 출시된다고 안내했다."
-    },
-    {
-      "id": "58a804a12948a1ea518f",
-      "title": "Peak climbs its way onto PS5 October 22",
-      "category": "게임",
-      "tags": [
-        "PS5",
-        "출시"
-      ],
-      "series": "Peak",
-      "startsAt": "2026-10-22T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/15/peak-climbs-its-way-onto-ps5-october-22/",
-      "reason": "Peak가 PS5로 10월 22일 출시된다고 안내합니다."
-    },
     {
       "id": "386eebf02633363b4ec2",
       "title": "Developers bring incredible new app experiences to iPhone Duo",
