@@ -1,56 +1,6 @@
 {
-  "generatedAt": "2026-11-06T01:17:01.667Z",
+  "generatedAt": "2026-11-07T00:30:56.159Z",
   "events": [
-    {
-      "id": "386eebf02633363b4ec2",
-      "title": "Developers bring incredible new app experiences to iPhone Duo",
-      "category": "테크",
-      "tags": [],
-      "series": "iPhone Duo",
-      "startsAt": "2026-10-23T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
-      "reason": "기사에 '이번 주 금요일'부터 iPhone Duo 사용자가 앱과 게임을 볼 수 있다고 명시되어 있어 해당 날짜의 이벤트로 추출했습니다."
-    },
-    {
-      "id": "ca72d90e6473a318af90",
-      "title": "Everything you need to know about DMZ mode in Call of Duty: Modern Warfare 4",
-      "category": "게임",
-      "tags": [
-        "Call of Duty: Modern Warfare 4",
-        "DMZ 모드",
-        "출시",
-        "October 23"
-      ],
-      "series": "Call of Duty: Modern Warfare 4",
-      "startsAt": "2026-10-23T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/05/everything-you-need-to-know-about-dmz-mode-in-call-of-duty-modern-warfare-4/",
-      "reason": "Call of Duty: Modern Warfare 4가 10월 23일 출시되며 DMZ 모드도 함께 출시된다고 안내되어 있습니다."
-    },
-    {
-      "id": "3ffdd9812ff50de73e57",
-      "title": "Modern Warfare 4 Launches October 23 as a Standalone Release",
-      "category": "게임",
-      "tags": [],
-      "series": "Modern Warfare 4",
-      "startsAt": "2026-10-23T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/15/modern-warfare-4-launches-october-23-as-a-standalone-release/",
-      "reason": "Modern Warfare 4가 2026년 10월 23일 단독 릴리스로 출시된다고 공지한다."
-    },
     {
       "id": "17f3a310b3782d4102ed",
       "title": "Formula 1® United States Grand Prix™ streams live on Apple TV this weekend",
@@ -444,11 +394,7 @@
       "id": "cdd7b6c8daaae4e5e26b",
       "title": "Grand Theft Auto VI pre-download begins November 10",
       "category": "게임",
-      "tags": [
-        "PlayStation",
-        "pre-download",
-        "Grand Theft Auto VI"
-      ],
+      "tags": [],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-10T12:00:00+09:00",
       "timeTbd": true,
@@ -457,7 +403,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "공식 게시물에서 GTA VI 사전 다운로드가 11월 10일 시작된다고 안내합니다."
+      "reason": "공식 PlayStation Blog 게시글에서 GTA VI의 프리다운로드가 11월 10일부터 시작된다고 안내했습니다."
     },
     {
       "id": "ba7a9a4cb2229f958b89",
@@ -477,6 +423,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
       "reason": "Warhammer Survivors가 PS5에서 11월 10일 출시된다고 명시되어 있습니다."
+    },
+    {
+      "id": "c7d722a8134b9f5ef12e",
+      "title": "Hope in the City: Why This Detective Uses a Sketchbook Instead of a Badge",
+      "category": "게임",
+      "tags": [],
+      "series": "Hope in the City",
+      "startsAt": "2026-11-11T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/hope-in-the-city-detective-sketchbook/",
+      "reason": "Hope in the City가 11월 11일 XBOX Series X|S, XBOX on PC, Steam에 출시된다고 명시합니다."
     },
     {
       "id": "858a690aa105f3c74df9",
@@ -562,6 +523,21 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/02/90s-style-sci-fi-horror-derelikt-launches-nov-13-on-ps5/",
       "reason": "공식 게시물에서 Derelikt가 PS5에 11월 13일 출시된다고 명시합니다."
+    },
+    {
+      "id": "8d3cddf38261dab3c1b2",
+      "title": "A Blade for the Innocent: Into the War-Torn Hutuo Region of Where Winds Meet on XBOX",
+      "category": "게임",
+      "tags": [],
+      "series": "Where Winds Meet",
+      "startsAt": "2026-11-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/where-winds-meet-anniversary-update-hutuo/",
+      "reason": "Hutuo 지역이 11월 13일 XBOX Series X|S에 공개된다고 안내합니다."
     },
     {
       "id": "9f22757f1c1e9d6cb166",
@@ -661,20 +637,16 @@
       "id": "53b73d26fdf19895c950",
       "title": "Grand Theft Auto VI launches November 19 on PlayStation 5",
       "category": "게임",
-      "tags": [
-        "PlayStation 5",
-        "launch",
-        "Grand Theft Auto VI"
-      ],
+      "tags": [],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-19T12:00:00+09:00",
       "timeTbd": true,
-      "eventMode": "scheduled",
+      "eventMode": "release-window",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "공식 게시물에서 GTA VI의 PS5 출시일이 11월 19일이라고 명시합니다."
+      "reason": "PlayStation Blog에서 GTA VI가 11월 19일 PS5로 출시된다고 명시했습니다."
     },
     {
       "id": "efa8b6f611f1204ab4c9",
@@ -725,6 +697,26 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
       "reason": "원문에 'November 19'로 게임 도착(출시) 날짜가 명시되어 있다."
+    },
+    {
+      "id": "9ee8448f454bc514c19a",
+      "title": "UFC 파이트 나이트 도하: 11월 21일 개최",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "UFC Fight Night",
+        "Doha",
+        "MMA"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-and-visit-qatar-announce-ufcs-return-doha-november-21",
+      "reason": "UFC 공식 발표에서 2026년 11월 21일 도하 ABHA Arena 개최가 명시됨."
     },
     {
       "id": "f6f326665285018cf6d5",
@@ -802,6 +794,25 @@
       "reason": "블랙컴뱃 공식 이벤트 페이지에 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시되어 있음. 시각은 미기재라 timeTbd 처리."
     },
     {
+      "id": "9d77fbce2de657d80d47",
+      "title": "블랙컴뱃 17: 2026년 11월 21일 개최",
+      "category": "격투기",
+      "tags": [
+        "BLACKCOMBAT",
+        "블랙컴뱃",
+        "17"
+      ],
+      "series": "BLACK COMBAT NUMBERING SERIES",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://blackcombat-official.com/event.php",
+      "reason": "공식 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일 2026년 11월 21일이 명시됨."
+    },
+    {
       "id": "c4db2af0a235f6097a88",
       "title": "블랙컴뱃 17: VANTABLACK",
       "category": "격투기",
@@ -838,24 +849,6 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php",
       "reason": "주최사(공식) 블랙컴뱃 사이트의 이벤트 리스트에서 블랙컴뱃 17 개최일이 2026-11-21로 명시돼 있음(시간 표기는 해당 리스트에 미표기)."
-    },
-    {
-      "id": "9d77fbce2de657d80d47",
-      "title": "블랙컴뱃 17: VANTABLACK (2026.11.21)",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "VANTABLACK"
-      ],
-      "series": "BLACK COMBAT NUMBERING SERIES",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://blackcombat-official.com/event.php",
-      "reason": "공식 블랙컴뱃 이벤트 목록에서 행사명과 날짜(2026년 11월 21일)가 명시되어 있음."
     },
     {
       "id": "e8d137be28d39e5a1a23",
@@ -1197,12 +1190,12 @@
     },
     {
       "id": "f1b7a96065830bf0473a",
-      "title": "UFC 파이트 나이트: 시드니 2027년 2월 7일",
+      "title": "UFC 파이트 나이트 시드니: 2027년 2월 7일",
       "category": "격투기",
       "tags": [
         "UFC",
         "UFC Fight Night",
-        "시드니"
+        "Sydney"
       ],
       "series": "UFC Fight Night",
       "startsAt": "2027-02-07T12:00:00+09:00",
@@ -1212,7 +1205,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 뉴스에서 2027년 2월 7일(일) 시드니 Afterpay Arena에서 개최를 명시."
+      "reason": "UFC 공식 공지에서 2027년 2월 7일(일) 시드니 Afterpay Arena 개최가 명시됨."
     },
     {
       "id": "e592158e96263bd448da",
@@ -1375,6 +1368,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "주최사 ONE Championship 공식 이벤트 페이지에 2027-03-26(금요일, March 26, 2027) 날짜가 명시돼 있음(시간 표기는 별도 표기 없이 'Coming Soon')."
+    },
+    {
+      "id": "e4c055f0ee5bc0e5fa80",
+      "title": "ONE: 카타르: 2027년 3월 26일(금)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE: Qatar",
+        "MMA",
+        "Muay Thai"
+      ],
+      "series": "ONE Championship Events",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "ONE 공식 ‘ONE: Qatar’ 페이지에 2027년 3월 26일(금) 개최가 명시됨."
     },
     {
       "id": "6363673aa1c584cd12ca",
