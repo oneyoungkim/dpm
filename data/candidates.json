@@ -1,21 +1,6 @@
 {
-  "generatedAt": "2026-11-07T00:30:56.159Z",
+  "generatedAt": "2026-11-08T00:05:03.340Z",
   "events": [
-    {
-      "id": "17f3a310b3782d4102ed",
-      "title": "Formula 1® United States Grand Prix™ streams live on Apple TV this weekend",
-      "category": "테크",
-      "tags": [],
-      "series": "Formula 1",
-      "startsAt": "2026-10-24T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/10/formula-1-united-states-grand-prix-streams-live-on-apple-tv-this-weekend/",
-      "reason": "해당 주말(날짜 미명시) 미국 그랑프리가 Apple TV에서 라이브 스트리밍된다고 안내되어 있어 일정으로 추출했습니다."
-    },
     {
       "id": "02c8c75429da52ff8855",
       "title": "Next Week on XBOX: October 26 to 30 공개 일정(신작 예고)",
@@ -391,10 +376,32 @@
       "reason": "주최사 UFC 공식 이벤트 페이지에 2026-11-07(현지표기: Sat, Nov 7) 일정이 명시돼 있음."
     },
     {
+      "id": "9beec076c01028659a79",
+      "title": "Hozy brings calm, tactile home restoration to PS5 on November 9",
+      "category": "게임",
+      "tags": [
+        "Hozy",
+        "PS5",
+        "November 9"
+      ],
+      "series": "Hozy",
+      "startsAt": "2026-11-09T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/06/hozy-brings-calm-tactile-home-restoration-to-ps5-on-november-9/",
+      "reason": "공식 글 제목에 PS5용 Hozy가 11월 9일 공개된다고 명시되어 있다."
+    },
+    {
       "id": "cdd7b6c8daaae4e5e26b",
       "title": "Grand Theft Auto VI pre-download begins November 10",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "pre-download",
+        "Grand Theft Auto VI"
+      ],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-10T12:00:00+09:00",
       "timeTbd": true,
@@ -403,7 +410,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "공식 PlayStation Blog 게시글에서 GTA VI의 프리다운로드가 11월 10일부터 시작된다고 안내했습니다."
+      "reason": "공식 글에서 Grand Theft Auto VI의 사전 다운로드가 11월 10일 시작된다고 명시했다."
     },
     {
       "id": "ba7a9a4cb2229f958b89",
@@ -637,7 +644,11 @@
       "id": "53b73d26fdf19895c950",
       "title": "Grand Theft Auto VI launches November 19 on PlayStation 5",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "launch",
+        "PlayStation 5",
+        "Grand Theft Auto VI"
+      ],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-19T12:00:00+09:00",
       "timeTbd": true,
@@ -646,7 +657,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "PlayStation Blog에서 GTA VI가 11월 19일 PS5로 출시된다고 명시했습니다."
+      "reason": "공식 글에서 Grand Theft Auto VI가 11월 19일 PlayStation 5로 출시된다고 명시했다."
     },
     {
       "id": "efa8b6f611f1204ab4c9",
