@@ -1,44 +1,6 @@
 {
-  "generatedAt": "2026-11-09T00:19:23.158Z",
+  "generatedAt": "2026-11-10T03:04:16.560Z",
   "events": [
-    {
-      "id": "02c8c75429da52ff8855",
-      "title": "Next Week on XBOX: October 26 to 30 공개 일정(신작 예고)",
-      "category": "게임",
-      "tags": [
-        "주간 코너",
-        "신작",
-        "Xbox"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-10-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/23/next-week-on-xbox-new-games-for-october-26-to-30/",
-      "reason": "원문에 10월 26~30일 범위가 명시되어 있어 시작일(10월 26일) 기준으로 일정 이벤트를 추출했습니다."
-    },
-    {
-      "id": "b0afe2eb3a68fc809ff9",
-      "title": "Spooky cute puzzler Fangtopia launches on PS5 October 26",
-      "category": "게임",
-      "tags": [
-        "Fangtopia",
-        "PS5",
-        "출시"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-10-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/02/spooky-cute-puzzler-fangtopia-launches-on-ps5-october-26/",
-      "reason": "Fangtopia가 2026년 10월 26일 PS5로 출시된다고 명시되어 있다."
-    },
     {
       "id": "18dfecc844f71709b149",
       "title": "Phantom Blade Zero State of Play: Phantom Blade Zero is set to release on October 29",
@@ -418,10 +380,7 @@
       "id": "cdd7b6c8daaae4e5e26b",
       "title": "Grand Theft Auto VI pre-download begins November 10",
       "category": "게임",
-      "tags": [
-        "PS5",
-        "GTA VI"
-      ],
+      "tags": [],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-10T12:00:00+09:00",
       "timeTbd": true,
@@ -430,7 +389,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "공식 글에서 GTA VI 선(先)다운로드가 11월 10일부터 시작된다고 명시한다."
+      "reason": "Grand Theft Auto VI의 사전 다운로드 시작일이 11월 10일로 명시되어 있어 추출했습니다."
     },
     {
       "id": "ba7a9a4cb2229f958b89",
@@ -558,12 +517,9 @@
     },
     {
       "id": "8d3cddf38261dab3c1b2",
-      "title": "Where Winds Meet - Hutuo 지역 출시(오픈)",
+      "title": "Where Winds Meet: Hutuo 지역 오픈(Into the War-Torn Hutuo Region of Where Winds Meet on XBOX)",
       "category": "게임",
-      "tags": [
-        "XBOX Series X|S",
-        "XBOX"
-      ],
+      "tags": [],
       "series": "Where Winds Meet",
       "startsAt": "2026-11-13T12:00:00+09:00",
       "timeTbd": true,
@@ -572,7 +528,7 @@
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/where-winds-meet-anniversary-update-hutuo/",
-      "reason": "원문에서 Hutuo 지역이 11월 13일 오픈된다고 명시되어 있습니다."
+      "reason": "문서에서 11월 13일 Hutuo 지역이 XBOX Series X|S에서 공개된다고 명시되어 있습니다."
     },
     {
       "id": "9f22757f1c1e9d6cb166",
@@ -672,10 +628,7 @@
       "id": "53b73d26fdf19895c950",
       "title": "Grand Theft Auto VI launches November 19 on PlayStation 5",
       "category": "게임",
-      "tags": [
-        "PS5",
-        "GTA VI"
-      ],
+      "tags": [],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-19T12:00:00+09:00",
       "timeTbd": true,
@@ -684,7 +637,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "공식 글에서 GTA VI가 11월 19일에 PS5로 출시된다고 안내한다."
+      "reason": "Grand Theft Auto VI의 PS5 출시일이 11월 19일로 명시되어 있어 추출했습니다."
     },
     {
       "id": "efa8b6f611f1204ab4c9",
@@ -735,6 +688,26 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
       "reason": "원문에 'November 19'로 게임 도착(출시) 날짜가 명시되어 있다."
+    },
+    {
+      "id": "d73ad62c96a119094c31",
+      "title": "UFC 11/21(토) 두하(UAE) UFC FIGHT NIGHT 개최",
+      "category": "격투기",
+      "tags": [
+        "UFC Fight Night",
+        "도하",
+        "Qatar",
+        "UFC"
+      ],
+      "series": "UFC",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/ufc-and-visit-qatar-announce-ufcs-return-doha-november-21",
+      "reason": "UFC 공식 뉴스에서 2026년 11월 21일(토) ABHA Arena에서 ‘UFC Fight Night’ 개최가 명시되어 있음."
     },
     {
       "id": "9ee8448f454bc514c19a",
@@ -1080,6 +1053,26 @@
       "reason": "ONE 공식 이벤트 페이지에 ONE Fight Night 50의 2026-12-19(지역 UTC 표기 포함) 개최 일정이 명시돼 있음."
     },
     {
+      "id": "d12cc30bed20b7089eb4",
+      "title": "PFL 12/19(토) PFL Lyon 벤탐 챔피언십 매치",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "PFL Lyon",
+        "MVP 전환 전 마지막 PFL",
+        "벤탐급 타이틀"
+      ],
+      "series": "PFL",
+      "startsAt": "2026-12-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
+      "reason": "PFL 공식 기사에서 ‘PFL Lyon’ 메인 이벤트로 2026년 12월 19일 개최가 명시되어 있음."
+    },
+    {
       "id": "5e2bbf68f5c68e3f25c6",
       "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
       "category": "게임",
@@ -1152,6 +1145,27 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/until-dawn-2-launches-january-28/",
       "reason": "Until Dawn 2가 2027년 1월 28일 PS5에 출시된다고 안내합니다."
+    },
+    {
+      "id": "3e5339bcbd035fc7ff22",
+      "title": "UFC 336 1/30(토) 토론토 타이틀 2개 경기",
+      "category": "격투기",
+      "tags": [
+        "UFC 336",
+        "토론토",
+        "타이틀",
+        "인테림 웰터급",
+        "플라이급"
+      ],
+      "series": "UFC",
+      "startsAt": "2027-01-30T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/two-electric-title-fights-announced-ufc-336",
+      "reason": "UFC 공식 기사에서 2027년 1월 30일 토론토에서 UFC 336 개최 및 타이틀전이 명시되어 있음."
     },
     {
       "id": "3ac8b8a81d44294f5d5b",
@@ -1389,13 +1403,14 @@
     },
     {
       "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (ONE-Qatar)",
+      "title": "ONE: Qatar 3/26(금) 도하 복귀 매머드 나이트",
       "category": "격투기",
       "tags": [
         "ONE Championship",
+        "Qatar",
+        "Aspire Dome",
         "MMA",
-        "Muay Thai",
-        "ONE Fight Night"
+        "무에타이"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -1405,7 +1420,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "주최사 ONE Championship 공식 이벤트 페이지에 2027-03-26(금요일, March 26, 2027) 날짜가 명시돼 있음(시간 표기는 별도 표기 없이 'Coming Soon')."
+      "reason": "ONE 공식 이벤트 페이지에서 2027년 3월 26일(금) 도하 개최가 ‘Next Event’로 명시되어 있음."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
