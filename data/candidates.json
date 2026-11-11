@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T03:04:16.560Z",
+  "generatedAt": "2026-11-11T00:57:22.332Z",
   "events": [
     {
       "id": "18dfecc844f71709b149",
@@ -517,9 +517,12 @@
     },
     {
       "id": "8d3cddf38261dab3c1b2",
-      "title": "Where Winds Meet: Hutuo 지역 오픈(Into the War-Torn Hutuo Region of Where Winds Meet on XBOX)",
+      "title": "A Blade for the Innocent: Into the War-Torn Hutuo Region of Where Winds Meet on XBOX",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "Where Winds Meet",
+        "Hutuo Region"
+      ],
       "series": "Where Winds Meet",
       "startsAt": "2026-11-13T12:00:00+09:00",
       "timeTbd": true,
@@ -528,7 +531,28 @@
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/where-winds-meet-anniversary-update-hutuo/",
-      "reason": "문서에서 11월 13일 Hutuo 지역이 XBOX Series X|S에서 공개된다고 명시되어 있습니다."
+      "reason": "The post says the Hutuo region will go live on November 13 on Xbox Series X|S."
+    },
+    {
+      "id": "c29a30d9176f14b4e28c",
+      "title": "The Inner Circle 38·ONE Friday Fights 178 2026년 11월 13일",
+      "category": "격투기",
+      "tags": [
+        "ONE Friday Fights",
+        "The Inner Circle",
+        "무에타이",
+        "루마네 스타디움",
+        "방콕"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-11-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-178",
+      "reason": "ONE Championship 공식 이벤트 페이지에 ‘Nov 13’(다음 이벤트)로 개최일이 명시되어 있음."
     },
     {
       "id": "9f22757f1c1e9d6cb166",
@@ -623,6 +647,24 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
       "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
+    },
+    {
+      "id": "1a4052ae2534ddf24578",
+      "title": "Grand Theft Auto VI Comes to XBOX One and XBOX Series X|S Through XBOX Cloud Gaming on November 19",
+      "category": "게임",
+      "tags": [
+        "Grand Theft Auto VI",
+        "XBOX Cloud Gaming"
+      ],
+      "series": "Grand Theft Auto VI",
+      "startsAt": "2026-11-19T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
+      "reason": "The post states that Grand Theft Auto VI will be playable via Xbox Cloud Gaming on November 19."
     },
     {
       "id": "53b73d26fdf19895c950",
@@ -976,6 +1018,40 @@
       "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
     },
     {
+      "id": "5ef7f401e755b2072e22",
+      "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
+      "category": "게임",
+      "tags": [],
+      "series": "The Outer Worlds 2 DLC",
+      "startsAt": "2026-12-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
+      "reason": "The post announces that the first DLC for The Outer Worlds 2 is coming on December 2."
+    },
+    {
+      "id": "3a1a161b4bcb3c613d29",
+      "title": "The Outer Worlds 2’s first DLC (Side Effects Guaranteed) arrives December 2",
+      "category": "게임",
+      "tags": [
+        "The Outer Worlds 2",
+        "DLC",
+        "Side Effects Guaranteed"
+      ],
+      "series": "The Outer Worlds 2",
+      "startsAt": "2026-12-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
+      "reason": "공식 블로그에서 The Outer Worlds 2 첫 DLC Side Effects Guaranteed의 12월 2일 출시를 안내했다."
+    },
+    {
       "id": "e2eb7c64e3a072e8c494",
       "title": "Suit up as Astro Bot in Rayman Legends Retold",
       "category": "게임",
@@ -993,6 +1069,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/10/28/suit-up-as-astro-bot-in-rayman-legends-retold/",
       "reason": "문서에서 Rayman Legends Retold가 12월 3일에 출시된다고 명시되어 있습니다."
+    },
+    {
+      "id": "00b412a0a43c3ef5de69",
+      "title": "Marathon Symbiosis update launches December 8",
+      "category": "게임",
+      "tags": [
+        "Marathon",
+        "Symbiosis update",
+        "PvE",
+        "PvP"
+      ],
+      "series": "Marathon",
+      "startsAt": "2026-12-08T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/10/marathon-symbiosis-update-launches-december-8-adding-new-pve-and-pvp-modes-weapons-and-more/",
+      "reason": "공식 블로그에서 Marathon의 Symbiosis 업데이트가 12월 8일에 출시된다고 공지했다."
     },
     {
       "id": "2cc6ac4df4297fc9a2f3",
@@ -1403,14 +1499,16 @@
     },
     {
       "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar 3/26(금) 도하 복귀 매머드 나이트",
+      "title": "ONE: Qatar(도하) 2027년 3월 26일",
       "category": "격투기",
       "tags": [
         "ONE Championship",
-        "Qatar",
-        "Aspire Dome",
         "MMA",
-        "무에타이"
+        "무에타이",
+        "킥복싱",
+        "서브미션그래플링",
+        "도하",
+        "Qatar"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -1420,7 +1518,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 이벤트 페이지에서 2027년 3월 26일(금) 도하 개최가 ‘Next Event’로 명시되어 있음."
+      "reason": "ONE Championship 공식 이벤트 페이지에 ‘Friday, March 26, 2027’로 개최일이 명시되어 있음."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
