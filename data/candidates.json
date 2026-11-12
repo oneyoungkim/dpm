@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T00:57:22.332Z",
+  "generatedAt": "2026-11-12T02:04:00.601Z",
   "events": [
     {
       "id": "18dfecc844f71709b149",
@@ -534,6 +534,26 @@
       "reason": "The post says the Hutuo region will go live on November 13 on Xbox Series X|S."
     },
     {
+      "id": "c9c17298c64d4c2056f0",
+      "title": "ONE: 더 이너 서클 38 (11/13)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "ONE FC",
+        "Lumpinee Stadium"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-11-13T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/he-is-absolute-perfection-rodtang-braces-for-epic-clash-with-legendary-nong-o-at-the-inner-circle-38",
+      "reason": "ONE 공식 기사에서 ‘Friday, November 13’ 및 대회 개최를 명시."
+    },
+    {
       "id": "c29a30d9176f14b4e28c",
       "title": "The Inner Circle 38·ONE Friday Fights 178 2026년 11월 13일",
       "category": "격투기",
@@ -653,8 +673,7 @@
       "title": "Grand Theft Auto VI Comes to XBOX One and XBOX Series X|S Through XBOX Cloud Gaming on November 19",
       "category": "게임",
       "tags": [
-        "Grand Theft Auto VI",
-        "XBOX Cloud Gaming"
+        "Xbox Cloud Gaming"
       ],
       "series": "Grand Theft Auto VI",
       "startsAt": "2026-11-19T12:00:00+09:00",
@@ -664,7 +683,7 @@
       "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
-      "reason": "The post states that Grand Theft Auto VI will be playable via Xbox Cloud Gaming on November 19."
+      "reason": "공개된 글에서 GTA VI가 Xbox Cloud Gaming을 통해 11월 19일 플레이 가능하다고 안내합니다."
     },
     {
       "id": "53b73d26fdf19895c950",
@@ -753,13 +772,14 @@
     },
     {
       "id": "9ee8448f454bc514c19a",
-      "title": "UFC 파이트 나이트 도하: 11월 21일 개최",
+      "title": "UFC 파이트 나이트: 도하(11/21)",
       "category": "격투기",
       "tags": [
         "UFC",
         "UFC Fight Night",
-        "Doha",
-        "MMA"
+        "MMA",
+        "Qatar",
+        "Doha"
       ],
       "series": "UFC Fight Night",
       "startsAt": "2026-11-21T12:00:00+09:00",
@@ -769,7 +789,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/ufc-and-visit-qatar-announce-ufcs-return-doha-november-21",
-      "reason": "UFC 공식 발표에서 2026년 11월 21일 도하 ABHA Arena 개최가 명시됨."
+      "reason": "UFC 공식 공지에서 ‘Saturday, November 21’ 및 경기 개최를 명시."
     },
     {
       "id": "f6f326665285018cf6d5",
@@ -904,6 +924,26 @@
       "reason": "주최사(공식) 블랙컴뱃 사이트의 이벤트 리스트에서 블랙컴뱃 17 개최일이 2026-11-21로 명시돼 있음(시간 표기는 해당 리스트에 미표기)."
     },
     {
+      "id": "3b6e801caf54d99cf8e7",
+      "title": "블랙컴뱃 17: VANTABLACK (11/21)",
+      "category": "격투기",
+      "tags": [
+        "BLACK COMBAT",
+        "MMA",
+        "서울 고척돔",
+        "넘버링 대회"
+      ],
+      "series": "블랙컴뱃",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/eventDetail.php?eventSeq=294",
+      "reason": "공식 이벤트 상세 페이지에서 ‘2026 NOVEMBER 21’ 개최를 명시."
+    },
+    {
       "id": "e8d137be28d39e5a1a23",
       "title": "UFC 파이트 나이트: Prochazka vs Stirling",
       "category": "격투기",
@@ -1033,13 +1073,30 @@
       "reason": "The post announces that the first DLC for The Outer Worlds 2 is coming on December 2."
     },
     {
-      "id": "3a1a161b4bcb3c613d29",
-      "title": "The Outer Worlds 2’s first DLC (Side Effects Guaranteed) arrives December 2",
+      "id": "5e68555b362f1d03c305",
+      "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
       "category": "게임",
       "tags": [
-        "The Outer Worlds 2",
+        "DLC"
+      ],
+      "series": "The Outer Worlds 2",
+      "startsAt": "2026-12-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
+      "reason": "공식 글에서 The Outer Worlds 2의 첫 DLC가 12월 2일 공개될 예정이라고 명시합니다."
+    },
+    {
+      "id": "3a1a161b4bcb3c613d29",
+      "title": "The Outer Worlds 2’s first DLC arrives December 2",
+      "category": "게임",
+      "tags": [
         "DLC",
-        "Side Effects Guaranteed"
+        "Side Effects Guaranteed",
+        "The Outer Worlds 2"
       ],
       "series": "The Outer Worlds 2",
       "startsAt": "2026-12-02T12:00:00+09:00",
@@ -1049,7 +1106,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
-      "reason": "공식 블로그에서 The Outer Worlds 2 첫 DLC Side Effects Guaranteed의 12월 2일 출시를 안내했다."
+      "reason": "공식 블로그에서 The Outer Worlds 2의 첫 DLC ‘Side Effects Guaranteed’가 12월 2일 출시된다고 공지했다."
     },
     {
       "id": "e2eb7c64e3a072e8c494",
@@ -1072,13 +1129,14 @@
     },
     {
       "id": "00b412a0a43c3ef5de69",
-      "title": "Marathon Symbiosis update launches December 8",
+      "title": "Marathon Symbiosis update launches December 8, adding new PvE and PvP modes, weapons, and more",
       "category": "게임",
       "tags": [
-        "Marathon",
-        "Symbiosis update",
+        "업데이트",
+        "Symbiosis",
         "PvE",
-        "PvP"
+        "PvP",
+        "Marathon"
       ],
       "series": "Marathon",
       "startsAt": "2026-12-08T12:00:00+09:00",
@@ -1088,7 +1146,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/10/marathon-symbiosis-update-launches-december-8-adding-new-pve-and-pvp-modes-weapons-and-more/",
-      "reason": "공식 블로그에서 Marathon의 Symbiosis 업데이트가 12월 8일에 출시된다고 공지했다."
+      "reason": "공식 블로그에서 Marathon의 ‘Symbiosis’ 업데이트가 12월 8일 출시된다고 밝혔다."
     },
     {
       "id": "2cc6ac4df4297fc9a2f3",
