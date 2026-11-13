@@ -1,56 +1,6 @@
 {
-  "generatedAt": "2026-11-12T02:04:00.601Z",
+  "generatedAt": "2026-11-13T01:34:36.930Z",
   "events": [
-    {
-      "id": "18dfecc844f71709b149",
-      "title": "Phantom Blade Zero State of Play: Phantom Blade Zero is set to release on October 29",
-      "category": "게임",
-      "tags": [
-        "출시",
-        "State of Play"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-10-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world/",
-      "reason": "원문에서 Phantom Blade Zero의 출시일이 10월 29일로 명시되어 있어 해당 날짜의 일정만 추출했다."
-    },
-    {
-      "id": "acfc3365c67f3e789552",
-      "title": "Return to Fabletown with The Wolf Among Us Remastered, out October 29",
-      "category": "게임",
-      "tags": [
-        "The Wolf Among Us Remastered"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-10-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/01/return-to-fabletown-with-the-wolf-among-us-remastered-out-october-29/",
-      "reason": "원문 제목에 ‘out October 29’로 특정된 The Wolf Among Us Remastered의 출시일(10월 29일)이 추출됩니다."
-    },
-    {
-      "id": "3708b19221c7da9f8494",
-      "title": "The Wolf Among Us Remastered — 10월 29일 출시",
-      "category": "게임",
-      "tags": [],
-      "series": "The Wolf Among Us Remastered",
-      "startsAt": "2026-10-29T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/01/return-to-fabletown-with-the-wolf-among-us-remastered-out-october-29/",
-      "reason": "원문에 The Wolf Among Us Remastered가 10월 29일 출시된다고 명시돼 있습니다."
-    },
     {
       "id": "9ee8d9b8844aa4de1339",
       "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
@@ -631,6 +581,47 @@
       "reason": "원문에서 Xbox 25주년 기념일이 2026년 11월 15일이라고 언급한다."
     },
     {
+      "id": "d5ee77d6cbabe08b31cf",
+      "title": "Slaughter Mode Arrives to DOOM: The Dark Ages | Revelations on November 16",
+      "category": "게임",
+      "tags": [
+        "DOOM: The Dark Ages",
+        "Revelations",
+        "Slaughter Mode",
+        "출시"
+      ],
+      "series": "DOOM: The Dark Ages",
+      "startsAt": "2026-11-16T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/slaughter-mode-arrives-to-doom-the-dark-ages-revelations-on-november-16/",
+      "reason": "제목에 ‘November 16’로 명시된 DOOM: The Dark Ages | Revelations의 Slaughter Mode 도입 일정을 추출했다."
+    },
+    {
+      "id": "1e43de7a8fb32a4e041a",
+      "title": "Once Human: Season 5 gameplay showcases co-op Colossus boss battle, live November 18",
+      "category": "게임",
+      "tags": [
+        "Once Human",
+        "Season 5",
+        "게임플레이",
+        "라이브",
+        "공동 보스전"
+      ],
+      "series": "Once Human",
+      "startsAt": "2026-11-18T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
+      "reason": "Once Human 시즌 5 게임플레이 쇼케이스가 11월 18일 라이브로 진행된다고 안내한다."
+    },
+    {
       "id": "cee18014c5542bf5d076",
       "title": "(For Southeast Asia) First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
       "category": "게임",
@@ -1094,9 +1085,9 @@
       "title": "The Outer Worlds 2’s first DLC arrives December 2",
       "category": "게임",
       "tags": [
+        "The Outer Worlds 2",
         "DLC",
-        "Side Effects Guaranteed",
-        "The Outer Worlds 2"
+        "Side Effects Guaranteed"
       ],
       "series": "The Outer Worlds 2",
       "startsAt": "2026-12-02T12:00:00+09:00",
@@ -1106,7 +1097,25 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
-      "reason": "공식 블로그에서 The Outer Worlds 2의 첫 DLC ‘Side Effects Guaranteed’가 12월 2일 출시된다고 공지했다."
+      "reason": "The Outer Worlds 2의 첫 DLC 'Side Effects Guaranteed'가 12월 2일 출시된다고 명시한다."
+    },
+    {
+      "id": "c74e1c88b07c17131309",
+      "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
+      "category": "게임",
+      "tags": [
+        "Apple Arcade",
+        "Football Manager 27 Touch"
+      ],
+      "series": "Apple Arcade holiday lineup",
+      "startsAt": "2026-12-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/11/football-manager-and-other-hit-franchises-headline-apple-arcades-holiday-lineup/",
+      "reason": "Apple Arcade의 홀리데이 라인업에 포함된 Football Manager 27 Touch 등 4종 신작이 12월 3일 출시된다고 발표했다."
     },
     {
       "id": "e2eb7c64e3a072e8c494",
@@ -1132,11 +1141,10 @@
       "title": "Marathon Symbiosis update launches December 8, adding new PvE and PvP modes, weapons, and more",
       "category": "게임",
       "tags": [
-        "업데이트",
-        "Symbiosis",
+        "Marathon",
+        "Symbiosis update",
         "PvE",
-        "PvP",
-        "Marathon"
+        "PvP"
       ],
       "series": "Marathon",
       "startsAt": "2026-12-08T12:00:00+09:00",
@@ -1146,7 +1154,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/10/marathon-symbiosis-update-launches-december-8-adding-new-pve-and-pvp-modes-weapons-and-more/",
-      "reason": "공식 블로그에서 Marathon의 ‘Symbiosis’ 업데이트가 12월 8일 출시된다고 밝혔다."
+      "reason": "Marathon의 Symbiosis 업데이트가 12월 8일 출시된다고 안내한다."
     },
     {
       "id": "2cc6ac4df4297fc9a2f3",
@@ -1375,6 +1383,25 @@
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
     },
     {
+      "id": "e8cda9a31a2a500564e7",
+      "title": "UFC Fight Night Sydney 2027년 2월 7일",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "UFC Fight Night",
+        "MMA"
+      ],
+      "series": "UFC",
+      "startsAt": "2027-02-07T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
+      "reason": "UFC 공식 뉴스/행사 공지에서 ‘Sunday 7 February 2027’ 개최가 명시되어 있음."
+    },
+    {
       "id": "1528be32b0f1bdb99db2",
       "title": "UFC 파이트 나이트 시드니 2027년 2월 7일",
       "category": "격투기",
@@ -1534,16 +1561,14 @@
     },
     {
       "id": "3ff610363964ac6c4b94",
-      "title": "ONE: Qatar (Aspire Dome)",
+      "title": "ONE: Qatar (ONE Championship) 2027년 3월 26일",
       "category": "격투기",
       "tags": [
         "ONE Championship",
         "MMA",
-        "무에타이",
+        "Muay Thai",
         "킥복싱",
-        "서브미션 그래플링",
-        "카타르",
-        "도하"
+        "서브미션 그래플링"
       ],
       "series": "ONE",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -1553,7 +1578,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 이벤트 페이지에 2027-03-26(금) 도하 Aspire Dome 개최로 명시되어 있음."
+      "reason": "주최사 ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’ 및 개최 정보가 명시되어 있음."
     },
     {
       "id": "719c9ff2811df1782da1",
