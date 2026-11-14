@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-11-13T01:34:36.930Z",
+  "generatedAt": "2026-11-14T01:07:54.602Z",
   "events": [
-    {
-      "id": "9ee8d9b8844aa4de1339",
-      "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
-      "category": "게임",
-      "tags": [
-        "PlayStation 11.11 Power Deals",
-        "세일",
-        "PS5 주변기기",
-        "할인"
-      ],
-      "series": "PlayStation 11.11 Power Deals",
-      "startsAt": "2026-10-30T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/27/20261028-sale/",
-      "reason": "PlayStation 11.11 Power Deals가 2026년 10월 30일부터 11월 12일까지 진행된다고 명시합니다."
-    },
     {
       "id": "c0015e858ff4bd496d7b",
       "title": "UFC Fight Night: Moicano vs Nolan (10/31)",
@@ -608,8 +588,9 @@
         "Once Human",
         "Season 5",
         "게임플레이",
-        "라이브",
-        "공동 보스전"
+        "라이브 공개",
+        "보스 배틀",
+        "코옵"
       ],
       "series": "Once Human",
       "startsAt": "2026-11-18T12:00:00+09:00",
@@ -619,7 +600,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
-      "reason": "Once Human 시즌 5 게임플레이 쇼케이스가 11월 18일 라이브로 진행된다고 안내한다."
+      "reason": "Once Human 시즌 5 관련 게임플레이 공개가 11월 18일에 진행된다고 발표했다."
     },
     {
       "id": "cee18014c5542bf5d076",
@@ -1384,12 +1365,13 @@
     },
     {
       "id": "e8cda9a31a2a500564e7",
-      "title": "UFC Fight Night Sydney 2027년 2월 7일",
+      "title": "UFC Fight Night Sydney (2027년 2월 7일)",
       "category": "격투기",
       "tags": [
         "UFC",
-        "UFC Fight Night",
-        "MMA"
+        "Fight Night",
+        "시드니",
+        "Afterpay Arena"
       ],
       "series": "UFC",
       "startsAt": "2027-02-07T12:00:00+09:00",
@@ -1399,7 +1381,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 뉴스/행사 공지에서 ‘Sunday 7 February 2027’ 개최가 명시되어 있음."
+      "reason": "UFC 공식 뉴스 글에서 ‘Sunday 7 February 2027’로 행사 날짜가 명시됨."
     },
     {
       "id": "1528be32b0f1bdb99db2",
@@ -1560,6 +1542,27 @@
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (2027년 3월 26일)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Muay Thai",
+        "킥복싱",
+        "서브미션 그라플링"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "공식 ONE Championship 이벤트 페이지에 ‘Friday, March 26, 2027’로 행사 날짜가 명시됨."
+    },
+    {
       "id": "3ff610363964ac6c4b94",
       "title": "ONE: Qatar (ONE Championship) 2027년 3월 26일",
       "category": "격투기",
@@ -1579,29 +1582,6 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "주최사 ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’ 및 개최 정보가 명시되어 있음."
-    },
-    {
-      "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar(도하) 2027년 3월 26일",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "무에타이",
-        "킥복싱",
-        "서브미션그래플링",
-        "도하",
-        "Qatar"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE Championship 공식 이벤트 페이지에 ‘Friday, March 26, 2027’로 개최일이 명시되어 있음."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
