@@ -1,45 +1,6 @@
 {
-  "generatedAt": "2026-11-14T01:07:54.602Z",
+  "generatedAt": "2026-11-15T00:32:12.925Z",
   "events": [
-    {
-      "id": "c0015e858ff4bd496d7b",
-      "title": "UFC Fight Night: Moicano vs Nolan (10/31)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Fight Night"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-10-31T20:00:00-04:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "reason": "UFC 공식 이벤트 페이지에 날짜/시간이 명시됨."
-    },
-    {
-      "id": "5987ad228053df570443",
-      "title": "UFC 파이트 나이트: 모이카노 vs 놀런 (10월 31일)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "경기",
-        "라스베이거스"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-10-31T20:00:00-04:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "reason": "UFC 공식 이벤트 페이지에 개최일(Oct 31, 2026)과 시작시간(8:00 PM EDT)이 명시되어 있음."
-    },
     {
       "id": "6e7215eefcf890f38124",
       "title": "Gears of War: E-Day and XBOX Unleash “The Emergence Pie” with Prince St. Pizza",
@@ -561,6 +522,25 @@
       "reason": "원문에서 Xbox 25주년 기념일이 2026년 11월 15일이라고 언급한다."
     },
     {
+      "id": "7558f601bce6f3ca7094",
+      "title": "Next Week on XBOX: New Games for November 16 to 20",
+      "category": "게임",
+      "tags": [
+        "XBOX",
+        "출시 예정",
+        "주간 라인업"
+      ],
+      "series": "Next Week on XBOX",
+      "startsAt": "2026-11-16T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/13/next-week-on-xbox-new-games-for-november-16-to-20/",
+      "reason": "글에서 11월 16일부터 20일까지 출시 예정 게임을 다루는 주간 안내가 언급된다."
+    },
+    {
       "id": "d5ee77d6cbabe08b31cf",
       "title": "Slaughter Mode Arrives to DOOM: The Dark Ages | Revelations on November 16",
       "category": "게임",
@@ -587,10 +567,10 @@
       "tags": [
         "Once Human",
         "Season 5",
+        "Dissonant Resonance",
         "게임플레이",
-        "라이브 공개",
-        "보스 배틀",
-        "코옵"
+        "라이브",
+        "보스 배틀"
       ],
       "series": "Once Human",
       "startsAt": "2026-11-18T12:00:00+09:00",
@@ -600,7 +580,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
-      "reason": "Once Human 시즌 5 관련 게임플레이 공개가 11월 18일에 진행된다고 발표했다."
+      "reason": "Once Human 시즌 5가 11월 18일에 글로벌로 출시된다고 밝힌 공개 일정입니다."
     },
     {
       "id": "cee18014c5542bf5d076",
@@ -878,12 +858,11 @@
     },
     {
       "id": "1144342c0e351190993e",
-      "title": "블랙컴뱃 17: VANTABLACK",
+      "title": "블랙컴뱃 17: VANTABLACK (11/21)",
       "category": "격투기",
       "tags": [
-        "블랙컴뱃",
-        "MMA",
-        "BLACK COMBAT NUMBERING SERIES"
+        "BLACK COMBAT",
+        "MMA"
       ],
       "series": "블랙컴뱃",
       "startsAt": "2026-11-21T12:00:00+09:00",
@@ -893,7 +872,7 @@
       "confidence": "confirmed",
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "주최사(공식) 블랙컴뱃 사이트의 이벤트 리스트에서 블랙컴뱃 17 개최일이 2026-11-21로 명시돼 있음(시간 표기는 해당 리스트에 미표기)."
+      "reason": "공식 이벤트 목록에서 ‘2026년 11월 21일’로 명시되어 있음. 시간은 미기재로 12:00:00+09:00 처리."
     },
     {
       "id": "3b6e801caf54d99cf8e7",
@@ -1030,6 +1009,23 @@
       "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
     },
     {
+      "id": "c20c38830c739b547861",
+      "title": "(참고) ONE SAMURAI 6 일정은 일정표에서 별도 확인 필요",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-12-02T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-178",
+      "reason": "요청 범위 내 미래 이벤트 후보로 보이나, 현재는 단일 개별 ‘행사 상세’ 페이지 URL이 확보되지 않아(일정표만 확인) 공식 ‘공개 이벤트 페이지(개별)’로 재검증이 필요해 확정 보류."
+    },
+    {
       "id": "5ef7f401e755b2072e22",
       "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
       "category": "게임",
@@ -1078,7 +1074,7 @@
       "confidence": "confirmed",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
-      "reason": "The Outer Worlds 2의 첫 DLC 'Side Effects Guaranteed'가 12월 2일 출시된다고 명시한다."
+      "reason": "The Outer Worlds 2의 첫 DLC Side Effects Guaranteed가 12월 2일에 도착한다고 공지했습니다."
     },
     {
       "id": "c74e1c88b07c17131309",
@@ -1197,13 +1193,12 @@
     },
     {
       "id": "d12cc30bed20b7089eb4",
-      "title": "PFL 12/19(토) PFL Lyon 벤탐 챔피언십 매치",
+      "title": "PFL Lyon 메인이벤트: Lapilus vs McKee (12/19)",
       "category": "격투기",
       "tags": [
         "PFL",
-        "PFL Lyon",
-        "MVP 전환 전 마지막 PFL",
-        "벤탐급 타이틀"
+        "MMA",
+        "월드 챔피언십"
       ],
       "series": "PFL",
       "startsAt": "2026-12-19T12:00:00+09:00",
@@ -1213,7 +1208,7 @@
       "confidence": "confirmed",
       "source": "PFL",
       "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
-      "reason": "PFL 공식 기사에서 ‘PFL Lyon’ 메인 이벤트로 2026년 12월 19일 개최가 명시되어 있음."
+      "reason": "PFL 공식 뉴스에서 ‘December 19’에 PFL Lyon 메인이벤트로 명시. 시간은 미기재로 12:00:00+09:00 처리."
     },
     {
       "id": "5e2bbf68f5c68e3f25c6",
@@ -1715,6 +1710,27 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE 공식 보도자료에 ‘4月29日 – ONE 175／東京・有明アリーナ(日本)’로 날짜가 명시됨(시간 미기재)."
+    },
+    {
+      "id": "d4ba2908fc2438394472",
+      "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
+      "category": "게임",
+      "tags": [
+        "Guild Saga",
+        "Vanished Worlds",
+        "PS5",
+        "전략",
+        "RPG"
+      ],
+      "series": "Guild Saga",
+      "startsAt": "2027-05-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
+      "reason": "Guild Saga: Vanished Worlds가 2027년 5월 PS5에 출시된다고 밝힌 공식 일정입니다."
     }
   ]
 }
