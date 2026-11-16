@@ -1,46 +1,6 @@
 {
-  "generatedAt": "2026-11-15T00:32:12.925Z",
+  "generatedAt": "2026-11-16T00:32:14.355Z",
   "events": [
-    {
-      "id": "6e7215eefcf890f38124",
-      "title": "Gears of War: E-Day and XBOX Unleash “The Emergence Pie” with Prince St. Pizza",
-      "category": "게임",
-      "tags": [
-        "Gears of War: E-Day",
-        "Prince St. Pizza",
-        "콜라보"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-11-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/28/gears-of-war-e-day-prince-st-pizza/",
-      "reason": "Prince St. Pizza에서 진행되는 ‘The Emergence Pie’ 한정 콜라보가 2026년 11월 1일까지라고 되어 있어 종료 시점을 이벤트 윈도우로 추출했다."
-    },
-    {
-      "id": "01cad19ab68bc77ed989",
-      "title": "Goobne ROAD FC 079 (2026년 11월 1일)",
-      "category": "격투기",
-      "tags": [
-        "ROAD FC",
-        "국내 개최",
-        "MMA",
-        "티켓",
-        "서울"
-      ],
-      "series": "ROAD FC",
-      "startsAt": "2026-11-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ROAD FC",
-      "sourceUrl": "https://roadfc.com/main/news/news_view.php?key=JTI1MjUzRElUTnhBVE0%3D",
-      "reason": "공식 ROAD FC 공지에서 ‘November 1’ 및 ‘Goobne ROAD FC 079’ 일정이 명시되어 있음."
-    },
     {
       "id": "d71b8867b60d9ac17da8",
       "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
@@ -526,8 +486,7 @@
       "title": "Next Week on XBOX: New Games for November 16 to 20",
       "category": "게임",
       "tags": [
-        "XBOX",
-        "출시 예정",
+        "출시 일정 예고",
         "주간 라인업"
       ],
       "series": "Next Week on XBOX",
@@ -535,10 +494,10 @@
       "timeTbd": true,
       "eventMode": "release-window",
       "datePrecision": "date",
-      "confidence": "expected",
+      "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/13/next-week-on-xbox-new-games-for-november-16-to-20/",
-      "reason": "글에서 11월 16일부터 20일까지 출시 예정 게임을 다루는 주간 안내가 언급된다."
+      "reason": "원문에 11월 16일부터 20일까지의 신작 라인업 예고(릴리즈 윈도우)가 명시되어 있습니다."
     },
     {
       "id": "d5ee77d6cbabe08b31cf",
@@ -581,6 +540,29 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
       "reason": "Once Human 시즌 5가 11월 18일에 글로벌로 출시된다고 밝힌 공개 일정입니다."
+    },
+    {
+      "id": "2fea588a02a674e2ce5c",
+      "title": "Once Human: Season 5 gameplay showcases co-op Colossus boss battle, live November 18",
+      "category": "게임",
+      "tags": [
+        "Once Human",
+        "Season 5",
+        "Dissonant Resonance",
+        "gameplay showcase",
+        "co-op",
+        "Colossus boss battle",
+        "live"
+      ],
+      "series": "Once Human: Season 5",
+      "startsAt": "2026-11-18T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
+      "reason": "Once Human 시즌 5 관련 코옵 보스 전투 게임플레이 쇼케이스가 11월 18일에 진행된다고 발표했다."
     },
     {
       "id": "cee18014c5542bf5d076",
@@ -1095,6 +1077,23 @@
       "reason": "Apple Arcade의 홀리데이 라인업에 포함된 Football Manager 27 Touch 등 4종 신작이 12월 3일 출시된다고 발표했다."
     },
     {
+      "id": "c3ab91d804377d00ccd6",
+      "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
+      "category": "게임",
+      "tags": [
+        "게임 출시"
+      ],
+      "series": "Apple Arcade",
+      "startsAt": "2026-12-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/11/football-manager-and-other-hit-franchises-headline-apple-arcades-holiday-lineup/",
+      "reason": "공식 뉴스에서 Apple Arcade의 ‘December 3’ 라인업으로 신작이 제공된다고 밝혔다."
+    },
+    {
       "id": "e2eb7c64e3a072e8c494",
       "title": "Suit up as Astro Bot in Rayman Legends Retold",
       "category": "게임",
@@ -1211,6 +1210,25 @@
       "reason": "PFL 공식 뉴스에서 ‘December 19’에 PFL Lyon 메인이벤트로 명시. 시간은 미기재로 12:00:00+09:00 처리."
     },
     {
+      "id": "7149a949a2ad9050bdd0",
+      "title": "Vindictus: Defying Fate comes to PS5 next year",
+      "category": "게임",
+      "tags": [
+        "Vindictus: Defying Fate",
+        "PS5",
+        "next year"
+      ],
+      "series": "Vindictus: Defying Fate",
+      "startsAt": "2027-01-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/12/vindictus-defying-fate-comes-to-ps5-next-year/",
+      "reason": "Vindictus: Defying Fate가 내년에 PS5로 온다고 발표했다."
+    },
+    {
       "id": "5e2bbf68f5c68e3f25c6",
       "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
       "category": "게임",
@@ -1304,6 +1322,25 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/two-electric-title-fights-announced-ufc-336",
       "reason": "UFC 공식 기사에서 2027년 1월 30일 토론토에서 UFC 336 개최 및 타이틀전이 명시되어 있음."
+    },
+    {
+      "id": "234fcd1f67cd7a1daa9f",
+      "title": "블랙컴뱃 16: 엑소더스 — 2027년 1월 31일",
+      "category": "격투기",
+      "tags": [
+        "BLACK COMBAT",
+        "블랙컴뱃 16",
+        "Inspire Arena"
+      ],
+      "series": "BLACK COMBAT",
+      "startsAt": "2027-01-31T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/eventDetail.php?eventSeq=285",
+      "reason": "공식 이벤트 상세 페이지에 ‘Jan 31 | BLACK COMBAT 16: EXODUS’로 행사 날짜가 명시됨."
     },
     {
       "id": "3ac8b8a81d44294f5d5b",
@@ -1537,27 +1574,6 @@
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
-      "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (2027년 3월 26일)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "Muay Thai",
-        "킥복싱",
-        "서브미션 그라플링"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "공식 ONE Championship 이벤트 페이지에 ‘Friday, March 26, 2027’로 행사 날짜가 명시됨."
-    },
-    {
       "id": "3ff610363964ac6c4b94",
       "title": "ONE: Qatar (ONE Championship) 2027년 3월 26일",
       "category": "격투기",
@@ -1577,6 +1593,27 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "주최사 ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’ 및 개최 정보가 명시되어 있음."
+    },
+    {
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (두하이) — 2027년 3월 26일",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE: Qatar",
+        "MMA",
+        "무에타이",
+        "킥복싱"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’로 차기 이벤트 날짜가 명시됨."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
@@ -1731,6 +1768,26 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
       "reason": "Guild Saga: Vanished Worlds가 2027년 5월 PS5에 출시된다고 밝힌 공식 일정입니다."
+    },
+    {
+      "id": "de43ab86674666c2ca1c",
+      "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
+      "category": "게임",
+      "tags": [
+        "Guild Saga: Vanished Worlds",
+        "PS5",
+        "tactical RPG",
+        "May 2027"
+      ],
+      "series": "Guild Saga: Vanished Worlds",
+      "startsAt": "2027-05-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
+      "reason": "Guild Saga: Vanished Worlds가 PS5에 2027년 5월에 출시된다고 발표했다."
     }
   ]
 }
