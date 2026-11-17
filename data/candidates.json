@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-11-16T00:32:14.355Z",
+  "generatedAt": "2026-11-17T03:18:48.339Z",
   "events": [
-    {
-      "id": "d71b8867b60d9ac17da8",
-      "title": "Phoenix Cyclops joins MARVEL Tōkon: Fighting Souls on November 2",
-      "category": "게임",
-      "tags": [
-        "MARVEL Tōkon: Fighting Souls",
-        "DLC 캐릭터",
-        "Phoenix Cyclops",
-        "Year 1 Pass"
-      ],
-      "series": "MARVEL Tōkon: Fighting Souls",
-      "startsAt": "2026-11-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/07/phoenix-cyclops-joins-marvel-tokon-fighting-souls-on-november-2/",
-      "reason": "MARVEL Tōkon: Fighting Souls의 Year 1 Pass에 포함되는 DLC 캐릭터 Phoenix Cyclops가 11월 2일 공개된다고 안내되어 있습니다."
-    },
     {
       "id": "966161afa0b97fec86c8",
       "title": "PlayStation Plus Monthly Games for November: Dead Island 2, Tomb Raider IV – VI Remastered, Monster Train 2",
@@ -1304,14 +1284,13 @@
     },
     {
       "id": "3e5339bcbd035fc7ff22",
-      "title": "UFC 336 1/30(토) 토론토 타이틀 2개 경기",
+      "title": "UFC 336 토론토 - 1월 30일 개최(타이틀전 2개)",
       "category": "격투기",
       "tags": [
+        "UFC",
         "UFC 336",
         "토론토",
-        "타이틀",
-        "인테림 웰터급",
-        "플라이급"
+        "타이틀전"
       ],
       "series": "UFC",
       "startsAt": "2027-01-30T12:00:00+09:00",
@@ -1321,7 +1300,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/two-electric-title-fights-announced-ufc-336",
-      "reason": "UFC 공식 기사에서 2027년 1월 30일 토론토에서 UFC 336 개최 및 타이틀전이 명시되어 있음."
+      "reason": "UFC 공식 뉴스에서 UFC 336이 2027-01-30 토론토(Scotiabank Arena) 개최로 명시됨."
     },
     {
       "id": "234fcd1f67cd7a1daa9f",
@@ -1574,6 +1553,26 @@
       "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
     },
     {
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (2027) - 두바이 아닌 카타르 복귀",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "Muay Thai",
+        "글로벌이벤트"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "공식 ONE 이벤트 페이지에서 2027-03-26(금) 카타르 아스파이어 돔 개최일이 명시됨."
+    },
+    {
       "id": "3ff610363964ac6c4b94",
       "title": "ONE: Qatar (ONE Championship) 2027년 3월 26일",
       "category": "격투기",
@@ -1593,27 +1592,6 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
       "reason": "주최사 ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’ 및 개최 정보가 명시되어 있음."
-    },
-    {
-      "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (두하이) — 2027년 3월 26일",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "ONE: Qatar",
-        "MMA",
-        "무에타이",
-        "킥복싱"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’로 차기 이벤트 날짜가 명시됨."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
