@@ -1,36 +1,6 @@
 {
-  "generatedAt": "2026-11-19T02:08:06.659Z",
+  "generatedAt": "2026-11-20T01:57:28.051Z",
   "events": [
-    {
-      "id": "893000f539a85620fb68",
-      "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
-      "category": "게임",
-      "tags": [],
-      "series": "Escape Academy",
-      "startsAt": "2026-11-05T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
-      "reason": "공식 PlayStation Blog에서 Escape Academy 2: Back 2 School의 PS5 출시일을 11월 5일로 안내했습니다."
-    },
-    {
-      "id": "47d1e6c25914195eaed4",
-      "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
-      "category": "게임",
-      "tags": [],
-      "series": "Escape Academy 2",
-      "startsAt": "2026-11-05T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/13/escape-academy-2-back-2-school-comes-to-ps5-on-november-5/",
-      "reason": "PlayStation Blog에 따르면 Escape Academy 2: Back 2 School이 2026년 11월 5일 PS5로 출시됩니다."
-    },
     {
       "id": "f72be418be94b8e45a2a",
       "title": "Modern Warfare 4 Season 1: Everything you need to know for November 6 launch",
@@ -657,6 +627,46 @@
       "reason": "블랙 프라이데이 세일이 11월 19일 시작이라고 명시되어 있다."
     },
     {
+      "id": "c6b3fca18f3c03513fa3",
+      "title": "2026 MAMA AWARDS CHAPTER 1 (Samsung TV Plus 라이브 스트리밍)",
+      "category": "e스포츠",
+      "tags": [
+        "Samsung TV Plus",
+        "MAMA AWARDS",
+        "livestream",
+        "K-pop"
+      ],
+      "series": "2026 MAMA AWARDS",
+      "startsAt": "2026-11-20T00:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world",
+      "reason": "원문에서 2026 MAMA AWARDS의 CHAPTER 1이 11월 20일에 진행된다고 명시되어 있습니다."
+    },
+    {
+      "id": "dfe34542c50fbdad9592",
+      "title": "Formula 1® Las Vegas Grand Prix™ streams live on Apple TV this weekend",
+      "category": "테크",
+      "tags": [
+        "Apple TV",
+        "F1",
+        "스트리밍",
+        "Las Vegas Grand Prix"
+      ],
+      "series": "F1 HEINEKEN LAS VEGAS GRAND PRIX 2026",
+      "startsAt": "2026-11-20T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/11/formula-1-las-vegas-grand-prix-streams-live-on-apple-tv-this-weekend/",
+      "reason": "공식 글에서 F1 라스베이거스 그랑프리 2026이 Apple TV에서 이번 주말에 생중계된다고 밝혔다."
+    },
+    {
       "id": "8143672111ce8a54fd53",
       "title": "Samsung TV Plus Brings 2026 MAMA AWARDS to K-pop Fans Around the World",
       "category": "특별 이벤트",
@@ -675,6 +685,26 @@
       "source": "Samsung Global Newsroom",
       "sourceUrl": "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world",
       "reason": "2026 MAMA AWARDS 챕터 1이 11월 20일에 진행된다고 명시되어 있다."
+    },
+    {
+      "id": "4d48fa2d99eb37fbe365",
+      "title": "2026 MAMA AWARDS CHAPTER 2 (Samsung TV Plus 라이브 스트리밍)",
+      "category": "e스포츠",
+      "tags": [
+        "Samsung TV Plus",
+        "MAMA AWARDS",
+        "livestream",
+        "K-pop"
+      ],
+      "series": "2026 MAMA AWARDS",
+      "startsAt": "2026-11-21T00:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "live-trigger",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world",
+      "reason": "원문에서 2026 MAMA AWARDS의 CHAPTER 2가 11월 21일에 진행된다고 명시되어 있습니다."
     },
     {
       "id": "951baa9c511232ff36a0",
@@ -737,6 +767,27 @@
       "reason": "UFC 공식 뉴스에서 2026년 11월 21일(토) ABHA Arena에서 ‘UFC Fight Night’ 개최가 명시되어 있음."
     },
     {
+      "id": "2c3b6f7d523826ccd559",
+      "title": "UFC Fight Night: Prochazka vs Stirling (11/21)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "UFC Fight Night",
+        "Qatar",
+        "Prochazka",
+        "Stirling"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/updates-ufc-qatar",
+      "reason": "UFC 공식 ‘Updates To UFC Qatar’에서 해당 이벤트 개최일(2026년 11월 21일)이 명시됨."
+    },
+    {
       "id": "9ee8448f454bc514c19a",
       "title": "UFC 파이트 나이트: 도하(11/21)",
       "category": "격투기",
@@ -774,6 +825,25 @@
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
       "reason": "UFC 공식 이벤트 페이지에 2026-11-21 날짜가 명시됨."
+    },
+    {
+      "id": "3d4e103a516ac1eebc60",
+      "title": "블랙컴뱃 17 (11/21) 고척스카이돔",
+      "category": "격투기",
+      "tags": [
+        "BLACK COMBAT",
+        "블랙컴뱃",
+        "고척스카이돔"
+      ],
+      "series": "블랙컴뱃 번호 시리즈",
+      "startsAt": "2026-11-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "BLACK COMBAT",
+      "sourceUrl": "https://www.blackcombat-official.com/event.php?page=4",
+      "reason": "BLACKCOMBAT 공식 이벤트 목록에서 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시됨."
     },
     {
       "id": "0190d14e2860871fba73",
@@ -1203,6 +1273,25 @@
       "reason": "Marathon의 Symbiosis 업데이트가 12월 8일 출시된다고 안내한다."
     },
     {
+      "id": "c51e1138c80bc4d34a95",
+      "title": "지능형 아이웨어(Intelligent Eyewear) 라인업 출시",
+      "category": "테크",
+      "tags": [
+        "intelligent eyewear",
+        "출시",
+        "pre-order"
+      ],
+      "series": "Samsung Intelligent Eyewear",
+      "startsAt": "2026-12-10T00:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
+      "reason": "원문에서 지능형 아이웨어 전체 라인업의 출시일이 12월 10일(미국 및 한국)로 명시되어 있습니다."
+    },
+    {
       "id": "82f6b4b6b1343f916978",
       "title": "Samsung Announces December Release for Intelligent Eyewear, Bringing a Smarter Way To See the World",
       "category": "테크",
@@ -1239,6 +1328,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 49이 12월 11일(동부시간 기준 21:00)로 명시."
+    },
+    {
+      "id": "4662af851c681fa5c5f3",
+      "title": "ONE 174: Shanghai (12/12) 중국 복귀",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE 174: Shanghai",
+        "MMA",
+        "상하이"
+      ],
+      "series": "ONE 174",
+      "startsAt": "2026-12-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
+      "reason": "ONE 공식 뉴스에서 ‘ONE 174: Shanghai’ 개최일(12월 12일) 및 행사 성격이 명시됨."
     },
     {
       "id": "e3522fabeca8cf29bc5d",
@@ -1299,6 +1408,26 @@
       "reason": "PFL 공식 뉴스에서 ‘December 19’에 PFL Lyon 메인이벤트로 명시. 시간은 미기재로 12:00:00+09:00 처리."
     },
     {
+      "id": "52a66552fc763a31ed44",
+      "title": "Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series",
+      "category": "e스포츠",
+      "tags": [
+        "Apple TV",
+        "F1 ACADEMY",
+        "스트리밍",
+        "F1"
+      ],
+      "series": "F1 ACADEMY",
+      "startsAt": "2027-01-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Apple Newsroom",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
+      "reason": "Apple은 F1 ACADEMY가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
+    },
+    {
       "id": "8ca112b4eaebf59e92a6",
       "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
       "category": "게임",
@@ -1336,6 +1465,27 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/12/vindictus-defying-fate-comes-to-ps5-next-year/",
       "reason": "Vindictus: Defying Fate가 내년에 PS5로 온다고 발표했다."
+    },
+    {
+      "id": "00a595a74d91c3f674ad",
+      "title": "UFC Fight Night: Rodriguez vs Garcia (1/16)",
+      "category": "격투기",
+      "tags": [
+        "UFC",
+        "Fight Night",
+        "Rodriguez",
+        "Garcia",
+        "Dallas"
+      ],
+      "series": "UFC Fight Night",
+      "startsAt": "2027-01-16T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/action-packed-main-event-yair-rodriguez-vs-steve-garcia-headlines-ufc-return-to-dallas-texas",
+      "reason": "UFC 공식 기사에서 UFC FIGHT NIGHT: RODRIGUEZ vs GARCIA의 개최일(2027년 1월 16일)이 명시됨."
     },
     {
       "id": "5e2bbf68f5c68e3f25c6",
