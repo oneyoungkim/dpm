@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-11-21T01:53:20.105Z",
+  "generatedAt": "2026-11-22T00:47:39.305Z",
   "events": [
-    {
-      "id": "0c4e3438f1a29486fe12",
-      "title": "UFC 파이트 나이트: Cortes Acosta vs Walker",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA",
-        "Fight Night",
-        "UFC Fight Pass/Paramount+"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-11-07T08:00:00+09:00",
-      "timeTbd": false,
-      "eventMode": "scheduled",
-      "datePrecision": "time",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "reason": "주최사 UFC 공식 이벤트 페이지에 2026-11-07(현지표기: Sat, Nov 7) 일정이 명시돼 있음."
-    },
     {
       "id": "9beec076c01028659a79",
       "title": "Hozy brings calm, tactile home restoration to PS5 on November 9",
@@ -961,10 +941,7 @@
       "id": "cf1a91059c0a49159dde",
       "title": "Next Week on XBOX: New Games for November 23 to 27",
       "category": "게임",
-      "tags": [
-        "주간 코너",
-        "신규 게임"
-      ],
+      "tags": [],
       "series": "Next Week on XBOX",
       "startsAt": "2026-11-23T12:00:00+09:00",
       "timeTbd": true,
@@ -973,7 +950,7 @@
       "confidence": "expected",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/20/next-week-on-xbox-new-games-for-november-23-to-27/",
-      "reason": "본문에서 11월 23일부터 27일까지의 예정 주간 신규 라인업 안내가 언급된다."
+      "reason": "기사에 11월 23일부터 27일까지 공개될 예정인 Xbox 신작(출시 일정은 변경 가능)이 안내된다."
     },
     {
       "id": "91ae095b190b3e214ab6",
@@ -1327,6 +1304,26 @@
       "reason": "PFL 공식 뉴스에 PFL Lyon의 메인 이벤트가 2026-12-19 LDLC Arena에서 개최된다고 명시됨."
     },
     {
+      "id": "ca66d3587e70a56180ec",
+      "title": "PFL 라이옹(12/19): 라필루스 vs 맥키 월드 타이틀",
+      "category": "격투기",
+      "tags": [
+        "PFL",
+        "라필루스",
+        "맥키",
+        "Bantamweight"
+      ],
+      "series": "PFL",
+      "startsAt": "2026-12-19T00:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PFL",
+      "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
+      "reason": "PFL 공식 뉴스에 2026년 12월 19일(프랑스 LDLC Arena) 메인이벤트가 명시되어 있습니다."
+    },
+    {
       "id": "c6f47e7520af0c6a03b6",
       "title": "ONE Fight Night 50 (ONE: X)",
       "category": "격투기",
@@ -1368,12 +1365,12 @@
     {
       "id": "52a66552fc763a31ed44",
       "title": "Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series",
-      "category": "e스포츠",
+      "category": "테크",
       "tags": [
         "Apple TV",
         "F1 ACADEMY",
-        "스트리밍",
-        "F1"
+        "스포츠",
+        "스트리밍"
       ],
       "series": "F1 ACADEMY",
       "startsAt": "2027-01-01T12:00:00+09:00",
@@ -1383,7 +1380,7 @@
       "confidence": "expected",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
-      "reason": "Apple은 F1 ACADEMY가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
+      "reason": "F1 ACADEMY가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
     },
     {
       "id": "8ca112b4eaebf59e92a6",
@@ -1789,6 +1786,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/nong-o-to-face-asadula-imangazaliev-for-the-vacant-one-flyweight-muay-thai-world-title-at-one-friday-fights-147",
       "reason": "ONE 공식 기사에 ‘March 20’ 개최일이 명시됨."
+    },
+    {
+      "id": "2615aede72d5dfb5679a",
+      "title": "ONE: Qatar (2027.3.26)",
+      "category": "격투기",
+      "tags": [
+        "ONE",
+        "MMA",
+        "두하",
+        "Qatar"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2027-03-26T00:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-qatar",
+      "reason": "ONE 공식 이벤트 페이지에 ‘Friday, March 26, 2027’가 명시되어 있습니다."
     },
     {
       "id": "54f4d9f6923378949b79",
