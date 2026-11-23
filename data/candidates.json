@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T00:47:39.305Z",
+  "generatedAt": "2026-11-23T01:14:48.483Z",
   "events": [
     {
       "id": "9beec076c01028659a79",
@@ -941,16 +941,19 @@
       "id": "cf1a91059c0a49159dde",
       "title": "Next Week on XBOX: New Games for November 23 to 27",
       "category": "게임",
-      "tags": [],
+      "tags": [
+        "주간 코너",
+        "예정작"
+      ],
       "series": "Next Week on XBOX",
       "startsAt": "2026-11-23T12:00:00+09:00",
       "timeTbd": true,
       "eventMode": "release-window",
       "datePrecision": "date",
-      "confidence": "expected",
+      "confidence": "confirmed",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/20/next-week-on-xbox-new-games-for-november-23-to-27/",
-      "reason": "기사에 11월 23일부터 27일까지 공개될 예정인 Xbox 신작(출시 일정은 변경 가능)이 안내된다."
+      "reason": "공식 게시물에서 11월 23일부터 27일까지의 XBOX 신규 게임 일정을 언급한다."
     },
     {
       "id": "91ae095b190b3e214ab6",
@@ -1364,12 +1367,11 @@
     },
     {
       "id": "52a66552fc763a31ed44",
-      "title": "Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series",
+      "title": "F1 ACADEMY™(올-여성 레이싱 시리즈) 미국 내 Apple TV 스트리밍 시작",
       "category": "테크",
       "tags": [
-        "Apple TV",
         "F1 ACADEMY",
-        "스포츠",
+        "Apple TV",
         "스트리밍"
       ],
       "series": "F1 ACADEMY",
@@ -1380,17 +1382,16 @@
       "confidence": "expected",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
-      "reason": "F1 ACADEMY가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
+      "reason": "F1 ACADEMY™가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
     },
     {
       "id": "8ca112b4eaebf59e92a6",
       "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
       "category": "게임",
       "tags": [
-        "PS5",
         "Hounded",
-        "Imprnt Studios",
-        "Silver Lining Interactive"
+        "PS5",
+        "출시"
       ],
       "series": "Hounded",
       "startsAt": "2027-01-01T12:00:00+09:00",
@@ -1400,7 +1401,7 @@
       "confidence": "expected",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/17/introducing-hounded-crafting-the-dog-adventure-coming-to-ps5-in-2027/",
-      "reason": "Hounded가 2027년 PS5에 출시된다고 안내되어 있습니다."
+      "reason": "글에서 Hounded의 PS5 출시가 2027년으로 안내되어 있습니다(구체 일자는 미기재)."
     },
     {
       "id": "7149a949a2ad9050bdd0",
@@ -2047,9 +2048,9 @@
       "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
       "category": "게임",
       "tags": [
-        "PS5",
         "Guild Saga: Vanished Worlds",
-        "tactical RPG"
+        "PS5",
+        "출시"
       ],
       "series": "Guild Saga: Vanished Worlds",
       "startsAt": "2027-05-01T12:00:00+09:00",
@@ -2059,7 +2060,7 @@
       "confidence": "expected",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
-      "reason": "Guild Saga: Vanished Worlds가 2027년 5월 PS5로 온다고 밝혔습니다."
+      "reason": "해당 글에서 Guild Saga: Vanished Worlds의 PS5 출시가 2027년 5월로 명시되었습니다(일자는 미기재)."
     }
   ]
 }
