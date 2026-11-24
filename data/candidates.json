@@ -1,45 +1,6 @@
 {
-  "generatedAt": "2026-11-23T01:14:48.483Z",
+  "generatedAt": "2026-11-24T05:03:57.444Z",
   "events": [
-    {
-      "id": "9beec076c01028659a79",
-      "title": "Hozy brings calm, tactile home restoration to PS5 on November 9",
-      "category": "게임",
-      "tags": [
-        "Hozy",
-        "PS5",
-        "November 9"
-      ],
-      "series": "Hozy",
-      "startsAt": "2026-11-09T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/06/hozy-brings-calm-tactile-home-restoration-to-ps5-on-november-9/",
-      "reason": "공식 글 제목에 PS5용 Hozy가 11월 9일 공개된다고 명시되어 있다."
-    },
-    {
-      "id": "8ea2046190926d674d7d",
-      "title": "Next Week on XBOX - 11월 9~13일 공개/예정 라인업",
-      "category": "게임",
-      "tags": [
-        "Xbox Series X|S",
-        "Xbox One",
-        "Xbox on PC",
-        "Game Pass"
-      ],
-      "series": "Next Week on XBOX",
-      "startsAt": "2026-11-09T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/next-week-on-xbox-new-games-for-november-9-to-13/",
-      "reason": "원문 제목에서 11월 9일부터 13일까지 출시될 예정 게임을 다룬다고 제시합니다."
-    },
     {
       "id": "cdd7b6c8daaae4e5e26b",
       "title": "Grand Theft Auto VI pre-download begins November 10",
@@ -1404,6 +1365,24 @@
       "reason": "글에서 Hounded의 PS5 출시가 2027년으로 안내되어 있습니다(구체 일자는 미기재)."
     },
     {
+      "id": "c4b687a31a0822f86e63",
+      "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
+      "category": "게임",
+      "tags": [
+        "Hounded",
+        "PS5"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2027-01-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/17/introducing-hounded-crafting-the-dog-adventure-coming-to-ps5-in-2027/",
+      "reason": "본문에 '2027년' 출시 예정만 명시되어 있어 해당 연도 일정으로 추출했습니다."
+    },
+    {
       "id": "7149a949a2ad9050bdd0",
       "title": "Vindictus: Defying Fate comes to PS5 next year",
       "category": "게임",
@@ -1871,13 +1850,14 @@
     },
     {
       "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar 2027년 3월 26일",
+      "title": "ONE: Qatar (도하) 2027년 3월 26일",
       "category": "격투기",
       "tags": [
         "ONE Championship",
-        "ONE Qatar",
-        "Doha",
-        "2027"
+        "MMA",
+        "무에타이",
+        "도하",
+        "Qatar"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -1887,7 +1867,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE Championship 공식 이벤트 페이지에 2027년 3월 26일(금) 개최가 명시됨. (시간 미정)"
+      "reason": "공식 이벤트 페이지에 2027년 3월 26일(금) 개최가 명시되어 있음."
     },
     {
       "id": "e4c055f0ee5bc0e5fa80",
