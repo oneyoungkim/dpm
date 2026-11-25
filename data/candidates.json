@@ -1,40 +1,6 @@
 {
-  "generatedAt": "2026-11-24T05:03:57.444Z",
+  "generatedAt": "2026-11-25T03:52:45.185Z",
   "events": [
-    {
-      "id": "cdd7b6c8daaae4e5e26b",
-      "title": "Grand Theft Auto VI pre-download begins November 10",
-      "category": "게임",
-      "tags": [],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "Grand Theft Auto VI의 사전 다운로드 시작일이 11월 10일로 명시되어 있어 추출했습니다."
-    },
-    {
-      "id": "ba7a9a4cb2229f958b89",
-      "title": "Warhammer Survivors launches November 10, new characters revealed",
-      "category": "게임",
-      "tags": [
-        "Warhammer Survivors",
-        "출시",
-        "신규 캐릭터"
-      ],
-      "series": "Warhammer Survivors",
-      "startsAt": "2026-11-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/06/warhammer-survivors-launches-november-10-new-characters-revealed/",
-      "reason": "Warhammer Survivors가 PS5에서 11월 10일 출시된다고 명시되어 있습니다."
-    },
     {
       "id": "c7d722a8134b9f5ef12e",
       "title": "Hope in the City: Detective Sketchbook - 게임 출시",
@@ -1079,6 +1045,26 @@
       "reason": "The Outer Worlds 2의 첫 DLC Side Effects Guaranteed가 2026년 12월 2일에 도착한다고 안내했습니다."
     },
     {
+      "id": "466ad67af201a0670f10",
+      "title": "ONE SAMURAI 6 (야마하마)",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "MMA",
+        "킥복싱",
+        "무에타이"
+      ],
+      "series": "ONE SAMURAI 6",
+      "startsAt": "2026-12-02T21:30:00+09:00",
+      "timeTbd": false,
+      "eventMode": "scheduled",
+      "datePrecision": "time",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/events/one-samurai-6",
+      "reason": "주최사 ONE 공식 행사 페이지에 2026-12-02(수) 8:30AM UTC 및 ONE SAMURAI 6 개최가 명시됨."
+    },
+    {
       "id": "c74e1c88b07c17131309",
       "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
       "category": "게임",
@@ -1101,6 +1087,8 @@
       "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
       "category": "게임",
       "tags": [
+        "Apple Arcade",
+        "Football Manager 27 Touch",
         "게임 출시"
       ],
       "series": "Apple Arcade",
@@ -1108,10 +1096,29 @@
       "timeTbd": true,
       "eventMode": "release-window",
       "datePrecision": "date",
-      "confidence": "expected",
+      "confidence": "confirmed",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/football-manager-and-other-hit-franchises-headline-apple-arcades-holiday-lineup/",
-      "reason": "공식 뉴스에서 Apple Arcade의 ‘December 3’ 라인업으로 신작이 제공된다고 밝혔다."
+      "reason": "Apple Arcade의 휴일 라인업에 포함된 Football Manager 27 Touch 등 신규 게임이 2026년 12월 3일 추가된다고 발표했다."
+    },
+    {
+      "id": "d1b8c7b7afe07b258af3",
+      "title": "Sea of Remnants: Set Sail for the Dawnbreaker Closed Beta on XBOX Series X",
+      "category": "게임",
+      "tags": [
+        "Closed Beta",
+        "XBOX Series X",
+        "XBOX Insiders"
+      ],
+      "series": "Dawnbreaker Closed Beta",
+      "startsAt": "2026-12-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/23/sea-of-remnants-set-sail-for-the-dawnbreaker-closed-beta-on-xbox-series-x/",
+      "reason": "해당 기사에서 Dawnbreaker Closed Beta가 12월 3일부터 시작된다고 안내합니다."
     },
     {
       "id": "e2eb7c64e3a072e8c494",
@@ -1328,7 +1335,7 @@
     },
     {
       "id": "52a66552fc763a31ed44",
-      "title": "F1 ACADEMY™(올-여성 레이싱 시리즈) 미국 내 Apple TV 스트리밍 시작",
+      "title": "Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series",
       "category": "테크",
       "tags": [
         "F1 ACADEMY",
@@ -1343,7 +1350,7 @@
       "confidence": "expected",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
-      "reason": "F1 ACADEMY™가 2027년부터 미국에서 Apple TV로 스트리밍된다고 발표했다."
+      "reason": "F1 ACADEMY가 미국에서 2027년부터 Apple TV로 스트리밍된다고 발표했다."
     },
     {
       "id": "8ca112b4eaebf59e92a6",
