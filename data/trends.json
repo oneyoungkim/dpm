@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T07:53:21.697Z",
+  "generatedAt": "2026-11-26T08:48:19.849Z",
   "sources": [
     {
       "id": "fmkorea",
@@ -47,7 +47,7 @@
       "id": "clien",
       "name": "클리앙",
       "url": "https://www.clien.net/service/board/park",
-      "posts": 27,
+      "posts": 28,
       "ok": true
     }
   ],
@@ -57,16 +57,18 @@
       "keyword": "김준표",
       "category": "연예",
       "score": 100,
-      "mentions": 11,
+      "mentions": 17,
       "sources": [
         "dcinside",
         "dogdrip",
         "fmkorea",
-        "inven"
+        "inven",
+        "ruliweb"
       ],
       "delta": 0,
-      "streak": 4,
+      "streak": 5,
       "spark": [
+        100,
         100,
         100,
         100,
@@ -85,68 +87,26 @@
           "source": "fmkorea"
         },
         {
-          "title": "ㅇㅂ) 김준표 근황",
-          "url": "https://www.inven.co.kr/board/maple/5974/7461810",
-          "source": "inven"
+          "title": "실시간 준표햄 유튜브 댓글 jpg",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527111",
+          "source": "ruliweb"
         }
       ]
     },
     {
       "rank": 2,
-      "keyword": "GTA6",
-      "category": "게임",
-      "score": 44,
-      "mentions": 6,
-      "sources": [
-        "bobaedream",
-        "dcinside",
-        "ruliweb"
-      ],
-      "delta": 1,
-      "streak": 9,
-      "spark": [
-        44,
-        49,
-        40,
-        55,
-        56,
-        47,
-        42,
-        27,
-        44
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "GTA) \"범죄 프로필 시스템은 명예시스템이 아니다\"",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526481",
-          "source": "ruliweb"
-        },
-        {
-          "title": "GTA6에 개빡친 중국인",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050285",
-          "source": "bobaedream"
-        },
-        {
-          "title": "싱글벙글 현재 GTA6에서 젤 인기많은 여캐",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481675",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 3,
       "keyword": "AI",
       "category": "테크",
-      "score": 42,
+      "score": 39,
       "mentions": 6,
       "sources": [
         "bobaedream",
         "dcinside",
+        "dogdrip",
         "fmkorea"
       ],
-      "delta": null,
-      "streak": 1,
+      "delta": 1,
+      "streak": 2,
       "spark": [
         69,
         76,
@@ -156,7 +116,8 @@
         94,
         20,
         0,
-        42
+        42,
+        39
       ],
       "sensitive": false,
       "samples": [
@@ -171,24 +132,113 @@
           "source": "bobaedream"
         },
         {
-          "title": "와들와들 ai의 무서운 발전 속도",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481707",
-          "source": "dcinside"
+          "title": "최근 저절로 감탄이 나오는 AI이미지.jpg",
+          "url": "https://www.dogdrip.net/736698401",
+          "source": "dogdrip"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "keyword": "GTA6",
+      "category": "게임",
+      "score": 35,
+      "mentions": 5,
+      "sources": [
+        "bobaedream",
+        "clien",
+        "dcinside",
+        "ruliweb"
+      ],
+      "delta": -1,
+      "streak": 10,
+      "spark": [
+        44,
+        49,
+        40,
+        55,
+        56,
+        47,
+        42,
+        27,
+        44,
+        35
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "GTA6 무려 2천만건 환불로 게임 역사상 최대 환불 게임으로 등극!",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526989",
+          "source": "ruliweb"
+        },
+        {
+          "title": "GTA6에 개빡친 중국인",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050285",
+          "source": "bobaedream"
+        },
+        {
+          "title": "GTA5, GTA6 모두 해보신 분이 계시다면...",
+          "url": "https://www.clien.net/service/board/park/19298893",
+          "source": "clien"
         }
       ]
     },
     {
       "rank": 4,
+      "keyword": "젠슨황",
+      "category": "테크",
+      "score": 17,
+      "mentions": 3,
+      "sources": [
+        "bobaedream",
+        "dcinside",
+        "ruliweb"
+      ],
+      "delta": 7,
+      "streak": 2,
+      "spark": [
+        46,
+        50,
+        43,
+        40,
+        40,
+        49,
+        12,
+        0,
+        14,
+        17
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "젠슨황 와이프 로리황 공식 입장문 발표",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050245",
+          "source": "bobaedream"
+        },
+        {
+          "title": "로리 황이 젠슨 황을 용서했을 요인 중 하나로 추정되는 거",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527181",
+          "source": "ruliweb"
+        },
+        {
+          "title": "MBC) 가죽 재킷 벗고 젠슨황 \"더 나은 CEO될것\"",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481627",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 5,
       "keyword": "존박",
       "category": "연예",
-      "score": 26,
+      "score": 16,
       "mentions": 3,
       "sources": [
         "dogdrip",
         "fmkorea"
       ],
-      "delta": -2,
-      "streak": 3,
+      "delta": -1,
+      "streak": 4,
       "spark": [
         9,
         10,
@@ -198,7 +248,8 @@
         0,
         23,
         27,
-        26
+        26,
+        16
       ],
       "sensitive": false,
       "samples": [
@@ -220,84 +271,22 @@
       ]
     },
     {
-      "rank": 5,
-      "keyword": "중국산",
-      "category": "자동차",
-      "score": 19,
-      "mentions": 3,
-      "sources": [
-        "dcinside",
-        "fmkorea"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        17,
-        19,
-        14,
-        17,
-        18,
-        0,
-        0,
-        0,
-        19
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "[단독] 현대 불량인데 그냥 사용.. 중국산 쏘나타 국내 4만대 ㅎㄷㄷㄷㅎㄷㄷㄷ",
-          "url": "https://www.fmkorea.com/10595880717",
-          "source": "fmkorea"
-        },
-        {
-          "title": "포텐간 \"불량인데 그냥 사용.. 중국산 쏘나타\" 팩트는 이거임",
-          "url": "https://www.fmkorea.com/10597855054",
-          "source": "fmkorea"
-        }
-      ]
-    },
-    {
       "rank": 6,
-      "keyword": "경찰",
-      "category": "시사",
-      "score": 19,
-      "mentions": 4,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        6,
-        7,
-        4,
-        6,
-        6,
-        29,
-        4,
-        0,
-        19
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 7,
       "keyword": "둠스데이",
       "category": "연예",
-      "score": 19,
-      "mentions": 2,
+      "score": 16,
+      "mentions": 4,
       "sources": [
-        "clien",
-        "fmkorea"
+        "fmkorea",
+        "ruliweb"
       ],
       "delta": 0,
-      "streak": 3,
+      "streak": 4,
       "spark": [
         17,
         20,
-        19
+        19,
+        16
       ],
       "sensitive": false,
       "samples": [
@@ -307,64 +296,146 @@
           "source": "fmkorea"
         },
         {
-          "title": "이번 어벤저스 둠스데이는 집결장면을 공개 했군요",
-          "url": "https://www.clien.net/service/board/park/19298852",
-          "source": "clien"
+          "title": "MCU) 케빈 파이기 \"둠스데이에 놀라운 반전 숨겨져 있다\"",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527002",
+          "source": "ruliweb"
+        },
+        {
+          "title": "MCU) 둠스데이 등장 캐릭터 찌라시 썰",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527118",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "keyword": "아파트",
+      "category": "돈",
+      "score": 14,
+      "mentions": 4,
+      "sources": [
+        "bobaedream",
+        "dcinside"
+      ],
+      "delta": 10,
+      "streak": 5,
+      "spark": [
+        31,
+        10,
+        10,
+        8,
+        14
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "아파트 내 주차문제 때문에 일이 컸었네요. 판단 좀 부탁드립니다.",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050253",
+          "source": "bobaedream"
+        },
+        {
+          "title": "념글 배달갑질 아파트 가격과 내부뷰",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481731",
+          "source": "dcinside"
+        },
+        {
+          "title": "아파트 좌식 욕실.",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050267",
+          "source": "bobaedream"
         }
       ]
     },
     {
       "rank": 8,
-      "keyword": "쏘나타",
-      "category": "자동차",
-      "score": 18,
+      "keyword": "로리황",
+      "category": "연예",
+      "score": 14,
       "mentions": 3,
       "sources": [
         "bobaedream",
-        "fmkorea"
+        "ruliweb"
       ],
-      "delta": 0,
-      "streak": 3,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        7,
-        19,
-        18
+        14
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "[단독] 현대 불량인데 그냥 사용.. 중국산 쏘나타 국내 4만대 ㅎㄷㄷㄷㅎㄷㄷㄷ",
-          "url": "https://www.fmkorea.com/10595880717",
-          "source": "fmkorea"
-        },
-        {
-          "title": "[단독] 불량인데 “그냥 사용”...중국산 쏘나타 국내 4만 대",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050244",
+          "title": "젠슨황 와이프 로리황 공식 입장문 발표",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050245",
           "source": "bobaedream"
         },
         {
-          "title": "포텐간 \"불량인데 그냥 사용.. 중국산 쏘나타\" 팩트는 이거임",
-          "url": "https://www.fmkorea.com/10597855054",
-          "source": "fmkorea"
+          "title": "로리 황 인터뷰 떳네",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527070",
+          "source": "ruliweb"
+        },
+        {
+          "title": "로리 황이 젠슨 황을 용서했을 요인 중 하나로 추정되는 거",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527181",
+          "source": "ruliweb"
         }
       ]
     },
     {
       "rank": 9,
+      "keyword": "마라톤",
+      "category": "기타",
+      "score": 14,
+      "mentions": 3,
+      "sources": [
+        "bobaedream",
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        14
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 10,
+      "keyword": "국민연금",
+      "category": "돈",
+      "score": 12,
+      "mentions": 2,
+      "sources": [
+        "clien",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        58,
+        13,
+        0,
+        0,
+        12
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 11,
       "keyword": "한국은행",
       "category": "시사",
-      "score": 18,
+      "score": 11,
       "mentions": 2,
       "sources": [
         "dogdrip",
         "fmkorea"
       ],
-      "delta": 0,
-      "streak": 3,
+      "delta": -1,
+      "streak": 4,
       "spark": [
         16,
         19,
-        18
+        18,
+        11
       ],
       "sensitive": false,
       "samples": [
@@ -381,130 +452,10 @@
       ]
     },
     {
-      "rank": 10,
-      "keyword": "구급차",
-      "category": "시사",
-      "score": 17,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        16,
-        0,
-        17
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "구급차까지 막아버린 마라톤..영상 퍼지자 '공분'",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77523419",
-          "source": "ruliweb"
-        },
-        {
-          "title": "구급차까지 막아버린 마라톤..영상 퍼지자 '공분'",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050274",
-          "source": "bobaedream"
-        }
-      ]
-    },
-    {
-      "rank": 11,
-      "keyword": "판결",
-      "category": "기타",
-      "score": 17,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        17
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
       "rank": 12,
-      "keyword": "KBO",
-      "category": "야구",
-      "score": 14,
-      "mentions": 4,
-      "sources": [
-        "fmkorea"
-      ],
-      "delta": 2,
-      "streak": 2,
-      "spark": [
-        11,
-        14
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "현재 kbo팬들사이에서 난리라는 문제",
-          "url": "https://www.fmkorea.com/10597215980",
-          "source": "fmkorea"
-        },
-        {
-          "title": "2026시즌 KBO MVP - 김도영",
-          "url": "https://www.fmkorea.com/10597997883",
-          "source": "fmkorea"
-        },
-        {
-          "title": "2026시즌 KBO 신인상 - 한화 이글스 허인서",
-          "url": "https://www.fmkorea.com/10597977904",
-          "source": "fmkorea"
-        }
-      ]
-    },
-    {
-      "rank": 13,
-      "keyword": "젠슨황",
-      "category": "테크",
-      "score": 14,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        46,
-        50,
-        43,
-        40,
-        40,
-        49,
-        12,
-        0,
-        14
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "젠슨황 와이프 로리황 공식 입장문 발표",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050245",
-          "source": "bobaedream"
-        },
-        {
-          "title": "MBC) 가죽 재킷 벗고 젠슨황 \"더 나은 CEO될것\"",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481627",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 14,
-      "keyword": "리만가설",
-      "category": "테크",
-      "score": 13,
+      "keyword": "대마도",
+      "category": "기타",
+      "score": 10,
       "mentions": 2,
       "sources": [
         "dcinside",
@@ -513,7 +464,99 @@
       "delta": null,
       "streak": 1,
       "spark": [
-        13
+        16,
+        17,
+        13,
+        16,
+        16,
+        13,
+        6,
+        0,
+        0,
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "대마도 스시자로 야마토수령 서비스종료",
+          "url": "https://www.fmkorea.com/10598040117",
+          "source": "fmkorea"
+        },
+        {
+          "title": "어질어질 대마도 스시자로 근황.png",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481713",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "keyword": "여돌",
+      "category": "연예",
+      "score": 9,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        13,
+        0,
+        0,
+        9
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "요즘 여돌 얼굴 근황jpg",
+          "url": "https://www.dogdrip.net/736648632",
+          "source": "dogdrip"
+        },
+        {
+          "title": "5세대 여돌 생태계 총정리 ..jpg",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481717",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "keyword": "김민석",
+      "category": "연예",
+      "score": 9,
+      "mentions": 2,
+      "sources": [
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        18,
+        0,
+        0,
+        0,
+        9
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 15,
+      "keyword": "리만가설",
+      "category": "테크",
+      "score": 8,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "fmkorea"
+      ],
+      "delta": 0,
+      "streak": 2,
+      "spark": [
+        13,
+        8
       ],
       "sensitive": false,
       "samples": [
@@ -530,20 +573,87 @@
       ]
     },
     {
-      "rank": 15,
+      "rank": 16,
+      "keyword": "신현송",
+      "category": "돈",
+      "score": 8,
+      "mentions": 2,
+      "sources": [
+        "clien",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        8
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "신현송 한은 총재, 반도체 낙수효과 자신...'내년 소비 강한 회복'",
+          "url": "https://www.clien.net/service/board/park/19298896",
+          "source": "clien"
+        },
+        {
+          "title": "신현송, 한국 주식을 믿어달라 호소",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481784",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "keyword": "MCU",
+      "category": "연예",
+      "score": 8,
+      "mentions": 6,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        23,
+        0,
+        0,
+        0,
+        8
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "MCU) 케빈 파이기 \"둠스데이에 놀라운 반전 숨겨져 있다\"",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527002",
+          "source": "ruliweb"
+        },
+        {
+          "title": "MCU) 둠스데이 등장 캐릭터 찌라시 썰",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527118",
+          "source": "ruliweb"
+        },
+        {
+          "title": "mcu)파이기:\"네들 누구 나올지 아무도 모를껄?\"",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527101",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 18,
       "keyword": "김도영",
       "category": "야구",
-      "score": 11,
+      "score": 7,
       "mentions": 3,
       "sources": [
         "fmkorea"
       ],
-      "delta": -3,
-      "streak": 3,
+      "delta": -2,
+      "streak": 4,
       "spark": [
         10,
         12,
-        11
+        11,
+        7
       ],
       "sensitive": false,
       "samples": [
@@ -560,57 +670,43 @@
       ]
     },
     {
-      "rank": 16,
-      "keyword": "트릭컬",
-      "category": "게임",
-      "score": 11,
-      "mentions": 4,
+      "rank": 19,
+      "keyword": "학폭",
+      "category": "시사",
+      "score": 7,
+      "mentions": 2,
       "sources": [
-        "ruliweb"
+        "bobaedream",
+        "dcinside"
       ],
-      "delta": -3,
-      "streak": 9,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        7,
-        7,
-        8,
-        11,
-        11,
-        14,
-        9,
-        11,
-        11
+        29,
+        32,
+        24,
+        31,
+        31,
+        45,
+        0,
+        0,
+        0,
+        7
       ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "블리치vs트릭컬은 트릭컬의 필패인 이유.jpg",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526586",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬)큰거왔다큰거왔다큰거왔다",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526504",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬) 연회장 정리중에 찾아온 프리클",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526453",
-          "source": "ruliweb"
-        }
-      ]
+      "sensitive": true,
+      "samples": []
     },
     {
-      "rank": 17,
+      "rank": 20,
       "keyword": "제우스",
       "category": "게임",
-      "score": 10,
-      "mentions": 7,
+      "score": 7,
+      "mentions": 8,
       "sources": [
         "inven"
       ],
-      "delta": -2,
-      "streak": 8,
+      "delta": -1,
+      "streak": 9,
       "spark": [
         39,
         30,
@@ -619,7 +715,8 @@
         18,
         8,
         11,
-        10
+        10,
+        7
       ],
       "sensitive": false,
       "samples": [
@@ -641,82 +738,215 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 21,
+      "keyword": "네이버",
+      "category": "테크",
+      "score": 7,
+      "mentions": 2,
+      "sources": [
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        7
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "네이버, 물류 자회사 ‘네이버로직스’ 설립",
+          "url": "https://www.clien.net/service/board/park/19298902",
+          "source": "clien"
+        },
+        {
+          "title": "듀오링고, 네이버에서 구독했는데 짤렸네요.",
+          "url": "https://www.clien.net/service/board/park/19298899",
+          "source": "clien"
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "keyword": "KBO",
+      "category": "야구",
+      "score": 6,
+      "mentions": 2,
+      "sources": [
+        "fmkorea"
+      ],
+      "delta": -8,
+      "streak": 3,
+      "spark": [
+        11,
+        14,
+        6
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "현재 kbo팬들사이에서 난리라는 문제",
+          "url": "https://www.fmkorea.com/10597215980",
+          "source": "fmkorea"
+        }
+      ]
+    },
+    {
+      "rank": 23,
       "keyword": "림버스",
       "category": "게임",
-      "score": 9,
+      "score": 6,
       "mentions": 4,
       "sources": [
         "ruliweb"
       ],
-      "delta": -1,
-      "streak": 3,
-      "spark": [
-        6,
-        9,
-        9
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "림버스)음식점으로 비유하자면",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526563",
-          "source": "ruliweb"
-        },
-        {
-          "title": "림버스) 유저한테 선보인는 컨텐츠에 투자하기 아깝다는건",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526364",
-          "source": "ruliweb"
-        },
-        {
-          "title": "림버스) 에고시너지나 신규인격으로 도상구축 케어하겠다는건",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526287",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 19,
-      "keyword": "아파트",
-      "category": "돈",
-      "score": 8,
-      "mentions": 2,
-      "sources": [
-        "bobaedream"
-      ],
       "delta": -3,
       "streak": 4,
       "spark": [
-        31,
-        10,
-        10,
-        8
+        6,
+        9,
+        9,
+        6
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "\"5000만원만 받아라\" vs \"2.9억 다 내놔라\"...아파트..",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050261",
-          "source": "bobaedream"
+          "title": "림버스)이 말만큼은 안했으면 좋았을텐데",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527004",
+          "source": "ruliweb"
         },
         {
-          "title": "아파트 좌식 욕실.",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050267",
-          "source": "bobaedream"
+          "title": "림버스) 도상구축 10까지 찍고 하는 후기",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526986",
+          "source": "ruliweb"
+        },
+        {
+          "title": "림버스) 아 십 도축 ↗됐다",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526933",
+          "source": "ruliweb"
         }
       ]
     },
     {
-      "rank": 20,
-      "keyword": "T1",
+      "rank": 24,
+      "keyword": "리니지",
       "category": "게임",
-      "score": 8,
-      "mentions": 4,
+      "score": 5,
+      "mentions": 3,
       "sources": [
         "inven"
       ],
       "delta": null,
       "streak": 1,
+      "spark": [
+        8,
+        9,
+        5,
+        8,
+        8,
+        0,
+        5,
+        7,
+        0,
+        5
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "[정보글] 리니지 행사 관련 린엠소식",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771184",
+          "source": "inven"
+        },
+        {
+          "title": "도움주신 행사장진행요원, 리니지 형님들 감사합니다.",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771277",
+          "source": "inven"
+        },
+        {
+          "title": "리니지 페스티벌 후기( 약스압)",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771194",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "keyword": "쏘나타",
+      "category": "자동차",
+      "score": 5,
+      "mentions": 2,
+      "sources": [
+        "fmkorea"
+      ],
+      "delta": -14,
+      "streak": 4,
+      "spark": [
+        7,
+        19,
+        18,
+        5
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "[단독] 현대 불량인데 그냥 사용.. 중국산 쏘나타 국내 4만대 ㅎㄷㄷㄷㅎㄷㄷㄷ",
+          "url": "https://www.fmkorea.com/10595880717",
+          "source": "fmkorea"
+        },
+        {
+          "title": "포텐간 \"불량인데 그냥 사용.. 중국산 쏘나타\" 팩트는 이거임",
+          "url": "https://www.fmkorea.com/10597855054",
+          "source": "fmkorea"
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "keyword": "블루아카이브",
+      "category": "게임",
+      "score": 5,
+      "mentions": 3,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": -2,
+      "streak": 2,
+      "spark": [
+        18,
+        0,
+        0,
+        7,
+        5
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "블루아카) 마나미어 해설기(미완성) .grim",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527052",
+          "source": "ruliweb"
+        },
+        {
+          "title": "[블루아카] 왜곡도 거짓도 없는 참된 나이스바디 이치카",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527263",
+          "source": "ruliweb"
+        },
+        {
+          "title": "[블루아카] 어느 레슬링 선수의 마지막 순간",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526831",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "keyword": "T1",
+      "category": "게임",
+      "score": 4,
+      "mentions": 4,
+      "sources": [
+        "inven"
+      ],
+      "delta": -5,
+      "streak": 2,
       "spark": [
         38,
         0,
@@ -726,15 +956,11 @@
         14,
         0,
         0,
-        8
+        8,
+        4
       ],
       "sensitive": false,
       "samples": [
-        {
-          "title": "\"제우스의 티원 리턴은 엄마 없는 애들이 하는 말이다\"",
-          "url": "https://www.inven.co.kr/board/lol/4625/4291678",
-          "source": "inven"
-        },
         {
           "title": "???:제우스가 젠지를 갔으면 갔지 T1은 안갈듯 ㅋㅋㅋㅋ",
           "url": "https://www.inven.co.kr/board/lol/4625/4291669",
@@ -744,20 +970,25 @@
           "title": "제우스 티원 리턴 이유",
           "url": "https://www.inven.co.kr/board/lol/4625/4291702",
           "source": "inven"
+        },
+        {
+          "title": "설레발 없이 지금 T1로스터 전 젠지급임",
+          "url": "https://www.inven.co.kr/board/lol/4625/4291788",
+          "source": "inven"
         }
       ]
     },
     {
-      "rank": 21,
+      "rank": 28,
       "keyword": "메이플스토리",
       "category": "게임",
-      "score": 8,
-      "mentions": 3,
+      "score": 4,
+      "mentions": 2,
       "sources": [
         "inven"
       ],
-      "delta": -3,
-      "streak": 7,
+      "delta": -5,
+      "streak": 8,
       "spark": [
         3,
         5,
@@ -765,95 +996,35 @@
         16,
         8,
         9,
-        8
+        8,
+        4
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "뉴비 6일차 인생 첫 메이플스토리 후기",
-          "url": "https://www.inven.co.kr/board/maple/5974/7460470",
+          "title": "아 메이플현대카드 인질제대로잡았네",
+          "url": "https://www.inven.co.kr/board/maple/5974/7461672",
           "source": "inven"
         },
         {
           "title": "요새 일반인? 메이플인식.jpg",
           "url": "https://www.inven.co.kr/board/maple/5974/7461625",
           "source": "inven"
-        },
-        {
-          "title": "메이플 8년만에",
-          "url": "https://www.inven.co.kr/board/maple/5974/7460997",
-          "source": "inven"
         }
       ]
     },
     {
-      "rank": 22,
-      "keyword": "블루아카이브",
-      "category": "게임",
-      "score": 7,
-      "mentions": 3,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        18,
-        0,
-        0,
-        7
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "블루아카] 뭔가 많이 화려한 드레스 히나",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526571",
-          "source": "ruliweb"
-        },
-        {
-          "title": "블루아카)스포) 내게로, 나의 칠수인",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77526562",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 23,
-      "keyword": "마운자로",
-      "category": "시사",
-      "score": 7,
-      "mentions": 2,
-      "sources": [
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        24,
-        27,
-        20,
-        26,
-        27,
-        14,
-        6,
-        0,
-        7
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 24,
+      "rank": 29,
       "keyword": "중국",
       "category": "시사",
-      "score": 5,
-      "mentions": 2,
+      "score": 4,
+      "mentions": 4,
       "sources": [
         "bobaedream",
         "dcinside"
       ],
       "delta": -5,
-      "streak": 3,
+      "streak": 4,
       "spark": [
         38,
         42,
@@ -863,91 +1034,80 @@
         0,
         10,
         6,
-        5
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 25,
-      "keyword": "부산",
-      "category": "자동차",
-      "score": 4,
-      "mentions": 2,
-      "sources": [
-        "dcinside",
-        "fmkorea"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        10,
-        0,
+        5,
         4
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 26,
-      "keyword": "수능",
-      "category": "시사",
-      "score": 4,
-      "mentions": 2,
-      "sources": [
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        5,
-        5,
-        3,
-        4,
-        5,
-        0,
-        3,
-        0,
-        4
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 27,
-      "keyword": "북한",
-      "category": "시사",
-      "score": 2,
-      "mentions": 2,
-      "sources": [
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        4,
-        4,
-        1,
-        2,
-        2,
-        5,
-        0,
-        0,
-        2
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "와들와들 개무서운 북한 지피티 사용수칙..jpg",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481593",
+          "title": "15억 못내는 중국 불법 어선...배 포기 속출",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050286",
+          "source": "bobaedream"
+        },
+        {
+          "title": "싱글벙글 중국 역사상 전례가 없던 사건...jpg",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481700",
           "source": "dcinside"
         },
         {
-          "title": "싱글벙글 아버지를 지게에 태우고 산을 오르는 남자를 지켜보던 북한 감시원",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481601",
+          "title": "구글 전 수석부사장 : 중국과 오픈소스, 증류에 대한 이야기들",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481605",
           "source": "dcinside"
         }
       ]
+    },
+    {
+      "rank": 30,
+      "keyword": "일본",
+      "category": "시사",
+      "score": 3,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        25,
+        28,
+        22,
+        28,
+        28,
+        24,
+        5,
+        6,
+        0,
+        3
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 31,
+      "keyword": "경찰",
+      "category": "시사",
+      "score": 3,
+      "mentions": 2,
+      "sources": [
+        "dcinside"
+      ],
+      "delta": -25,
+      "streak": 2,
+      "spark": [
+        6,
+        7,
+        4,
+        6,
+        6,
+        29,
+        4,
+        0,
+        19,
+        3
+      ],
+      "sensitive": true,
+      "samples": []
     }
   ]
 }

@@ -1694,6 +1694,197 @@
           "sensitive": false
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-26T08:48:19.849Z",
+      "keywords": [
+        {
+          "keyword": "김준표",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 2,
+          "score": 39,
+          "sensitive": false
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 3,
+          "score": 35,
+          "sensitive": false
+        },
+        {
+          "keyword": "젠슨황",
+          "rank": 4,
+          "score": 17,
+          "sensitive": false
+        },
+        {
+          "keyword": "존박",
+          "rank": 5,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "둠스데이",
+          "rank": 6,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "아파트",
+          "rank": 7,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "로리황",
+          "rank": 8,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "마라톤",
+          "rank": 9,
+          "score": 14,
+          "sensitive": true
+        },
+        {
+          "keyword": "국민연금",
+          "rank": 10,
+          "score": 12,
+          "sensitive": true
+        },
+        {
+          "keyword": "한국은행",
+          "rank": 11,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "대마도",
+          "rank": 12,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "여돌",
+          "rank": 13,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "김민석",
+          "rank": 14,
+          "score": 9,
+          "sensitive": true
+        },
+        {
+          "keyword": "리만가설",
+          "rank": 15,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "신현송",
+          "rank": 16,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "MCU",
+          "rank": 17,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "김도영",
+          "rank": 18,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "학폭",
+          "rank": 19,
+          "score": 7,
+          "sensitive": true
+        },
+        {
+          "keyword": "제우스",
+          "rank": 20,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "네이버",
+          "rank": 21,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "KBO",
+          "rank": 22,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "림버스",
+          "rank": 23,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "리니지",
+          "rank": 24,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "쏘나타",
+          "rank": 25,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "블루아카이브",
+          "rank": 26,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "T1",
+          "rank": 27,
+          "score": 4,
+          "sensitive": false
+        },
+        {
+          "keyword": "메이플스토리",
+          "rank": 28,
+          "score": 4,
+          "sensitive": false
+        },
+        {
+          "keyword": "중국",
+          "rank": 29,
+          "score": 4,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 30,
+          "score": 3,
+          "sensitive": true
+        },
+        {
+          "keyword": "경찰",
+          "rank": 31,
+          "score": 3,
+          "sensitive": true
+        }
+      ]
     }
   ]
 }
