@@ -7,8 +7,14 @@
  *  1. 규칙(키 없이도 돈다): 이름 + 호칭(햄·형·좌·님 …) 꼴의 별명.
  *     - "준표햄" → 이번 집계에 성까지 붙은 이름 "김준표"가 하나뿐이면 그쪽으로
  *     - "페이커형님" → "페이커"가 이번 집계의 키워드면 그쪽으로
+ *     - "GTA 6" → 띄어쓰기만 다른 "GTA6"가 있으면 그쪽으로
  *  2. 모델(OPENAI_API_KEY 가 있을 때만): 남은 키워드 목록을 보여 주고 별명·줄임말·표기 차이를 묶게 한다.
- *     모델이 준 묶음은 목록에 실제로 있는 키워드끼리일 때만, 사전이 서로 다른 대상이라고 아는 경우가 아닐 때만 받는다.
+ *     작은 모델은 관련만 있는 것도 묶는다(11-26 실행: 신현송 → 한국은행, 둠스데이 → 어벤져스).
+ *     그래서 제안은 모델이 하되, 아래를 다 지킨 짝만 받는다(acceptGroups):
+ *       · 목록에 실제로 있는 키워드끼리, 사전이 다른 대상으로 아는 둘이 아닐 것
+ *       · 글자가 겹칠 것(두 글자 이상 이어서, 짧은 쪽의 절반 이상). 겹치는 글자가 없는 별명은 사전(ALIASES)에 적어야 한다
+ *       · 같은 제목에 함께 나오는 일이 드물 것(함께 나오는 둘은 대개 사람과 소속, 작품과 부제처럼 다른 대상이다)
+ *       · 둘 다 성 붙은 사람 이름이면 다른 사람이다
  *
  * 합친 내용은 실행 기록에 한 줄씩 남긴다(잘못 합쳤는지 눈으로 볼 수 있게).
  */
@@ -33,6 +39,8 @@ interface KeyStat {
   count: number;
   displays: Map<string, number>;
   sample: string;
+  /** 이 키워드가 붙은 글 번호 */
+  ids: Set<number>;
 }
 
 function keyStats(posts: Post[]): Map<string, KeyStat> {
@@ -40,8 +48,9 @@ function keyStats(posts: Post[]): Map<string, KeyStat> {
   for (const post of posts) {
     for (const [key, display] of post.keywords) {
       if (isStopword(key)) continue;
-      const s = stats.get(key) ?? { count: 0, displays: new Map<string, number>(), sample: post.title };
+      const s = stats.get(key) ?? { count: 0, displays: new Map<string, number>(), sample: post.title, ids: new Set<number>() };
       s.count++;
+      s.ids.add(post.idx);
       s.displays.set(display, (s.displays.get(display) ?? 0) + 1);
       stats.set(key, s);
     }
@@ -102,6 +111,12 @@ export function nicknameMerges(stats: Map<string, KeyStat>): Map<string, string>
   }
 
   const map = new Map<string, string>();
+  // 띄어쓰기만 다른 것("gta 6" 과 "gta6")은 붙여 쓴 쪽으로
+  for (const key of stats.keys()) {
+    if (!key.includes(" ")) continue;
+    const joined = key.replace(/ /g, "");
+    if (stats.has(joined)) map.set(key, joined);
+  }
   for (const key of stats.keys()) {
     if (!/^[a-z0-9가-힣]+$/.test(key)) continue; // 두 낱말 키워드는 건드리지 않는다
     if (KNOWN.has(key)) continue; // 사전에 있는 이름은 그 자체가 정식 이름이다
@@ -141,6 +156,35 @@ const groupsSchema = z.object({
 const MAX_CANDIDATES = 90;
 const weakKeys = new Set(WEAK_KEYWORDS.map(normalizeKey));
 
+/** 두 키에 이어서 겹치는 글자 수(가장 긴 것) */
+function commonRun(a: string, b: string): number {
+  let best = 0;
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < b.length; j++) {
+      let n = 0;
+      while (i + n < a.length && j + n < b.length && a[i + n] === b[j + n]) n++;
+      if (n > best) best = n;
+    }
+  }
+  return best;
+}
+
+/** 글자로 보아 같은 이름의 다른 모양일 수 있나: 두 글자 이상 이어서 겹치고, 그것이 짧은 쪽의 절반 이상 */
+function lettersOverlap(a: string, b: string): boolean {
+  const x = a.replace(/ /g, "");
+  const y = b.replace(/ /g, "");
+  const run = commonRun(x, y);
+  return run >= 2 && run * 2 >= Math.min(x.length, y.length);
+}
+
+/** 같은 제목에 함께 나오는 비율(적게 나온 쪽 기준) */
+function togetherShare(a: KeyStat, b: KeyStat): number {
+  let both = 0;
+  for (const id of a.ids) if (b.ids.has(id)) both++;
+  return both / Math.max(1, Math.min(a.ids.size, b.ids.size));
+}
+const TOGETHER_LIMIT = 0.3;
+
 /** 모델이 준 묶음을 걸러 별명 → 정식 이름 짝으로 바꾼다. */
 export function acceptGroups(
   groups: Array<{ canonical: string; members: string[] }>,
@@ -168,10 +212,19 @@ export function acceptGroups(
     if (members.some((m) => used.has(m))) continue;
     // 사전에 있는 이름이 묶음에 있으면 그것이 정식 이름이다
     const target = members.find((m) => KNOWN.has(m)) ?? canonical;
+    const targetStat = stats.get(target)!;
     for (const m of members) {
+      if (m === target) continue;
+      // 글자가 겹치지 않으면 관련만 있는 다른 대상일 수 있다(신현송·한국은행)
+      if (!lettersOverlap(m, target)) continue;
+      // 성 붙은 이름 둘은 다른 사람이다(김민석·김민재)
+      if (looksLikeFullName(m) && looksLikeFullName(target)) continue;
+      // 같은 제목에 자주 함께 나오면 다른 대상이다(어벤져스: 둠스데이)
+      if (togetherShare(stats.get(m)!, targetStat) >= TOGETHER_LIMIT) continue;
       used.add(m);
-      if (m !== target) map.set(m, target);
+      map.set(m, target);
     }
+    if (members.some((m) => map.get(m) === target)) used.add(target);
   }
   return map;
 }

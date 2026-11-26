@@ -70,6 +70,14 @@ async function main() {
     check("이름+이형, 성명+씨", map.get("흥민이형") === "손흥민" && map.get("손흥민씨") === "손흥민", show(map));
   }
   {
+    const posts = postsOf(["GTA6 트레일러", "GTA6 출시일"]);
+    // 모델이 띄어 쓴 키워드를 붙였을 때를 흉내 낸다
+    posts[0].keywords.set("gta 6", "GTA 6");
+    posts[0].keywords.delete("gta6");
+    const map = nicknameMergesOf(posts);
+    check("띄어쓰기만 다르면 붙여 쓴 쪽으로", map.get("gta 6") === "gta6", show(map));
+  }
+  {
     const map = nicknameMergesOf(postsOf(["유재석 새 예능", "재석형 미담", "이재형 신곡 발표", "이재형 콘서트"]));
     check("이름이 '형'으로 끝나는 사람은 그대로", map.get("재석형") === "유재석" && !map.has("이재형"), show(map));
   }
@@ -82,6 +90,12 @@ async function main() {
       "T1 결승 진출", "T1 로스터", "페이커 인터뷰", "페이커 솔랭",
       "일본 여행 후기", "일본 물가", "도쿄 맛집 지도", "도쿄 숙소",
       "GTA6 트레일러", "GTA6 출시일", "쏘나타 신형", "쏘나타 디자인",
+      "페이커센세 강의", "페이커센세 명장면",
+      "신현송 한국은행 총재 발언", "한국은행 금리 동결", "신현송 기자회견",
+      "어벤져스 둠스데이 예고편", "어벤져스 둠스데이 캐스팅",
+      "김민석 총리 일정", "김민석 발언", "김민재 선발", "김민재 평점",
+      "블루아카이브 블루아카콜라보 일정", "블루아카이브 블루아카콜라보 굿즈 목록",
+      "제노블레이드크로스 리마스터 발표", "제노블레이드크로스 발매일", "제노블레이드 스토리 요약", "제노블레이드 공략",
     ]);
     const ok = acceptGroupsOf(posts, [{ canonical: "김준표", members: ["김준표", "준표햄"] }]);
     check("목록에 있는 별명 묶음은 받음", ok.get("준표햄") === "김준표", show(ok));
@@ -92,8 +106,14 @@ async function main() {
     check("사전이 다른 대상으로 아는 둘(T1·페이커)은 버림", acceptGroupsOf(posts, [{ canonical: "T1", members: ["T1", "페이커"] }]).size === 0);
     check("넓은 말(일본)이 낀 묶음은 버림", acceptGroupsOf(posts, [{ canonical: "일본", members: ["일본", "도쿄"] }]).size === 0);
     check("다섯 개 넘게 묶으면 버림", acceptGroupsOf(posts, [{ canonical: "김준표", members: ["김준표", "준표햄", "쏘나타", "도쿄", "GTA6"] }]).size === 0);
-    const known = acceptGroupsOf(posts, [{ canonical: "준표햄", members: ["준표햄", "페이커"] }]);
-    check("사전 이름이 묶음에 있으면 그쪽이 정식 이름", known.get("준표햄") === "페이커" && !known.has("페이커"), show(known));
+    const known = acceptGroupsOf(posts, [{ canonical: "페이커센세", members: ["페이커센세", "페이커"] }]);
+    check("사전 이름이 묶음에 있으면 그쪽이 정식 이름", known.get("페이커센세") === "페이커" && !known.has("페이커"), show(known));
+    check("글자가 안 겹치면 버림(사람과 기관)", acceptGroupsOf(posts, [{ canonical: "한국은행", members: ["한국은행", "신현송"] }]).size === 0);
+    check("글자가 안 겹치면 버림(작품과 부제)", acceptGroupsOf(posts, [{ canonical: "어벤져스", members: ["어벤져스", "둠스데이"] }]).size === 0);
+    check("성 붙은 이름 둘은 다른 사람", acceptGroupsOf(posts, [{ canonical: "김민석", members: ["김민석", "김민재"] }]).size === 0);
+    check("같은 제목에 함께 나오는 둘은 버림", acceptGroupsOf(posts, [{ canonical: "블루아카이브", members: ["블루아카이브", "블루아카콜라보"] }]).size === 0);
+    const variant = acceptGroupsOf(posts, [{ canonical: "제노블레이드크로스", members: ["제노블레이드크로스", "제노블레이드"] }]);
+    check("글자가 겹치고 따로 나오는 줄임말은 받음", variant.get("제노블레이드") === "제노블레이드크로스", show(variant));
     const twice = acceptGroupsOf(posts, [
       { canonical: "김준표", members: ["김준표", "준표햄"] },
       { canonical: "쏘나타", members: ["쏘나타", "준표햄"] },
