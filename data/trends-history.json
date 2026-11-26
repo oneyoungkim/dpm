@@ -1169,6 +1169,233 @@
           "sensitive": false
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-26T07:47:47.264Z",
+      "keywords": [
+        {
+          "keyword": "김준표",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 2,
+          "score": 42,
+          "sensitive": false
+        },
+        {
+          "keyword": "존박",
+          "rank": 3,
+          "score": 23,
+          "sensitive": false
+        },
+        {
+          "keyword": "카페",
+          "rank": 4,
+          "score": 22,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 5,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "준표햄",
+          "rank": 6,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "부동산",
+          "rank": 7,
+          "score": 18,
+          "sensitive": true
+        },
+        {
+          "keyword": "둠스데이",
+          "rank": 8,
+          "score": 17,
+          "sensitive": false
+        },
+        {
+          "keyword": "주식",
+          "rank": 9,
+          "score": 17,
+          "sensitive": false
+        },
+        {
+          "keyword": "구급차",
+          "rank": 10,
+          "score": 16,
+          "sensitive": true
+        },
+        {
+          "keyword": "한국은행",
+          "rank": 11,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "커뮤글",
+          "rank": 12,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "스시자",
+          "rank": 13,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "보조배터리",
+          "rank": 14,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "여돌",
+          "rank": 15,
+          "score": 13,
+          "sensitive": false
+        },
+        {
+          "keyword": "국민연금",
+          "rank": 16,
+          "score": 13,
+          "sensitive": true
+        },
+        {
+          "keyword": "아주르",
+          "rank": 17,
+          "score": 12,
+          "sensitive": true
+        },
+        {
+          "keyword": "젠슨황",
+          "rank": 18,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "중국",
+          "rank": 19,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "아파트",
+          "rank": 20,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "김도영",
+          "rank": 21,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "부산",
+          "rank": 22,
+          "score": 10,
+          "sensitive": true
+        },
+        {
+          "keyword": "굿즈",
+          "rank": 23,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "트릭컬",
+          "rank": 24,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "메이플스토리",
+          "rank": 25,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "제우스",
+          "rank": 26,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "쏘나타",
+          "rank": 27,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "림버스",
+          "rank": 28,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "마운자로",
+          "rank": 29,
+          "score": 6,
+          "sensitive": true
+        },
+        {
+          "keyword": "3끼",
+          "rank": 30,
+          "score": 6,
+          "sensitive": true
+        },
+        {
+          "keyword": "대마도",
+          "rank": 31,
+          "score": 6,
+          "sensitive": true
+        },
+        {
+          "keyword": "중국인",
+          "rank": 32,
+          "score": 5,
+          "sensitive": true
+        },
+        {
+          "keyword": "일본",
+          "rank": 33,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "리니지",
+          "rank": 34,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "젠지",
+          "rank": 35,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "경찰",
+          "rank": 36,
+          "score": 4,
+          "sensitive": true
+        },
+        {
+          "keyword": "수능",
+          "rank": 37,
+          "score": 3,
+          "sensitive": true
+        }
+      ]
     }
   ]
 }
