@@ -2,6 +2,9 @@ name: 커뮤니티 키워드 순위
 
 # 커뮤니티 인기글 목록에서 키워드 순위를 만들어 data/trends.json 에 커밋한다.
 # 순위가 바뀌었을 때만 커밋하고, crawl.yml 과 푸시가 겹쳐도 되도록 rebase 후 3번까지 다시 민다.
+#
+# 평소에는 보조 수집(scripts/trends/local-feed.sh)이 2시간마다 수집본을 올린 뒤 이 워크플로를 실행시킨다.
+# 정시 실행은 예비다. 깃허브의 정시 실행은 몇 시간씩 늦기도 해서, 100분 안에 집계한 적이 있으면 건너뛴다.
 on:
   schedule:
     # 2시간마다(UTC 정각 기준, KST 로는 홀수 시)
@@ -21,14 +24,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 방금 집계했으면 건너뛰기(정시 실행만)
+        id: recent
+        if: github.event_name == 'schedule'
+        run: |
+          age=$(node -e 'const t = Date.parse(require("./data/trends.json").generatedAt); console.log(Math.round((Date.now() - t) / 60000))' 2>/dev/null || echo 9999)
+          echo "지난 집계: ${age}분 전"
+          if [ "$age" -lt 100 ]; then
+            echo "100분이 안 지나 건너뜀"
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.recent.outputs.skip != '1'
         with:
           node-version: "22"
           cache: npm
 
       - run: npm ci
+        if: steps.recent.outputs.skip != '1'
 
       - name: 보조 수집본 받기
+        if: steps.recent.outputs.skip != '1'
         # 이 서버의 접속을 막는 곳(에펨코리아·개드립)은 한국에 있는 컴퓨터가 읽어
         # 릴리스 local-feed 에 올려 둔다(scripts/trends/local-feed.sh). 없으면 그냥 넘어간다.
         env:
@@ -38,6 +55,7 @@ jobs:
             || echo "보조 수집본 없음"
 
       - name: 키워드 집계
+        if: steps.recent.outputs.skip != '1'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_TREND_MODEL: gpt-5.4-nano-2026-03-17
@@ -46,6 +64,7 @@ jobs:
         run: npm run trends -- --feed-in "$RUNNER_TEMP/trends-local.json"
 
       - name: 변경분 커밋·푸시
+        if: steps.recent.outputs.skip != '1'
         run: |
           git config user.name "dpmbros-bot"
           git config user.email "bot@users.noreply.github.com"

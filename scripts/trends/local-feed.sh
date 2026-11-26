@@ -3,7 +3,7 @@
 # 이 컴퓨터에서 읽어, 저장소 릴리스 `local-feed` 의 첨부 파일(trends-local.json)로 올린다.
 # 깃허브의 순위 집계(.github/workflows/trends.yml)가 그 파일을 받아 직접 못 읽은 곳을 메운다.
 #
-# 한국에 있는 컴퓨터에서 2시간마다 돌린다(집계가 KST 홀수 시 정각이라 짝수 시 30분쯤이 알맞다).
+# 한국에 있는 컴퓨터에서 2시간마다 돌린다. 올린 뒤 집계 워크플로를 바로 실행시킨다.
 # 필요한 것: 이 저장소 복제본(npm ci 끝난 것), gh 로그인(저장소에 쓸 수 있는 계정).
 # 저장소 파일은 읽기만 하고 아무것도 고치지 않는다. 기록은 ~/Library/Logs/gak-trends-feed.log.
 #
@@ -54,8 +54,19 @@ if (( DRY )); then
   exit 0
 fi
 
-if gh release upload "$TAG" "$OUT" --repo "$REPO" --clobber; then
-  echo "  올림: $(wc -c <"$OUT" | tr -d ' ')바이트"
-else
+if ! gh release upload "$TAG" "$OUT" --repo "$REPO" --clobber; then
   echo "  올리기 실패(gh 로그인이나 릴리스 $TAG 를 확인)"
+  exit 0
+fi
+echo "  올림: $(wc -c <"$OUT" | tr -d ' ')바이트"
+
+# 깃허브의 정시 실행은 몇 시간씩 늦거나 빠지곤 한다(이 저장소에서 4~8시간 지연 확인).
+# 방금 올린 수집본이 식기 전에 집계를 바로 깨운다. 정시 실행은 이 컴퓨터가 꺼졌을 때의 예비다.
+# 끄려면 FEED_TRIGGER=0.
+if [[ "${FEED_TRIGGER:-1}" != "0" ]]; then
+  if gh workflow run trends.yml --repo "$REPO" --ref main >/dev/null; then
+    echo "  집계 실행 요청함"
+  else
+    echo "  집계 실행 요청 실패(정시 실행이 대신 돈다)"
+  fi
 fi
