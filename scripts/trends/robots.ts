@@ -80,7 +80,12 @@ export async function loadRobots(
   origin: string,
   get: (url: string) => Promise<{ status: number; text: string } | null>,
 ): Promise<Robots | null> {
-  const res = await get(`${origin}/robots.txt`);
+  let res = await get(`${origin}/robots.txt`);
+  // 한 번 끊긴 것(타임아웃·5xx)으로 그 소스 전체를 버리지 않게 3초 뒤 한 번만 더 읽는다
+  if (!res || res.status >= 500) {
+    await new Promise((r) => setTimeout(r, 3_000));
+    res = await get(`${origin}/robots.txt`);
+  }
   if (!res) return null;
   if (res.status >= 500) return null;
   if (res.status >= 400) return { rules: [], crawlDelay: null };
