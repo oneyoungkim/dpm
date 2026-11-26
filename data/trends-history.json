@@ -1396,6 +1396,137 @@
           "sensitive": true
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-26T07:50:56.565Z",
+      "keywords": [
+        {
+          "keyword": "김준표",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "존박",
+          "rank": 2,
+          "score": 27,
+          "sensitive": false
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 3,
+          "score": 27,
+          "sensitive": false
+        },
+        {
+          "keyword": "카페",
+          "rank": 4,
+          "score": 26,
+          "sensitive": false
+        },
+        {
+          "keyword": "대한민국",
+          "rank": 5,
+          "score": 21,
+          "sensitive": false
+        },
+        {
+          "keyword": "둠스데이",
+          "rank": 6,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "쏘나타",
+          "rank": 7,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "한국은행",
+          "rank": 8,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "보조배터리",
+          "rank": 9,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "김도영",
+          "rank": 10,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "트릭컬",
+          "rank": 11,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "KBO",
+          "rank": 12,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "제우스",
+          "rank": 13,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "아파트",
+          "rank": 14,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "서울",
+          "rank": 15,
+          "score": 9,
+          "sensitive": true
+        },
+        {
+          "keyword": "림버스",
+          "rank": 16,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "메이플스토리",
+          "rank": 17,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "리니지",
+          "rank": 18,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "중국",
+          "rank": 19,
+          "score": 6,
+          "sensitive": true
+        },
+        {
+          "keyword": "젠지",
+          "rank": 20,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 21,
+          "score": 6,
+          "sensitive": false
+        }
+      ]
     }
   ]
 }
