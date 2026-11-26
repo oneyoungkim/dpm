@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T03:17:42.111Z",
+  "generatedAt": "2026-11-26T04:58:20.793Z",
   "events": [
     {
       "id": "858a690aa105f3c74df9",
@@ -49,25 +49,6 @@
       "reason": "원문에서 XBOX FanFest가 2026년 11월 12일 열린다고 명시한다."
     },
     {
-      "id": "c3c64753ec834842c377",
-      "title": "Hello from Seattle: XBOX FanFest Comes Home November 12",
-      "category": "게임",
-      "tags": [
-        "XBOX FanFest",
-        "MoPOP",
-        "Seattle"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-11-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/05/xbox-fanfest-seattle-25th-anniversary/",
-      "reason": "원문에 2026년 11월 12일 XBOX FanFest가 MoPOP에서 열린다고 명시되어 있다."
-    },
-    {
       "id": "3d301ea1f46e6fc1275a",
       "title": "‘90s style sci-fi horror Derelikt launches Nov 13 on PS5",
       "category": "게임",
@@ -85,44 +66,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/02/90s-style-sci-fi-horror-derelikt-launches-nov-13-on-ps5/",
       "reason": "공식 게시물에서 Derelikt가 PS5에 11월 13일 출시된다고 명시합니다."
-    },
-    {
-      "id": "8d3cddf38261dab3c1b2",
-      "title": "A Blade for the Innocent: Into the War-Torn Hutuo Region of Where Winds Meet on XBOX",
-      "category": "게임",
-      "tags": [
-        "Where Winds Meet",
-        "Hutuo Region"
-      ],
-      "series": "Where Winds Meet",
-      "startsAt": "2026-11-13T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/where-winds-meet-anniversary-update-hutuo/",
-      "reason": "The post says the Hutuo region will go live on November 13 on Xbox Series X|S."
-    },
-    {
-      "id": "c9c17298c64d4c2056f0",
-      "title": "ONE: 더 이너 서클 38 (11/13)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "ONE FC",
-        "Lumpinee Stadium"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-11-13T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/news/he-is-absolute-perfection-rodtang-braces-for-epic-clash-with-legendary-nong-o-at-the-inner-circle-38",
-      "reason": "ONE 공식 기사에서 ‘Friday, November 13’ 및 대회 개최를 명시."
     },
     {
       "id": "c29a30d9176f14b4e28c",
@@ -240,27 +183,6 @@
       "reason": "제목에 ‘November 16’로 명시된 DOOM: The Dark Ages | Revelations의 Slaughter Mode 도입 일정을 추출했다."
     },
     {
-      "id": "1e43de7a8fb32a4e041a",
-      "title": "Once Human: Season 5 gameplay showcases co-op Colossus boss battle, live November 18",
-      "category": "게임",
-      "tags": [
-        "Once Human",
-        "Season 5",
-        "Dissonant Resonance",
-        "free to play",
-        "라이브"
-      ],
-      "series": "Once Human",
-      "startsAt": "2026-11-18T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
-      "reason": "Once Human 시즌 5(Dissonant Resonance)가 2026년 11월 18일 전 세계 출시된다고 공지했습니다."
-    },
-    {
       "id": "2fea588a02a674e2ce5c",
       "title": "Once Human: Season 5 gameplay showcases co-op Colossus boss battle, live November 18",
       "category": "게임",
@@ -284,76 +206,6 @@
       "reason": "Once Human 시즌 5 관련 코옵 보스 전투 게임플레이 쇼케이스가 11월 18일에 진행된다고 발표했다."
     },
     {
-      "id": "cee18014c5542bf5d076",
-      "title": "(For Southeast Asia) First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
-      "category": "게임",
-      "tags": [
-        "Grand Theft Auto VI",
-        "Limited-Edition DualSense",
-        "PS 컨트롤러",
-        "출시"
-      ],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-gta/",
-      "reason": "Grand Theft Auto VI가 11월 19일 출시된다고 본문에 언급되어 해당 날짜의 출시 이벤트를 추출합니다."
-    },
-    {
-      "id": "1cdcdc8dfae073d1eca5",
-      "title": "First look at the Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers",
-      "category": "게임",
-      "tags": [
-        "게임 출시",
-        "컨트롤러"
-      ],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/first-look-at-the-grand-theft-auto-vi-limited-edition-dualsense-wireless-controllers/",
-      "reason": "Grand Theft Auto VI 관련 컨트롤러 소개 글에서 게임 발매일(11월 19일)을 함께 언급합니다."
-    },
-    {
-      "id": "1a4052ae2534ddf24578",
-      "title": "Grand Theft Auto VI Comes to XBOX One and XBOX Series X|S Through XBOX Cloud Gaming on November 19",
-      "category": "게임",
-      "tags": [
-        "Xbox Cloud Gaming"
-      ],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
-      "reason": "공개된 글에서 GTA VI가 Xbox Cloud Gaming을 통해 11월 19일 플레이 가능하다고 안내합니다."
-    },
-    {
-      "id": "53b73d26fdf19895c950",
-      "title": "Grand Theft Auto VI launches November 19 on PlayStation 5",
-      "category": "게임",
-      "tags": [],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/03/grand-theft-auto-vi-pre-download-begins-november-10/",
-      "reason": "Grand Theft Auto VI의 PS5 출시일이 11월 19일로 명시되어 있어 추출했습니다."
-    },
-    {
       "id": "efa8b6f611f1204ab4c9",
       "title": "Grand Theft Auto VI 공식 런치 트레일러 공개 – 게임은 11월 19일 출시",
       "category": "게임",
@@ -374,21 +226,6 @@
       "reason": "공식 런치 트레일러가 공개되며 게임이 11월 19일 도착(출시)한다고 명시되어 있다."
     },
     {
-      "id": "36d36bfde32525c3166c",
-      "title": "How to Get Ready for November 19",
-      "category": "게임",
-      "tags": [],
-      "series": "Xbox Wire",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/17/how-to-get-ready-for-november-19/",
-      "reason": "기사에서 11월 19일을 준비 대상으로 언급한다."
-    },
-    {
       "id": "2e10113c7173f179528e",
       "title": "Pre-Order Grand Theft Auto VI Now. Coming to XBOX Series X|S November 19, 2026",
       "category": "게임",
@@ -402,38 +239,6 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L#new_tab",
       "reason": "공식 페이지 문구에 따라 2026년 11월 19일에 XBOX Series X|S로 출시된다."
-    },
-    {
-      "id": "99cbbb60a41e5cb33e8b",
-      "title": "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-      "category": "게임",
-      "tags": [],
-      "series": "Grand Theft Auto VI",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-      "reason": "원문에 'November 19'로 게임 도착(출시) 날짜가 명시되어 있다."
-    },
-    {
-      "id": "741e62076227f62a71d1",
-      "title": "XBOX Black Friday Sale Starts November 19 with Our Biggest Sale of the Year on Games, Accessories and More!",
-      "category": "게임",
-      "tags": [
-        "Black Friday Sale"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-11-19T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/16/xbox-black-friday-sale-2026/",
-      "reason": "블랙 프라이데이 세일이 11월 19일 시작이라고 명시되어 있다."
     },
     {
       "id": "c6b3fca18f3c03513fa3",
@@ -476,26 +281,6 @@
       "reason": "공식 글에서 F1 라스베이거스 그랑프리 2026이 Apple TV에서 이번 주말에 생중계된다고 밝혔다."
     },
     {
-      "id": "8143672111ce8a54fd53",
-      "title": "Samsung TV Plus Brings 2026 MAMA AWARDS to K-pop Fans Around the World",
-      "category": "특별 이벤트",
-      "tags": [
-        "Samsung TV Plus",
-        "2026 MAMA AWARDS",
-        "CJ ENM",
-        "livestream"
-      ],
-      "series": "2026 MAMA AWARDS",
-      "startsAt": "2026-11-20T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "live-trigger",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world",
-      "reason": "2026 MAMA AWARDS 챕터 1이 11월 20일에 진행된다고 명시되어 있다."
-    },
-    {
       "id": "4d48fa2d99eb37fbe365",
       "title": "2026 MAMA AWARDS CHAPTER 2 (Samsung TV Plus 라이브 스트리밍)",
       "category": "e스포츠",
@@ -536,45 +321,6 @@
       "reason": "공식 뉴스에서 이번 주말에 Apple TV로 생중계된다고 안내합니다."
     },
     {
-      "id": "cfd066d14f8626c5d9ad",
-      "title": "Samsung TV Plus Brings 2026 MAMA AWARDS to K-pop Fans Around the World (CHAPTER 2)",
-      "category": "테크",
-      "tags": [
-        "livestream",
-        "MAMA AWARDS",
-        "TV Plus"
-      ],
-      "series": "2026 MAMA AWARDS",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "live-trigger",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-tv-plus-brings-2026-mama-awards-to-k-pop-fans-around-the-world",
-      "reason": "Samsung TV Plus가 2026 MAMA AWARDS의 CHAPTER 2를 11월 21일에 라이브로 방송한다고 밝혔다."
-    },
-    {
-      "id": "d73ad62c96a119094c31",
-      "title": "UFC 11/21(토) 두하(UAE) UFC FIGHT NIGHT 개최",
-      "category": "격투기",
-      "tags": [
-        "UFC Fight Night",
-        "도하",
-        "Qatar",
-        "UFC"
-      ],
-      "series": "UFC",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-and-visit-qatar-announce-ufcs-return-doha-november-21",
-      "reason": "UFC 공식 뉴스에서 2026년 11월 21일(토) ABHA Arena에서 ‘UFC Fight Night’ 개최가 명시되어 있음."
-    },
-    {
       "id": "2c3b6f7d523826ccd559",
       "title": "UFC Fight Night: Prochazka vs Stirling (11/21)",
       "category": "격투기",
@@ -596,45 +342,6 @@
       "reason": "UFC 공식 ‘Updates To UFC Qatar’에서 해당 이벤트 개최일(2026년 11월 21일)이 명시됨."
     },
     {
-      "id": "9ee8448f454bc514c19a",
-      "title": "UFC 파이트 나이트: 도하(11/21)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "MMA",
-        "Qatar",
-        "Doha"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/ufc-and-visit-qatar-announce-ufcs-return-doha-november-21",
-      "reason": "UFC 공식 공지에서 ‘Saturday, November 21’ 및 경기 개최를 명시."
-    },
-    {
-      "id": "f6f326665285018cf6d5",
-      "title": "UFC 파이트 나이트: 프로차즈카 vs 스털링(11/21)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "MMA"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-      "reason": "UFC 공식 이벤트 페이지에 2026-11-21 날짜가 명시됨."
-    },
-    {
       "id": "3d4e103a516ac1eebc60",
       "title": "블랙컴뱃 17 (11/21) 고척스카이돔",
       "category": "격투기",
@@ -654,25 +361,6 @@
       "reason": "BLACKCOMBAT 공식 이벤트 목록에서 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시됨."
     },
     {
-      "id": "0190d14e2860871fba73",
-      "title": "블랙컴뱃 17 VANTABLACK(11월 21일)",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "MMA",
-        "고척스카이돔"
-      ],
-      "series": "BLACK COMBAT NUMBERING SERIES",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "공식 블랙컴뱃 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일(2026년 11월 21일)이 명시됨."
-    },
-    {
       "id": "803c6d4f989aa1ac712c",
       "title": "블랙컴뱃 17: 11/21 고척스카이돔",
       "category": "격투기",
@@ -690,63 +378,6 @@
       "source": "BLACK COMBAT",
       "sourceUrl": "https://www.blackcombat-official.com/event.php?page=10",
       "reason": "공식 이벤트 목록에서 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)가 명시되어 있음."
-    },
-    {
-      "id": "591d2393e3a0acdd35a3",
-      "title": "블랙컴뱃 17: 2026-11-21 고척스카이돔 개최",
-      "category": "격투기",
-      "tags": [
-        "MMA",
-        "Black Combat",
-        "블랙컴뱃 17"
-      ],
-      "series": "블랙컴뱃 NUMBERING SERIES",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php",
-      "reason": "블랙컴뱃 공식 이벤트 페이지에 ‘블랙컴뱃 17’의 날짜(2026년 11월 21일)와 장소가 명시되어 있음. 시각은 미기재라 timeTbd 처리."
-    },
-    {
-      "id": "9d77fbce2de657d80d47",
-      "title": "블랙컴뱃 17: 2026년 11월 21일 개최",
-      "category": "격투기",
-      "tags": [
-        "BLACKCOMBAT",
-        "블랙컴뱃",
-        "17"
-      ],
-      "series": "BLACK COMBAT NUMBERING SERIES",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://blackcombat-official.com/event.php",
-      "reason": "공식 이벤트 목록에서 ‘블랙컴뱃 17: VANTABLACK’의 개최일 2026년 11월 21일이 명시됨."
-    },
-    {
-      "id": "c4db2af0a235f6097a88",
-      "title": "블랙컴뱃 17: VANTABLACK",
-      "category": "격투기",
-      "tags": [
-        "블랙컴뱃",
-        "MMA",
-        "글러브"
-      ],
-      "series": "BLACK COMBAT",
-      "startsAt": "2026-11-21T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/event.php?page=1",
-      "reason": "블랙컴뱃 공식 이벤트 페이지에 블랙컴뱃 17(2026년 11월 21일) 개최일이 명시됨(시간은 미기재)."
     },
     {
       "id": "1144342c0e351190993e",
@@ -863,79 +494,6 @@
       "reason": "공식 게시물에서 11월 23일부터 27일까지의 XBOX 신규 게임 일정을 언급한다."
     },
     {
-      "id": "91ae095b190b3e214ab6",
-      "title": "Gears of War: E-Day x Liquid Death – Unlock a Legendary Pose and More",
-      "category": "게임",
-      "tags": [
-        "Gears of War: E-Day",
-        "Liquid Death",
-        "콜라보",
-        "인게임 보상",
-        "머치",
-        "Emergence Day"
-      ],
-      "series": "Gears of War: E-Day",
-      "startsAt": "2026-11-30T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/25/gears-of-war-e-day-liquid-death/",
-      "reason": "해당 콜라보 이벤트가 11월 30일까지 진행된다고 명시되어 있다."
-    },
-    {
-      "id": "b8cd30695ac41fa44f8c",
-      "title": "PlayStation Plus Monthly Games for November: Dead Island 2, Tomb Raider IV – VI Remastered, Monster Train 2",
-      "category": "게임",
-      "tags": [
-        "PlayStation Plus",
-        "Monthly Games"
-      ],
-      "series": "PlayStation Plus Monthly Games",
-      "startsAt": "2026-11-30T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/28/playstation-plus-monthly-games-for-november-dead-island-2-tomb-raider-iv-vi-remastered-monster-train-2/",
-      "reason": "문서에서 해당 PlayStation Plus 월간 게임이 11월 30일까지 이용 가능하다고 명시되어 있습니다."
-    },
-    {
-      "id": "367163c6259b78ded723",
-      "title": "Chaotic Co-Op Dumpster Gang Coming to XBOX PC in December 2026",
-      "category": "게임",
-      "tags": [],
-      "series": "Dumpster Gang",
-      "startsAt": "2026-12-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/27/dumpster-gang-chaotic-raccoon-co-op/",
-      "reason": "기사 제목에 ‘December 2026’로만 표기되어 있어 월 기준으로 12월 1일로 처리한다."
-    },
-    {
-      "id": "39caa61c0c01f620c4a1",
-      "title": "Hela: Of Mice & Magic will launch on Xbox Game Pass on December 1, 2026",
-      "category": "게임",
-      "tags": [
-        "Game Pass",
-        "출시"
-      ],
-      "series": "Xbox Wire",
-      "startsAt": "2026-12-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/18/how-remedies-shape-progression-in-hela-of-mice-magic/",
-      "reason": "문서에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass day one으로 출시된다고 명시되어 있습니다."
-    },
-    {
       "id": "4f317775550a11f5d602",
       "title": "How Remedies Shape Progression in Hela: Of Mice & Magic",
       "category": "게임",
@@ -955,76 +513,6 @@
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/18/how-remedies-shape-progression-in-hela-of-mice-magic/",
       "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
-    },
-    {
-      "id": "587358ab4bc92b7023af",
-      "title": "PlayStation Plus Monthly Games for December: Tony Hawk’s Pro Skater 3+4, Dragon Ball Xenoverse 2, Amnesia: The Bunker",
-      "category": "게임",
-      "tags": [
-        "PlayStation Plus",
-        "월간 게임",
-        "Tony Hawk’s Pro Skater 3+4",
-        "Dragon Ball Xenoverse 2",
-        "Amnesia: The Bunker"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2026-12-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/25/playstation-plus-monthly-games-for-december-tony-hawks-pro-skater-34-dragon-ball-xenoverse-2-amnesia-the-bunker/",
-      "reason": "PlayStation Plus 멤버용 월간 게임이 12월 1일부터 공개된다고 안내되어 있습니다."
-    },
-    {
-      "id": "c20c38830c739b547861",
-      "title": "(참고) ONE SAMURAI 6 일정은 일정표에서 별도 확인 필요",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-12-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-178",
-      "reason": "요청 범위 내 미래 이벤트 후보로 보이나, 현재는 단일 개별 ‘행사 상세’ 페이지 URL이 확보되지 않아(일정표만 확인) 공식 ‘공개 이벤트 페이지(개별)’로 재검증이 필요해 확정 보류."
-    },
-    {
-      "id": "5ef7f401e755b2072e22",
-      "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
-      "category": "게임",
-      "tags": [],
-      "series": "The Outer Worlds 2 DLC",
-      "startsAt": "2026-12-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
-      "reason": "The post announces that the first DLC for The Outer Worlds 2 is coming on December 2."
-    },
-    {
-      "id": "5e68555b362f1d03c305",
-      "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
-      "category": "게임",
-      "tags": [
-        "DLC"
-      ],
-      "series": "The Outer Worlds 2",
-      "startsAt": "2026-12-02T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
-      "reason": "공식 글에서 The Outer Worlds 2의 첫 DLC가 12월 2일 공개될 예정이라고 명시합니다."
     },
     {
       "id": "3a1a161b4bcb3c613d29",
@@ -1066,31 +554,13 @@
       "reason": "주최사 ONE 공식 행사 페이지에 2026-12-02(수) 8:30AM UTC 및 ONE SAMURAI 6 개최가 명시됨."
     },
     {
-      "id": "c74e1c88b07c17131309",
+      "id": "c3ab91d804377d00ccd6",
       "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
+      "titleKo": "Football Manager 27 Touch 애플아케이드 12월3일",
       "category": "게임",
       "tags": [
         "Apple Arcade",
         "Football Manager 27 Touch"
-      ],
-      "series": "Apple Arcade holiday lineup",
-      "startsAt": "2026-12-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Apple Newsroom",
-      "sourceUrl": "https://www.apple.com/newsroom/2026/11/football-manager-and-other-hit-franchises-headline-apple-arcades-holiday-lineup/",
-      "reason": "Apple Arcade의 홀리데이 라인업에 포함된 Football Manager 27 Touch 등 4종 신작이 12월 3일 출시된다고 발표했다."
-    },
-    {
-      "id": "c3ab91d804377d00ccd6",
-      "title": "Football Manager and other hit franchises headline Apple Arcade’s holiday lineup",
-      "category": "게임",
-      "tags": [
-        "Apple Arcade",
-        "Football Manager 27 Touch",
-        "게임 출시"
       ],
       "series": "Apple Arcade",
       "startsAt": "2026-12-03T12:00:00+09:00",
@@ -1100,26 +570,7 @@
       "confidence": "confirmed",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/football-manager-and-other-hit-franchises-headline-apple-arcades-holiday-lineup/",
-      "reason": "Apple Arcade의 휴일 라인업에 포함된 Football Manager 27 Touch 등 신규 게임이 2026년 12월 3일 추가된다고 발표했다."
-    },
-    {
-      "id": "d1b8c7b7afe07b258af3",
-      "title": "Sea of Remnants: Set Sail for the Dawnbreaker Closed Beta on XBOX Series X",
-      "category": "게임",
-      "tags": [
-        "Closed Beta",
-        "XBOX Series X",
-        "XBOX Insiders"
-      ],
-      "series": "Dawnbreaker Closed Beta",
-      "startsAt": "2026-12-03T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/23/sea-of-remnants-set-sail-for-the-dawnbreaker-closed-beta-on-xbox-series-x/",
-      "reason": "해당 기사에서 Dawnbreaker Closed Beta가 12월 3일부터 시작된다고 안내합니다."
+      "reason": "Apple Arcade의 홀리데이 라인업에 Football Manager 27 Touch가 12월 3일 추가된다고 밝혔다."
     },
     {
       "id": "e47ce5068027445e95e6",
@@ -1201,44 +652,6 @@
       "reason": "원문에서 지능형 아이웨어 전체 라인업의 출시일이 12월 10일(미국 및 한국)로 명시되어 있습니다."
     },
     {
-      "id": "df0a35873c7a9db5c24a",
-      "title": "Samsung Announces December Release for Intelligent Eyewear",
-      "category": "테크",
-      "tags": [
-        "intelligent eyewear",
-        "release",
-        "pre-order"
-      ],
-      "series": "Intelligent Eyewear",
-      "startsAt": "2026-12-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
-      "reason": "삼성이 지능형 안경 풀 라인업을 12월 10일 미국과 한국에서 출시한다고 발표했다."
-    },
-    {
-      "id": "82f6b4b6b1343f916978",
-      "title": "Samsung Announces December Release for Intelligent Eyewear, Bringing a Smarter Way To See the World",
-      "category": "테크",
-      "tags": [
-        "intelligent eyewear",
-        "AI assistance",
-        "pre-orders"
-      ],
-      "series": "Intelligent Eyewear full lineup",
-      "startsAt": "2026-12-10T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Samsung Global Newsroom",
-      "sourceUrl": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
-      "reason": "지능형 웨어러블 전체 라인업이 12월 10일에 미국과 한국에서 출시된다고 명시되어 있다."
-    },
-    {
       "id": "2cc6ac4df4297fc9a2f3",
       "title": "ONE Fight Night 49 (12/11 일정)",
       "category": "격투기",
@@ -1258,34 +671,14 @@
       "reason": "ONE Championship 공식 2026년 1차 이벤트 일정 공지에 ONE Fight Night 49이 12월 11일(동부시간 기준 21:00)로 명시."
     },
     {
-      "id": "4662af851c681fa5c5f3",
-      "title": "ONE 174: Shanghai (12/12) 중국 복귀",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "ONE 174: Shanghai",
-        "MMA",
-        "상하이"
-      ],
-      "series": "ONE 174",
-      "startsAt": "2026-12-12T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
-      "reason": "ONE 공식 뉴스에서 ‘ONE 174: Shanghai’ 개최일(12월 12일) 및 행사 성격이 명시됨."
-    },
-    {
       "id": "29ff86bcda9e2b7dbf64",
-      "title": "ONE 174: 상하이 2026년 12/12 개최 확정",
+      "title": "ONE 174: Shanghai — 12/12/2026",
+      "titleKo": "ONE 174: Shanghai",
       "category": "격투기",
       "tags": [
-        "ONE Championship",
         "ONE 174",
-        "상하이",
-        "2026"
+        "Shanghai",
+        "ONE Championship"
       ],
       "series": "ONE Championship",
       "startsAt": "2026-12-12T12:00:00+09:00",
@@ -1295,46 +688,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
-      "reason": "ONE 공식 뉴스에서 ONE 174: Shanghai가 2026년 12월 12일(토요일) 개최로 명시되어 있음."
-    },
-    {
-      "id": "e3522fabeca8cf29bc5d",
-      "title": "PFL Lyon: Lapilus vs McKee (12/19)",
-      "category": "격투기",
-      "tags": [
-        "PFL",
-        "LDLC Arena",
-        "World Title"
-      ],
-      "series": "PFL",
-      "startsAt": "2026-12-19T00:00:00-05:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
-      "reason": "PFL 공식 뉴스에 PFL Lyon의 메인 이벤트가 2026-12-19 LDLC Arena에서 개최된다고 명시됨."
-    },
-    {
-      "id": "ca66d3587e70a56180ec",
-      "title": "PFL 라이옹(12/19): 라필루스 vs 맥키 월드 타이틀",
-      "category": "격투기",
-      "tags": [
-        "PFL",
-        "라필루스",
-        "맥키",
-        "Bantamweight"
-      ],
-      "series": "PFL",
-      "startsAt": "2026-12-19T00:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PFL",
-      "sourceUrl": "https://pflmma.com/news/history-on-the-line-in-lyon-as-taylor-lapilus-and-mitch-mckee-battle-for-inaugural-pfl-bantamweight-world-title",
-      "reason": "PFL 공식 뉴스에 2026년 12월 19일(프랑스 LDLC Arena) 메인이벤트가 명시되어 있습니다."
+      "reason": "공식 기사에서 ONE 174: Shanghai의 개최일을 2026년 12월 12일(토)로 명시함(시간 미공개)."
     },
     {
       "id": "c6f47e7520af0c6a03b6",
@@ -1378,11 +732,11 @@
     {
       "id": "52a66552fc763a31ed44",
       "title": "Apple TV becomes the new U.S. home of F1 ACADEMY™, the all-female racing series",
-      "category": "테크",
+      "titleKo": "F1 ACADEMY 애플TV 중계 시작",
+      "category": "e스포츠",
       "tags": [
-        "F1 ACADEMY",
         "Apple TV",
-        "스트리밍"
+        "F1 ACADEMY"
       ],
       "series": "F1 ACADEMY",
       "startsAt": "2027-01-01T12:00:00+09:00",
@@ -1392,44 +746,7 @@
       "confidence": "expected",
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
-      "reason": "F1 ACADEMY가 미국에서 2027년부터 Apple TV로 스트리밍된다고 발표했다."
-    },
-    {
-      "id": "8ca112b4eaebf59e92a6",
-      "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
-      "category": "게임",
-      "tags": [
-        "Hounded",
-        "PS5",
-        "출시"
-      ],
-      "series": "Hounded",
-      "startsAt": "2027-01-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/17/introducing-hounded-crafting-the-dog-adventure-coming-to-ps5-in-2027/",
-      "reason": "글에서 Hounded의 PS5 출시가 2027년으로 안내되어 있습니다(구체 일자는 미기재)."
-    },
-    {
-      "id": "c4b687a31a0822f86e63",
-      "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
-      "category": "게임",
-      "tags": [
-        "Hounded",
-        "PS5"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2027-01-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/17/introducing-hounded-crafting-the-dog-adventure-coming-to-ps5-in-2027/",
-      "reason": "본문에 '2027년' 출시 예정만 명시되어 있어 해당 연도 일정으로 추출했습니다."
+      "reason": "F1 ACADEMY가 2027년부터 미국에서 Apple TV에서 스트리밍 된다고 발표했다."
     },
     {
       "id": "7149a949a2ad9050bdd0",
@@ -1449,27 +766,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/12/vindictus-defying-fate-comes-to-ps5-next-year/",
       "reason": "Vindictus: Defying Fate가 내년에 PS5로 온다고 발표했다."
-    },
-    {
-      "id": "00a595a74d91c3f674ad",
-      "title": "UFC Fight Night: Rodriguez vs Garcia (1/16)",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "Fight Night",
-        "Rodriguez",
-        "Garcia",
-        "Dallas"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2027-01-16T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/action-packed-main-event-yair-rodriguez-vs-steve-garcia-headlines-ufc-return-to-dallas-texas",
-      "reason": "UFC 공식 기사에서 UFC FIGHT NIGHT: RODRIGUEZ vs GARCIA의 개최일(2027년 1월 16일)이 명시됨."
     },
     {
       "id": "d3c75719c0c3d5707c8a",
@@ -1494,13 +790,13 @@
     },
     {
       "id": "f5dd9e9f651c5566c39f",
-      "title": "UFC 파이트 나이트: 2027년 1/23 브래디 vs 보님",
+      "title": "UFC Fight Night: Brady vs Bonfim — 1/23/2027",
+      "titleKo": "UFC Fight Night: Brady vs Bonfim",
       "category": "격투기",
       "tags": [
         "UFC Fight Night",
         "Meta APEX",
-        "라스베이거스",
-        "2027"
+        "Las Vegas"
       ],
       "series": "UFC",
       "startsAt": "2027-01-23T12:00:00+09:00",
@@ -1510,47 +806,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/exciting-welterweight-tilt-between-5-sean-brady-and-6-gabriel-bonfim-headlines-first-meta-apex",
-      "reason": "UFC 공식 뉴스에서 UFC Fight Night: Brady vs Bonfim이 2027년 1월 23일 개최로 명시되어 있음."
-    },
-    {
-      "id": "5e2bbf68f5c68e3f25c6",
-      "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
-      "category": "게임",
-      "tags": [
-        "Until Dawn 2",
-        "PS5",
-        "출시",
-        "2027년 1월 28일"
-      ],
-      "series": "Until Dawn",
-      "startsAt": "2027-01-28T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-ud/",
-      "reason": "Until Dawn 2가 PS5용으로 2027년 1월 28일 출시된다고 명시되어 있습니다."
-    },
-    {
-      "id": "f7c46337fafa1fcc7fb4",
-      "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
-      "category": "게임",
-      "tags": [
-        "Until Dawn 2",
-        "PS5",
-        "출시",
-        "January 28, 2027"
-      ],
-      "series": "Until Dawn 2",
-      "startsAt": "2027-01-28T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/03/20260904-ud/",
-      "reason": "공식 글에서 Until Dawn 2가 PS5에서 2027년 1월 28일 출시된다고 명시합니다."
+      "reason": "UFC 공식 기사에 UFC Fight Night: Brady vs Bonfim 개최일이 2027년 1월 23일(토)로 명시되어 있음(시간 미공개)."
     },
     {
       "id": "ad0f5ccbfd2279dbae69",
@@ -1628,25 +884,6 @@
       "reason": "UFC 공식 뉴스에서 ‘Saturday, January 30’ 및 개최지(Scotiabank Arena)가 명시됨."
     },
     {
-      "id": "234fcd1f67cd7a1daa9f",
-      "title": "블랙컴뱃 16: 엑소더스 — 2027년 1월 31일",
-      "category": "격투기",
-      "tags": [
-        "BLACK COMBAT",
-        "블랙컴뱃 16",
-        "Inspire Arena"
-      ],
-      "series": "BLACK COMBAT",
-      "startsAt": "2027-01-31T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "BLACK COMBAT",
-      "sourceUrl": "https://www.blackcombat-official.com/eventDetail.php?eventSeq=285",
-      "reason": "공식 이벤트 상세 페이지에 ‘Jan 31 | BLACK COMBAT 16: EXODUS’로 행사 날짜가 명시됨."
-    },
-    {
       "id": "3ac8b8a81d44294f5d5b",
       "title": "블랙컴뱃 16: 엑소더스 2027년 1월 31일",
       "category": "격투기",
@@ -1666,21 +903,6 @@
       "reason": "블랙컴뱃 공식 상세 페이지의 ‘주요 일정’에 ‘1월 31일: 블랙컴뱃 16 넘버링 대회’가 명시되어 있음."
     },
     {
-      "id": "36177cad125c7709ed1a",
-      "title": "METRO 2039 Isn&#8217;t Kidding Around",
-      "category": "게임",
-      "tags": [],
-      "series": "METRO 2039",
-      "startsAt": "2027-02-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/08/26/metro-2039-preview/",
-      "reason": "원문에서 METRO 2039가 2027년 2월에 출시 예정이라고 언급합니다(일자는 미기재)."
-    },
-    {
       "id": "d8d60ea69f51adc8f3ef",
       "title": "Muramasa: Revenant Blades 출시(2027년 2월 4일)",
       "category": "게임",
@@ -1698,65 +920,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/09/10/muramasa-revenant-blades-launches-february-4-2027/",
       "reason": "원문에서 Muramasa: Revenant Blades가 2027년 2월 4일 출시된다고 명시합니다."
-    },
-    {
-      "id": "e8cda9a31a2a500564e7",
-      "title": "UFC Fight Night: Sydney 2027 2월 7일",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "Sydney",
-        "2027"
-      ],
-      "series": "UFC",
-      "startsAt": "2027-02-07T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 뉴스 공지에 2027년 2월 7일(일) 개최가 명시됨. (현지 시간대 표기가 없어 한국시간 확정 불가 → 12:00:00+09:00 처리)"
-    },
-    {
-      "id": "1528be32b0f1bdb99db2",
-      "title": "UFC 파이트 나이트 시드니 2027년 2월 7일",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "시드니",
-        "파이트 나이트"
-      ],
-      "series": "UFC Fight Night Sydney",
-      "startsAt": "2027-02-07T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 공지에 ‘2027년 2월 7일(일)’ 개최가 명시되어 있음."
-    },
-    {
-      "id": "f1b7a96065830bf0473a",
-      "title": "UFC 파이트 나이트 시드니: 2027년 2월 7일",
-      "category": "격투기",
-      "tags": [
-        "UFC",
-        "UFC Fight Night",
-        "Sydney"
-      ],
-      "series": "UFC Fight Night",
-      "startsAt": "2027-02-07T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "UFC",
-      "sourceUrl": "https://www.ufc.com/news/octagon-returns-down-under-ufc-fight-night-sydney-sunday-february-7",
-      "reason": "UFC 공식 공지에서 2027년 2월 7일(일) 시드니 Afterpay Arena 개최가 명시됨."
     },
     {
       "id": "e592158e96263bd448da",
@@ -1838,64 +1001,24 @@
       "reason": "ONE 공식 기사에 ‘March 20’ 개최일이 명시됨."
     },
     {
-      "id": "2615aede72d5dfb5679a",
-      "title": "ONE: Qatar (2027.3.26)",
+      "id": "719c9ff2811df1782da1",
+      "title": "ONE: Qatar (Aspire Dome, Doha) — 3/26/2027",
+      "titleKo": "ONE: Qatar",
       "category": "격투기",
       "tags": [
-        "ONE",
+        "ONE Championship",
         "MMA",
-        "두하",
-        "Qatar"
+        "쿠웨이트가 아닌 카타르(Doha)"
       ],
       "series": "ONE Championship",
-      "startsAt": "2027-03-26T00:00:00+09:00",
+      "startsAt": "2027-03-26T12:00:00+09:00",
       "timeTbd": true,
       "eventMode": "scheduled",
       "datePrecision": "date",
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 이벤트 페이지에 ‘Friday, March 26, 2027’가 명시되어 있습니다."
-    },
-    {
-      "id": "54f4d9f6923378949b79",
-      "title": "ONE-카타르 파트너십: 2027년 3/26 아스파이어돔 첫 개최",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "카타르",
-        "아스파이어돔",
-        "2027"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
-      "reason": "ONE 공식 보도자료에서 카타르에서의 첫 이벤트가 2027년 3월 26일(금요일) 아스파이어 돔 개최로 명시되어 있음."
-    },
-    {
-      "id": "8027962d52a7ce6f5c57",
-      "title": "ONE: ONE x Visit Qatar 첫 이벤트(3/26, 도하)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "사우디/카타르",
-        "Muay Thai",
-        "MMA"
-      ],
-      "series": "ONE",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/news/training-never-betrays-you-ryujin-nasukawa-reflects-on-stunning-one-debut-victory-over-thongpoon",
-      "reason": "ONE 공식 기사에서 ‘2027년 3월 26일(금) 도하 Aspire Dome에서 첫 이벤트가 열린다’고 구체 날짜/장소가 명시됨."
+      "reason": "공식 이벤트 페이지에 2027년 3월 26일(금)로 개최일이 명시되어 있음(시간은 미공개)."
     },
     {
       "id": "3ff610363964ac6c4b94",
@@ -1919,66 +1042,6 @@
       "reason": "주최사 ONE 공식 행사 페이지에 ‘Friday, March 26, 2027’ 및 개최 정보가 명시되어 있음."
     },
     {
-      "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (도하) 2027년 3월 26일",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "무에타이",
-        "도하",
-        "Qatar"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "공식 이벤트 페이지에 2027년 3월 26일(금) 개최가 명시되어 있음."
-    },
-    {
-      "id": "e4c055f0ee5bc0e5fa80",
-      "title": "ONE: 카타르: 2027년 3월 26일(금)",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "ONE: Qatar",
-        "MMA",
-        "Muay Thai"
-      ],
-      "series": "ONE Championship Events",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 ‘ONE: Qatar’ 페이지에 2027년 3월 26일(금) 개최가 명시됨."
-    },
-    {
-      "id": "6363673aa1c584cd12ca",
-      "title": "ONE: 카타르(3/26) 두하 복귀",
-      "category": "격투기",
-      "tags": [
-        "ONE Championship",
-        "MMA",
-        "카타르"
-      ],
-      "series": "ONE: Qatar",
-      "startsAt": "2027-03-26T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "ONE 공식 이벤트 페이지에 2027-03-26(금) 명시됨."
-    },
-    {
       "id": "dd0a32b34a26cd8a6a9b",
       "title": "ONE 174 (4/3)",
       "category": "격투기",
@@ -1996,45 +1059,6 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/jp/press-releases/one-championship-announces-first-wave-of-2026-events",
       "reason": "ONE 공식 보도자료에 ‘4月3日 – ONE 174’가 명시되어 있으나, 시간은 미기재라서 해당 날짜 12:00(+09:00)로 표기."
-    },
-    {
-      "id": "baaff371be1fb5b0a363",
-      "title": "Final Fantasy VII Revelation hands-on report: Into the Whirlwind Maze where Sephiroth awaits",
-      "category": "게임",
-      "tags": [
-        "Final Fantasy VII Revelation",
-        "출시",
-        "PS5"
-      ],
-      "series": "Final Fantasy VII",
-      "startsAt": "2027-04-08T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
-      "reason": "본문에 Final Fantasy VII Revelation의 출시일이 '2027년 4월 8일'로 명시되어 있으며 시간이 없어 12:00으로 표기했습니다."
-    },
-    {
-      "id": "a72c883a1797e2e06f12",
-      "title": "Final Fantasy VII Revelation hands-on report: Into the Whirlwind Maze where Sephiroth awaits",
-      "category": "게임",
-      "tags": [
-        "Final Fantasy VII",
-        "Revelation",
-        "PS5",
-        "출시"
-      ],
-      "series": "PlayStation Blog",
-      "startsAt": "2027-04-08T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/",
-      "reason": "본문에서 2027년 4월 8일 출시가 명시돼 있어 해당 날짜로 추출했다."
     },
     {
       "id": "024f9bdd333c694257e8",
@@ -2092,25 +1116,6 @@
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
       "reason": "Guild Saga: Vanished Worlds가 2027년 5월 PS5에 출시된다고 밝힌 공식 일정입니다."
-    },
-    {
-      "id": "de43ab86674666c2ca1c",
-      "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
-      "category": "게임",
-      "tags": [
-        "Guild Saga: Vanished Worlds",
-        "PS5",
-        "출시"
-      ],
-      "series": "Guild Saga: Vanished Worlds",
-      "startsAt": "2027-05-01T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "expected",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
-      "reason": "해당 글에서 Guild Saga: Vanished Worlds의 PS5 출시가 2027년 5월로 명시되었습니다(일자는 미기재)."
     }
   ]
 }
