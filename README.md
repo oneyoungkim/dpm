@@ -79,6 +79,13 @@ npm run trends:dry                # 파일을 쓰지 않고 순위만 본다
 npm run trends -- --explain       # 키워드마다 어떤 제목이 걸렸는지
 ```
 
+집계는 `.github/workflows/trends.yml`이 2시간마다 돌린다. 깃허브 서버의 접속을 막는 곳(2026-11-26 기준 에펨코리아, 개드립)은 한국에 있는 컴퓨터가 그 두 곳의 목록만 읽어 릴리스 `local-feed`의 첨부 파일로 올리고, 집계가 그 파일로 빈 곳을 메운다. 3시간 넘게 지난 파일은 쓰지 않는다.
+
+```bash
+zsh scripts/trends/local-feed.sh --dry   # 두 곳을 읽어 보기만 한다
+zsh scripts/trends/local-feed.sh         # 읽어서 릴리스에 올린다(gh 로그인 필요)
+```
+
 ### 매거진
 
 글 한 편은 `content/articles/YYYY-MM-DD-<slug>.md` 하나다. 머리말에 근거(`sources`) 3개 이상이 있어야 하고, `npm run magazine:check`를 통과한 글만 낸다.

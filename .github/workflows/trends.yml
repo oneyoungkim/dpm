@@ -28,12 +28,22 @@ jobs:
 
       - run: npm ci
 
+      - name: 보조 수집본 받기
+        # 이 서버의 접속을 막는 곳(에펨코리아·개드립)은 한국에 있는 컴퓨터가 읽어
+        # 릴리스 local-feed 에 올려 둔다(scripts/trends/local-feed.sh). 없으면 그냥 넘어간다.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download local-feed --repo "$GITHUB_REPOSITORY" --pattern trends-local.json --dir "$RUNNER_TEMP" --clobber \
+            || echo "보조 수집본 없음"
+
       - name: 키워드 집계
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_TREND_MODEL: gpt-5.4-nano-2026-03-17
-        # 소스가 반 넘게 막히거나 키워드가 모자라면 스크립트가 파일을 안 바꾸고 0으로 끝난다
-        run: npm run trends
+        # 소스가 반 넘게 막히거나 키워드가 모자라면 스크립트가 파일을 안 바꾸고 0으로 끝난다.
+        # 직접 못 읽은 소스는 3시간 안에 만든 보조 수집본이 있으면 그것으로 메운다.
+        run: npm run trends -- --feed-in "$RUNNER_TEMP/trends-local.json"
 
       - name: 변경분 커밋·푸시
         run: |

@@ -40,4 +40,6 @@ export interface SourceResult {
   posts: RawPost[];
   ok: boolean;
   error?: string;
+  /** 직접 읽지 못해 보조 수집본으로 메웠을 때의 설명 */
+  note?: string;
 }

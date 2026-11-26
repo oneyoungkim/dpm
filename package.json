@@ -13,6 +13,7 @@
     "crawl:dry": "tsx scripts/crawl.ts --dry",
     "trends": "tsx scripts/trends/run.ts",
     "trends:dry": "tsx scripts/trends/run.ts --dry",
+    "trends:feed": "tsx scripts/trends/run.ts --only fmkorea,dogdrip --feed-out",
     "magazine:pick": "tsx scripts/magazine/pick.ts",
     "magazine:check": "tsx scripts/magazine/check.ts",
     "magazine:image": "tsx scripts/magazine/image.ts",

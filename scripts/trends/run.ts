@@ -8,6 +8,11 @@
  *   --raw-out <파일>  받은 글 목록을 JSON 으로 저장
  *   --raw-in <파일>   저장해 둔 글 목록으로 집계(요청 없음, --dry 와 같이 쓴다)
  *
+ * 보조 수집(scripts/trends/feed.ts, 깃허브 서버를 막는 곳을 다른 컴퓨터가 대신 읽을 때):
+ *   --only <id,id>    그 소스만 읽는다
+ *   --feed-out <파일> 읽은 글 목록을 보조 수집본으로 저장하고 끝낸다(집계·저장 없음). 하나도 못 읽으면 종료 코드 2
+ *   --feed-in <파일>  직접 읽기에 실패한 소스를 보조 수집본으로 메운다
+ *
  * 순서: 소스별 목록 수집(robots.txt 확인, 곳당 최대 2쪽, 요청 사이 1.5초 이상)
  *   → 글 정리·반응 무게 → (키가 있으면) 모델 태그 → 키 없이 뽑기로 나머지 채우기
  *   → 점수·분류·민감·샘플 → 지난 기록과 비교 → 안전장치 통과 시 저장
@@ -16,6 +21,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { TrendKeyword, TrendsFile, TrendSource } from "../../lib/trends";
+import { applyFeed, writeFeed } from "./feed";
 import { fetchListPage } from "./fetch";
 import { appendRun, loadHistory, trendOf } from "./history";
 import { preparePosts, scoreKeywords, tagHeuristic } from "./keywords";
@@ -37,14 +43,28 @@ const argValue = (name: string) => {
 };
 const RAW_OUT = argValue("--raw-out");
 const RAW_IN = argValue("--raw-in");
+const FEED_OUT = argValue("--feed-out");
+const FEED_IN = argValue("--feed-in");
+const ONLY = argValue("--only")
+  ?.split(",")
+  .map((id) => id.trim())
+  .filter(Boolean);
 /** 키워드마다 걸린 제목을 다 찍는다(사전 손볼 때) */
 const EXPLAIN = args.includes("--explain");
+
+const unknown = (ONLY ?? []).filter((id) => !SOURCES.some((s) => s.id === id));
+if (unknown.length) {
+  console.error(`--only 에 모르는 소스: ${unknown.join(", ")} (쓸 수 있는 것: ${SOURCES.map((s) => s.id).join(", ")})`);
+  process.exit(1);
+}
+/** 이번 실행에서 읽을 소스 */
+const ACTIVE = ONLY ? SOURCES.filter((s) => ONLY.includes(s.id)) : SOURCES;
 
 async function collect(): Promise<SourceResult[]> {
   const results: SourceResult[] = [];
   // 소스끼리는 호스트가 달라 동시에 돌려도 각 사이트에는 1.5초 간격이 지켜진다
   await Promise.all(
-    SOURCES.map(async (adapter) => {
+    ACTIVE.map(async (adapter) => {
       const posts: RawPost[] = [];
       let error: string | undefined;
       for (const page of adapter.pages.slice(0, 2)) {
@@ -62,7 +82,7 @@ async function collect(): Promise<SourceResult[]> {
       results.push({ adapter, posts, ok: posts.length > 0, error: posts.length > 0 ? undefined : error });
     }),
   );
-  return SOURCES.map((s) => results.find((r) => r.adapter.id === s.id)!);
+  return ACTIVE.map((s) => results.find((r) => r.adapter.id === s.id)!);
 }
 
 function loadRaw(path: string): SourceResult[] {
@@ -82,9 +102,23 @@ async function main() {
   console.log(`▶ 커뮤니티 키워드 집계 ${DRY ? "(dry)" : ""}`);
 
   const results = RAW_IN ? loadRaw(RAW_IN) : await collect();
+  const feedLines = FEED_IN && !RAW_IN ? applyFeed(results, FEED_IN) : [];
   for (const r of results) {
     const mark = r.ok ? "✓" : "✗";
-    console.log(`  ${mark} ${r.adapter.name.padEnd(8)} ${String(r.posts.length).padStart(3)}건${r.error ? `  (${r.error})` : ""}`);
+    const extra = r.error ?? r.note;
+    console.log(`  ${mark} ${r.adapter.name.padEnd(8)} ${String(r.posts.length).padStart(3)}건${extra ? `  (${extra})` : ""}`);
+  }
+  for (const line of feedLines) console.log(`  · ${line}`);
+  if (FEED_OUT) {
+    const okCount = results.filter((r) => r.ok).length;
+    if (okCount === 0) {
+      console.warn("  · 읽은 소스가 없어 보조 수집본을 만들지 않음");
+      process.exitCode = 2;
+      return;
+    }
+    writeFeed(FEED_OUT, results);
+    console.log(`  · 보조 수집본 저장: ${FEED_OUT} (소스 ${okCount}/${results.length})`);
+    return;
   }
   if (RAW_OUT) {
     writeFileSync(RAW_OUT, JSON.stringify(results.map((r) => ({ id: r.adapter.id, ok: r.ok, posts: r.posts })), null, 2));
@@ -177,6 +211,8 @@ async function main() {
 }
 
 main().catch((err) => {
+  // 보조 수집은 실패를 알려야 올리지 않는다
+  if (FEED_OUT) process.exitCode = 1;
   // 집계가 죽어도 워크플로는 실패로 만들지 않는다(기존 파일 유지)
   warnLoud(["키워드 집계 중 오류 — data/trends.json 은 그대로입니다.", err instanceof Error ? err.stack ?? err.message : String(err)]);
 });
