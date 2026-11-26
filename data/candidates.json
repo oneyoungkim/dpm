@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-11-25T03:52:45.185Z",
+  "generatedAt": "2026-11-26T03:17:42.111Z",
   "events": [
-    {
-      "id": "c7d722a8134b9f5ef12e",
-      "title": "Hope in the City: Detective Sketchbook - 게임 출시",
-      "category": "게임",
-      "tags": [
-        "Xbox Series X|S",
-        "Xbox on PC",
-        "Steam",
-        "Game Pass"
-      ],
-      "series": "Hope in the City",
-      "startsAt": "2026-11-11T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/hope-in-the-city-detective-sketchbook/",
-      "reason": "원문에서 Hope in the City가 11월 11일 출시된다고 명시되어 있습니다."
-    },
     {
       "id": "858a690aa105f3c74df9",
       "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
@@ -977,6 +957,27 @@
       "reason": "본문에서 Hela: Of Mice & Magic이 2026년 12월 1일에 Xbox Game Pass에 출시된다고 명시되어 있다."
     },
     {
+      "id": "587358ab4bc92b7023af",
+      "title": "PlayStation Plus Monthly Games for December: Tony Hawk’s Pro Skater 3+4, Dragon Ball Xenoverse 2, Amnesia: The Bunker",
+      "category": "게임",
+      "tags": [
+        "PlayStation Plus",
+        "월간 게임",
+        "Tony Hawk’s Pro Skater 3+4",
+        "Dragon Ball Xenoverse 2",
+        "Amnesia: The Bunker"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2026-12-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/25/playstation-plus-monthly-games-for-december-tony-hawks-pro-skater-34-dragon-ball-xenoverse-2-amnesia-the-bunker/",
+      "reason": "PlayStation Plus 멤버용 월간 게임이 12월 1일부터 공개된다고 안내되어 있습니다."
+    },
+    {
       "id": "c20c38830c739b547861",
       "title": "(참고) ONE SAMURAI 6 일정은 일정표에서 별도 확인 필요",
       "category": "격투기",
@@ -1121,6 +1122,27 @@
       "reason": "해당 기사에서 Dawnbreaker Closed Beta가 12월 3일부터 시작된다고 안내합니다."
     },
     {
+      "id": "e47ce5068027445e95e6",
+      "title": "Sea of Remnants: Set Sail for the Dawnbreaker Closed Beta on XBOX Series X",
+      "category": "게임",
+      "tags": [
+        "Sea of Remnants",
+        "Dawnbreaker",
+        "Closed Beta",
+        "XBOX Series X",
+        "XBOX Insiders"
+      ],
+      "series": "Sea of Remnants",
+      "startsAt": "2026-12-03T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/23/sea-of-remnants-set-sail-for-the-dawnbreaker-closed-beta-on-xbox-series-x/",
+      "reason": "XBOX Series X에서 Dawnbreaker 클로즈드 베타가 12월 3일부터 시작된다고 안내합니다."
+    },
+    {
       "id": "e2eb7c64e3a072e8c494",
       "title": "Suit up as Astro Bot in Rayman Legends Retold",
       "category": "게임",
@@ -1254,6 +1276,26 @@
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
       "reason": "ONE 공식 뉴스에서 ‘ONE 174: Shanghai’ 개최일(12월 12일) 및 행사 성격이 명시됨."
+    },
+    {
+      "id": "29ff86bcda9e2b7dbf64",
+      "title": "ONE 174: 상하이 2026년 12/12 개최 확정",
+      "category": "격투기",
+      "tags": [
+        "ONE Championship",
+        "ONE 174",
+        "상하이",
+        "2026"
+      ],
+      "series": "ONE Championship",
+      "startsAt": "2026-12-12T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ONE Championship",
+      "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
+      "reason": "ONE 공식 뉴스에서 ONE 174: Shanghai가 2026년 12월 12일(토요일) 개최로 명시되어 있음."
     },
     {
       "id": "e3522fabeca8cf29bc5d",
@@ -1451,6 +1493,26 @@
       "reason": "UFC 공식 뉴스에서 해당 대회가 ‘Saturday, January 16, 2027’(댈러스)로 명시됨."
     },
     {
+      "id": "f5dd9e9f651c5566c39f",
+      "title": "UFC 파이트 나이트: 2027년 1/23 브래디 vs 보님",
+      "category": "격투기",
+      "tags": [
+        "UFC Fight Night",
+        "Meta APEX",
+        "라스베이거스",
+        "2027"
+      ],
+      "series": "UFC",
+      "startsAt": "2027-01-23T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "UFC",
+      "sourceUrl": "https://www.ufc.com/news/exciting-welterweight-tilt-between-5-sean-brady-and-6-gabriel-bonfim-headlines-first-meta-apex",
+      "reason": "UFC 공식 뉴스에서 UFC Fight Night: Brady vs Bonfim이 2027년 1월 23일 개최로 명시되어 있음."
+    },
+    {
       "id": "5e2bbf68f5c68e3f25c6",
       "title": "(For Southeast Asia) Until Dawn 2 launches January 28",
       "category": "게임",
@@ -1526,13 +1588,14 @@
     },
     {
       "id": "3e5339bcbd035fc7ff22",
-      "title": "UFC 336 토론토 - 1월 30일 개최(타이틀전 2개)",
+      "title": "UFC 336 토론토: 2027년 1/30 타이틀 2연전",
       "category": "격투기",
       "tags": [
         "UFC",
+        "타이틀",
         "UFC 336",
         "토론토",
-        "타이틀전"
+        "2027"
       ],
       "series": "UFC",
       "startsAt": "2027-01-30T12:00:00+09:00",
@@ -1542,7 +1605,7 @@
       "confidence": "confirmed",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/news/two-electric-title-fights-announced-ufc-336",
-      "reason": "UFC 공식 뉴스에서 UFC 336이 2027-01-30 토론토(Scotiabank Arena) 개최로 명시됨."
+      "reason": "UFC 공식 뉴스에서 UFC 336이 2027년 1월 30일(토론토) 개최로 명시되어 있음."
     },
     {
       "id": "20c5cef3cddcfb24030e",
@@ -1796,13 +1859,13 @@
     },
     {
       "id": "54f4d9f6923378949b79",
-      "title": "ONE, 카타르 첫 시리즈 이벤트 2027년 3월 26일",
+      "title": "ONE-카타르 파트너십: 2027년 3/26 아스파이어돔 첫 개최",
       "category": "격투기",
       "tags": [
         "ONE Championship",
         "카타르",
-        "2027-03-26",
-        "출범 이벤트"
+        "아스파이어돔",
+        "2027"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -1812,7 +1875,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/press-releases/one-championship-and-visit-qatar-renew-landmark-three-year-partnership",
-      "reason": "공식 보도자료에 ‘2027년 3월 26일(Friday, March 26, 2027)’ 첫 이벤트 개최 일자가 명시되어 미래 일정으로 재확인."
+      "reason": "ONE 공식 보도자료에서 카타르에서의 첫 이벤트가 2027년 3월 26일(금요일) 아스파이어 돔 개최로 명시되어 있음."
     },
     {
       "id": "8027962d52a7ce6f5c57",
