@@ -8,6 +8,7 @@ import { DEFAULT_INTERESTS, INTEREST_STYLE, interestCategoryOf } from "@/lib/int
 import { isCuratedEvent } from "@/lib/curation";
 import { EventCard } from "./EventCard";
 import { InterestPicker } from "./InterestPicker";
+import { BRAND } from "@/lib/brand";
 
 const SAVED_STORAGE_KEY = "matchday.saved.v1";
 const LEGACY_ALARM_KEY = "matchday.alarms.v1";
@@ -209,7 +210,7 @@ export function ScheduleBrowser({
   const handleShare = async (event: SportEvent) => {
     const days = diffDays(today, event.dateKey);
     const dday = event.status === "진행중" ? "LIVE" : days === 0 ? "TODAY" : `D-${days}`;
-    const text = `${event.title} — ${dday}\n${event.series ?? event.league} · DPMBROS`;
+    const text = `${event.title} · ${dday}\n${event.series ?? event.league} · ${BRAND.name}`;
     try {
       if (navigator.share) await navigator.share({ title: event.title, text, url: window.location.href });
       else await navigator.clipboard.writeText(`${text}\n${window.location.href}`);
@@ -243,10 +244,10 @@ export function ScheduleBrowser({
         <section id="top" className="spotlight" aria-labelledby="spotlight-title">
           <div className="hero-manifesto">
             <div>
-              <p className="eyebrow">THE REDLINE / NEXT 30 DAYS</p>
-              <h1 id="spotlight-title">도파민브로스</h1>
+              <p className="eyebrow">볼 각 / 앞으로 30일</p>
+              <h1 id="spotlight-title">30일 일정</h1>
             </div>
-            <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />달력에 빨간 줄 그을 순간만.</p>
+            <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />달력에 표시할 것만 골랐습니다.</p>
           </div>
           <EventCard
             event={featured}
@@ -258,7 +259,7 @@ export function ScheduleBrowser({
             featured
           />
           <div className="signal-ticker" aria-label="다가오는 이벤트 요약">
-            <span className="ticker-label"><i aria-hidden /> DPMBROS SIGNAL</span>
+            <span className="ticker-label"><i aria-hidden /> GAK SIGNAL</span>
             <span><strong>{curatedCount}</strong> CURATED</span>
             <span><strong>{liveCount}</strong> LIVE NOW</span>
             <span><strong>30</strong> DAYS AHEAD</span>

@@ -13,8 +13,8 @@ import { fetchJson } from "../http";
  */
 
 const WIKI = "https://en.wikipedia.org/w/api.php";
-const SDB = "https://www.thesportsdb.com/api/v1/json/3";
-const WIKI_UA = "matchday/0.1 (schedule aggregator)";
+// 예전 무료 키 "3"은 2026년에 영구 폐기돼 403을 준다. 지금 무료 키는 "123"(분당 30회).
+const SDB = "https://www.thesportsdb.com/api/v1/json/123";
 
 const MONTHS: Record<string, number> = {
   Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
@@ -51,7 +51,6 @@ interface WikiSection { index: string; line: string }
 async function findScheduledSection(): Promise<string | null> {
   const json = await fetchJson<{ parse?: { sections?: WikiSection[] } }>(
     `${WIKI}?action=parse&page=List_of_UFC_events&prop=sections&format=json&formatversion=2`,
-    { "User-Agent": WIKI_UA },
   );
   const hit = json?.parse?.sections?.find((s) => /^scheduled events$/i.test(s.line.trim()));
   return hit?.index ?? null;
@@ -67,7 +66,6 @@ async function crawlUfcWiki(from: string, to: string): Promise<SportEvent[]> {
   const json = await fetchJson<{ parse?: { wikitext?: string } }>(
     `${WIKI}?action=parse&page=List_of_UFC_events&prop=wikitext&section=${section}` +
       `&format=json&formatversion=2`,
-    { "User-Agent": WIKI_UA },
   );
   const wikitext = json?.parse?.wikitext;
   if (!wikitext) return [];

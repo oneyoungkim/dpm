@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { addDays, todayKey } from "../lib/kst";
 import {
   candidatesFileSchema,
+  dedupeCandidates,
   hasWeakVerification,
   type CandidatesFile,
   type EventCandidate,
@@ -81,7 +82,9 @@ async function main() {
   });
   const merged = new Map(retained.map((event) => [event.id, event]));
   for (const event of discovered) merged.set(event.id, event);
-  const events = [...merged.values()].sort(
+  // id는 원문 주소·시각·시리즈 이름의 해시라 모델이 시리즈를 다르게 적으면 같은 발표가 따로 쌓인다.
+  // 원문 주소+날짜로 한 번 더 합친다. 새로 발견한 것(titleKo가 있는 쪽)이 남는다.
+  const events = dedupeCandidates([...merged.values()]).sort(
     (a, b) => a.startsAt.localeCompare(b.startsAt) || a.title.localeCompare(b.title),
   );
 

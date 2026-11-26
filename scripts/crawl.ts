@@ -1,10 +1,10 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { EventsFile, SportEvent } from "../lib/types";
 import { addDays, todayKey } from "../lib/kst";
 import { scoreHype } from "../lib/hype";
 import { interestCategoryOf } from "../lib/interests";
-import { crawlNaverSports } from "./sources/naver-sports";
+import { crawlTheSportsDb } from "./sources/thesportsdb";
 import { crawlNaverEsports } from "./sources/naver-esports";
 import { crawlFighting } from "./sources/fighting";
 import { crawlBlackCombat } from "./sources/blackcombat";
@@ -73,7 +73,8 @@ async function main() {
   console.log(`\n[DPMBROS] 수집 구간 ${from} ~ ${to}\n`);
 
   const jobs: Array<{ name: string; run: () => Promise<SportEvent[]> }> = [
-    { name: "네이버 스포츠", run: () => crawlNaverSports(from, to) },
+    // 네이버 스포츠(api-gw)는 2026-11부터 Node 요청에 응답하지 않아 뺐다. 사정은 thesportsdb.ts 머리말.
+    { name: "TheSportsDB", run: () => crawlTheSportsDb(from, to) },
     { name: "네이버 e스포츠", run: () => crawlNaverEsports(from, to) },
     { name: "격투기", run: () => crawlFighting(from, to) },
     { name: "블랙컴뱃", run: () => crawlBlackCombat(from, to) },
@@ -98,6 +99,18 @@ async function main() {
       console.log(`실패 (${err instanceof Error ? err.message : err})`);
     }
   }
+
+  // 0건 소스는 크게 알린다. 종료 코드는 0 그대로 — 다른 소스 결과는 살려야 한다.
+  // 비시즌(e스포츠 11~12월)이나 예정 대회가 없는 달(블랙컴뱃)에도 0건이 정상일 수 있어 경고에 그친다.
+  // 수동 입력은 평소에 비어 있는 게 정상이라 셈에서 뺀다.
+  const empty = jobs
+    .map((j) => j.name)
+    .filter((name) => name !== "수동 입력" && (stats[name] ?? 0) === 0);
+  if (empty.length > 0) {
+    const bar = "!".repeat(60);
+    console.warn(`\n${bar}\n  0건 소스: ${empty.join(", ")}\n  어댑터가 깨졌거나 막혔을 수 있다. 위 로그의 "포기" 줄을 확인하라.\n${bar}`);
+  }
+  stats["0건 소스 수"] = empty.length;
 
   // 병합 — 뒤에 오는 소스가 이긴다. jobs 순서상 수동 입력이 마지막이라 최우선.
   const byId = new Map<string, SportEvent>();
@@ -171,12 +184,32 @@ async function main() {
     process.exit(1);
   }
 
+  // 직전 스냅샷보다 절반 아래로 떨어졌으면 큰 소스 하나가 죽은 것이다. 덮어쓰지 않는다.
+  // 종료 코드는 0 — 워크플로가 실패로 끝나면 후보 파일 커밋까지 막히기 때문이다.
+  const previousTotal = readPreviousTotal();
+  if (previousTotal !== null && total < previousTotal / 2) {
+    console.error(
+      `\n수집 결과 ${total}건이 직전 스냅샷 ${previousTotal}건의 절반 미만이라 events.json 을 덮어쓰지 않는다.\n`,
+    );
+    return;
+  }
+
   // 들여쓰기 없이 쓴다. CI가 하루 4번 커밋하는 산출물이라 40%를 아끼는 게
   // 손으로 읽기 편한 것보다 낫다 (읽어야 하면 `npm run crawl:dry` 요약을 보면 된다).
   const out = join(process.cwd(), "data", "events.json");
   const json = JSON.stringify(file);
   writeFileSync(out, json, "utf-8");
   console.log(`\n저장 완료 → ${out} (${Math.round(Buffer.byteLength(json) / 1024)}KB)\n`);
+}
+
+/** 직전 events.json 의 이벤트 수. 파일이 없거나 깨졌으면 null(비교하지 않음). */
+function readPreviousTotal(): number | null {
+  try {
+    const prev = JSON.parse(readFileSync(join(process.cwd(), "data", "events.json"), "utf-8")) as EventsFile;
+    return Array.isArray(prev.events) ? prev.events.length : null;
+  } catch {
+    return null;
+  }
 }
 
 main().catch((err) => {

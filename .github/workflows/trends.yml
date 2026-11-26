@@ -1,0 +1,55 @@
+name: 커뮤니티 키워드 순위
+
+# 커뮤니티 인기글 목록에서 키워드 순위를 만들어 data/trends.json 에 커밋한다.
+# 순위가 바뀌었을 때만 커밋하고, crawl.yml 과 푸시가 겹쳐도 되도록 rebase 후 3번까지 다시 민다.
+on:
+  schedule:
+    # 2시간마다(UTC 정각 기준, KST 로는 홀수 시)
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: trends
+  cancel-in-progress: false
+
+jobs:
+  trends:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: 키워드 집계
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_TREND_MODEL: gpt-5.4-nano-2026-03-17
+        # 소스가 반 넘게 막히거나 키워드가 모자라면 스크립트가 파일을 안 바꾸고 0으로 끝난다
+        run: npm run trends
+
+      - name: 변경분 커밋·푸시
+        run: |
+          git config user.name "dpmbros-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/trends.json data/trends-history.json
+          if git diff --staged --quiet; then
+            echo "바뀐 것 없음"
+            exit 0
+          fi
+          git commit -m "chore: 키워드 순위 갱신 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "푸시 실패(${attempt}/3) — 잠시 뒤 다시"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 10))
+          done
+          echo "푸시 3번 실패"
+          exit 1

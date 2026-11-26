@@ -1,86 +1,81 @@
-import { activeInterests, loadEvents, monthHighlights } from "@/lib/events";
-import { addDays, formatDateKo, todayKey } from "@/lib/kst";
-import { ScheduleBrowser } from "@/components/ScheduleBrowser";
-import { buildPreviewEvents } from "@/lib/preview-events";
+import Link from "next/link";
+import { loadEvents } from "@/lib/events";
+import { addDays, todayKey } from "@/lib/kst";
 import { isCuratedEvent } from "@/lib/curation";
+import { loadTrends, mainChart } from "@/lib/trends";
+import { loadArticles } from "@/lib/articles";
+import { BRAND } from "@/lib/brand";
+import { RankBoard } from "@/components/RankBoard";
+import { ArticleCard } from "@/components/ArticleCard";
+import { EventStrip } from "@/components/EventStrip";
+import { AdSlot } from "@/components/AdSlot";
 
-/** 크롤러가 events.json 을 갈아끼우면 최대 10분 뒤 반영된다. */
+/** 집계·크롤·새 글이 들어오면 최대 10분 뒤 반영된다. */
 export const revalidate = 600;
 
 export default function Home() {
-  const data = loadEvents();
-  const today = todayKey();
-  const lastDay = addDays(today, 30);
-  // 명시적으로 켤 때만 예시 데이터를 섞는다. 배포 기본값은 실제 수집 결과만.
-  const previewEvents =
-    process.env.MATCHDAY_PREVIEW_EVENTS === "1" ? buildPreviewEvents(today) : [];
-  const allEvents = [...data.events, ...previewEvents];
-  const upcoming = allEvents.filter(
-    (event) =>
-      event.dateKey >= today &&
-      event.dateKey <= lastDay &&
-      event.status !== "취소" &&
-      event.status !== "종료",
-  );
-  const featured = monthHighlights(upcoming, 1)[0] ?? upcoming[0];
-  const categories = activeInterests(upcoming);
-  const curated = upcoming.filter(isCuratedEvent);
-  const curatedCount = curated.length;
-  const liveCount = curated.filter((event) => event.status === "진행중").length;
+  const trends = loadTrends();
+  const chart = mainChart(trends, 10);
+  const articles = loadArticles();
+  const [lead, ...rest] = articles;
 
-  const generated =
-    data.events.length > 0
-      ? new Date(data.generatedAt).toLocaleString("ko-KR", {
-          timeZone: "Asia/Seoul",
-          month: "long",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        })
-      : null;
+  const today = todayKey();
+  const weekEnd = addDays(today, 7);
+  const events = loadEvents()
+    .events.filter(
+      (event) =>
+        event.dateKey >= today &&
+        event.dateKey <= weekEnd &&
+        event.status !== "취소" &&
+        event.status !== "종료" &&
+        isCuratedEvent(event),
+    )
+    .sort((a, b) => b.hype - a.hype || a.startsAt.localeCompare(b.startsAt))
+    .slice(0, 6)
+    .sort((a, b) => a.startsAt.localeCompare(b.startsAt));
 
   return (
-    <main className="site-shell">
-      <header className="site-header">
-        <a href="#top" className="wordmark" aria-label="도파민브로스 처음으로">
-          DPMBROS<span className="wordmark-dot" />
-        </a>
-        <p className="header-tagline">도파민브로스</p>
-        <div className="header-date">
-          <span className="header-live"><i aria-hidden /> SIGNAL ON</span>
-          <span>KST</span>
-          {formatDateKo(today)}
-        </div>
-      </header>
+    <main id="main" className="home">
+      <h1 className="sr-only">
+        {BRAND.name} — {BRAND.description}
+      </h1>
 
-      {allEvents.length === 0 ? (
-        <section id="top" className="empty-state">
-          <p className="eyebrow">NO EVENTS YET</p>
-          <h2>아직 수집된 일정이 없습니다.</h2>
-          <p>일정이 업데이트되면 앞으로 30일의 추천 이벤트가 이곳에 나타납니다.</p>
+      <section className={lead ? "home-top" : "home-top home-top-solo"}>
+        <RankBoard file={trends} keywords={chart} />
+        {lead ? (
+          <div className="home-lead">
+            <ArticleCard article={lead} variant="lead" priority />
+            {rest.slice(0, 3).map((article) => (
+              <ArticleCard key={article.slug} article={article} variant="row" />
+            ))}
+          </div>
+        ) : null}
+      </section>
+
+      <AdSlot placement="home-top" />
+
+      <EventStrip events={events} today={today} />
+
+      {rest.length > 3 ? (
+        <section className="mag-section" aria-labelledby="home-mag-title">
+          <header className="block-head">
+            <div>
+              <p className="eyebrow">읽을 각 / 매거진</p>
+              <h2 id="home-mag-title">하루 두 편</h2>
+            </div>
+            <Link href="/magazine" className="block-more">
+              매거진 전체 <span aria-hidden>→</span>
+            </Link>
+          </header>
+          <div className="mag-grid">
+            {rest.slice(3, 9).map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
         </section>
-      ) : (
-        <ScheduleBrowser
-          events={upcoming}
-          today={today}
-          activeCategories={categories}
-          featuredId={featured?.id}
-          curatedCount={curatedCount}
-          liveCount={liveCount}
-        />
-      )}
+      ) : null}
 
-      <footer className="site-footer">
-        <div>
-          <span className="wordmark footer-wordmark">DPMBROS.</span>
-          <p>달력에 빨간 줄 그을 순간만.</p>
-        </div>
-        <div className="footer-meta">
-          <p>모든 일정은 한국 시간(KST) 기준</p>
-          <p>마지막 업데이트 {generated ?? "업데이트 대기 중"}</p>
-          <p>일정과 대진은 주최 측 사정으로 변경될 수 있습니다.</p>
-        </div>
-      </footer>
+      <AdSlot placement="home-mid" />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 {
-  "name": "DPMBROS — 도파민브로스",
-  "short_name": "DPMBROS",
-  "description": "결승전, 대작 출시, 신제품 발표. 달력에 빨간 줄 그을 순간만.",
+  "name": "gak.gg — 볼 각, 뜰 각, 읽을 각.",
+  "short_name": "gak.gg",
+  "description": "남자 커뮤니티 키워드 순위, 30일 일정, 하루 두 편 매거진.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050607",

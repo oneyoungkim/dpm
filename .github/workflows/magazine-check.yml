@@ -1,0 +1,46 @@
+name: 매거진 검사
+
+# 글(content/articles)이나 검사 도구가 바뀌면 발행 기준(content/EDITORIAL.md)을 지키는지 본다.
+# 근거 주소 열어 보기까지 돌린다(--offline 아님). 주소가 안 열리는 것은 경고라 실패로 치지 않는다.
+on:
+  pull_request:
+    paths:
+      - "content/articles/**"
+      - "scripts/magazine/**"
+      - "lib/articles.ts"
+      - ".github/workflows/magazine-check.yml"
+  push:
+    paths:
+      - "content/articles/**"
+      - "scripts/magazine/**"
+      - "lib/articles.ts"
+      - ".github/workflows/magazine-check.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: magazine-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: 검사 도구 자기 시험
+        run: npx tsx scripts/magazine/selftest.ts
+
+      - name: 글 검사(근거 주소 포함)
+        run: npm run magazine:check
+
+      - name: 타입 검사
+        run: npx tsc --noEmit

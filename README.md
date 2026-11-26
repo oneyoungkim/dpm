@@ -1,11 +1,21 @@
-# DPMBROS — 도파민브로스
+# gak.gg — 각
 
-축구 · 야구 · LCK · UFC까지, 앞으로 한 달간 열리는 경기를 **화제성 순으로** 한 화면에 정리하는 사이트.
+> 볼 각, 뜰 각, 읽을 각.
 
-**Live:** https://dpm-five.vercel.app
+남자 커뮤니티에서 지금 가장 많이 나오는 말의 **순위**, 앞으로 30일의 **일정**, 하루 두 편 올라오는 **매거진**을 한곳에 모은 사이트. 옛 이름은 DPMBROS(도파민브로스)다.
 
-경기 목록을 그냥 시간순으로 쏟아내면 하루 200경기라 아무도 안 본다.
-그래서 이 프로젝트의 핵심은 수집이 아니라 **"오늘 이건 봐야 함"을 골라내는 점수**다.
+**Live:** https://dpm-five.vercel.app (도메인 `gak.gg` 연결 전)
+
+| 화면 | 주소 | 데이터 | 만드는 명령 |
+|---|---|---|---|
+| 키워드 순위 (뜰 각) | `/rank` | `data/trends.json` | `npm run trends` |
+| 일정 (볼 각) | `/schedule` | `data/events.json` | `npm run discover`, `npm run crawl` |
+| 매거진 (읽을 각) | `/magazine`, `/magazine/<slug>` | `content/articles/*.md` | `scripts/magazine/WRITER.md` 순서 |
+
+문서
+
+- `content/EDITORIAL.md`: 매거진 편집 기준
+- `scripts/magazine/WRITER.md`: 글 한 편을 내는 순서(예약 작업이 따라 한다)
 
 ---
 
@@ -13,66 +23,86 @@
 
 ```bash
 npm install
-npm run crawl     # data/events.json 생성 (2~3분)
+npm run crawl     # data/events.json 생성 (7분쯤)
+npm run trends    # data/trends.json 생성 (1분쯤, 한국 IP에서)
 npm run dev       # http://localhost:3000
 ```
 
-`npm run crawl` 을 한 번도 안 돌리면 사이트는 뜨지만 "수집된 일정이 없다" 화면이 나온다.
+데이터 파일이 없어도 사이트는 뜬다. 빈 자리에는 "집계 전" 같은 안내가 나온다.
+환경변수는 `.env.example`에 설명이 있다. 이름·주소·문구는 `lib/brand.ts` 한 곳에서 바꾼다.
 
 ---
 
 ## 구조
 
 ```
-scripts/
-  crawl.ts              모든 소스를 긁어 data/events.json 하나로 합침
-  discover.ts           공식 RSS·웹 검색 → AI 구조화 → 검증된 이벤트 후보 병합
-  http.ts               재시도·타임아웃 공용 fetch
-  discovery/
-    official-feeds.ts   Apple·Samsung·PlayStation·Xbox 공식 RSS 수집
-    extract-events.ts   날짜가 명시된 이벤트만 Structured Outputs로 추출
-    web-search.ts       웹·커뮤니티에서 후보 발견 후 공식 출처로 재검증
-    candidate-schema.ts 후보 파일의 런타임 스키마와 타입
-  sources/
-    naver-sports.ts     KBO·MLB·NPB·K리그·EPL·라리가·세리에A·분데스·MLS·농구·배구
-    naver-esports.ts    LCK / LCK CL / 롤드컵 / MSI / 발로란트 / 오버워치
-    fighting.ts         UFC (위키피디아 일정표 + TheSportsDB 시각 보정)
-    blackcombat.ts      블랙컴뱃 공식 EVENT 페이지 수집
-    manual.ts           data/manual.json 오버레이 (아시안게임 등 API 없는 이벤트)
+app/
+  page.tsx                  첫 화면: 순위 10 + 대표 글 + 이번 주 일정 + 글 목록
+  rank/                     키워드 순위 전체(분류 탭, 대표 글 펼치기)
+  schedule/                 30일 일정(관심사, 기대 걸기)
+  magazine/                 글 목록, 분류별 목록(c/<분류>), 글 본문, 공유 이미지
+  about/ privacy/           소개·편집 원칙, 개인정보 처리방침(애드센스 요건)
+  sitemap.ts robots.ts feed.xml/ ads.txt/
+  api/events/route.ts       일정 읽기 전용 API
+
+components/                 SiteHeader, RankBoard, RankChart, ArticleCard, ArticleCover, AdSlot, …
 
 lib/
-  types.ts              SportEvent — 모든 소스가 여기로 정규화된다
-  hype.ts               ★ 화제성 점수. 리그 가중치 · 라이벌전 · 팀 화제성 · 편성시간
-  kst.ts                한국시간 고정 유틸
-  events.ts             사이트가 데이터를 읽는 유일한 통로
-  sport-style.ts        종목별 색/아이콘
+  brand.ts                  이름·주소·문구·광고 ID
+  trends.ts                 TrendsFile 형식과 읽기
+  articles.ts               글 머리말 스키마와 읽기
+  types.ts events.ts hype.ts kst.ts   일정 쪽
 
-app/
-  page.tsx              오늘의 픽 + 한 달 달력 + 날짜별 목록
-  api/events/route.ts   앱이 쓸 읽기 전용 API
+scripts/
+  trends/                   커뮤니티 인기 글 목록 → 키워드 순위
+  magazine/                 check(발행 문턱) · pick(글감) · image(사진) · new(틀) · WRITER.md
+  crawl.ts discover.ts sources/ discovery/   일정 수집
+
+content/
+  EDITORIAL.md              편집 기준
+  articles/                 발행된 글(파일 하나 = 글 하나)
 
 data/
-  events.json           크롤 산출물 (커밋 대상)
-  manual.json           손으로 채우는 이벤트
+  trends.json trends-history.json   순위와 지난 집계
+  events.json candidates.json manual.json   일정
 ```
 
-### 데이터 흐름
+### 키워드 순위
 
-```
-공식 RSS ──► AI 구조화 ────────────────┐
-웹·커뮤니티 ─► AI 검색 ─► 공식 출처 검증 ─┼──► data/candidates.json
-                                                │
-스포츠 크롤러 ──────────────────────────────────┼──► data/events.json ──► 화면 / API
-                                                │
-                                  data/manual.json (덮어쓰기 우선)
+`npm run trends`는 커뮤니티 7곳의 인기 글 **목록**만 읽는다(본문·댓글은 받지 않는다). 곳마다 `robots.txt`를 먼저 보고 막아 둔 경로는 쓰지 않는다.
+제목에서 키워드를 뽑고, 반응이 큰 글에 나올수록·여러 커뮤니티에 함께 나올수록 점수를 높게 준다. 숫자는 전부 코드가 센다.
+`OPENAI_API_KEY`가 있으면 모델이 제목마다 대표 키워드를 붙여 주고, 없으면 규칙만으로 뽑는다.
+정치·사건사고 키워드는 `sensitive`로 표시해 기본 순위에서 빼고 대표 글을 싣지 않는다.
+
+```bash
+npm run trends:dry                # 파일을 쓰지 않고 순위만 본다
+npm run trends -- --explain       # 키워드마다 어떤 제목이 걸렸는지
 ```
 
-사이트는 **events.json 하나만** 읽는다. 크롤이 실패해도 직전 스냅샷으로 계속 서비스된다.
-크롤 결과가 0건이면 기존 파일을 덮어쓰지 않고 종료한다 — 전부 실패한 날 빈 사이트를 배포하는 게 최악이라서.
+### 매거진
+
+글 한 편은 `content/articles/YYYY-MM-DD-<slug>.md` 하나다. 머리말에 근거(`sources`) 3개 이상이 있어야 하고, `npm run magazine:check`를 통과한 글만 낸다.
+
+```bash
+npm run magazine:pick -- --slot morning     # 글감 후보
+npm run magazine:new -- --title "…" --slug … --category 격투기
+npm run magazine:image -- "검색어"           # 이용 허락이 확인된 사진 후보
+npm run magazine:check -- content/articles/<파일>.md
+npm run magazine:selftest                   # 검사 규칙이 제대로 잡는지 시험
+```
+
+### 광고
+
+`NEXT_PUBLIC_ADSENSE_CLIENT`와 자리별 번호(`NEXT_PUBLIC_AD_SLOT_*`)가 있어야 광고 코드를 싣는다. 없으면 배포 사이트에는 아무것도 안 나오고, 개발 화면에서만 점선 상자로 자리가 보인다. `/ads.txt`도 게시자 ID가 있을 때만 나온다.
 
 ---
 
-## 화제성 점수 (`lib/hype.ts`)
+## 일정 수집
+
+경기 목록을 그냥 시간순으로 쏟아내면 하루 200경기라 아무도 안 본다.
+그래서 일정 쪽의 핵심은 수집이 아니라 **"이건 봐야 함"을 골라내는 점수**다.
+
+### 화제성 점수 (`lib/hype.ts`)
 
 ```
 점수 = 리그 기본값
@@ -101,10 +131,10 @@ data/
 
 | 소스 | 담당 | 비고 |
 |---|---|---|
-| 네이버 스포츠 API | KBO, MLB, NPB, K리그, EPL, 라리가, 세리에A, 분데스, MLS, 농구, 배구 | 실시간 스코어까지 나옴 |
+| TheSportsDB (무료 키 `123`) | EPL, 라리가, 세리에A, 분데스, 챔피언스리그, K리그1, NBA, KBL, KBO, MLB | 축구는 라운드 단위, 농구는 날짜 단위로 읽는다. 팀 이름은 `scripts/sources/team-names.ts`로 한글화 |
 | 네이버 e스포츠 API | LCK, 롤드컵, MSI, 발로란트, 오버워치 | 월 단위 조회 |
 | Wikipedia (List of UFC events) | UFC 전체 일정 | 날짜만 확정, 시각은 `timeTbd` |
-| TheSportsDB (무료 키) | UFC 임박 대회 시각 보정 | 무료 티어는 응답 건수 제한이 커서 보정용으로만 |
+| TheSportsDB (같은 키) | UFC 임박 대회 시각 보정 | 요청을 몰아 보내면 429가 나서 6초 간격으로 보낸다. 수집 전체가 7분쯤 걸린다 |
 | BLACK COMBAT 공식 EVENT | 블랙컴뱃 넘버링·라이즈·블랙컵 등 | 날짜·장소 자동 수집, 시각은 `timeTbd` |
 | `data/manual.json` | 아시안게임, API 없는 이벤트 | 손으로 입력, 크롤 결과보다 우선 |
 | `data/candidates.json` | 게임·테크·빅 이벤트 후보 | API/RSS/AI 정규화 결과, 출처 URL 필수 |
@@ -114,7 +144,9 @@ data/
 | Xbox Wire RSS | 게임 출시·Xbox 쇼케이스 | 공식 도메인 원문만 허용 |
 | OpenAI Web search | 격투기·빅 스포츠·모터스포츠·게임·테크 후보 | 커뮤니티는 단서로만 사용, 공식 URL 재검증 필수 |
 
-**비공식 엔드포인트를 쓴다.** 언제든 스키마가 바뀌거나 막힐 수 있다.
+**네이버 스포츠는 2026-11부터 쓰지 않는다.** 서버가 Node의 기본 TLS 접속에 응답하지 않고(자동 접속 차단으로 보인다), `m.sports.naver.com/robots.txt`도 수집을 전부 막아 두었다. TLS 설정을 바꾸면 뚫리지만 우회하지 않기로 했다. 어댑터 파일(`naver-sports.ts`)은 남겨 두었다.
+
+**비공식·무료 엔드포인트를 쓴다.** 언제든 스키마가 바뀌거나 막힐 수 있다.
 그래서 소스 하나가 죽어도 나머지는 계속 수집되고(`crawl.ts`의 try/catch),
 크롤 로그에 소스별 건수를 찍는다 — 어느 날 갑자기 `0건`이 뜨면 그 어댑터가 깨진 것이다.
 
@@ -223,6 +255,8 @@ GET /api/events?sport=야구,e스포츠&minHype=70&from=2026-08-20&to=2026-08-31
 - **UFC 개시 시각**: 위키피디아엔 날짜만 있어 대부분 `시간 미정`으로 뜬다. 임박한 대회만 TheSportsDB로 보정된다.
 - **블랙컴뱃 개시 시각**: 공식 EVENT 페이지에 날짜·장소만 있어 `시간 미정`으로 표시한다.
 - **ROAD FC**: 안정적인 공개 일정 API가 없어 AI 검색의 공식 출처 검증과 `data/manual.json`을 함께 쓴다.
-- **NBA·V리그·KBL**: 어댑터는 붙어 있지만 비시즌엔 네이버가 일정을 안 내려줘 0건이다. 시즌 시작하면 자동으로 채워진다.
-- **UEFA 챔피언스리그**: 네이버가 조추첨 후에야 일정을 올린다. `categoryName` 에 "챔피언스"가 들어오면 자동으로 `ucl` 가중치를 먹도록 해뒀다.
+- **NBA**: TheSportsDB 무료 키는 하루 3경기까지만 준다. 그래서 NBA는 하루 3경기만 잡힌다.
+- **V리그(배구)**: 자동 수집을 허용한 공개 출처를 찾지 못해 0건이다. 필요하면 `data/manual.json`에 손으로 넣는다.
+- **LCK**: 네이버 e스포츠는 살아 있다. 비시즌에는 0건이 정상이다.
+- **UFC 선수 이름**: 위키피디아 표기 그대로라 영어로 나온다("Oliveira vs Lopes").
 - **팀명 매칭이 부분 문자열 기반**이다. 같은 뿌리의 2군/유스 팀이 1군 점수를 먹을 수 있다.
