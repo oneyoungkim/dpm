@@ -285,6 +285,19 @@ function pickSamples(posts: Post[]): TrendSample[] {
   return samples;
 }
 
+/**
+ * 그것만 봐서는 무엇인지 알 수 없는 조각("DR", "3끼", 한 글자). 사전에 있는 이름(AI, T1, KT)은 조각이 아니다.
+ * 낱말을 자를 때(text.ts)도 걸러 내지만, 모델이 붙여 준 키워드는 그 길을 거치지 않아서 여기서 한 번 더 본다.
+ */
+export function isFragmentKey(key: string, sourceCount: number): boolean {
+  if (key.includes(" ") || KNOWN.has(key)) return false;
+  if (/^[0-9]/.test(key)) return true; // 3끼, 2026
+  if (/^[가-힣]$/.test(key)) return true;
+  // 영문·숫자 한두 글자는 여러 커뮤니티에 같이 나왔을 때만 인정한다
+  if (/^[a-z0-9+&]{1,2}$/.test(key)) return sourceCount < 2;
+  return false;
+}
+
 export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
   const groups = new Map<string, { posts: Post[]; displays: Map<string, number> }>();
   for (const post of posts) {
@@ -302,7 +315,9 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
     if (g.posts.length < 2) continue;
     // 욕설·비하어는 키워드로도 쓰지 않는다
     if (blockedSample.some((w) => key.replace(/ /g, "").includes(w))) continue;
-    const singleSource = new Set(g.posts.map((p) => p.source)).size === 1;
+    const sourceCount = new Set(g.posts.map((p) => p.source)).size;
+    const singleSource = sourceCount === 1;
+    if (isFragmentKey(key, sourceCount)) continue;
     // 사전에 없는 한글 낱말이 한 커뮤니티에서 두 번 나온 것은 근거가 약하다(군말일 때가 많다)
     if (singleSource && g.posts.length < 3 && !KNOWN.has(key) && !/^[a-z0-9]+$/.test(key)) continue;
     const bySource = new Map<string, number[]>();

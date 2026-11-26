@@ -10,6 +10,12 @@ on:
     # 2시간마다(UTC 정각 기준, KST 로는 홀수 시)
     - cron: "0 */2 * * *"
   workflow_dispatch:
+    inputs:
+      dry:
+        description: "저장·커밋 없이 결과만 본다(규칙을 고친 뒤 시험할 때)"
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: trends
@@ -61,10 +67,10 @@ jobs:
           OPENAI_TREND_MODEL: gpt-5.4-nano-2026-03-17
         # 소스가 반 넘게 막히거나 키워드가 모자라면 스크립트가 파일을 안 바꾸고 0으로 끝난다.
         # 직접 못 읽은 소스는 3시간 안에 만든 보조 수집본이 있으면 그것으로 메운다.
-        run: npm run trends -- --feed-in "$RUNNER_TEMP/trends-local.json"
+        run: npm run trends -- --feed-in "$RUNNER_TEMP/trends-local.json" ${{ inputs.dry && '--dry' || '' }}
 
       - name: 변경분 커밋·푸시
-        if: steps.recent.outputs.skip != '1'
+        if: steps.recent.outputs.skip != '1' && !inputs.dry
         run: |
           git config user.name "dpmbros-bot"
           git config user.email "bot@users.noreply.github.com"

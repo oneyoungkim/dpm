@@ -15,6 +15,7 @@
  *
  * 순서: 소스별 목록 수집(robots.txt 확인, 곳당 최대 2쪽, 요청 사이 1.5초 이상)
  *   → 글 정리·반응 무게 → (키가 있으면) 모델 태그 → 키 없이 뽑기로 나머지 채우기
+ *   → 같은 대상의 별명 합치기(merge.ts)
  *   → 점수·분류·민감·샘플 → 지난 기록과 비교 → 안전장치 통과 시 저장
  */
 
@@ -26,6 +27,7 @@ import { fetchListPage } from "./fetch";
 import { appendRun, loadHistory, trendOf } from "./history";
 import { preparePosts, scoreKeywords, tagHeuristic } from "./keywords";
 import { tagWithModel } from "./llm";
+import { mergeSameEntities } from "./merge";
 import { SOURCES } from "./sources";
 import type { RawPost, SourceResult } from "./types";
 
@@ -132,6 +134,12 @@ async function main() {
   if (llm.used) console.log(`  · 모델 태그: ${llm.tagged}건에 키워드${llm.error ? `, 일부 실패: ${llm.error}` : ""}`);
   else console.log("  · OPENAI_API_KEY 없음 → 키 없이 뽑기만 씀");
   tagHeuristic(posts);
+
+  // 같은 대상의 별명·줄임말을 한 키워드로(점수를 매기기 전에)
+  const merged = await mergeSameEntities(posts);
+  for (const m of merged.merges) console.log(`  · 합침(${m.by}): ${m.fromDisplay} → ${m.toDisplay}`);
+  if (merged.error) console.warn(`   ! 모델로 합치기 실패(규칙으로 합친 것만 씀): ${merged.error}`);
+  else if (merged.merges.length === 0) console.log(`  · 합칠 별명 없음${merged.modelUsed ? "" : "(규칙만 봄)"}`);
 
   const scored = scoreKeywords(posts, MAX_KEYWORDS);
   const top = scored[0]?.raw ?? 1;
