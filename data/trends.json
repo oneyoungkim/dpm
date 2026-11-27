@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T16:16:09.428Z",
+  "generatedAt": "2026-11-27T01:26:36.384Z",
   "sources": [
     {
       "id": "fmkorea",
@@ -19,8 +19,8 @@
       "id": "ruliweb",
       "name": "루리웹",
       "url": "https://bbs.ruliweb.com/best/all",
-      "posts": 0,
-      "ok": false
+      "posts": 64,
+      "ok": true
     },
     {
       "id": "bobaedream",
@@ -47,75 +47,105 @@
       "id": "clien",
       "name": "클리앙",
       "url": "https://www.clien.net/service/board/park",
-      "posts": 23,
+      "posts": 24,
       "ok": true
     }
   ],
   "keywords": [
     {
       "rank": 1,
-      "keyword": "AI",
-      "category": "테크",
+      "keyword": "이재명",
+      "category": "시사",
       "score": 100,
       "mentions": 4,
       "sources": [
-        "clien",
-        "dcinside",
-        "inven"
+        "bobaedream",
+        "clien"
       ],
-      "delta": 1,
-      "streak": 3,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        69,
-        76,
-        60,
-        75,
-        75,
-        94,
-        20,
-        0,
+        38,
         42,
-        39,
+        36,
+        34,
+        34,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
         100
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 2,
+      "keyword": "GTA6",
+      "category": "게임",
+      "score": 77,
+      "mentions": 6,
+      "sources": [
+        "dcinside",
+        "ruliweb"
+      ],
+      "delta": 2,
+      "streak": 12,
+      "spark": [
+        44,
+        49,
+        40,
+        55,
+        56,
+        47,
+        42,
+        27,
+        44,
+        35,
+        49,
+        77
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "AI로 성경 다큐를 만들고 있는데..",
-          "url": "https://www.clien.net/service/board/park/19299019",
-          "source": "clien"
+          "title": "GTA 6 불법복제 PC이식 근황",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77532902",
+          "source": "ruliweb"
         },
         {
-          "title": "와들와들 ai의 무서운 발전 속도",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481707",
+          "title": "게임 개발진들이 바라본 GTA6 평가",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481860",
           "source": "dcinside"
         },
         {
-          "title": "AI 씨바 인벤 단체린치 사건 사과 미리 감사",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771530",
-          "source": "inven"
+          "title": "GTA6)스코프로 보면 죽이러 오는 원펀맨 죽여봄",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533689",
+          "source": "ruliweb"
         }
       ]
     },
     {
-      "rank": 2,
+      "rank": 3,
       "keyword": "김준표",
       "category": "연예",
-      "score": 70,
-      "mentions": 10,
+      "score": 71,
+      "mentions": 9,
       "sources": [
         "dcinside",
         "inven"
       ],
-      "delta": -1,
-      "streak": 6,
+      "delta": 0,
+      "streak": 7,
       "spark": [
         100,
         100,
         100,
         100,
         100,
-        70
+        70,
+        71
       ],
       "sensitive": false,
       "samples": [
@@ -137,313 +167,376 @@
       ]
     },
     {
-      "rank": 3,
-      "keyword": "GTA6",
-      "category": "게임",
-      "score": 49,
-      "mentions": 3,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": 0,
-      "streak": 11,
-      "spark": [
-        44,
-        49,
-        40,
-        55,
-        56,
-        47,
-        42,
-        27,
-        44,
-        35,
-        49
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "GTA6에 개빡친 중국인",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050285",
-          "source": "bobaedream"
-        },
-        {
-          "title": "게임 개발진들이 바라본 GTA6 평가",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481860",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
       "rank": 4,
-      "keyword": "메이플스토리",
+      "keyword": "블루아카이브",
       "category": "게임",
-      "score": 24,
-      "mentions": 2,
+      "score": 63,
+      "mentions": 10,
       "sources": [
-        "dcinside",
-        "inven"
+        "inven",
+        "ruliweb"
       ],
-      "delta": 20,
-      "streak": 9,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        3,
+        18,
+        0,
+        0,
+        7,
         5,
-        6,
-        16,
-        8,
-        9,
-        8,
-        4,
-        24
+        0,
+        63
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "근데 요새 애들은 진짜 군적금 메이플 박으면 되는거아님?",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481833",
-          "source": "dcinside"
+          "title": "블루아카) 마나미는 자기 자식에게 지극정성일 듯?",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533630",
+          "source": "ruliweb"
         },
         {
-          "title": "메이플스토리 현대카드 Plus",
-          "url": "https://www.inven.co.kr/board/maple/5974/7461636",
+          "title": "블아 이벤트 히든",
+          "url": "https://www.inven.co.kr/board/maple/5974/7464009",
           "source": "inven"
+        },
+        {
+          "title": "블루아카) 마나미가 엄마가 되면",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533681",
+          "source": "ruliweb"
         }
       ]
     },
     {
       "rank": 5,
-      "keyword": "신창섭",
-      "category": "게임",
-      "score": 24,
-      "mentions": 3,
+      "keyword": "집값",
+      "category": "돈",
+      "score": 56,
+      "mentions": 2,
       "sources": [
-        "inven"
+        "clien",
+        "dcinside"
       ],
       "delta": null,
       "streak": 1,
       "spark": [
-        24
+        56
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "충성을 맹세 합니다 창섭이형",
-          "url": "https://www.inven.co.kr/board/maple/5974/7461138",
-          "source": "inven"
+          "title": "집값이 너무 상승합니다 어떻게 해야 할까요?",
+          "url": "https://www.clien.net/service/board/park/19299105",
+          "source": "clien"
         },
         {
-          "title": "창섭이형 솔직히 콜라보 기간제 템은 좀 없애줘 기원 7일차",
-          "url": "https://www.inven.co.kr/board/maple/5974/7461854",
-          "source": "inven"
-        },
-        {
-          "title": "신창섭 감사합니다! 감사합니다! 감사합니다!",
-          "url": "https://www.inven.co.kr/board/maple/5974/7462478",
-          "source": "inven"
+          "title": "집값 올랐다고 좋아할게 아녔어”...종부세 대상·세액 4년 만에 최대",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481852",
+          "source": "dcinside"
         }
       ]
     },
     {
       "rank": 6,
-      "keyword": "삼성",
-      "category": "테크",
-      "score": 21,
-      "mentions": 3,
-      "sources": [
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        21
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "애플 생태계 삼성 생태계 차이..",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481769",
-          "source": "dcinside"
-        },
-        {
-          "title": "삼성 카피캣 ㅋㅋㅋㅋㅋ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481725",
-          "source": "dcinside"
-        },
-        {
-          "title": "싱글벙글 삼성은 성균관대에 정말 도움을 주고 있을까?",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481881",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 7,
-      "keyword": "윤석열",
+      "keyword": "민주당",
       "category": "시사",
-      "score": 20,
+      "score": 49,
       "mentions": 2,
       "sources": [
+        "clien",
         "dcinside"
       ],
       "delta": null,
       "streak": 1,
       "spark": [
-        20
+        49
       ],
       "sensitive": true,
       "samples": []
     },
     {
-      "rank": 8,
-      "keyword": "중국",
-      "category": "시사",
-      "score": 15,
-      "mentions": 3,
+      "rank": 7,
+      "keyword": "삼성전자",
+      "category": "테크",
+      "score": 45,
+      "mentions": 2,
       "sources": [
-        "bobaedream",
-        "dcinside"
+        "dcinside",
+        "ruliweb"
       ],
-      "delta": 18,
-      "streak": 5,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        38,
-        42,
-        25,
-        28,
-        28,
-        0,
-        10,
-        6,
-        5,
-        4,
-        15
+        45
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "15억 못내는 중국 불법 어선...배 포기 속출",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050286",
+          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
+          "source": "ruliweb"
+        },
+        {
+          "title": "전남광주 삼성전자 근황",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481800",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "keyword": "주식",
+      "category": "돈",
+      "score": 43,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        31,
+        17,
+        0,
+        0,
+        0,
+        0,
+        43
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "2026년 주식 못 산사람 시점.. gif",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050432",
           "source": "bobaedream"
         },
         {
-          "title": "한국인 1만명 '유전체 지도' 공개...부계는 비슷·모계는 다양, 중국·일본과도 달라",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481879",
+          "title": "“주식으로 생활비 버는 시대 열자”",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481782",
           "source": "dcinside"
         }
       ]
     },
     {
       "rank": 9,
-      "keyword": "제우스",
-      "category": "게임",
-      "score": 14,
+      "keyword": "한덕수",
+      "category": "시사",
+      "score": 42,
       "mentions": 2,
       "sources": [
-        "inven"
+        "clien",
+        "dcinside"
       ],
-      "delta": 8,
-      "streak": 10,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        39,
-        30,
-        39,
-        32,
-        18,
-        8,
-        11,
-        10,
-        7,
-        14
+        42
       ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "제우스도 알았던거지..",
-          "url": "https://www.inven.co.kr/board/lol/4625/4291811",
-          "source": "inven"
-        },
-        {
-          "title": "제우스 리턴 과정보면서 든 생각",
-          "url": "https://www.inven.co.kr/board/lol/4625/4291859",
-          "source": "inven"
-        }
-      ]
+      "sensitive": true,
+      "samples": []
     },
     {
       "rank": 10,
-      "keyword": "KBO",
-      "category": "야구",
-      "score": 11,
+      "keyword": "마운자로",
+      "category": "시사",
+      "score": 39,
       "mentions": 2,
       "sources": [
-        "dcinside"
+        "bobaedream",
+        "ruliweb"
       ],
-      "delta": 9,
-      "streak": 4,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        11,
+        24,
+        27,
+        20,
+        26,
+        27,
         14,
         6,
-        11
+        0,
+        7,
+        0,
+        0,
+        39
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "KBO 구단별 MVP 배출 현황 ㄷㄷㄷㄷㄷㄷ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481813",
-          "source": "dcinside"
+          "title": "마운자로 맞는 거 욕하는 애들 중 가장 이상한 애들",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533746",
+          "source": "ruliweb"
         },
         {
-          "title": "“2026 KBO 골든글러브 외야수 부문, 구자욱 축하드립니다.”",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481807",
-          "source": "dcinside"
+          "title": "마운자로 때문에 헬스장이 망한다고?",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050388",
+          "source": "bobaedream"
         }
       ]
     },
     {
       "rank": 11,
-      "keyword": "일본",
-      "category": "시사",
-      "score": 7,
-      "mentions": 3,
+      "keyword": "머스크",
+      "category": "테크",
+      "score": 36,
+      "mentions": 2,
       "sources": [
-        "dcinside"
+        "dcinside",
+        "ruliweb"
       ],
-      "delta": 19,
-      "streak": 2,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        25,
-        28,
-        22,
-        28,
-        28,
-        24,
-        5,
-        6,
-        0,
-        3,
-        7
+        36
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "일본인이 말한 한국의 문제점",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481792",
-          "source": "dcinside"
+          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
+          "source": "ruliweb"
         },
         {
-          "title": "일본에서 화제) 여자에게 결혼이 행복과 무관한 이유.manhwa...",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481697",
-          "source": "dcinside"
-        },
-        {
-          "title": "한국인 1만명 '유전체 지도' 공개...부계는 비슷·모계는 다양, 중국·일본과도 달라",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481879",
+          "title": "미국어린이에게 주식 나눠주는 참아빠 일론머스크 ㄷ",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481913",
           "source": "dcinside"
         }
       ]
+    },
+    {
+      "rank": 12,
+      "keyword": "AI",
+      "category": "테크",
+      "score": 33,
+      "mentions": 4,
+      "sources": [
+        "dcinside",
+        "inven"
+      ],
+      "delta": -8,
+      "streak": 4,
+      "spark": [
+        69,
+        76,
+        60,
+        75,
+        75,
+        94,
+        20,
+        0,
+        42,
+        39,
+        100,
+        33
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "AI 씨바 인벤 단체린치 사건 사과 미리 감사",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771530",
+          "source": "inven"
+        },
+        {
+          "title": "아모데이) AI에 통제권 안넘긴다 X 초장문 글",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481901",
+          "source": "dcinside"
+        },
+        {
+          "title": "AI?] 간호사 시험 만점자 27배 증가",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771553",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "keyword": "플레이스테이션",
+      "category": "게임",
+      "score": 32,
+      "mentions": 2,
+      "sources": [
+        "clien",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        32
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "ps5 쓰시는 분들 패드 몇개 있으신가요?",
+          "url": "https://www.clien.net/service/board/park/19299140",
+          "source": "clien"
+        },
+        {
+          "title": "애초에 그타6 보고 플스 산게 아님",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481796",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "keyword": "부동산",
+      "category": "돈",
+      "score": 31,
+      "mentions": 2,
+      "sources": [
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        33,
+        28,
+        28,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        31
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "부동산 떨어질 조짐이 보이니 불만의 목소리가 더 커지네요",
+          "url": "https://www.clien.net/service/board/park/19299125",
+          "source": "clien"
+        },
+        {
+          "title": "부동산이 하락하면 자화자찬 할까요",
+          "url": "https://www.clien.net/service/board/park/19299108",
+          "source": "clien"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "keyword": "윤석열",
+      "category": "시사",
+      "score": 21,
+      "mentions": 2,
+      "sources": [
+        "dcinside"
+      ],
+      "delta": -8,
+      "streak": 2,
+      "spark": [
+        20,
+        21
+      ],
+      "sensitive": true,
+      "samples": []
     }
   ]
 }
