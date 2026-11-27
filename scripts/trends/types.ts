@@ -1,3 +1,5 @@
+import type { FmSearchItem } from "../../lib/trends";
+
 /**
  * 커뮤니티 키워드 순위 수집에서 쓰는 내부 타입.
  * 사이트에 나가는 형식은 lib/trends.ts 의 TrendsFile 이고, 여기 것은 집계 도중에만 쓴다.
@@ -33,6 +35,18 @@ export interface SourceAdapter {
   parse(html: string, pageUrl: string): RawPost[];
   /** 기본 Accept 말고 따로 필요한 요청 헤더 */
   headers?: Record<string, string>;
+  /**
+   * 첫 쪽 HTML 에 함께 실린 검색어 순위를 뽑는다(에펨코리아만). 새 주소를 요청하지 않는다.
+   * 못 찾으면 빈 배열(글 목록 수집은 그대로 성공).
+   */
+  parseSearchRanking?(html: string): FmSearchItem[];
+}
+
+/** 소스 첫 쪽에서 함께 읽은 검색어 순위 */
+export interface SearchRanking {
+  /** 그 쪽을 받은 시각 ISO */
+  collectedAt: string;
+  items: FmSearchItem[];
 }
 
 export interface SourceResult {
@@ -42,4 +56,6 @@ export interface SourceResult {
   error?: string;
   /** 직접 읽지 못해 보조 수집본으로 메웠을 때의 설명 */
   note?: string;
+  /** parseSearchRanking 이 있는 소스만 */
+  searchRanking?: SearchRanking;
 }

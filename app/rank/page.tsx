@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { activeTrendCategories, loadTrends } from "@/lib/trends";
 import { RankChart } from "@/components/RankChart";
 import { formatTallyTime } from "@/components/RankBoard";
+import { RankDelta } from "@/components/RankDelta";
 import { AdSlot } from "@/components/AdSlot";
 import { pageMetadata } from "@/lib/seo";
 
@@ -19,6 +20,9 @@ export default function RankPage() {
   const categories = activeTrendCategories(trends);
   const okSources = trends.sources.filter((source) => source.ok);
   const posts = okSources.reduce((sum, source) => sum + source.posts, 0);
+  // 순위의 1순위 근거라 작게 같이 보여 준다. 정치·사건사고·욕설 검색어는 싣지 않는다
+  const search = trends.fmkoreaSearch;
+  const searchItems = search?.items.filter((item) => !item.sensitive) ?? [];
 
   return (
     <main id="main" className="page">
@@ -27,6 +31,7 @@ export default function RankPage() {
         <h1>지금 뜨는 말</h1>
         <p className="page-deck">
           남자 커뮤니티 {okSources.length}곳의 인기 글 {posts.toLocaleString("ko-KR")}개 제목에서 가장 많이 나온 말입니다.
+          {searchItems.length > 0 ? " 에펨코리아 검색어 순위에 오른 말은 크게 더 쳐 줍니다. " : " "}
           줄을 누르면 그 말이 나온 대표 글이 열립니다.
         </p>
         <p className="page-stamp">
@@ -34,6 +39,23 @@ export default function RankPage() {
           {formatTallyTime(trends.generatedAt)} 집계 · 2시간마다 갱신
         </p>
       </header>
+
+      {search && searchItems.length > 0 && (
+        <section className="search-rank" aria-labelledby="search-rank-title">
+          <p className="rank-note" id="search-rank-title">
+            에펨코리아 검색어 순위, 최근 24시간 · {formatTallyTime(search.collectedAt)} 기준
+          </p>
+          <ol className="method-sources">
+            {searchItems.map((item) => (
+              <li key={`${item.rank}-${item.keyword}`}>
+                <span>{item.rank}</span>
+                {item.keyword}
+                <RankDelta delta={item.change === "new" ? null : item.change} />
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       {trends.keywords.length === 0 ? (
         <p className="rank-empty">첫 집계를 기다리는 중입니다.</p>
@@ -55,6 +77,11 @@ export default function RankPage() {
           <li>
             반응이 큰 글에 나올수록, 여러 커뮤니티에 함께 나올수록 점수가 높습니다. 1위 점수를 100으로 놓고 나머지를 맞춥니다.
           </li>
+          <li>
+            에펨코리아 검색어 순위(최근 24시간)에 오른 말은 점수를 가장 크게 더합니다. 검색어 순위가 높을수록, 오르거나
+            새로 들어왔을수록 더 받고, 아직 인기 글 제목에 없는 검색어도 순위에 올립니다.
+          </li>
+          <li>순위는 집계 때마다 지금 인기 글 목록과 검색어 순위로 새로 만듭니다. 지난 집계의 화제는 점수에 넘기지 않습니다.</li>
           <li>정치·사건사고 키워드는 기본 순위에서 빼고 ‘시사’ 분류에 이름과 숫자만 둡니다.</li>
         </ol>
         {trends.sources.length > 0 && (

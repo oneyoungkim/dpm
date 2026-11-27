@@ -16,26 +16,37 @@
  * 순서: 소스별 목록 수집(robots.txt 확인, 곳당 최대 2쪽, 요청 사이 1.5초 이상)
  *   → 글 정리·반응 무게 → (키가 있으면) 모델 태그 → 키 없이 뽑기로 나머지 채우기
  *   → 같은 대상의 별명 합치기(merge.ts)
- *   → 점수·분류·민감·샘플 → 지난 기록과 비교 → 안전장치 통과 시 저장
+ *   → 점수·분류·민감·샘플(에펨코리아 검색어 순위 가산점 포함) → 지난 기록과 비교 → 안전장치 통과 시 저장
+ *
+ * 에펨코리아 검색어 순위: /best 첫 쪽에 함께 실린 위젯을 같이 읽는다(요청을 늘리지 않는다).
+ *   data/trends.json 의 fmkoreaSearch 에 남기고, 키워드 점수에 가장 크게 반영한다(keywords.ts 의 SEARCH_*).
+ *   SEARCH_MAX_AGE_MIN 보다 오래된 순위는 쓰지 않는다(fmkoreaSearch: null).
+ *
+ * 신선도: 키워드는 집계마다 이번에 읽은 인기글 1~2쪽과 검색어 순위로만 새로 만든다. 지난 순위는 delta·streak·spark
+ *   계산에만 쓰고 점수에 넘기지 않으므로, 이번 수집에서 안 잡힌 말은 순위에 남지 않는다.
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import type { TrendKeyword, TrendsFile, TrendSource } from "../../lib/trends";
-import { applyFeed, writeFeed } from "./feed";
+import type { FmSearchEntry, FmSearchRanking, TrendKeyword, TrendsFile, TrendSource } from "../../lib/trends";
+import { applyFeed, FEED_MAX_AGE_MIN, writeFeed } from "./feed";
 import { fetchListPage } from "./fetch";
 import { appendRun, loadHistory, trendOf } from "./history";
-import { preparePosts, scoreKeywords, tagHeuristic } from "./keywords";
+import { preparePosts, scoreKeywords, searchWordFlags, tagHeuristic } from "./keywords";
 import { tagWithModel } from "./llm";
 import { mergeSameEntities } from "./merge";
 import { SOURCES } from "./sources";
-import type { RawPost, SourceResult } from "./types";
+import type { RawPost, SearchRanking, SourceResult } from "./types";
 
 const DATA_DIR = join(process.cwd(), "data");
 const TRENDS_PATH = join(DATA_DIR, "trends.json");
 const HISTORY_PATH = join(DATA_DIR, "trends-history.json");
 const MAX_KEYWORDS = 50;
 const MIN_KEYWORDS = 10;
+/** 이보다 오래된 검색어 순위는 반영하지 않는다(보조 수집본과 같은 기준: 2시간 주기에서 한 번 건너뛴 것까지) */
+const SEARCH_MAX_AGE_MIN = FEED_MAX_AGE_MIN;
+/** 검색어 순위를 읽는 소스 */
+const SEARCH_SOURCE = "fmkorea";
 
 const args = process.argv.slice(2);
 const DRY = args.includes("--dry");
@@ -69,9 +80,20 @@ async function collect(): Promise<SourceResult[]> {
     ACTIVE.map(async (adapter) => {
       const posts: RawPost[] = [];
       let error: string | undefined;
-      for (const page of adapter.pages.slice(0, 2)) {
+      let searchRanking: SearchRanking | undefined;
+      for (const [pageIndex, page] of adapter.pages.slice(0, 2).entries()) {
         try {
           const html = await fetchListPage(page, adapter.headers);
+          // 검색어 순위는 첫 쪽에만 본다. 못 읽어도 글 목록 수집은 그대로 간다
+          if (pageIndex === 0 && adapter.parseSearchRanking) {
+            try {
+              const items = adapter.parseSearchRanking(html);
+              if (items.length) searchRanking = { collectedAt: new Date().toISOString(), items };
+              else console.warn(`   ! ${adapter.name} 검색어 순위를 못 찾음(구조가 바뀌었을 수 있음)`);
+            } catch (err) {
+              console.warn(`   ! ${adapter.name} 검색어 순위 읽기 실패: ${err instanceof Error ? err.message : String(err)}`);
+            }
+          }
           const parsed = adapter.parse(html, page);
           if (parsed.length === 0) throw new Error("목록에서 글을 하나도 못 읽음(구조가 바뀌었을 수 있음)");
           posts.push(...parsed);
@@ -81,17 +103,29 @@ async function collect(): Promise<SourceResult[]> {
           if (posts.length === 0) break;
         }
       }
-      results.push({ adapter, posts, ok: posts.length > 0, error: posts.length > 0 ? undefined : error });
+      const ok = posts.length > 0;
+      results.push({ adapter, posts, ok, error: ok ? undefined : error, ...(ok && searchRanking ? { searchRanking } : {}) });
     }),
   );
   return ACTIVE.map((s) => results.find((r) => r.adapter.id === s.id)!);
 }
 
 function loadRaw(path: string): SourceResult[] {
-  const saved = JSON.parse(readFileSync(path, "utf-8")) as Array<{ id: string; ok: boolean; posts: RawPost[] }>;
+  const saved = JSON.parse(readFileSync(path, "utf-8")) as Array<{
+    id: string;
+    ok: boolean;
+    posts: RawPost[];
+    searchRanking?: SearchRanking;
+  }>;
   return SOURCES.map((adapter) => {
     const hit = saved.find((s) => s.id === adapter.id);
-    return { adapter, posts: hit?.posts ?? [], ok: hit?.ok ?? false, error: hit ? undefined : "저장본에 없음" };
+    return {
+      adapter,
+      posts: hit?.posts ?? [],
+      ok: hit?.ok ?? false,
+      error: hit ? undefined : "저장본에 없음",
+      ...(hit?.searchRanking ? { searchRanking: hit.searchRanking } : {}),
+    };
   });
 }
 
@@ -123,7 +157,14 @@ async function main() {
     return;
   }
   if (RAW_OUT) {
-    writeFileSync(RAW_OUT, JSON.stringify(results.map((r) => ({ id: r.adapter.id, ok: r.ok, posts: r.posts })), null, 2));
+    writeFileSync(
+      RAW_OUT,
+      JSON.stringify(
+        results.map((r) => ({ id: r.adapter.id, ok: r.ok, posts: r.posts, ...(r.searchRanking ? { searchRanking: r.searchRanking } : {}) })),
+        null,
+        2,
+      ),
+    );
     console.log(`  · 받은 글 목록 저장: ${RAW_OUT}`);
   }
 
@@ -141,7 +182,19 @@ async function main() {
   if (merged.error) console.warn(`   ! 모델로 합치기 실패(규칙으로 합친 것만 씀): ${merged.error}`);
   else if (merged.merges.length === 0) console.log(`  · 합칠 별명 없음${merged.modelUsed ? "" : "(규칙만 봄)"}`);
 
-  const scored = scoreKeywords(posts, MAX_KEYWORDS);
+  // 에펨코리아 검색어 순위(직접 읽었거나 보조 수집본에서 온 것). 저장본으로 다시 돌릴 때(--raw-in)는 시각을 보지 않는다
+  const searchSource = results.find((r) => r.adapter.id === SEARCH_SOURCE);
+  let search: SearchRanking | null = searchSource?.ok ? (searchSource.searchRanking ?? null) : null;
+  if (search && !RAW_IN) {
+    const ageMin = (Date.now() - Date.parse(search.collectedAt)) / 60_000;
+    if (!Number.isFinite(ageMin) || ageMin > SEARCH_MAX_AGE_MIN || ageMin < -10) {
+      console.warn(`   ! 에펨코리아 검색어 순위가 ${Math.round(ageMin)}분 전 것이라 쓰지 않음(기준 ${SEARCH_MAX_AGE_MIN}분)`);
+      search = null;
+    }
+  }
+  console.log(search ? `  · 에펨코리아 검색어 순위 ${search.items.length}개 반영` : "  · 에펨코리아 검색어 순위 없음(글 제목만으로 집계)");
+
+  const scored = scoreKeywords(posts, MAX_KEYWORDS, search?.items ?? []);
   const top = scored[0]?.raw ?? 1;
   const history = loadHistory(HISTORY_PATH);
 
@@ -161,8 +214,25 @@ async function main() {
       ...trendOf(k.keyword, rank, score, history, mainRank),
       sensitive: k.sensitive,
       samples: k.sensitive ? [] : k.samples,
+      ...(k.search.length ? { fmSearch: k.search[0] } : {}),
     };
   });
+
+  const fmkoreaSearch: FmSearchRanking | null = search
+    ? {
+        collectedAt: search.collectedAt,
+        url: searchSource?.adapter.listUrl ?? "",
+        items: search.items.map((item): FmSearchEntry => {
+          const owner = scored.find((k) => k.search.some((h) => h.rank === item.rank && h.keyword === item.keyword));
+          const flags = searchWordFlags(item.keyword);
+          return {
+            ...item,
+            sensitive: flags.sensitive || flags.blocked || Boolean(owner?.sensitive),
+            matched: owner?.keyword ?? null,
+          };
+        }),
+      }
+    : null;
 
   const sources: TrendSource[] = results.map((r) => ({
     id: r.adapter.id,
@@ -171,19 +241,31 @@ async function main() {
     posts: posts.filter((p) => p.source === r.adapter.id).length,
     ok: r.ok,
   }));
-  const file: TrendsFile = { generatedAt: new Date().toISOString(), sources, keywords };
+  const file: TrendsFile = { generatedAt: new Date().toISOString(), sources, keywords, fmkoreaSearch };
 
-  // 출력: 민감 빼고 상위 20 + 민감 목록
+  // 출력: 검색어 순위 → 민감 빼고 상위 20 + 민감 목록
+  const changeLabel = (c: number | "new") => (c === "new" ? "new" : c > 0 ? `+${c}` : c < 0 ? `${c}` : "");
+  if (fmkoreaSearch) {
+    console.log(`\n  에펨코리아 검색어 순위 (최근 24시간, ${fmkoreaSearch.collectedAt} 수집)`);
+    for (const item of fmkoreaSearch.items) {
+      const where = item.matched ? `→ ${item.matched}` : "→ 반영 안 됨(불용어·조각·욕설이거나 순위 밖)";
+      console.log(
+        `  ${String(item.rank).padStart(2)}. ${item.keyword.padEnd(10)} ${changeLabel(item.change).padEnd(4)} ${where}${item.sensitive ? " (민감)" : ""}`,
+      );
+    }
+  }
   console.log("\n  순위 (민감 제외 상위 20)");
   for (const k of keywords.filter((k) => !k.sensitive).slice(0, 20)) {
     const d = k.delta === null ? "NEW" : k.delta > 0 ? `▲${k.delta}` : k.delta < 0 ? `▼${-k.delta}` : "-";
+    const fm = k.fmSearch ? `  [에펨 검색 ${k.fmSearch.rank}위${changeLabel(k.fmSearch.change) ? `(${changeLabel(k.fmSearch.change)})` : ""}]` : "";
     console.log(
-      `  ${String(k.rank).padStart(2)}. ${k.keyword.padEnd(14)} ${k.category.padEnd(4)} 점수 ${String(k.score).padStart(3)}  글 ${k.mentions}  [${k.sources.join(",")}]  ${d}`,
+      `  ${String(k.rank).padStart(2)}. ${k.keyword.padEnd(14)} ${k.category.padEnd(4)} 점수 ${String(k.score).padStart(3)}  글 ${k.mentions}  [${k.sources.join(",")}]  ${d}${fm}`,
     );
   }
   if (EXPLAIN) {
     for (const k of scored) {
-      console.log(`\n  ■ ${k.keyword} (${k.category}${k.sensitive ? ", 민감" : ""}) raw ${k.raw.toFixed(2)} [${k.sources.join(",")}]`);
+      const fm = k.search.length ? ` 검색어 ${k.search.map((h) => `${h.rank}위 ${h.keyword}`).join(", ")}` : "";
+      console.log(`\n  ■ ${k.keyword} (${k.category}${k.sensitive ? ", 민감" : ""}) raw ${k.raw.toFixed(2)} [${k.sources.join(",")}]${fm}`);
       for (const p of k.posts) console.log(`     - [${p.source}/${p.board}] ${p.title}`);
     }
   }

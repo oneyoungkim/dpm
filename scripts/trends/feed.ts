@@ -9,6 +9,7 @@
  *
  * 집계는 직접 읽기에 실패한 소스에 한해, 너무 오래되지 않은 수집본의 글을 대신 쓴다.
  * 직접 읽기가 되는 소스는 수집본이 있어도 직접 읽은 것을 쓴다.
+ * 에펨코리아 검색어 순위(첫 쪽에 함께 실린 것)도 같은 수집본에 실어 넘긴다(11-27부터, 없으면 없는 대로).
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -31,9 +32,29 @@ const postSchema = z.object({
   adultBoard: z.boolean().optional(),
 });
 
+const searchRankingSchema = z.object({
+  collectedAt: z.string(),
+  items: z
+    .array(
+      z.object({
+        rank: z.number().int().min(1).max(100),
+        keyword: z.string().trim().min(1).max(30),
+        change: z.union([z.number().int().min(-100).max(100), z.literal("new")]),
+      }),
+    )
+    .max(30),
+});
+
 const feedSchema = z.object({
   generatedAt: z.string(),
-  sources: z.array(z.object({ id: z.string(), ok: z.boolean(), posts: z.array(postSchema).max(500) })),
+  sources: z.array(
+    z.object({
+      id: z.string(),
+      ok: z.boolean(),
+      posts: z.array(postSchema).max(500),
+      searchRanking: searchRankingSchema.optional(),
+    }),
+  ),
 });
 
 export type FeedFile = z.infer<typeof feedSchema>;
@@ -41,7 +62,12 @@ export type FeedFile = z.infer<typeof feedSchema>;
 export function writeFeed(path: string, results: SourceResult[], now = new Date()): FeedFile {
   const file: FeedFile = {
     generatedAt: now.toISOString(),
-    sources: results.map((r) => ({ id: r.adapter.id, ok: r.ok, posts: r.posts })),
+    sources: results.map((r) => ({
+      id: r.adapter.id,
+      ok: r.ok,
+      posts: r.posts,
+      ...(r.searchRanking ? { searchRanking: r.searchRanking } : {}),
+    })),
   };
   writeFileSync(path, `${JSON.stringify(file)}\n`);
   return file;
@@ -86,7 +112,16 @@ export function applyFeed(results: SourceResult[], path: string, now = Date.now(
     r.ok = true;
     r.error = undefined;
     r.note = `보조 수집 ${Math.round(ageMin)}분 전`;
-    lines.push(`${r.adapter.name}: 직접 읽기 실패(${directError ?? "이유 모름"}) → 보조 수집본 ${posts.length}건 사용`);
+    // 검색어 순위는 수집본의 시각 검사를 이미 통과했다. 그 쪽 자체의 시각이 앞날이거나 수집본보다 많이 앞서면 버린다
+    const search = hit.searchRanking;
+    const searchAge = search ? (now - Date.parse(search.collectedAt)) / 60_000 : NaN;
+    if (search && search.items.length && Number.isFinite(searchAge) && searchAge >= -10 && searchAge <= FEED_MAX_AGE_MIN) {
+      r.searchRanking = search;
+    }
+    lines.push(
+      `${r.adapter.name}: 직접 읽기 실패(${directError ?? "이유 모름"}) → 보조 수집본 ${posts.length}건 사용` +
+        (r.searchRanking ? `, 검색어 순위 ${r.searchRanking.items.length}개` : ""),
+    );
   }
   if (lines.length === 0) lines.push("보조 수집본을 쓸 소스 없음");
   return lines;

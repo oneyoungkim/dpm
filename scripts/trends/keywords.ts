@@ -3,7 +3,7 @@
  * 세는 일과 점수는 전부 여기 코드가 한다.
  */
 
-import type { TrendCategory, TrendSample } from "../../lib/trends";
+import type { FmSearchItem, TrendCategory, TrendSample } from "../../lib/trends";
 import {
   BLOCKED_SAMPLE_WORDS,
   BOARD_CATEGORY_HINTS,
@@ -44,6 +44,8 @@ export interface ScoredKeyword {
   sensitive: boolean;
   samples: TrendSample[];
   posts: Post[];
+  /** 이 키워드로 모인 에펨코리아 검색어(순위순). 없으면 빈 배열 */
+  search: FmSearchItem[];
 }
 
 // ---------------------------------------------------------------------------
@@ -298,7 +300,107 @@ export function isFragmentKey(key: string, sourceCount: number): boolean {
   return false;
 }
 
-export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
+// ---------------------------------------------------------------------------
+// 에펨코리아 검색어 순위(11-27부터 키워드 순위의 1순위 근거)
+//
+// 글 제목은 글을 올린 사람의 관심이고, 검색어는 찾아본 사람(에펨 로그인 사용자, 최근 24시간)의 관심이다.
+// 서로 다른 신호라 글 근거 위에 더하고, 지금 막 뜨는 말을 제목보다 먼저 잡기 때문에 가장 크게 친다.
+// ---------------------------------------------------------------------------
+
+/**
+ * 검색어 1위가 받는 가산점 = 이번 집계에서 여러 커뮤니티에 나온 1등 키워드의 글 점수(raw) × 이 값.
+ * 검색어가 없는 키워드는 아무리 커도 그 1등 점수(1.0)까지다. 1.5 로 두면 검색어 5위 안쪽(세기 0.67 이상)에
+ * 오른 말은 글이 한 개만 있어도 검색어 없는 모든 키워드 위로 간다. 그래서 키워드 순위 위쪽은 검색어 순위가 정하고,
+ * 검색어끼리는 글 근거(여러 커뮤니티에 많이 나온 쪽)가 순서를 조금 바꾼다.
+ */
+export const SEARCH_WEIGHT = 1.5;
+/** 검색어 순위가 한 칸 내려갈 때마다 깎는 몫. 1위 1.0 → 5위 0.72 → 10위 0.37 */
+export const SEARCH_RANK_STEP = 0.07;
+/** 순위가 아무리 낮아도 이만큼은 남긴다(위젯이 20줄로 늘어날 때 대비) */
+export const SEARCH_RANK_FLOOR = 0.2;
+/**
+ * 새로 오른 검색어(new). 지금 막 뜨는 말이라 더 준다.
+ * 두 칸 차이(0.14)쯤만 끌어올리게 했다. 더 크면 3위 new 가 1위를 넘어 위젯 순위가 뒤집힌다.
+ */
+export const SEARCH_NEW_FACTOR = 1.15;
+/** 오른 칸마다 ×1.05, 3칸까지(+3 이면 new 와 같다) */
+export const SEARCH_UP_STEP = 0.05;
+export const SEARCH_UP_MAX = 3;
+/** 내린 칸마다 ×0.97, 4칸까지(-4 이하 ×0.88). 순위에 남아 있는 것 자체가 근거라 많이 깎지 않는다 */
+export const SEARCH_DOWN_STEP = 0.03;
+export const SEARCH_DOWN_MAX = 4;
+/**
+ * 제목에 한 번도 안 나온 검색어. 무엇을 두고 찾는지 글로 확인할 수 없고 대표 글도 못 붙여 덜 쳐 준다.
+ * 0.75 면 검색어 3위 안쪽(×1.5×0.75 ≥ 0.97)은 글 근거 1등과 비슷한 자리, 그 아래는 중간쯤에 놓인다
+ * (11-27 실제 집계: 0.6 이면 검색어 3위가 '년생'·'원인' 같은 군말 아래 8위로 밀렸다).
+ */
+export const SEARCH_ONLY_FACTOR = 0.75;
+/**
+ * 검색어가 더 긴 키워드의 앞·뒤 조각이면 그 키워드로 묶는다(준표 → 김준표, gta → GTA6, 뮤지컬 → 뮤지컬배우).
+ * 글자 차이가 이보다 크면 다른 말로 본다.
+ */
+const SEARCH_FAMILY_MAX_EXTRA = 4;
+
+/** 검색어 하나의 세기(순위 × 오름·새로 오름). 1위 변화 없음이 1.0 */
+export function searchStrength(item: Pick<FmSearchItem, "rank" | "change">): number {
+  const base = Math.max(SEARCH_RANK_FLOOR, 1 - SEARCH_RANK_STEP * (item.rank - 1));
+  const { change } = item;
+  const momentum =
+    change === "new"
+      ? SEARCH_NEW_FACTOR
+      : change > 0
+        ? 1 + SEARCH_UP_STEP * Math.min(change, SEARCH_UP_MAX)
+        : change < 0
+          ? 1 - SEARCH_DOWN_STEP * Math.min(-change, SEARCH_DOWN_MAX)
+          : 1;
+  return base * momentum;
+}
+
+/** 검색어의 비교용 키(별칭이면 정식 이름) */
+function searchKeyOf(word: string): string {
+  return normalizeKey(canonicalOf(word) ?? word);
+}
+
+/**
+ * 검색어를 키워드로 쓸 수 있나, 민감한가.
+ * 쓸 수 없는 것: 불용어, 욕설·비하어, 조각(한 글자, 숫자로 시작). 민감: 민감어 사전·부분 문자열.
+ */
+export function searchWordFlags(word: string): { usable: boolean; sensitive: boolean; blocked: boolean } {
+  const key = searchKeyOf(word);
+  const blocked = blockedSample.some((w) => key.includes(w) || normalizeKey(word).includes(w));
+  const usable = Boolean(key) && !blocked && !isStopword(key) && !isStopword(word) && !isFragmentKey(key, 2);
+  const sensitive = isSensitiveKey(key) || titleIsSensitive(word, tokenize(word));
+  return { usable, sensitive, blocked };
+}
+
+/** 검색어 key 가 키워드 groupKey 의 앞·뒤 조각인가(또는 사전 이름인 groupKey 가 검색어의 앞·뒤 조각인가) */
+function searchFamily(key: string, groupKey: string): boolean {
+  const g = groupKey.replace(/ /g, "");
+  if (g === key) return true;
+  if (weakKeys.has(key) || weakKeys.has(g)) return false;
+  const [short, long, shortIsSearch] = key.length < g.length ? [key, g, true] : [g, key, false];
+  if (short.length < 2 || long.length - short.length > SEARCH_FAMILY_MAX_EXTRA) return false;
+  // 검색어가 더 길 때는 키워드가 사전 이름일 때만(이동연 → '이동' 같은 군말에 붙지 않게)
+  if (!shortIsSearch && !KNOWN.has(groupKey)) return false;
+  return long.startsWith(short) || long.endsWith(short);
+}
+
+/** 검색어만 있고 키워드로 잡힌 적 없는 말의 화면 이름: 제목에 나온 모양(대소문자), 없으면 위젯 표기 */
+function searchDisplay(word: string, posts: Post[]): string {
+  const canonical = canonicalOf(word);
+  if (canonical) return canonical;
+  if (/^[a-z0-9]+$/i.test(word)) {
+    const re = new RegExp(word.replace(/[^a-z0-9]/gi, ""), "i");
+    for (const post of posts) {
+      const m = post.title.match(re);
+      if (m) return m[0];
+    }
+    return word.length <= 4 ? word.toUpperCase() : word;
+  }
+  return word;
+}
+
+export function scoreKeywords(posts: Post[], limit = 50, search: FmSearchItem[] = []): ScoredKeyword[] {
   const groups = new Map<string, { posts: Post[]; displays: Map<string, number> }>();
   for (const post of posts) {
     for (const [key, display] of post.keywords) {
@@ -310,16 +412,46 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
     }
   }
 
+  // 검색어를 키워드에 붙인다: 같은 말 → 앞·뒤 조각인 말(글이 많은 쪽) → 없으면 검색어로 새 줄(그 말이 든 제목을 묶어서)
+  const searchHits = new Map<string, FmSearchItem[]>();
+  for (const item of [...search].sort((a, b) => a.rank - b.rank)) {
+    if (!searchWordFlags(item.keyword).usable) continue;
+    const key = searchKeyOf(item.keyword);
+    let target: string | null = null;
+    let best = -1;
+    for (const [groupKey, g] of groups) {
+      if (isStopword(groupKey) || !searchFamily(key, groupKey)) continue;
+      // 글이 많은 쪽, 같으면 같은 말
+      const weight = g.posts.length + (groupKey === key ? 0.5 : 0);
+      if (weight > best) {
+        best = weight;
+        target = groupKey;
+      }
+    }
+    if (!target) {
+      const raw = normalizeKey(item.keyword);
+      const hit = posts.filter((p) => {
+        const flat = normalizeKey(cleanTitle(p.title).text);
+        return flat.includes(key) || flat.includes(raw);
+      });
+      groups.set(key, { posts: hit, displays: new Map([[searchDisplay(item.keyword, hit), 1]]) });
+      target = key;
+    }
+    searchHits.set(target, [...(searchHits.get(target) ?? []), item]);
+  }
+
   const candidates: Array<ScoredKeyword & { rank: number }> = [];
   for (const [key, g] of groups) {
-    if (g.posts.length < 2) continue;
+    const hits = searchHits.get(key) ?? [];
+    const searched = hits.length > 0;
+    if (g.posts.length < 2 && !searched) continue;
     // 욕설·비하어는 키워드로도 쓰지 않는다
     if (blockedSample.some((w) => key.replace(/ /g, "").includes(w))) continue;
     const sourceCount = new Set(g.posts.map((p) => p.source)).size;
     const singleSource = sourceCount === 1;
-    if (isFragmentKey(key, sourceCount)) continue;
-    // 사전에 없는 한글 낱말이 한 커뮤니티에서 두 번 나온 것은 근거가 약하다(군말일 때가 많다)
-    if (singleSource && g.posts.length < 3 && !KNOWN.has(key) && !/^[a-z0-9]+$/.test(key)) continue;
+    if (isFragmentKey(key, searched ? 2 : sourceCount)) continue;
+    // 사전에 없는 한글 낱말이 한 커뮤니티에서 두 번 나온 것은 근거가 약하다(군말일 때가 많다). 검색어에 오른 말은 예외
+    if (!searched && singleSource && g.posts.length < 3 && !KNOWN.has(key) && !/^[a-z0-9]+$/.test(key)) continue;
     const bySource = new Map<string, number[]>();
     for (const post of g.posts) bySource.set(post.source, [...(bySource.get(post.source) ?? []), post.weight]);
     let sum = 0;
@@ -328,9 +460,14 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
       sum += weights.reduce((acc, w, i) => acc + w * SAME_SOURCE_DECAY ** i, 0);
     }
     const sources = [...bySource.keys()].sort();
-    const raw = sum * (1 + CROSS_SOURCE_BONUS * (sources.length - 1)) * (weakKeys.has(key) ? WEAK_FACTOR : 1);
-    const sensitiveShare = g.posts.filter((p) => p.sensitive || p.llmSensitive).length / g.posts.length;
-    const sensitive = isSensitiveKey(key) || sensitiveShare >= 0.5;
+    const raw = sources.length
+      ? sum * (1 + CROSS_SOURCE_BONUS * (sources.length - 1)) * (weakKeys.has(key) ? WEAK_FACTOR : 1)
+      : 0;
+    const sensitiveShare = g.posts.length
+      ? g.posts.filter((p) => p.sensitive || p.llmSensitive).length / g.posts.length
+      : 0;
+    const sensitive =
+      isSensitiveKey(key) || sensitiveShare >= 0.5 || hits.some((h) => searchWordFlags(h.keyword).sensitive);
     candidates.push({
       key,
       keyword: displayFor(key, g.displays),
@@ -342,10 +479,11 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
       sensitive,
       samples: [],
       posts: g.posts,
+      search: hits,
     });
   }
 
-  // 한 커뮤니티 도배가 1위를 못 하게
+  // 한 커뮤니티 도배가 1위를 못 하게(글 근거에만 건다. 검색어 가산점은 그 뒤에 더한다)
   const bestMulti = Math.max(0, ...candidates.filter((c) => c.sources.length > 1).map((c) => c.raw));
   if (bestMulti > 0) {
     for (const c of candidates) {
@@ -354,6 +492,23 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
         c.rank = c.raw * entityBoost(c.key);
       }
     }
+  }
+
+  // 검색어 가산점. 기준은 글 근거 1등(여러 커뮤니티에 나온 것, 없으면 전체 1등)이라 집계마다 크기가 맞춰진다
+  const reference = bestMulti > 0 ? bestMulti : Math.max(0, ...candidates.map((c) => c.raw)) || 1;
+  // 넓은 말(나라 이름)은 검색어로 올라도 글 점수와 같은 비율(WEAK_FACTOR)만 쳐 준다
+  const searchBonus = (c: { key: string; search: FmSearchItem[]; mentions: number }) =>
+    c.search.length === 0
+      ? 0
+      : SEARCH_WEIGHT *
+        reference *
+        Math.max(...c.search.map(searchStrength)) *
+        (c.mentions === 0 ? SEARCH_ONLY_FACTOR : 1) *
+        (weakKeys.has(c.key) ? WEAK_FACTOR : 1);
+  for (const c of candidates) {
+    if (!c.search.length) continue;
+    c.raw += searchBonus(c);
+    c.rank = c.raw * entityBoost(c.key);
   }
 
   // 같은 글 묶음을 나눠 가진 말(중국산·쏘나타·부품·불량)은 대표 하나만
@@ -369,7 +524,17 @@ export function scoreKeywords(posts: Post[], limit = 50): ScoredKeyword[] {
       const union = ids.size + kIds.size - inter;
       return inter / union >= OVERLAP_LIMIT || inter / smaller >= 0.8;
     });
-    if (clash) continue;
+    if (clash) {
+      // 같은 글 묶음이면 같은 이야기다. 빠지는 쪽이 받은 검색어는 남는 쪽으로 옮긴다(더 센 검색어면 가산점도 그만큼 올린다)
+      if (c.search.length) {
+        const before = searchBonus(clash);
+        clash.search = [...clash.search, ...c.search].sort((a, b) => a.rank - b.rank);
+        clash.raw += searchBonus(clash) - before;
+        clash.rank = clash.raw * entityBoost(clash.key);
+        if (c.search.some((h) => searchWordFlags(h.keyword).sensitive)) clash.sensitive = true;
+      }
+      continue;
+    }
     kept.push(c);
     if (kept.length >= limit) break;
   }

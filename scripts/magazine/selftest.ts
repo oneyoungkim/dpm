@@ -2,9 +2,10 @@ import { spawnSync } from "node:child_process";
 import { copyFileSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import type { TrendKeyword, TrendsFile } from "../../lib/trends";
 import type { SportEvent } from "../../lib/types";
 import { checkFiles, type FileReport } from "./check";
-import { planMainEvent, type Slot } from "./pick";
+import { fromTrends, planMainEvent, TREND_MAX_AGE_H, type Slot } from "./pick";
 
 /**
  * check.ts 자기 시험.
@@ -13,6 +14,7 @@ import { planMainEvent, type Slot } from "./pick";
  * fixtures/ 의 시험 글마다 "반드시 나와야 하는 오류·경고"와 "나오면 안 되는 오류"를 적어 두고 맞춰 본다.
  * 최근 글 비교는 fixtures/recent/ 를 쓴다(content/articles 는 건드리지 않는다).
  * 메인 이벤트 고르기(pick.ts 의 planMainEvent)는 만든 일정·글로 맞춰 본다.
+ * 키워드 글감(pick.ts 의 fromTrends)은 만든 키워드 순위로 에펨코리아 검색어 우선·오래된 집계 빼기를 본다.
  * 하나라도 어긋나면 종료 코드 1.
  */
 
@@ -213,10 +215,101 @@ async function main() {
 
   const mainCount = mainEventCases();
   failed += mainCount.failed;
+  const trendCount = trendPickCases();
+  failed += trendCount.failed;
 
-  const total = Object.keys(CASES).length + exitCases.length + previewCases.length + mainCount.total;
+  const total = Object.keys(CASES).length + exitCases.length + previewCases.length + mainCount.total + trendCount.total;
   console.log(failed ? `\n자기 시험 실패 ${failed}건` : `\n자기 시험 통과 (${total}건)`);
   process.exit(failed ? 1 : 0);
+}
+
+// ─── 키워드 글감(에펨코리아 검색어 우선) ──────────────────
+
+function kw(keyword: string, rank: number, extra: Partial<TrendKeyword> = {}): TrendKeyword {
+  return {
+    rank,
+    keyword,
+    category: "게임",
+    score: 50,
+    mentions: 4,
+    sources: ["dcinside", "ruliweb"],
+    delta: 0,
+    streak: 1,
+    sensitive: false,
+    samples: [],
+    spark: [50],
+    ...extra,
+  };
+}
+
+function trendFile(ageH: number, searchAgeH: number | null): TrendsFile {
+  const at = (h: number) => new Date(NOW.getTime() - h * 3_600_000).toISOString();
+  return {
+    generatedAt: at(ageH),
+    sources: [],
+    keywords: [
+      kw("GTA6", 1, { score: 100, sources: ["dcinside", "fmkorea", "ruliweb"], mentions: 9 }),
+      kw("김준표", 2, { category: "연예", score: 70, sources: ["dcinside"], mentions: 3, fmSearch: { rank: 1, keyword: "준표", change: 0 } }),
+      kw("투컷", 3, { category: "기타", score: 30, sources: [], mentions: 0, fmSearch: { rank: 8, keyword: "투컷", change: 1 } }),
+      kw("윤석열", 4, { category: "시사", sensitive: true, fmSearch: { rank: 2, keyword: "윤석열", change: "new" } }),
+      kw("맨유", 5, { category: "축구", score: 40, sources: ["fmkorea"], mentions: 2 }),
+    ],
+    fmkoreaSearch:
+      searchAgeH === null
+        ? null
+        : {
+            collectedAt: at(searchAgeH),
+            url: "https://www.fmkorea.com/best",
+            items: [
+              { rank: 1, keyword: "준표", change: 0, sensitive: false, matched: "김준표" },
+              { rank: 2, keyword: "윤석열", change: "new", sensitive: true, matched: "윤석열" },
+              { rank: 8, keyword: "투컷", change: 1, sensitive: false, matched: "투컷" },
+            ],
+          },
+  };
+}
+
+function trendPickCases(): { total: number; failed: number } {
+  let failed = 0;
+  let total = 0;
+  const run = (name: string, file: TrendsFile, test: (ids: string[], reasons: Map<string, string>, skipped: string[]) => string[]) => {
+    total++;
+    const skipped: string[] = [];
+    const list = fromTrends(file, skipped, NOW).sort((a, b) => b.score - a.score);
+    const ids = list.map((c) => c.keywords[0]);
+    const problems = test(ids, new Map(list.map((c) => [c.keywords[0], c.reason])), skipped);
+    if (problems.length) {
+      failed++;
+      console.log(`어긋남 키워드 글감: ${name}\n  ${problems.join("\n  ")}`);
+    } else {
+      console.log(`맞음   키워드 글감: ${name}  (${ids.join(" > ") || skipped[0]})`);
+    }
+  };
+
+  run("에펨 검색어에 오른 키워드가 먼저(한 곳·글 0 이어도)", trendFile(1, 1), (ids, reasons) => {
+    const p: string[] = [];
+    if (ids.join(",") !== "김준표,투컷,GTA6") p.push(`순서 ${ids.join(",")} (기대 김준표,투컷,GTA6)`);
+    if (!reasons.get("김준표")?.startsWith('에펨 검색어 1위(검색어 "준표")')) p.push(`김준표 이유: ${reasons.get("김준표")}`);
+    if (!reasons.get("투컷")?.startsWith("에펨 검색어 8위(+1)")) p.push(`투컷 이유: ${reasons.get("투컷")}`);
+    if (reasons.get("GTA6")?.includes("에펨 검색어")) p.push("검색어에 없는 GTA6 에 검색어 근거가 붙음");
+    return p;
+  });
+  run("민감 키워드는 검색어에 올라도 빼고, 한 곳뿐인 검색어 없는 말도 뺌", trendFile(1, 1), (ids) =>
+    ids.includes("윤석열") || ids.includes("맨유") ? [`빠져야 할 것이 들어옴: ${ids.join(",")}`] : [],
+  );
+  run(`집계가 ${TREND_MAX_AGE_H}시간보다 오래되면 키워드 글감 없음`, trendFile(TREND_MAX_AGE_H + 1, 1), (ids, _r, skipped) => {
+    const p: string[] = [];
+    if (ids.length) p.push(`후보가 나옴: ${ids.join(",")}`);
+    if (!skipped.some((line) => line.includes("시간 전") && line.includes("쓰지 않음"))) p.push("뺀 이유가 없음");
+    return p;
+  });
+  run("검색어 순위만 오래됐으면 검색어 가산점 없이 보통 규칙", trendFile(1, TREND_MAX_AGE_H + 2), (ids) =>
+    ids.join(",") === "GTA6" ? [] : [`순서 ${ids.join(",")} (기대 GTA6)`],
+  );
+  run("검색어 순위가 없는 예전 파일도 그대로", { ...trendFile(1, null), fmkoreaSearch: undefined }, (ids) =>
+    ids.join(",") === "GTA6" ? [] : [`순서 ${ids.join(",")} (기대 GTA6)`],
+  );
+  return { total, failed };
 }
 
 // ─── 메인 이벤트 고르기 ─────────────────────────────────

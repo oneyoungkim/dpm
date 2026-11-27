@@ -3,16 +3,28 @@
  *
  *   npm run trends:selftest
  *
- * 보는 것: 별명 합치기(규칙, 모델 응답 걸러 내기), 조각 키워드 걸러 내기, 보조 수집본 메우기.
+ * 보는 것: 별명 합치기(규칙, 모델 응답 걸러 내기), 조각 키워드 걸러 내기, 보조 수집본 메우기,
+ *         에펨코리아 검색어 순위 읽기(fixtures/fmkorea-best.html)와 점수 반영.
  */
 
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { applyFeed } from "./feed";
-import { isFragmentKey, preparePosts, scoreKeywords, tagHeuristic, type Post } from "./keywords";
+import type { FmSearchItem } from "../../lib/trends";
+import { applyFeed, writeFeed } from "./feed";
+import {
+  isFragmentKey,
+  preparePosts,
+  scoreKeywords,
+  searchStrength,
+  SEARCH_ONLY_FACTOR,
+  SEARCH_WEIGHT,
+  tagHeuristic,
+  type Post,
+} from "./keywords";
 import { acceptGroupsOf, mergeSameEntities, nicknameMergesOf } from "./merge";
 import { SOURCES } from "./sources";
+import { fmkorea, parseFmSearchRanking } from "./sources/fmkorea";
 import type { RawPost, SourceResult } from "./types";
 
 let failed = 0;
@@ -136,6 +148,85 @@ async function main() {
   }
 
   // -------------------------------------------------------------------------
+  console.log("\n[에펨코리아 검색어 순위: 읽기]");
+  {
+    const html = readFileSync(join(__dirname, "fixtures", "fmkorea-best.html"), "utf-8");
+    const items = parseFmSearchRanking(html);
+    const at = (rank: number) => items.find((i) => i.rank === rank);
+    check("10줄, 목록·티커 중복 없이", items.length === 10 && new Set(items.map((i) => i.keyword)).size === 10, items.map((i) => i.keyword).join(" "));
+    check("순위·검색어 그대로", at(1)?.keyword === "페이커" && at(2)?.keyword === "gta" && items.every((i, n) => i.rank === n + 1));
+    check("변화 표시: 없음 0, +1, -3, new", at(1)?.change === 0 && at(4)?.change === 1 && at(3)?.change === -3 && at(5)?.change === "new" && at(10)?.change === -1);
+    check("HTML 엔티티를 풀어 읽음(R&D)", at(8)?.keyword === "R&D", at(8)?.keyword);
+    const tickerOnly = html.replace(/<ul class="keyword_rank_list">[\s\S]*?<\/ul>/, "");
+    const fromTicker = parseFmSearchRanking(tickerOnly);
+    check("목록이 없으면 티커에서", fromTicker.length === 10 && fromTicker[2].change === -3);
+    check("위젯이 없으면 빈 목록", parseFmSearchRanking("<html><body><ul><li class='li'></li></ul></body></html>").length === 0);
+    const posts = fmkorea.parse(html, "https://www.fmkorea.com/best");
+    check(
+      "글 줄은 그대로 읽음(핫딜 skip, 정치 표시)",
+      posts.length === 3 && posts[0].title === "GTA6 트레일러 3편 공개" && posts[1].skip === true && posts[2].politicsFlag === true,
+      posts.map((p) => p.title).join(" / "),
+    );
+    check("검색어 위젯은 글 줄로 안 들어감", !posts.some((p) => /페이커|토트넘/.test(p.title)));
+  }
+
+  // -------------------------------------------------------------------------
+  console.log("\n[에펨코리아 검색어 순위: 점수]");
+  {
+    const s = (rank: number, keyword: string, change: FmSearchItem["change"] = 0): FmSearchItem => ({ rank, keyword, change });
+    check("세기: 1위 1.0, 10위 0.37", Math.abs(searchStrength(s(1, "a")) - 1) < 1e-9 && Math.abs(searchStrength(s(10, "a")) - 0.37) < 1e-9);
+    check("new 는 두 칸 위까지만 넘음(3위 new < 1위)", searchStrength(s(3, "a", "new")) < searchStrength(s(1, "a")) && searchStrength(s(3, "a", "new")) > searchStrength(s(2, "a")));
+    check("new·오름은 더, 내림은 덜", searchStrength(s(5, "a", "new")) > searchStrength(s(5, "a", 2)) && searchStrength(s(5, "a", 2)) > searchStrength(s(5, "a")) && searchStrength(s(5, "a")) > searchStrength(s(5, "a", -3)));
+    check("오름은 3칸까지만", searchStrength(s(5, "a", 9)) === searchStrength(s(5, "a", 3)));
+
+    const titles = [
+      "dcinside|GTA6 트레일러 공개", "ruliweb|GTA6 발매일 확정", "fmkorea|GTA6 가격 정리", "dcinside|GTA6 지도 분석", "ruliweb|GTA6 예약 구매",
+      "dcinside|김준표 유튜브 복귀", "dcinside|김준표 방송 다시보기", "dcinside|김준표 사과문",
+      "fmkorea|존박 신곡 무대",
+      "inven|이동 경로 정리", "inven|이동 수단 비교", "inven|이동 시간 단축",
+      "dcinside|윤석열 재판 결과", "ruliweb|윤석열 선고 일정",
+    ];
+    const base = scoreKeywords(postsOf(titles));
+    check("검색어 없이는 여러 곳에 나온 GTA6가 1위", base[0]?.key === "gta6", base.slice(0, 3).map((k) => k.keyword).join(" "));
+    check("검색어 없이는 한 곳 한 글(존박)은 순위 밖", !base.some((k) => k.key === "존박"));
+
+    const search = [s(1, "준표"), s(2, "gta", 1), s(3, "존박", "new"), s(4, "투컷", -3), s(5, "윤석열", 2), s(6, "근황"), s(7, "이동연"), s(8, "투컷")];
+    const scored = scoreKeywords(postsOf(titles), 50, search);
+    const get = (key: string) => scored.find((k) => k.key === key);
+    const order = scored.map((k) => k.key);
+    const line = scored.slice(0, 6).map((k) => `${k.keyword}:${k.raw.toFixed(1)}`).join(" ");
+    check("검색어 1위 '준표' → 김준표에 붙음", get("김준표")?.search[0]?.keyword === "준표" && !get("준표"), line);
+    check("검색어도 있고 글도 가장 많은 GTA6 가 1위, 그다음 검색어 1위 김준표", order[0] === "gta6" && order[1] === "김준표", line);
+    check(
+      "검색어에 오른 말(글 있는 것)은 검색어 없는 말보다 위",
+      scored.filter((k) => k.search.length && k.mentions > 0 && !k.sensitive).every((k) => scored.filter((x) => !x.search.length).every((x) => x.raw < k.raw)),
+      line,
+    );
+    check("'gta' → GTA6 에 붙음(새 줄 없음)", get("gta6")?.search[0]?.keyword === "gta" && !get("gta"));
+    check("글 하나뿐인 존박도 검색어라 후보로, 그 글을 묶음", get("존박")?.mentions === 1 && get("존박")?.samples.length === 1);
+    const tukeot = get("투컷");
+    check("제목에 없는 검색어(투컷)도 후보로, 글 0", tukeot?.mentions === 0 && tukeot.sources.length === 0 && tukeot.samples.length === 0);
+    check("같은 검색어가 두 번이면 센 쪽(4위)만 셈", tukeot?.search.length === 2 && tukeot.search[0].rank === 4);
+    check("글 없는 검색어는 덜 쳐 줌(SEARCH_ONLY_FACTOR)", Boolean(tukeot) && Boolean(get("존박")) && tukeot!.raw < get("존박")!.raw);
+    const ref = base.find((k) => k.sources.length > 1)!.raw;
+    check(
+      "글 없는 검색어 점수 = 글 근거 1등 × SEARCH_WEIGHT × 세기 × SEARCH_ONLY_FACTOR",
+      Math.abs((tukeot?.raw ?? 0) - ref * SEARCH_WEIGHT * searchStrength(s(4, "투컷", -3)) * SEARCH_ONLY_FACTOR) < 1e-6,
+    );
+    check("정치 검색어는 민감(기본 차트에서 빠짐)", get("윤석열")?.sensitive === true && get("윤석열")?.samples.length === 0);
+    check("불용어 검색어(근황)는 안 씀", !scored.some((k) => k.search.some((h) => h.keyword === "근황")));
+    check("검색어가 더 길면 사전 이름에만 붙음(이동연 → '이동' 아님)", !get("이동")?.search.length && get("이동연")?.mentions === 0);
+    check("검색어 없는 키워드는 search 가 빈 배열", scored.filter((k) => !k.search.length).every((k) => Array.isArray(k.search)));
+    {
+      // 넓은 말(나라 이름)은 검색어 가산점도 덜 받는다
+      const weak = scoreKeywords(postsOf([...titles, "clien|일본 여행 후기", "dogdrip|일본 물가 근황"]), 50, [s(1, "일본"), s(2, "존박")]);
+      const japan = weak.find((k) => k.key === "일본");
+      const john = weak.find((k) => k.key === "존박");
+      check("넓은 말(일본)은 검색어 1위여도 2위 존박보다 덜 받음", Boolean(japan && john) && japan!.raw < john!.raw, weak.slice(0, 4).map((k) => `${k.keyword}:${k.raw.toFixed(1)}`).join(" "));
+    }
+  }
+
+  // -------------------------------------------------------------------------
   console.log("\n[보조 수집본]");
   {
     const dir = mkdtempSync(join(tmpdir(), "trends-selftest-"));
@@ -211,6 +302,32 @@ async function main() {
       r = fresh();
       applyFeed(r, join(dir, "bad.json"), now);
       check("모양이 틀린 수집본은 통째로 쓰지 않음", failedCount(r) === 2);
+
+      // 검색어 순위도 수집본으로 넘어온다
+      {
+        const ranking = { collectedAt: new Date(now - 5 * 60_000).toISOString(), items: [{ rank: 1, keyword: "페이커", change: "new" as const }] };
+        const local = fresh().map((x) => (x.adapter.id === "fmkorea" ? { ...x, ok: true, error: undefined, posts: feed.sources[0].posts, searchRanking: ranking } : x));
+        const withSearch = join(dir, "with-search.json");
+        writeFeed(withSearch, local, new Date(now));
+        r = fresh();
+        applyFeed(r, withSearch, now + 30 * 60_000);
+        check("수집본의 검색어 순위로 메움", get(r, "fmkorea").searchRanking?.items[0]?.keyword === "페이커");
+        r = fresh();
+        applyFeed(r, path, now);
+        check("검색어 순위가 없는 예전 수집본도 그대로 씀", get(r, "fmkorea").ok && !get(r, "fmkorea").searchRanking);
+        const stale = JSON.parse(readFileSync(withSearch, "utf-8"));
+        stale.sources[0].searchRanking.collectedAt = new Date(now - 400 * 60_000).toISOString();
+        writeFileSync(join(dir, "stale-search.json"), JSON.stringify(stale));
+        r = fresh();
+        applyFeed(r, join(dir, "stale-search.json"), now);
+        check("수집본은 새것이어도 검색어 순위가 오래됐으면 버림", get(r, "fmkorea").ok && !get(r, "fmkorea").searchRanking);
+        const odd = JSON.parse(readFileSync(withSearch, "utf-8"));
+        odd.sources[0].searchRanking.items[0].keyword = "x".repeat(80);
+        writeFileSync(join(dir, "odd-search.json"), JSON.stringify(odd));
+        r = fresh();
+        applyFeed(r, join(dir, "odd-search.json"), now);
+        check("검색어 모양이 틀리면 수집본을 통째로 쓰지 않음", failedCount(r) === 2);
+      }
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

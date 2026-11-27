@@ -4,7 +4,7 @@ import { ARTICLE_CATEGORIES, loadAllArticles, type Article, type ArticleCategory
 import { loadEvents } from "../../lib/events";
 import { mainEventsToCover, type MainEventTier } from "../../lib/main-event";
 import { diffDays } from "../../lib/kst";
-import { TREND_CATEGORIES, type TrendCategory, type TrendKeyword, type TrendsFile } from "../../lib/trends";
+import { TREND_CATEGORIES, type FmSearchItem, type TrendCategory, type TrendKeyword, type TrendsFile } from "../../lib/trends";
 import { INTEREST_CATEGORIES, SPORTS, type InterestCategory, type SportEvent } from "../../lib/types";
 import { TOPIC_RULES } from "./rules";
 import { normalizeTag, titleSimilarity } from "./check";
@@ -26,7 +26,9 @@ import { normalizeTag, titleSimilarity } from "./check";
  *   이미 소개한 일정 = 지금까지 낸 모든 글의 eventIds(기간 제한 없음).
  *
  * 재료
- *   data/trends.json   민감하지 않고 커뮤니티 2곳 이상에서 나온 키워드
+ *   data/trends.json   민감하지 않고 커뮤니티 2곳 이상에서 나온 키워드, 또는 에펨코리아 검색어 순위에 오른 키워드.
+ *                      검색어 순위에 오른 키워드를 먼저 낸다(이유에 "에펨 검색어 N위(+M)"). 집계가 TREND_MAX_AGE_H
+ *                      보다 오래됐으면 키워드 글감을 내지 않는다(며칠 지난 화제를 "왜 난리인가"로 쓰지 않게).
  *   data/events.json   메인 이벤트 차례(lib/main-event.ts 기준)
  *   scripts/magazine/evergreen.json   언제 써도 되는 글감
  * 빼는 것: 최근 14일 글의 태그·키워드와 겹치는 글감, 이미 쓴 글과 제목이 겹치는 상시 글감,
@@ -59,6 +61,8 @@ export interface Candidate {
   /** 이번 회차에 반드시 써야 하는 후보(메인 이벤트 첫 일정)만 true */
   required: boolean;
   role: Role;
+  /** 키워드 글감이 에펨코리아 검색어 순위에 올랐으면 그 검색어(순위·변화·검색어 표기) */
+  fmSearch?: FmSearchItem;
 }
 
 interface Evergreen {
@@ -72,8 +76,26 @@ interface Evergreen {
 }
 
 const DAY_MS = 86_400_000;
+const HOUR_MS = 3_600_000;
 const RECENT_DAYS = 14;
 const TREND_MIN_SOURCES = 2;
+/**
+ * 키워드 순위(와 그 안의 에펨코리아 검색어 순위)가 이보다 오래됐으면 키워드 글감을 내지 않는다.
+ * 집계는 2시간마다라 반나절이 지났으면 수집이 멈춘 것이고, 거기 있는 화제는 이미 지난 이야기일 수 있다.
+ */
+export const TREND_MAX_AGE_H = 12;
+/**
+ * 에펨코리아 검색어 순위에 오른 키워드 글감의 가산점(11-27부터 "왜 난리인가" 글감의 1순위 근거).
+ *   기본 50 + 순위(1위 30, 한 칸 내려갈 때마다 3씩 덜, 10위 3) + 변화(new +8, 오른 칸마다 +2, 내린 칸마다 -2, 3칸까지)
+ * 기본 50: 검색어 없는 키워드 글감은 많아야 30 + 점수 반(키워드 점수에서 검색어가 1위를 차지해 대개 33 이하) + 15 + 3 이라,
+ * 검색어 10위도 그보다 위에 오게 했다. 상시 글감(50~65)도 넘는다.
+ * 분류 연속 감점(직전 두 편과 같은 분류 ×0.7·×0.2)은 그대로 걸린다. 같은 분류 세 편 연속 금지가 먼저다.
+ */
+const PICK_SEARCH_BASE = 50;
+const PICK_SEARCH_PER_RANK = 3;
+const PICK_SEARCH_NEW = 8;
+const PICK_SEARCH_PER_MOVE = 2;
+const PICK_SEARCH_MOVE_MAX = 3;
 /** 메인 이벤트 첫 일정 뒤에 붙이는 대체 후보 수 */
 const MAIN_EVENT_ALTERNATES = 2;
 
@@ -154,7 +176,13 @@ function readTrends(): { file: TrendsFile | null; note: string } {
   try {
     const parsed = JSON.parse(readFileSync(path, "utf-8")) as TrendsFile;
     if (!Array.isArray(parsed.keywords)) return { file: null, note: "data/trends.json 형식이 다름(keywords 없음)" };
-    return { file: parsed, note: `data/trends.json ${parsed.keywords.length}개(집계 ${parsed.generatedAt ?? "시각 없음"})` };
+    const search = parsed.fmkoreaSearch?.items.length
+      ? `, 에펨 검색어 ${parsed.fmkoreaSearch.items.length}개(${kstStamp(parsed.fmkoreaSearch.collectedAt)} 수집)`
+      : ", 에펨 검색어 없음";
+    return {
+      file: parsed,
+      note: `data/trends.json ${parsed.keywords.length}개(집계 ${parsed.generatedAt ? `${kstStamp(parsed.generatedAt)} KST` : "시각 없음"}${search})`,
+    };
   } catch (error) {
     return { file: null, note: `data/trends.json 읽기 실패: ${error instanceof Error ? error.message : error}` };
   }
@@ -200,38 +228,84 @@ const INTEREST_TO_ARTICLE: Partial<Record<InterestCategory, ArticleCategory>> = 
 
 // ─── 후보 만들기 ───────────────────────────────────────
 
-function fromTrends(file: TrendsFile | null, skipped: string[]): Candidate[] {
+/** "에펨 검색어 6위(+1)" 꼴. 키워드와 검색어 표기가 다르면 검색어도 적는다 */
+export function fmSearchLabel(hit: FmSearchItem, keyword: string): string {
+  const move = hit.change === "new" ? "new" : hit.change > 0 ? `+${hit.change}` : hit.change < 0 ? `${hit.change}` : "";
+  const query = hit.keyword.toLowerCase().replace(/\s/g, "") === keyword.toLowerCase().replace(/\s/g, "") ? "" : `검색어 "${hit.keyword}"`;
+  const inside = [move, query].filter(Boolean).join(", ");
+  return `에펨 검색어 ${hit.rank}위${inside ? `(${inside})` : ""}`;
+}
+
+function fmSearchBonus(hit: FmSearchItem): number {
+  const rank = Math.max(0, 11 - hit.rank) * PICK_SEARCH_PER_RANK;
+  const move =
+    hit.change === "new"
+      ? PICK_SEARCH_NEW
+      : Math.sign(hit.change) * Math.min(Math.abs(hit.change), PICK_SEARCH_MOVE_MAX) * PICK_SEARCH_PER_MOVE;
+  return PICK_SEARCH_BASE + rank + move;
+}
+
+/** 집계 시각이 now 에서 몇 시간 전인가(읽을 수 없으면 무한대) */
+function ageHours(iso: string | undefined, now: Date): number {
+  const t = iso ? Date.parse(iso) : NaN;
+  return Number.isNaN(t) ? Infinity : (now.getTime() - t) / HOUR_MS;
+}
+
+export function fromTrends(file: TrendsFile | null, skipped: string[], now = new Date()): Candidate[] {
   if (!file) return [];
+  const age = ageHours(file.generatedAt, now);
+  if (age > TREND_MAX_AGE_H) {
+    skipped.push(`키워드 순위 전체: ${Number.isFinite(age) ? `${Math.round(age)}시간 전` : "시각을 모르는"} 집계라 쓰지 않음(기준 ${TREND_MAX_AGE_H}시간, 지난 화제일 수 있음)`);
+    return [];
+  }
+  // 검색어 순위는 그 자체의 수집 시각으로 한 번 더 본다(보조 수집이면 집계보다 이를 수 있다)
+  const searchFresh = Boolean(file.fmkoreaSearch) && ageHours(file.fmkoreaSearch?.collectedAt, now) <= TREND_MAX_AGE_H;
   const out: Candidate[] = [];
   for (const item of file.keywords as TrendKeyword[]) {
     if (item.sensitive) continue;
-    if ((item.sources?.length ?? 0) < TREND_MIN_SOURCES) continue;
+    const hit = searchFresh ? item.fmSearch : undefined;
+    const sourceCount = item.sources?.length ?? 0;
+    // 커뮤니티 한 곳에서만 나온 말도 에펨 검색어 순위에 올랐으면 쓴다(찾아본 사람이 많다는 별도 근거)
+    if (sourceCount < TREND_MIN_SOURCES && !hit) continue;
     const category = TREND_TO_ARTICLE[item.category];
     if (!category) {
       skipped.push(`키워드 "${item.keyword}": 분류 ${item.category}는 자동 글감에서 뺌`);
       continue;
     }
-    const banned = hasBannedTopic(item.keyword);
+    const banned = hasBannedTopic(`${item.keyword} ${hit?.keyword ?? ""}`);
     if (banned) {
       skipped.push(`키워드 "${item.keyword}": 금지 주제 ${banned}`);
       continue;
     }
     const movement = item.delta === null ? "새로 진입" : item.delta > 0 ? `${item.delta}계단 상승` : item.delta < 0 ? `${-item.delta}계단 하락` : "제자리";
+    const posts =
+      item.mentions > 0
+        ? `커뮤니티 ${sourceCount}곳(${item.sources.join(", ")})에서 글 ${item.mentions}개`
+        : "인기글 제목엔 아직 없음(검색어로만 뜸)";
+    const notes: string[] = [];
+    if (hit) notes.push("에펨코리아 검색어 순위에 올라 먼저 제시");
+    if (hit && item.mentions === 0) notes.push("글 제목에 없는 검색어라 무엇 때문에 찾는지부터 확인");
     out.push({
       kind: "trend",
       id: `trend:${item.keyword}`,
       category,
       format: "왜 난리인가",
       title: `키워드 "${item.keyword}", 왜 순위에 올랐나`,
-      score: 30 + item.score * 0.5 + Math.min(item.sources.length - TREND_MIN_SOURCES, 3) * 5 + Math.min(item.streak, 3),
-      reason: `키워드 순위 ${item.rank}위(점수 ${item.score}, ${movement}), 커뮤니티 ${item.sources.length}곳(${item.sources.join(", ")})에서 글 ${item.mentions}개`,
+      score:
+        30 +
+        item.score * 0.5 +
+        Math.min(Math.max(sourceCount - TREND_MIN_SOURCES, 0), 3) * 5 +
+        Math.min(item.streak, 3) +
+        (hit ? fmSearchBonus(hit) : 0),
+      reason: `${hit ? `${fmSearchLabel(hit, item.keyword)}, ` : ""}키워드 순위 ${item.rank}위(점수 ${item.score}, ${movement}), ${posts}`,
       tags: [item.keyword],
       keywords: [item.keyword],
       eventIds: [],
       sourceHints: ["본인·소속 단체 공식 발표", "통신사(연합뉴스·로이터) 보도"],
-      notes: [],
+      notes,
       required: false,
       role: "normal",
+      ...(hit ? { fmSearch: hit } : {}),
     });
   }
   return out;
@@ -511,7 +585,7 @@ function main() {
   const plan = planMainEvent({ events: loadEvents().events, articles: all, now, slot }, skipped);
   // 메인 이벤트를 맡은 회차는 아침 무게, 아니면 그 회차 무게
   const weights = SLOT_WEIGHT[plan.covers ? "morning" : slot];
-  const pool = [...fromTrends(trends.file, skipped), ...fromEvergreen(evergreen.topics, today, slot, all, skipped)];
+  const pool = [...fromTrends(trends.file, skipped, now), ...fromEvergreen(evergreen.topics, today, slot, all, skipped)];
 
   // 메인 이벤트 후보에는 최근 태그 겹침·분류 감점을 걸지 않는다(검사도 프리뷰 글은 이 둘을 오류로 보지 않는다).
   // 겹침은 글을 쓸 때 각도를 바꾸라는 참고로만 남긴다.

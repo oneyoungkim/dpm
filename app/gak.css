@@ -694,6 +694,28 @@ body {
   opacity: 0.5;
 }
 
+/* /rank 위 에펨코리아 검색어 순위: .method-sources 칩을 그대로 쓰고 간격·변화 색만 */
+.search-rank {
+  margin: 0 0 26px;
+}
+
+.search-rank .method-sources {
+  margin-top: 0;
+}
+
+.search-rank .method-sources .rank-delta-up {
+  color: var(--up);
+}
+
+.search-rank .method-sources .rank-delta-down {
+  color: var(--down);
+}
+
+.search-rank .method-sources .rank-delta-new {
+  color: var(--signal);
+  font-size: 9px;
+}
+
 /* ── 일정 줄(첫 화면) ───────────────────────────────── */
 
 .strip,

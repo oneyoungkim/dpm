@@ -73,7 +73,7 @@ export function RankChart({
                   type="button"
                   className="rank-line-main"
                   aria-expanded={canExpand ? expanded : undefined}
-                  aria-label={`${item.rank}위 ${item.keyword}, 글 ${item.mentions}개${canExpand ? ", 대표 글 보기" : ""}`}
+                  aria-label={`${item.rank}위 ${item.keyword}, 글 ${item.mentions}개${item.fmSearch ? `, 에펨코리아 검색어 ${item.fmSearch.rank}위` : ""}${canExpand ? ", 대표 글 보기" : ""}`}
                   disabled={!canExpand}
                   onClick={() => setOpen(expanded ? null : item.keyword)}
                 >
@@ -82,6 +82,7 @@ export function RankChart({
                   <span className="rank-word">
                     <strong>{item.keyword}</strong>
                     <small style={{ color: TREND_COLOR[item.category] }}>{item.category}</small>
+                    {item.fmSearch && <small style={{ color: "var(--muted)" }}>검색 {item.fmSearch.rank}위</small>}
                   </span>
                   <span className="rank-bar" aria-hidden>
                     <i style={{ width: `${Math.max(item.score, 3)}%` }} />
@@ -89,7 +90,7 @@ export function RankChart({
                   <span className="rank-score">{item.score}</span>
                   <span className="rank-count">
                     글 {item.mentions}
-                    <small>{item.sources.length}곳</small>
+                    <small>{item.sources.length > 0 ? `${item.sources.length}곳` : "검색어"}</small>
                   </span>
                   <Spark values={item.spark} />
                   <span className="rank-caret" aria-hidden>
@@ -101,6 +102,7 @@ export function RankChart({
                   <div className="rank-detail">
                     <p className="rank-detail-sources">
                       {item.sources.map((id) => sourceName.get(id) ?? id).join(" · ")}
+                      {item.fmSearch ? ` · 에펨코리아 검색어 ${item.fmSearch.rank}위` : ""}
                       {item.streak > 1 ? ` · ${item.streak}회 연속 순위권` : ""}
                     </p>
                     <ul>

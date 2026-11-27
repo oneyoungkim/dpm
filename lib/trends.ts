@@ -54,6 +54,41 @@ export interface TrendKeyword {
   samples: TrendSample[];
   /** 최근 집계들의 점수(옛것 → 최신, 최대 12개). 추이 선 그리기용. */
   spark: number[];
+  /**
+   * 에펨코리아 검색어 순위에 올라 점수를 더 받았으면 그 검색어(여럿이 한 키워드로 모이면 가장 높은 것).
+   * 없으면 필드가 없다.
+   */
+  fmSearch?: FmSearchItem;
+}
+
+/** 에펨코리아 검색어 순위 한 줄(위젯에 보이는 그대로) */
+export interface FmSearchItem {
+  /** 1부터 */
+  rank: number;
+  /** 검색어(위젯 표기 그대로) */
+  keyword: string;
+  /** 직전 대비 순위 변화. +면 상승, 0 은 변화 표시 없음, "new" 는 새로 오름 */
+  change: number | "new";
+}
+
+export interface FmSearchEntry extends FmSearchItem {
+  /** 정치·사건사고·욕설 등. 화면에 싣지 않는다. */
+  sensitive: boolean;
+  /** 이 검색어를 반영한 키워드 순위의 이름. 걸러졌거나 순위에 못 들었으면 null */
+  matched: string | null;
+}
+
+/**
+ * 에펨코리아 검색어 순위(포텐 터짐 /best 첫 쪽에 함께 실리는 위젯).
+ * 에펨코리아 설명: 최근 24시간 집계, 로그인 사용자 검색만 반영.
+ */
+export interface FmSearchRanking {
+  /** 그 쪽을 받은 시각 ISO(보조 수집이면 한국 컴퓨터가 받은 시각) */
+  collectedAt: string;
+  /** 읽은 쪽 주소 */
+  url: string;
+  /** rank 오름차순 */
+  items: FmSearchEntry[];
 }
 
 export interface TrendSource {
@@ -75,6 +110,8 @@ export interface TrendsFile {
   sources: TrendSource[];
   /** rank 오름차순, 최대 50개 */
   keywords: TrendKeyword[];
+  /** 이번 집계에 반영한 에펨코리아 검색어 순위. 못 읽었거나 오래됐으면 null(11-27 전 파일에는 필드가 없다) */
+  fmkoreaSearch?: FmSearchRanking | null;
 }
 
 const EMPTY: TrendsFile = { generatedAt: new Date(0).toISOString(), sources: [], keywords: [] };
