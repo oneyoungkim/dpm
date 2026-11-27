@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-27T19:32:01.830Z",
+  "generatedAt": "2026-11-27T21:32:09.532Z",
   "sources": [
     {
       "id": "fmkorea",
       "name": "에펨코리아",
       "url": "https://www.fmkorea.com/best",
-      "posts": 43,
+      "posts": 23,
       "ok": true
     },
     {
@@ -19,8 +19,8 @@
       "id": "ruliweb",
       "name": "루리웹",
       "url": "https://bbs.ruliweb.com/best/all",
-      "posts": 63,
-      "ok": true
+      "posts": 0,
+      "ok": false
     },
     {
       "id": "bobaedream",
@@ -47,7 +47,7 @@
       "id": "clien",
       "name": "클리앙",
       "url": "https://www.clien.net/service/board/park",
-      "posts": 20,
+      "posts": 22,
       "ok": true
     }
   ],
@@ -63,7 +63,7 @@
         "dcinside"
       ],
       "delta": 0,
-      "streak": 5,
+      "streak": 6,
       "spark": [
         31,
         77,
@@ -71,6 +71,7 @@
         100,
         100,
         93,
+        100,
         100,
         100
       ],
@@ -84,82 +85,13 @@
     },
     {
       "rank": 2,
-      "keyword": "준표햄",
-      "category": "기타",
-      "score": 80,
-      "mentions": 1,
-      "sources": [
-        "fmkorea"
-      ],
-      "delta": 2,
-      "streak": 3,
-      "spark": [
-        78,
-        90,
-        80
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "준표햄 관련 건 최신 근황",
-          "url": "https://www.fmkorea.com/10600343662",
-          "source": "fmkorea"
-        }
-      ],
-      "fmSearch": {
-        "rank": 3,
-        "keyword": "준표",
-        "change": 0
-      }
-    },
-    {
-      "rank": 3,
-      "keyword": "GTA6",
-      "category": "게임",
-      "score": 71,
-      "mentions": 1,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": 4,
-      "streak": 21,
-      "spark": [
-        35,
-        49,
-        77,
-        52,
-        100,
-        100,
-        100,
-        81,
-        46,
-        77,
-        56,
-        71
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "GTA6) 사장님 차수리좀 해주세요",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542566",
-          "source": "ruliweb"
-        }
-      ],
-      "fmSearch": {
-        "rank": 4,
-        "keyword": "gta",
-        "change": 0
-      }
-    },
-    {
-      "rank": 4,
       "keyword": "이동연",
       "category": "기타",
-      "score": 60,
+      "score": 55,
       "mentions": 0,
       "sources": [],
-      "delta": -1,
-      "streak": 7,
+      "delta": 2,
+      "streak": 8,
       "spark": [
         35,
         35,
@@ -167,7 +99,8 @@
         41,
         100,
         95,
-        60
+        60,
+        55
       ],
       "sensitive": false,
       "samples": [],
@@ -178,61 +111,25 @@
       }
     },
     {
-      "rank": 5,
-      "keyword": "국정원",
-      "category": "시사",
-      "score": 57,
-      "mentions": 5,
-      "sources": [
-        "bobaedream",
-        "dcinside",
-        "dogdrip",
-        "fmkorea",
-        "inven"
-      ],
-      "delta": 7,
-      "streak": 5,
-      "spark": [
-        34,
-        24,
-        0,
-        0,
-        18,
-        42,
-        20,
-        38,
-        57
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 6,
-      "keyword": "뮤지컬배우",
+      "rank": 3,
+      "keyword": "배우",
       "category": "연예",
       "score": 54,
       "mentions": 1,
       "sources": [
-        "dcinside"
+        "fmkorea"
       ],
       "delta": null,
       "streak": 1,
       "spark": [
-        32,
-        0,
-        71,
-        55,
-        0,
-        0,
-        0,
         54
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "지금 논란인 뮤지컬배우 충격적인점.jpg",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481990",
-          "source": "dcinside"
+          "title": "배우가 너무 찍기 싫었던 영화 명장면.jpg",
+          "url": "https://www.fmkorea.com/10602721629",
+          "source": "fmkorea"
         }
       ],
       "fmSearch": {
@@ -242,17 +139,178 @@
       }
     },
     {
+      "rank": 4,
+      "keyword": "국정원",
+      "category": "시사",
+      "score": 53,
+      "mentions": 4,
+      "sources": [
+        "bobaedream",
+        "dcinside",
+        "dogdrip",
+        "inven"
+      ],
+      "delta": 1,
+      "streak": 6,
+      "spark": [
+        34,
+        24,
+        0,
+        0,
+        18,
+        42,
+        20,
+        38,
+        57,
+        53
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 5,
+      "keyword": "준표",
+      "category": "기타",
+      "score": 51,
+      "mentions": 0,
+      "sources": [],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        51
+      ],
+      "sensitive": false,
+      "samples": [],
+      "fmSearch": {
+        "rank": 3,
+        "keyword": "준표",
+        "change": 0
+      }
+    },
+    {
+      "rank": 6,
+      "keyword": "최민희",
+      "category": "시사",
+      "score": 51,
+      "mentions": 7,
+      "sources": [
+        "bobaedream",
+        "clien"
+      ],
+      "delta": 5,
+      "streak": 7,
+      "spark": [
+        23,
+        17,
+        27,
+        20,
+        29,
+        32,
+        51
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
       "rank": 7,
+      "keyword": "GTA6",
+      "category": "게임",
+      "score": 47,
+      "mentions": 0,
+      "sources": [],
+      "delta": -2,
+      "streak": 22,
+      "spark": [
+        49,
+        77,
+        52,
+        100,
+        100,
+        100,
+        81,
+        46,
+        77,
+        56,
+        71,
+        47
+      ],
+      "sensitive": false,
+      "samples": [],
+      "fmSearch": {
+        "rank": 4,
+        "keyword": "gta",
+        "change": 0
+      }
+    },
+    {
+      "rank": 8,
+      "keyword": "김준표",
+      "category": "기타",
+      "score": 43,
+      "mentions": 0,
+      "sources": [],
+      "delta": 1,
+      "streak": 17,
+      "spark": [
+        70,
+        71,
+        43,
+        54,
+        100,
+        96,
+        82,
+        86,
+        47,
+        51,
+        47,
+        43
+      ],
+      "sensitive": false,
+      "samples": [],
+      "fmSearch": {
+        "rank": 5,
+        "keyword": "김준표",
+        "change": 0
+      }
+    },
+    {
+      "rank": 9,
+      "keyword": "존박",
+      "category": "연예",
+      "score": 39,
+      "mentions": 0,
+      "sources": [],
+      "delta": 1,
+      "streak": 8,
+      "spark": [
+        47,
+        53,
+        62,
+        51,
+        39,
+        46,
+        42,
+        39
+      ],
+      "sensitive": false,
+      "samples": [],
+      "fmSearch": {
+        "rank": 6,
+        "keyword": "존박",
+        "change": 0
+      }
+    },
+    {
+      "rank": 10,
       "keyword": "주식",
       "category": "돈",
-      "score": 47,
-      "mentions": 3,
+      "score": 37,
+      "mentions": 2,
       "sources": [
-        "dcinside",
-        "ruliweb"
+        "dcinside"
       ],
-      "delta": 0,
-      "streak": 4,
+      "delta": -2,
+      "streak": 5,
       "spark": [
         43,
         42,
@@ -263,15 +321,11 @@
         41,
         5,
         63,
-        47
+        47,
+        37
       ],
       "sensitive": false,
       "samples": [
-        {
-          "title": "주식) 방구석 유게이보다 주식 못하는 전문가",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77541402",
-          "source": "ruliweb"
-        },
         {
           "title": "어제 주식 생방송중 눈물흘린 눈나",
           "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482041",
@@ -290,311 +344,167 @@
       }
     },
     {
-      "rank": 8,
-      "keyword": "김준표",
-      "category": "기타",
-      "score": 47,
-      "mentions": 0,
-      "sources": [],
-      "delta": 2,
-      "streak": 16,
-      "spark": [
-        100,
-        70,
-        71,
-        43,
-        54,
-        100,
-        96,
-        82,
-        86,
-        47,
-        51,
-        47
-      ],
-      "sensitive": false,
-      "samples": [],
-      "fmSearch": {
-        "rank": 5,
-        "keyword": "김준표",
-        "change": 0
-      }
-    },
-    {
-      "rank": 9,
-      "keyword": "존박",
-      "category": "연예",
-      "score": 42,
-      "mentions": 0,
-      "sources": [],
-      "delta": 2,
-      "streak": 7,
-      "spark": [
-        16,
-        0,
-        0,
-        0,
-        0,
-        47,
-        53,
-        62,
-        51,
-        39,
-        46,
-        42
-      ],
-      "sensitive": false,
-      "samples": [],
-      "fmSearch": {
-        "rank": 6,
-        "keyword": "존박",
-        "change": 0
-      }
-    },
-    {
-      "rank": 10,
-      "keyword": "데블스",
-      "category": "기타",
-      "score": 33,
-      "mentions": 0,
-      "sources": [],
-      "delta": 2,
-      "streak": 5,
-      "spark": [
-        34,
-        37,
-        33,
-        36,
-        33
-      ],
-      "sensitive": false,
-      "samples": [],
-      "fmSearch": {
-        "rank": 8,
-        "keyword": "데블스",
-        "change": 0
-      }
-    },
-    {
       "rank": 11,
-      "keyword": "최민희",
-      "category": "시사",
+      "keyword": "코리안 해밍웨이",
+      "category": "연예",
       "score": 32,
-      "mentions": 6,
+      "mentions": 2,
       "sources": [
-        "bobaedream",
-        "clien"
+        "dogdrip",
+        "fmkorea"
       ],
-      "delta": 3,
-      "streak": 6,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        23,
-        17,
-        27,
-        20,
-        29,
+        13,
+        0,
+        0,
+        0,
+        0,
         32
       ],
-      "sensitive": true,
-      "samples": []
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "코리안 해밍웨이 ㄷㄷㄷ",
+          "url": "https://www.fmkorea.com/10601172333",
+          "source": "fmkorea"
+        },
+        {
+          "title": "코리안 해밍웨이 ㄷㄷㄷ",
+          "url": "https://www.dogdrip.net/736915136",
+          "source": "dogdrip"
+        }
+      ]
     },
     {
       "rank": 12,
       "keyword": "우정잉",
       "category": "기타",
-      "score": 28,
+      "score": 32,
       "mentions": 0,
       "sources": [],
-      "delta": -2,
-      "streak": 3,
+      "delta": 0,
+      "streak": 4,
       "spark": [
         28,
         53,
+        28,
+        32
+      ],
+      "sensitive": false,
+      "samples": [],
+      "fmSearch": {
+        "rank": 8,
+        "keyword": "우정잉",
+        "change": 1
+      }
+    },
+    {
+      "rank": 13,
+      "keyword": "이서진",
+      "category": "연예",
+      "score": 28,
+      "mentions": 3,
+      "sources": [
+        "dcinside",
+        "fmkorea"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        11,
+        0,
+        0,
+        0,
+        0,
         28
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "한지민 \"이서진 옛날보다 철없고 자세 좀 고쳐 앉아야 해\"",
+          "url": "https://www.fmkorea.com/10602739763",
+          "source": "fmkorea"
+        },
+        {
+          "title": "배우 이서진, 40대 여배우 노처녀 비하 발언 논란.news",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482043",
+          "source": "dcinside"
+        },
+        {
+          "title": "또 방송국 놈들에게 당한 이서진 ㅋㅋㅋㅋㅋ",
+          "url": "https://www.fmkorea.com/10602677341",
+          "source": "fmkorea"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "keyword": "데블스",
+      "category": "기타",
+      "score": 25,
+      "mentions": 0,
+      "sources": [],
+      "delta": -3,
+      "streak": 6,
+      "spark": [
+        34,
+        37,
+        33,
+        36,
+        33,
+        25
       ],
       "sensitive": false,
       "samples": [],
       "fmSearch": {
         "rank": 9,
-        "keyword": "우정잉",
-        "change": 0
+        "keyword": "데블스",
+        "change": -1
       }
     },
     {
-      "rank": 13,
-      "keyword": "신태일",
-      "category": "기타",
-      "score": 26,
-      "mentions": 3,
+      "rank": 15,
+      "keyword": "리만가설",
+      "category": "테크",
+      "score": 25,
+      "mentions": 2,
       "sources": [
-        "bobaedream",
-        "dcinside",
+        "clien",
         "dogdrip"
       ],
-      "delta": -3,
-      "streak": 7,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        18,
-        26,
-        44,
-        44,
-        47,
-        40,
-        26
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 14,
-      "keyword": "중국",
-      "category": "시사",
-      "score": 20,
-      "mentions": 5,
-      "sources": [
-        "bobaedream",
-        "clien",
-        "dogdrip",
-        "fmkorea"
-      ],
-      "delta": 8,
-      "streak": 2,
-      "spark": [
-        4,
-        15,
-        0,
-        0,
-        20,
-        12,
-        7,
-        5,
-        19,
-        0,
-        11,
-        20
+        25
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "국정원 중국 관련 교훈",
-          "url": "https://www.fmkorea.com/10602249401",
-          "source": "fmkorea"
-        },
-        {
-          "title": "중국.. 이거 하나는 인정해야함",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050556",
-          "source": "bobaedream"
-        },
-        {
-          "title": "판다 못 보내준다...교훈 얻길' 돌연 입장 바꾼 중국",
-          "url": "https://www.clien.net/service/board/park/19299528",
+          "title": "리만가설 증명에서 클로드의 독창적 방법",
+          "url": "https://www.clien.net/service/board/park/19299529",
           "source": "clien"
-        }
-      ]
-    },
-    {
-      "rank": 15,
-      "keyword": "AI",
-      "category": "테크",
-      "score": 19,
-      "mentions": 3,
-      "sources": [
-        "bobaedream",
-        "dcinside",
-        "ruliweb"
-      ],
-      "delta": -7,
-      "streak": 13,
-      "spark": [
-        39,
-        100,
-        33,
-        40,
-        81,
-        23,
-        12,
-        35,
-        56,
-        59,
-        63,
-        19
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "싱글벙글 AI 슬롭에 지친 사람들을 위한 이미지들....jpg",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481952",
-          "source": "dcinside"
         },
         {
-          "title": "위는 방송 아래는 빡친 사람이 ai로 만든거",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050574",
-          "source": "bobaedream"
+          "title": "리만 가설 증명의 압축본이 발표됨",
+          "url": "https://www.dogdrip.net/736970094",
+          "source": "dogdrip"
         }
       ]
     },
     {
       "rank": 16,
-      "keyword": "일본",
-      "category": "시사",
-      "score": 18,
-      "mentions": 5,
-      "sources": [
-        "clien",
-        "fmkorea",
-        "inven",
-        "ruliweb"
-      ],
-      "delta": 13,
-      "streak": 6,
-      "spark": [
-        3,
-        7,
-        0,
-        0,
-        12,
-        0,
-        4,
-        6,
-        7,
-        3,
-        8,
-        18
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "일본에 존재한다는 회식 문화.mp4",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542086",
-          "source": "ruliweb"
-        },
-        {
-          "title": "“통일교 헌금 돌려 달라”...일본.손해배상.400명 넘어",
-          "url": "https://www.clien.net/service/board/park/19299486",
-          "source": "clien"
-        },
-        {
-          "title": "일본 레테 코스프레",
-          "url": "https://www.inven.co.kr/board/maple/5974/7467115",
-          "source": "inven"
-        }
-      ]
-    },
-    {
-      "rank": 17,
       "keyword": "김민석",
       "category": "시사",
-      "score": 17,
+      "score": 25,
       "mentions": 4,
       "sources": [
         "clien"
       ],
-      "delta": -2,
-      "streak": 3,
+      "delta": 1,
+      "streak": 4,
       "spark": [
-        9,
-        0,
-        0,
         18,
         0,
         0,
@@ -603,92 +513,64 @@
         0,
         16,
         26,
-        17
+        17,
+        25
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 17,
+      "keyword": "이재명",
+      "category": "시사",
+      "score": 23,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23
       ],
       "sensitive": true,
       "samples": []
     },
     {
       "rank": 18,
-      "keyword": "쇼핑몰",
-      "category": "기타",
-      "score": 14,
-      "mentions": 2,
-      "sources": [
-        "dogdrip",
-        "fmkorea"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        12,
-        0,
-        0,
-        0,
-        14
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "주문 취소 이유 물어보자 쌍욕으로 답한 쇼핑몰",
-          "url": "https://www.fmkorea.com/10602472398",
-          "source": "fmkorea"
-        }
-      ]
-    },
-    {
-      "rank": 19,
-      "keyword": "수익",
-      "category": "게임",
-      "score": 13,
-      "mentions": 2,
-      "sources": [
-        "dogdrip",
-        "inven"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        13
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "타코야끼 트럭 한달 수익",
-          "url": "https://www.dogdrip.net/736917848",
-          "source": "dogdrip"
-        },
-        {
-          "title": "이번달 수익",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771590",
-          "source": "inven"
-        }
-      ]
-    },
-    {
-      "rank": 20,
-      "keyword": "삼성",
+      "keyword": "머스크",
       "category": "테크",
-      "score": 13,
-      "mentions": 2,
+      "score": 23,
+      "mentions": 3,
       "sources": [
         "bobaedream",
         "dcinside"
       ],
-      "delta": -4,
-      "streak": 2,
+      "delta": 10,
+      "streak": 11,
       "spark": [
-        21,
-        0,
-        0,
-        0,
+        36,
+        85,
+        12,
+        17,
         18,
-        19,
-        15,
-        27,
-        0,
-        20,
-        13
+        16,
+        47,
+        16,
+        10,
+        7,
+        23
       ],
       "sensitive": false,
       "samples": [
@@ -701,156 +583,26 @@
           "title": "캬 삼성이 일론머스크에게 갑질 ㅋㅋㅋㅋㅋ",
           "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481980",
           "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 21,
-      "keyword": "소방관",
-      "category": "게임",
-      "score": 12,
-      "mentions": 2,
-      "sources": [
-        "dogdrip",
-        "inven"
-      ],
-      "delta": -3,
-      "streak": 4,
-      "spark": [
-        15,
-        11,
-        18,
-        12
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 22,
-      "keyword": "플레이스테이션",
-      "category": "게임",
-      "score": 12,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": -4,
-      "streak": 8,
-      "spark": [
-        32,
-        0,
-        21,
-        5,
-        11,
-        10,
-        19,
-        11,
-        17,
-        12
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "게임했다고 플스 박살",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050569",
-          "source": "bobaedream"
         },
         {
-          "title": "돈 못 번다고 플스 박살 낸 아내 ㄷㄷ.knn",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482002",
+          "title": "미국어린이에게 주식 나눠주는 참아빠 일론머스크 ㄷ",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481913",
           "source": "dcinside"
         }
       ]
     },
     {
-      "rank": 23,
-      "keyword": "급식",
-      "category": "기타",
-      "score": 11,
-      "mentions": 2,
-      "sources": [
-        "dcinside",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        11
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "학교 급식에서 위탁급식 못하는 이유",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77541377",
-          "source": "ruliweb"
-        },
-        {
-          "title": "냠냠쩝쩝 한국의 급식 맛보는 영국인 학생들",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481956",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 24,
-      "keyword": "담배",
-      "category": "연예",
-      "score": 10,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        10
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "산에서 담배 피려다 걸린 사람",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050523",
-          "source": "bobaedream"
-        },
-        {
-          "title": "최강희가 담배랑 술 전부 다 끊은 방법.jpg",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482037",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 25,
-      "keyword": "특검",
-      "category": "시사",
-      "score": 10,
-      "mentions": 2,
-      "sources": [
-        "clien"
-      ],
-      "delta": -4,
-      "streak": 2,
-      "spark": [
-        16,
-        10
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 26,
+      "rank": 19,
       "keyword": "민주당",
       "category": "시사",
-      "score": 9,
-      "mentions": 2,
+      "score": 19,
+      "mentions": 4,
       "sources": [
         "bobaedream",
         "dcinside"
       ],
-      "delta": null,
-      "streak": 1,
+      "delta": 7,
+      "streak": 2,
       "spark": [
         49,
         0,
@@ -861,16 +613,97 @@
         17,
         0,
         0,
-        9
+        9,
+        19
       ],
       "sensitive": true,
       "samples": []
     },
     {
-      "rank": 27,
-      "keyword": "쌀숭이들",
+      "rank": 20,
+      "keyword": "소방관",
       "category": "게임",
-      "score": 8,
+      "score": 19,
+      "mentions": 2,
+      "sources": [
+        "dogdrip",
+        "inven"
+      ],
+      "delta": 1,
+      "streak": 5,
+      "spark": [
+        15,
+        11,
+        18,
+        12,
+        19
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 21,
+      "keyword": "첼시",
+      "category": "축구",
+      "score": 18,
+      "mentions": 4,
+      "sources": [
+        "fmkorea"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        18
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "[노팅엄 vs 첼시] 노팅엄 이고르 제수스 선제골ㄹㄹㄹㄹ",
+          "url": "https://www.fmkorea.com/10603057577",
+          "source": "fmkorea"
+        },
+        {
+          "title": "[노팅엄 vs 첼시] 모깁화 PK 추가골ㄹㄹㄹㄹㄹ",
+          "url": "https://www.fmkorea.com/10603089730",
+          "source": "fmkorea"
+        },
+        {
+          "title": "[노팅엄 vs 첼시] 역전의 서막 에메가 추격골ㄹㄹㄹㄹㄹ",
+          "url": "https://www.fmkorea.com/10603092397",
+          "source": "fmkorea"
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "keyword": "신태일",
+      "category": "연예",
+      "score": 17,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dcinside"
+      ],
+      "delta": -9,
+      "streak": 8,
+      "spark": [
+        18,
+        26,
+        44,
+        44,
+        47,
+        40,
+        26,
+        17
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 23,
+      "keyword": "리그오브레전드",
+      "category": "게임",
+      "score": 17,
       "mentions": 2,
       "sources": [
         "dcinside",
@@ -879,103 +712,155 @@
       "delta": null,
       "streak": 1,
       "spark": [
-        8
+        11,
+        0,
+        0,
+        14,
+        0,
+        17
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "쌀숭이들이 사업자 신고를 꼭 해야 하는 이유",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482116",
+          "title": "\" 내가 롤판은 잔인하다 느낀계기가 \"",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481984",
           "source": "dcinside"
+        },
+        {
+          "title": "구마유시가 달성한 롤 최초기록..jpg",
+          "url": "https://www.inven.co.kr/board/lol/4625/4292030",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "keyword": "이 대통령",
+      "category": "시사",
+      "score": 17,
+      "mentions": 2,
+      "sources": [
+        "clien",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        12,
+        0,
+        0,
+        17
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 25,
+      "keyword": "특검",
+      "category": "시사",
+      "score": 15,
+      "mentions": 2,
+      "sources": [
+        "clien"
+      ],
+      "delta": 0,
+      "streak": 3,
+      "spark": [
+        16,
+        10,
+        15
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 26,
+      "keyword": "AI",
+      "category": "테크",
+      "score": 14,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "inven"
+      ],
+      "delta": -5,
+      "streak": 14,
+      "spark": [
+        100,
+        33,
+        40,
+        81,
+        23,
+        12,
+        35,
+        56,
+        59,
+        63,
+        19,
+        14
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "싱글벙글 AI 슬롭에 지친 사람들을 위한 이미지들....jpg",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481952",
+          "source": "dcinside"
+        },
+        {
+          "title": "AI 느낌 많이나는 썸네일은거부감 느껴지네",
+          "url": "https://www.inven.co.kr/board/maple/5974/7464899",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "keyword": "블프",
+      "category": "게임",
+      "score": 12,
+      "mentions": 7,
+      "sources": [
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        6,
+        0,
+        0,
+        0,
+        12
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "큐나로 키나사는거랑 블프패키지랑 뭐가다른지 알려줄게",
+          "url": "https://www.inven.co.kr/board/aion2/6388/306965",
+          "source": "inven"
+        },
+        {
+          "title": "블프팩 나이땨",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771605",
+          "source": "inven"
+        },
+        {
+          "title": "블프팩을 샀더니",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771661",
+          "source": "inven"
         }
       ]
     },
     {
       "rank": 28,
-      "keyword": "정지",
-      "category": "게임",
-      "score": 8,
-      "mentions": 7,
-      "sources": [
-        "inven"
-      ],
-      "delta": -5,
-      "streak": 3,
-      "spark": [
-        6,
-        12,
-        8
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "정지 95%가 다계정투컴 쌀숭이들 같으면 개추",
-          "url": "https://www.inven.co.kr/board/maple/5974/7466756",
-          "source": "inven"
-        },
-        {
-          "title": "투컴쌀숭이 정지먹었습니다",
-          "url": "https://www.inven.co.kr/board/maple/5974/7465086",
-          "source": "inven"
-        },
-        {
-          "title": "하 씨 왜 정지당한 사람들 대부분 여친 와이프 가족이 메이플 같이하는거지?",
-          "url": "https://www.inven.co.kr/board/maple/5974/7466896",
-          "source": "inven"
-        }
-      ]
-    },
-    {
-      "rank": 29,
-      "keyword": "블루아카이브",
-      "category": "게임",
-      "score": 8,
-      "mentions": 2,
-      "sources": [
-        "inven",
-        "ruliweb"
-      ],
-      "delta": -8,
-      "streak": 10,
-      "spark": [
-        5,
-        0,
-        63,
-        33,
-        46,
-        9,
-        8,
-        13,
-        35,
-        16,
-        16,
-        8
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "블루 아카이브 코스프레",
-          "url": "https://www.inven.co.kr/board/maple/5974/7467003",
-          "source": "inven"
-        },
-        {
-          "title": "[맥스 팩토리] 1/7 블루 아카이브 - 레이죠 메모리얼 로비 생방송 샘플",
-          "url": "https://bbs.ruliweb.com/best/board/300017/read/2443674",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 30,
       "keyword": "이라333",
       "category": "게임",
-      "score": 7,
+      "score": 11,
       "mentions": 3,
       "sources": [
         "inven"
       ],
-      "delta": -6,
-      "streak": 9,
+      "delta": 4,
+      "streak": 10,
       "spark": [
         12,
         17,
@@ -985,7 +870,8 @@
         12,
         7,
         11,
-        7
+        7,
+        11
       ],
       "sensitive": false,
       "samples": [
@@ -1007,122 +893,16 @@
       ]
     },
     {
-      "rank": 31,
-      "keyword": "성범죄",
-      "category": "시사",
-      "score": 7,
-      "mentions": 2,
-      "sources": [
-        "bobaedream"
-      ],
-      "delta": -6,
-      "streak": 2,
-      "spark": [
-        21,
-        11,
-        7,
-        0,
-        0,
-        11,
-        7
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 32,
-      "keyword": "머스크",
-      "category": "테크",
-      "score": 7,
-      "mentions": 3,
-      "sources": [
-        "dcinside"
-      ],
-      "delta": -4,
-      "streak": 10,
-      "spark": [
-        36,
-        85,
-        12,
-        17,
-        18,
-        16,
-        47,
-        16,
-        10,
-        7
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "캬 삼성이 일론머스크에게 갑질 ㅋㅋㅋㅋㅋ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481980",
-          "source": "dcinside"
-        },
-        {
-          "title": "싱글벙글 최근 일론 머스크를 당황하게한 이재용 회장 일화",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482058",
-          "source": "dcinside"
-        },
-        {
-          "title": "미국어린이에게 주식 나눠주는 참아빠 일론머스크 ㄷ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481913",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 33,
-      "keyword": "트릭컬",
-      "category": "게임",
-      "score": 6,
-      "mentions": 3,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        12,
-        0,
-        10,
-        8,
-        0,
-        0,
-        0,
-        0,
-        6
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "트릭컬) 각 캐릭터별 후기 그림",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542595",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬)골디의 무게",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542672",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬) 스핔이 완성!",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77541974",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 34,
+      "rank": 29,
       "keyword": "로스트아크",
       "category": "게임",
-      "score": 6,
-      "mentions": 2,
+      "score": 11,
+      "mentions": 3,
       "sources": [
         "inven"
       ],
-      "delta": -8,
-      "streak": 7,
+      "delta": 6,
+      "streak": 8,
       "spark": [
         6,
         5,
@@ -1130,7 +910,8 @@
         12,
         7,
         11,
-        6
+        6,
+        11
       ],
       "sensitive": false,
       "samples": [
@@ -1147,118 +928,127 @@
       ]
     },
     {
-      "rank": 35,
-      "keyword": "블프팩",
+      "rank": 30,
+      "keyword": "정지",
       "category": "게임",
-      "score": 5,
+      "score": 11,
+      "mentions": 4,
+      "sources": [
+        "inven"
+      ],
+      "delta": 0,
+      "streak": 4,
+      "spark": [
+        6,
+        12,
+        8,
+        11
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "정지 95%가 다계정투컴 쌀숭이들 같으면 개추",
+          "url": "https://www.inven.co.kr/board/maple/5974/7466756",
+          "source": "inven"
+        },
+        {
+          "title": "투컴쌀숭이 정지먹었습니다",
+          "url": "https://www.inven.co.kr/board/maple/5974/7465086",
+          "source": "inven"
+        },
+        {
+          "title": "정지 먹은 이유(의심)",
+          "url": "https://www.inven.co.kr/board/maple/5974/7466510",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "keyword": "블루아카이브",
+      "category": "게임",
+      "score": 10,
       "mentions": 3,
       "sources": [
         "inven"
       ],
-      "delta": -6,
+      "delta": 0,
+      "streak": 11,
+      "spark": [
+        63,
+        33,
+        46,
+        9,
+        8,
+        13,
+        35,
+        16,
+        16,
+        8,
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "블아 이벤트에 필요했던 거.jpg",
+          "url": "https://www.inven.co.kr/board/maple/5974/7466669",
+          "source": "inven"
+        },
+        {
+          "title": "챌섭캐릭에 블아 칭호,코디 줄 수 있는 확률 올라감",
+          "url": "https://www.inven.co.kr/board/maple/5974/7467536",
+          "source": "inven"
+        },
+        {
+          "title": "블루 아카이브 코스프레",
+          "url": "https://www.inven.co.kr/board/maple/5974/7467003",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "keyword": "중국",
+      "category": "시사",
+      "score": 8,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "clien"
+      ],
+      "delta": -12,
       "streak": 3,
       "spark": [
-        13,
-        7,
+        15,
+        0,
+        0,
+        20,
+        12,
         7,
         5,
+        19,
         0,
-        5,
-        8,
-        5
+        11,
+        20,
+        8
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "블프팩 나이땨",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771605",
-          "source": "inven"
+          "title": "판다 못 보내준다...교훈 얻길' 돌연 입장 바꾼 중국",
+          "url": "https://www.clien.net/service/board/park/19299528",
+          "source": "clien"
         },
         {
-          "title": "블프팩을 샀더니",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771661",
-          "source": "inven"
-        },
-        {
-          "title": "블프팩 성물 질러본 결과",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771652",
-          "source": "inven"
-        }
-      ]
-    },
-    {
-      "rank": 36,
-      "keyword": "MCU",
-      "category": "연예",
-      "score": 5,
-      "mentions": 2,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": -5,
-      "streak": 2,
-      "spark": [
-        8,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        7,
-        5
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "MCU) 유부녀 완다가 다시 기대되는 이유",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542671",
-          "source": "ruliweb"
-        },
-        {
-          "title": "MCU) 언젠가 봤으면 좋겠는 장면",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77541976",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 37,
-      "keyword": "서울",
-      "category": "기타",
-      "score": 5,
-      "mentions": 2,
-      "sources": [
-        "dogdrip",
-        "fmkorea"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        6,
-        0,
-        5
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "도보로 서울에서 부산 일주일 컷에 도전 해본 13만 유튜버",
-          "url": "https://www.dogdrip.net/736887238",
-          "source": "dogdrip"
-        },
-        {
-          "title": "미쳐버린 다음주 서울 날씨",
-          "url": "https://www.fmkorea.com/10602754951",
-          "source": "fmkorea"
+          "title": "중국.. 이거 하나는 인정해야함",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050556",
+          "source": "bobaedream"
         }
       ]
     }
   ],
   "fmkoreaSearch": {
-    "collectedAt": "2026-11-27T19:30:07.288Z",
+    "collectedAt": "2026-11-27T21:30:07.217Z",
     "url": "https://www.fmkorea.com/best",
     "items": [
       {
@@ -1280,7 +1070,7 @@
         "keyword": "준표",
         "change": 0,
         "sensitive": false,
-        "matched": "준표햄"
+        "matched": "준표"
       },
       {
         "rank": 4,
@@ -1308,21 +1098,21 @@
         "keyword": "배우",
         "change": 0,
         "sensitive": false,
-        "matched": "뮤지컬배우"
+        "matched": "배우"
       },
       {
         "rank": 8,
-        "keyword": "데블스",
-        "change": 0,
+        "keyword": "우정잉",
+        "change": 1,
         "sensitive": false,
-        "matched": "데블스"
+        "matched": "우정잉"
       },
       {
         "rank": 9,
-        "keyword": "우정잉",
-        "change": 0,
+        "keyword": "데블스",
+        "change": -1,
         "sensitive": false,
-        "matched": "우정잉"
+        "matched": "데블스"
       },
       {
         "rank": 10,
