@@ -2612,6 +2612,215 @@
           "sensitive": false
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-27T09:32:15.164Z",
+      "keywords": [
+        {
+          "keyword": "GTA6",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "김준표",
+          "rank": 2,
+          "score": 96,
+          "sensitive": false
+        },
+        {
+          "keyword": "뮤지컬배우",
+          "rank": 3,
+          "score": 71,
+          "sensitive": true
+        },
+        {
+          "keyword": "존박",
+          "rank": 4,
+          "score": 53,
+          "sensitive": false
+        },
+        {
+          "keyword": "데블스플랜3",
+          "rank": 5,
+          "score": 46,
+          "sensitive": false
+        },
+        {
+          "keyword": "이동연",
+          "rank": 6,
+          "score": 35,
+          "sensitive": false
+        },
+        {
+          "keyword": "백종원",
+          "rank": 7,
+          "score": 34,
+          "sensitive": false
+        },
+        {
+          "keyword": "투컷",
+          "rank": 8,
+          "score": 28,
+          "sensitive": false
+        },
+        {
+          "keyword": "신태일",
+          "rank": 9,
+          "score": 26,
+          "sensitive": true
+        },
+        {
+          "keyword": "최민희",
+          "rank": 10,
+          "score": 23,
+          "sensitive": true
+        },
+        {
+          "keyword": "민주당",
+          "rank": 11,
+          "score": 21,
+          "sensitive": true
+        },
+        {
+          "keyword": "삼성",
+          "rank": 12,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "종부세",
+          "rank": 13,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "머스크",
+          "rank": 14,
+          "score": 18,
+          "sensitive": false
+        },
+        {
+          "keyword": "회사원",
+          "rank": 15,
+          "score": 17,
+          "sensitive": false
+        },
+        {
+          "keyword": "여의도",
+          "rank": 16,
+          "score": 15,
+          "sensitive": false
+        },
+        {
+          "keyword": "치이카와",
+          "rank": 17,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "워렌버핏",
+          "rank": 18,
+          "score": 13,
+          "sensitive": false
+        },
+        {
+          "keyword": "흑백리뷰",
+          "rank": 19,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 20,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "림버스",
+          "rank": 21,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "메이플스토리",
+          "rank": 22,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "삼국지",
+          "rank": 23,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "플레이스테이션",
+          "rank": 24,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "이라333",
+          "rank": 25,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "성범죄",
+          "rank": 26,
+          "score": 11,
+          "sensitive": true
+        },
+        {
+          "keyword": "트릭컬",
+          "rank": 27,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "블루아카이브",
+          "rank": 28,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "중국",
+          "rank": 29,
+          "score": 7,
+          "sensitive": true
+        },
+        {
+          "keyword": "블프팩",
+          "rank": 30,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "소전2",
+          "rank": 31,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "로스트아크",
+          "rank": 32,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 33,
+          "score": 4,
+          "sensitive": false
+        },
+        {
+          "keyword": "미국",
+          "rank": 34,
+          "score": 2,
+          "sensitive": false
+        }
+      ]
     }
   ]
 }
