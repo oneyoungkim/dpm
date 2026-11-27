@@ -22,7 +22,8 @@
     "magazine:new": "tsx scripts/magazine/new.ts",
     "magazine:selftest": "tsx scripts/magazine/selftest.ts",
     "magazine:polish": "tsx scripts/magazine/polish.ts",
-    "magazine:serve": "tsx scripts/magazine/serve.ts"
+    "magazine:serve": "tsx scripts/magazine/serve.ts",
+    "seo:indexnow": "tsx scripts/seo/indexnow.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^5.10.1",

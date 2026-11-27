@@ -1306,6 +1306,26 @@ body {
   font-size: 12px;
 }
 
+/* 글 끝 내부 링크(관련 일정·관련 키워드). 태그 줄과 같은 모양에 링크만 얹는다. */
+.article-links {
+  margin-top: 10px;
+}
+
+.article-links li.article-links-label {
+  padding-left: 0;
+  border-color: transparent;
+  color: #747b81;
+}
+
+.article-links a {
+  color: #d9dcda;
+  text-decoration: none;
+}
+
+.article-links a:hover {
+  color: #fff;
+}
+
 .article-rail {
   position: sticky;
   top: 88px;

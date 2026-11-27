@@ -3,13 +3,12 @@ import { BRAND, NAV } from "@/lib/brand";
 import { formatDateKo, todayKey } from "@/lib/kst";
 import { NavLinks } from "./NavLinks";
 
-/** 각도 기호(∠) 하나가 로고다. 꼭짓점의 빨간 점이 "지금"을 가리킨다. */
+/** 트랙 선 G 아이콘 하나가 로고다. 오른쪽 위 빨간 점이 "지금"을 가리킨다. 바로 옆에 글자 로고가 있어 alt는 비운다. */
 export function BrandMark({ size = 22 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden className="brand-mark">
-      <path d="M20.5 3.5 4 20.5h17" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinejoin="miter" />
-      <rect x="1.5" y="18" width="5" height="5" fill="var(--accent)" />
-    </svg>
+    // 64px짜리 작은 그림 하나라 next/image 변환을 거치지 않는다.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={BRAND.logo.mark} width={size} height={size} alt="" aria-hidden className="brand-mark" decoding="async" />
   );
 }
 

@@ -148,6 +148,12 @@ export function loadArticles(now: Date = new Date()): Article[] {
   );
 }
 
+/** 최근 hours시간 안에 발행된 글. 뉴스 사이트맵과 IndexNow 알림이 쓴다. 최신순. */
+export function recentArticles(hours = 48, now: Date = new Date()): Article[] {
+  const since = now.getTime() - hours * 60 * 60 * 1000;
+  return loadArticles(now).filter((article) => Date.parse(article.publishedAt) >= since);
+}
+
 /** 검사·주제 고르기용: 초안과 예약 글까지 전부. */
 export function loadAllArticles(): Article[] {
   return readAll();

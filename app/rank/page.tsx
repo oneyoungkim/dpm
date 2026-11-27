@@ -3,15 +3,16 @@ import { activeTrendCategories, loadTrends } from "@/lib/trends";
 import { RankChart } from "@/components/RankChart";
 import { formatTallyTime } from "@/components/RankBoard";
 import { AdSlot } from "@/components/AdSlot";
+import { pageMetadata } from "@/lib/seo";
 
 export const revalidate = 600;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "커뮤니티 키워드 순위",
   description:
     "에펨코리아·디시·루리웹 인기 글 제목을 집계해 지금 가장 많이 나오는 말을 순위로 보여 줍니다.",
-  alternates: { canonical: "/rank" },
-};
+  path: "/rank",
+});
 
 export default function RankPage() {
   const trends = loadTrends();

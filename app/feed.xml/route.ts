@@ -37,6 +37,9 @@ export function GET() {
     `<link>${absoluteUrl("/magazine")}</link>` +
     `<description>${esc(BRAND.description)}</description>` +
     `<language>ko</language>` +
+    // RSS 2.0 채널 그림은 가로 144px 이하라서 96px G 아이콘을 쓴다.
+    `<image><url>${absoluteUrl("/brand/gak-icon-96.png")}</url><title>${esc(BRAND.name)} 매거진</title>` +
+    `<link>${absoluteUrl("/magazine")}</link><width>96</width><height>96</height></image>` +
     `<atom:link href="${absoluteUrl("/feed.xml")}" rel="self" type="application/rss+xml"/>` +
     items +
     `</channel></rss>`;

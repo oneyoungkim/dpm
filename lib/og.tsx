@@ -17,16 +17,28 @@ export async function ogFonts() {
   ];
 }
 
+/**
+ * 공유 이미지 왼쪽 위 G 아이콘(바탕을 뺀 128px). data URI로 넣어 바깥 요청 없이 그린다.
+ * 실행 중(ISR)에도 읽히도록 next.config.ts 의 outputFileTracingIncludes 에 이 파일을 넣어 두었다.
+ */
+export async function ogMark(): Promise<string> {
+  const png = await readFile(join(process.cwd(), "public", "brand", "gak-mark-128.png"));
+  return `data:image/png;base64,${png.toString("base64")}`;
+}
+
 export function OgFrame({
   color,
   label,
   title,
   foot,
+  mark,
 }: {
   color: string;
   label: string;
   title: string;
   foot: string;
+  /** ogMark() 결과 */
+  mark: string;
 }) {
   const size = title.length > 26 ? 66 : title.length > 16 ? 80 : 96;
   return (
@@ -46,10 +58,8 @@ export function OgFrame({
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", fontSize: 40, fontWeight: 900, letterSpacing: -2 }}>
-          <svg width="40" height="40" viewBox="0 0 24 24" style={{ marginRight: 12 }}>
-            <path d="M20.5 3.5 4 20.5h17" fill="none" stroke="#f5f6f3" strokeWidth="3.4" />
-            <rect x="1.5" y="18" width="5" height="5" fill="#ff2438" />
-          </svg>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={mark} width={40} height={40} alt="" style={{ marginRight: 12 }} />
           <span>gak</span>
           <span style={{ color: "#ff2438" }}>.gg</span>
         </div>

@@ -3,14 +3,15 @@ import { loadArticles } from "@/lib/articles";
 import { CategoryNav } from "@/components/CategoryNav";
 import { ArticleCard } from "@/components/ArticleCard";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, collectionJsonLd } from "@/lib/structured-data";
 
 export const revalidate = 600;
 
-export const metadata: Metadata = {
-  title: "매거진",
-  description: "격투기, 축구, 차, 장비, 돈. 숫자와 출처가 있는 글을 하루 두 편 올립니다.",
-  alternates: { canonical: "/magazine" },
-};
+const DESCRIPTION = "격투기, 축구, 차, 장비, 돈. 숫자와 출처가 있는 글을 하루 두 편 올립니다.";
+
+export const metadata: Metadata = pageMetadata({ title: "매거진", description: DESCRIPTION, path: "/magazine" });
 
 export default function MagazinePage() {
   const articles = loadArticles();
@@ -18,6 +19,15 @@ export default function MagazinePage() {
 
   return (
     <main id="main" className="page">
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "홈", path: "/" },
+            { name: "매거진", path: "/magazine" },
+          ]),
+          collectionJsonLd({ name: "매거진", description: DESCRIPTION, path: "/magazine", articles }),
+        ]}
+      />
       <header className="page-head">
         <p className="eyebrow">읽을 각 / 매거진</p>
         <h1>매거진</h1>

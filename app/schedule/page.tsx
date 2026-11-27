@@ -5,15 +5,18 @@ import { ScheduleBrowser } from "@/components/ScheduleBrowser";
 import { buildPreviewEvents } from "@/lib/preview-events";
 import { isCuratedEvent } from "@/lib/curation";
 import { articlesByEventId } from "@/lib/articles";
+import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, scheduleJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
 
 /** 크롤러가 events.json 을 갈아끼우면 최대 10분 뒤 반영된다. */
 export const revalidate = 600;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "30일 일정",
   description: "축구·야구·UFC·LCK 중계 일정부터 게임 출시, 신제품 발표까지. 앞으로 30일 주요 일정을 모았습니다.",
-  alternates: { canonical: "/schedule" },
-};
+  path: "/schedule",
+});
 
 export default function SchedulePage() {
   const data = loadEvents();
@@ -46,6 +49,16 @@ export default function SchedulePage() {
 
   return (
     <main id="main" className="schedule-page">
+      {/* 미리보기 예시 일정은 빼고, 실제 수집된 일정만 구조화 데이터로 싣는다. */}
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "홈", path: "/" },
+            { name: "30일 일정", path: "/schedule" },
+          ]),
+          scheduleJsonLd(upcoming.filter((event) => !event.preview)),
+        ].filter((item) => item !== null)}
+      />
       {allEvents.length === 0 ? (
         <section id="top" className="empty-state">
           <p className="eyebrow">NO EVENTS YET</p>

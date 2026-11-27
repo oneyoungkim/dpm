@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { BRAND } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "개인정보 처리방침",
-  description: `${BRAND.name}가 어떤 정보를 다루는지, 광고와 쿠키가 어떻게 쓰이는지 적었습니다.`,
-  alternates: { canonical: "/privacy" },
-};
+  description: `${BRAND.name}(${BRAND.domain})가 어떤 정보를 다루는지, 광고와 쿠키가 어떻게 쓰이는지 적었습니다.`,
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

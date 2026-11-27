@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "소개와 편집 원칙",
-  description: `${BRAND.name}가 무엇을 싣고, 글과 순위를 어떻게 만드는지 적었습니다.`,
-  alternates: { canonical: "/about" },
-};
+  description: `${BRAND.name}(${BRAND.domain})가 무엇을 싣고, 글과 순위를 어떻게 만드는지 적었습니다.`,
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -18,7 +19,7 @@ export default function AboutPage() {
 
       <h2>무엇을 하는 곳인가</h2>
       <p>
-        {BRAND.name}(각)는 세 가지를 한곳에 모읍니다. 남자 커뮤니티에서 지금 가장 많이 나오는 말의 순위, 앞으로
+        {BRAND.name}({BRAND.domain})는 세 가지를 한곳에 모읍니다. 남자 커뮤니티에서 지금 가장 많이 나오는 말의 순위, 앞으로
         30일 동안 열리는 경기·출시·발표 일정, 그리고 하루 두 편 올라오는 매거진입니다.
       </p>
 

@@ -5,6 +5,11 @@ import { findArticle, loadArticles, relatedArticles } from "@/lib/articles";
 import { ARTICLE_CATEGORY_SLUG, ARTICLE_COLOR } from "@/lib/category-style";
 import { BRAND, absoluteUrl } from "@/lib/brand";
 import { loadTrends, mainChart } from "@/lib/trends";
+import { loadEvents } from "@/lib/events";
+import { formatDateKo } from "@/lib/kst";
+import { RSS_ALTERNATE } from "@/lib/seo";
+import { articleCrumbs, articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
+import { JsonLd } from "@/components/JsonLd";
 import { ArticleBody, splitBody } from "@/components/ArticleBody";
 import { ArticleCard, formatArticleDate } from "@/components/ArticleCard";
 import { ArticleCover } from "@/components/ArticleCover";
@@ -25,7 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: article.title,
     description: article.deck,
     keywords: article.tags,
-    alternates: { canonical: `/magazine/${article.slug}` },
+    alternates: { canonical: `/magazine/${article.slug}`, types: RSS_ALTERNATE },
+    // 공유 이미지는 같은 폴더의 opengraph-image.tsx 가 붙인다(여기서 images 를 적으면 그것이 빠진다).
     openGraph: {
       type: "article",
       title: article.title,
@@ -37,9 +43,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       modifiedTime: article.updatedAt ?? article.publishedAt,
       section: article.category,
       tags: article.tags,
+      authors: [absoluteUrl("/about")],
     },
     twitter: { card: "summary_large_image", title: article.title, description: article.deck },
   };
+}
+
+/** 키워드 순위에서 온 낱말만. "evergreen:…" 같은 글감 표시는 뺀다. */
+function rankKeywords(keywords: string[]): string[] {
+  return [...new Set(keywords.map((keyword) => keyword.trim()))].filter(
+    (keyword) => keyword.length > 0 && !/^[a-z-]+:/.test(keyword),
+  );
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -51,31 +65,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const related = relatedArticles(article, 3);
   const chart = mainChart(loadTrends(), 5);
   const color = ARTICLE_COLOR[article.category];
-  const url = absoluteUrl(`/magazine/${article.slug}`);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.deck,
-    datePublished: article.publishedAt,
-    dateModified: article.updatedAt ?? article.publishedAt,
-    articleSection: article.category,
-    keywords: article.tags.join(", "),
-    inLanguage: "ko-KR",
-    mainEntityOfPage: url,
-    image: article.image?.url ?? absoluteUrl(`/magazine/${article.slug}/opengraph-image`),
-    author: { "@type": "Organization", name: `${BRAND.name} ${article.author}`, url: absoluteUrl("/about") },
-    publisher: { "@type": "Organization", name: BRAND.name, url: BRAND.url },
-    citation: article.sources.map((source) => source.url),
-  };
+  // 글 끝 내부 링크: 이 글이 다룬 일정(일정 페이지로)과 키워드(순위 페이지로)
+  const eventIds = new Set(article.eventIds);
+  const relatedEvents =
+    eventIds.size > 0
+      ? loadEvents()
+          .events.filter((event) => eventIds.has(event.id))
+          .sort((a, b) => a.startsAt.localeCompare(b.startsAt))
+      : [];
+  const keywords = rankKeywords(article.keywords);
 
   return (
     <main id="main" className="article-page">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={[articleJsonLd(article), breadcrumbJsonLd(articleCrumbs(article))]} />
 
       <article className="article">
         <header className="article-head">
@@ -128,6 +130,30 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <li key={tag}>#{tag}</li>
           ))}
         </ul>
+
+        {relatedEvents.length > 0 && (
+          <ul className="article-tags article-links" aria-label="관련 일정">
+            <li className="article-links-label">관련 일정</li>
+            {relatedEvents.map((event) => (
+              <li key={event.id}>
+                <Link href="/schedule">
+                  {event.title} · {formatDateKo(event.dateKey)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {keywords.length > 0 && (
+          <ul className="article-tags article-links" aria-label="관련 키워드">
+            <li className="article-links-label">관련 키워드</li>
+            {keywords.map((keyword) => (
+              <li key={keyword}>
+                <Link href="/rank">{keyword}</Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <AdSlot placement="article-end" />
       </article>

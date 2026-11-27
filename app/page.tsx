@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { loadEvents } from "@/lib/events";
 import { addDays, todayKey } from "@/lib/kst";
@@ -6,6 +7,7 @@ import { loadTrends, mainChart } from "@/lib/trends";
 import { articlesByEventId, loadArticles } from "@/lib/articles";
 import { mainEventOf } from "@/lib/main-event";
 import { BRAND } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 import { RankBoard } from "@/components/RankBoard";
 import { ArticleCard } from "@/components/ArticleCard";
 import { EventStrip } from "@/components/EventStrip";
@@ -15,6 +17,8 @@ import { Reveal } from "@/components/Reveal";
 
 /** 집계·크롤·새 글이 들어오면 최대 10분 뒤 반영된다. */
 export const revalidate = 600;
+
+export const metadata: Metadata = pageMetadata({ description: BRAND.description, path: "/" });
 
 export default function Home() {
   const trends = loadTrends();
@@ -45,7 +49,7 @@ export default function Home() {
   return (
     <main id="main" className="home">
       <h1 className="sr-only">
-        {BRAND.name} — {BRAND.description}
+        {BRAND.name} {BRAND.domain} — {BRAND.description}
       </h1>
 
       {main ? (
