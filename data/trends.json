@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-27T01:26:36.384Z",
+  "generatedAt": "2026-11-27T03:32:55.022Z",
   "sources": [
     {
       "id": "fmkorea",
       "name": "에펨코리아",
       "url": "https://www.fmkorea.com/best",
-      "posts": 0,
-      "ok": false
+      "posts": 41,
+      "ok": true
     },
     {
       "id": "dcinside",
@@ -19,7 +19,7 @@
       "id": "ruliweb",
       "name": "루리웹",
       "url": "https://bbs.ruliweb.com/best/all",
-      "posts": 64,
+      "posts": 63,
       "ok": true
     },
     {
@@ -40,61 +40,106 @@
       "id": "dogdrip",
       "name": "개드립",
       "url": "https://www.dogdrip.net/dogdrip?sort_index=popular",
-      "posts": 0,
-      "ok": false
+      "posts": 40,
+      "ok": true
     },
     {
       "id": "clien",
       "name": "클리앙",
       "url": "https://www.clien.net/service/board/park",
-      "posts": 24,
+      "posts": 21,
       "ok": true
     }
   ],
   "keywords": [
     {
       "rank": 1,
-      "keyword": "이재명",
-      "category": "시사",
+      "keyword": "삼성전자",
+      "category": "테크",
       "score": 100,
-      "mentions": 4,
+      "mentions": 7,
       "sources": [
-        "bobaedream",
-        "clien"
+        "clien",
+        "dcinside",
+        "fmkorea",
+        "ruliweb"
       ],
-      "delta": null,
-      "streak": 1,
+      "delta": 4,
+      "streak": 2,
       "spark": [
-        38,
-        42,
-        36,
-        34,
-        34,
-        17,
-        0,
-        0,
-        0,
-        0,
-        0,
+        45,
         100
       ],
-      "sensitive": true,
-      "samples": []
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "삼성 배당금 들어왔네요.",
+          "url": "https://www.clien.net/service/board/park/19299170",
+          "source": "clien"
+        },
+        {
+          "title": "일론 머스크가 이야기하는 삼성전자.jpg",
+          "url": "https://www.fmkorea.com/10600259167",
+          "source": "fmkorea"
+        },
+        {
+          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
+          "source": "ruliweb"
+        }
+      ]
     },
     {
       "rank": 2,
-      "keyword": "GTA6",
-      "category": "게임",
-      "score": 77,
-      "mentions": 6,
+      "keyword": "머스크",
+      "category": "테크",
+      "score": 85,
+      "mentions": 5,
       "sources": [
+        "clien",
         "dcinside",
+        "fmkorea",
         "ruliweb"
       ],
-      "delta": 2,
-      "streak": 12,
+      "delta": 6,
+      "streak": 2,
       "spark": [
-        44,
+        36,
+        85
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "머스크 ‘메모리 구애’..이재용 “뭘 더 해줄 수 있나”",
+          "url": "https://www.clien.net/service/board/park/19299187",
+          "source": "clien"
+        },
+        {
+          "title": "일론 머스크가 이야기하는 삼성전자.jpg",
+          "url": "https://www.fmkorea.com/10600259167",
+          "source": "fmkorea"
+        },
+        {
+          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "keyword": "GTA6",
+      "category": "게임",
+      "score": 52,
+      "mentions": 5,
+      "sources": [
+        "dcinside",
+        "fmkorea",
+        "ruliweb"
+      ],
+      "delta": -2,
+      "streak": 13,
+      "spark": [
         49,
         40,
         55,
@@ -105,7 +150,8 @@
         44,
         35,
         49,
-        77
+        77,
+        52
       ],
       "sensitive": false,
       "samples": [
@@ -115,29 +161,29 @@
           "source": "ruliweb"
         },
         {
+          "title": "AI로 난리난 GTA6 근황.JPG",
+          "url": "https://www.fmkorea.com/10600618852",
+          "source": "fmkorea"
+        },
+        {
           "title": "게임 개발진들이 바라본 GTA6 평가",
           "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481860",
           "source": "dcinside"
-        },
-        {
-          "title": "GTA6)스코프로 보면 죽이러 오는 원펀맨 죽여봄",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533689",
-          "source": "ruliweb"
         }
       ]
     },
     {
-      "rank": 3,
+      "rank": 4,
       "keyword": "김준표",
-      "category": "연예",
-      "score": 71,
+      "category": "시사",
+      "score": 43,
       "mentions": 9,
       "sources": [
         "dcinside",
-        "inven"
+        "dogdrip"
       ],
-      "delta": 0,
-      "streak": 7,
+      "delta": -2,
+      "streak": 8,
       "spark": [
         100,
         100,
@@ -145,14 +191,15 @@
         100,
         100,
         70,
-        71
+        71,
+        43
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "ㅇㅂ) 김준표 근황",
-          "url": "https://www.inven.co.kr/board/maple/5974/7461810",
-          "source": "inven"
+          "title": "김준표 영상 최초로 날린 사람의 후기",
+          "url": "https://www.dogdrip.net/736796720",
+          "source": "dogdrip"
         },
         {
           "title": "최근 영상 저작권 3번 경고 신고삭당하는 렉카 마술 유튜버 김준표 해명 ㄷㄷㄷ",
@@ -167,135 +214,19 @@
       ]
     },
     {
-      "rank": 4,
-      "keyword": "블루아카이브",
-      "category": "게임",
-      "score": 63,
-      "mentions": 10,
-      "sources": [
-        "inven",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        18,
-        0,
-        0,
-        7,
-        5,
-        0,
-        63
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "블루아카) 마나미는 자기 자식에게 지극정성일 듯?",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533630",
-          "source": "ruliweb"
-        },
-        {
-          "title": "블아 이벤트 히든",
-          "url": "https://www.inven.co.kr/board/maple/5974/7464009",
-          "source": "inven"
-        },
-        {
-          "title": "블루아카) 마나미가 엄마가 되면",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533681",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
       "rank": 5,
-      "keyword": "집값",
-      "category": "돈",
-      "score": 56,
-      "mentions": 2,
-      "sources": [
-        "clien",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        56
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "집값이 너무 상승합니다 어떻게 해야 할까요?",
-          "url": "https://www.clien.net/service/board/park/19299105",
-          "source": "clien"
-        },
-        {
-          "title": "집값 올랐다고 좋아할게 아녔어”...종부세 대상·세액 4년 만에 최대",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481852",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 6,
-      "keyword": "민주당",
-      "category": "시사",
-      "score": 49,
-      "mentions": 2,
-      "sources": [
-        "clien",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        49
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 7,
-      "keyword": "삼성전자",
-      "category": "테크",
-      "score": 45,
-      "mentions": 2,
-      "sources": [
-        "dcinside",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        45
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
-          "source": "ruliweb"
-        },
-        {
-          "title": "전남광주 삼성전자 근황",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481800",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 8,
       "keyword": "주식",
       "category": "돈",
-      "score": 43,
-      "mentions": 2,
+      "score": 42,
+      "mentions": 3,
       "sources": [
         "bobaedream",
-        "dcinside"
+        "clien",
+        "inven"
       ],
-      "delta": null,
-      "streak": 1,
+      "delta": 1,
+      "streak": 2,
       "spark": [
-        100,
         100,
         100,
         100,
@@ -306,7 +237,8 @@
         0,
         0,
         0,
-        43
+        43,
+        42
       ],
       "sensitive": false,
       "samples": [
@@ -316,113 +248,26 @@
           "source": "bobaedream"
         },
         {
-          "title": "“주식으로 생활비 버는 시대 열자”",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481782",
-          "source": "dcinside"
+          "title": "주식 얘기가 나와서 말인데",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771573",
+          "source": "inven"
         }
       ]
     },
     {
-      "rank": 9,
-      "keyword": "한덕수",
-      "category": "시사",
-      "score": 42,
-      "mentions": 2,
-      "sources": [
-        "clien",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        42
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 10,
-      "keyword": "마운자로",
-      "category": "시사",
-      "score": 39,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        24,
-        27,
-        20,
-        26,
-        27,
-        14,
-        6,
-        0,
-        7,
-        0,
-        0,
-        39
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "마운자로 맞는 거 욕하는 애들 중 가장 이상한 애들",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533746",
-          "source": "ruliweb"
-        },
-        {
-          "title": "마운자로 때문에 헬스장이 망한다고?",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050388",
-          "source": "bobaedream"
-        }
-      ]
-    },
-    {
-      "rank": 11,
-      "keyword": "머스크",
-      "category": "테크",
-      "score": 36,
-      "mentions": 2,
-      "sources": [
-        "dcinside",
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        36
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "램 장기구매 때문에 삼성전자 찾아온 머스크",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77533493",
-          "source": "ruliweb"
-        },
-        {
-          "title": "미국어린이에게 주식 나눠주는 참아빠 일론머스크 ㄷ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481913",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 12,
+      "rank": 6,
       "keyword": "AI",
       "category": "테크",
-      "score": 33,
-      "mentions": 4,
+      "score": 40,
+      "mentions": 6,
       "sources": [
         "dcinside",
+        "fmkorea",
         "inven"
       ],
-      "delta": -8,
-      "streak": 4,
+      "delta": 3,
+      "streak": 5,
       "spark": [
-        69,
         76,
         60,
         75,
@@ -433,61 +278,339 @@
         42,
         39,
         100,
+        33,
+        40
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "AI로 난리난 GTA6 근황.JPG",
+          "url": "https://www.fmkorea.com/10600618852",
+          "source": "fmkorea"
+        },
+        {
+          "title": "싱글벙글 AI 슬롭에 지친 사람들을 위한 이미지들....jpg",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481952",
+          "source": "dcinside"
+        },
+        {
+          "title": "AI 씨바 인벤 단체린치 사건 사과 미리 감사",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771530",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "keyword": "국정원",
+      "category": "시사",
+      "score": 34,
+      "mentions": 3,
+      "sources": [
+        "dogdrip",
+        "fmkorea"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        34
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "국정원, 中에 '대만 정보' 제공 시도...美 '발칵'",
+          "url": "https://www.dogdrip.net/736797375",
+          "source": "dogdrip"
+        },
+        {
+          "title": "최근 터진 국정원 중국 휴민트 사건 요약.jpg",
+          "url": "https://www.fmkorea.com/10600321613",
+          "source": "fmkorea"
+        },
+        {
+          "title": "국정원 휴민트 사건 요약",
+          "url": "https://www.dogdrip.net/736837418",
+          "source": "dogdrip"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "keyword": "블루아카이브",
+      "category": "게임",
+      "score": 33,
+      "mentions": 7,
+      "sources": [
+        "inven",
+        "ruliweb"
+      ],
+      "delta": -5,
+      "streak": 2,
+      "spark": [
+        18,
+        0,
+        0,
+        7,
+        5,
+        0,
+        63,
         33
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "AI 씨바 인벤 단체린치 사건 사과 미리 감사",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771530",
+          "title": "블아 총력전 데미안 학생 추천",
+          "url": "https://www.inven.co.kr/board/maple/5974/7462690",
           "source": "inven"
         },
         {
-          "title": "아모데이) AI에 통제권 안넘긴다 X 초장문 글",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481901",
-          "source": "dcinside"
+          "title": "블루아카) '토키의 선택지'",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77534774",
+          "source": "ruliweb"
         },
         {
-          "title": "AI?] 간호사 시험 만점자 27배 증가",
-          "url": "https://www.inven.co.kr/board/lineagem/5019/771553",
+          "title": "블아 이벤트 히든",
+          "url": "https://www.inven.co.kr/board/maple/5974/7464009",
           "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "keyword": "친자검사",
+      "category": "기타",
+      "score": 25,
+      "mentions": 2,
+      "sources": [
+        "dogdrip",
+        "fmkorea"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        25
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "친자검사에서 친자불일치보다 더 끔찍한 결과 ㄷㄷ",
+          "url": "https://www.fmkorea.com/10599904659",
+          "source": "fmkorea"
+        },
+        {
+          "title": "친자검사에서 친자불일치보다 더 끔찍한 결과",
+          "url": "https://www.dogdrip.net/736820559",
+          "source": "dogdrip"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "keyword": "코스피",
+      "category": "돈",
+      "score": 24,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        59,
+        50,
+        49,
+        49,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "코스피 오른다고 좋아했는데 나선이 2퍼가 올랐네요",
+          "url": "https://www.clien.net/service/board/park/19299181",
+          "source": "clien"
+        },
+        {
+          "title": "우리가 코스피 투자후 물린 이유",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050456",
+          "source": "bobaedream"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "keyword": "수영장",
+      "category": "기타",
+      "score": 23,
+      "mentions": 3,
+      "sources": [
+        "bobaedream",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        23
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "여름 수영장 알바썰",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050445",
+          "source": "bobaedream"
+        },
+        {
+          "title": "수영장 알바하는데 단체손님 온썰.jpg",
+          "url": "https://www.dogdrip.net/736823826",
+          "source": "dogdrip"
+        },
+        {
+          "title": "수영장 알바하는데 단체손님 온썰",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050464",
+          "source": "bobaedream"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "keyword": "자영업자",
+      "category": "돈",
+      "score": 22,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "fmkorea"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        22
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "(약혐) 오늘도 자영업자는 힘듭니다ㅜ",
+          "url": "https://www.fmkorea.com/10600434444",
+          "source": "fmkorea"
+        },
+        {
+          "title": "요즘 자영업자들 근황. jpg",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050429",
+          "source": "bobaedream"
         }
       ]
     },
     {
       "rank": 13,
-      "keyword": "플레이스테이션",
-      "category": "게임",
-      "score": 32,
+      "keyword": "BYD",
+      "category": "자동차",
+      "score": 22,
       "mentions": 2,
       "sources": [
-        "clien",
-        "dcinside"
+        "bobaedream",
+        "dogdrip"
       ],
       "delta": null,
       "streak": 1,
       "spark": [
-        32
+        22
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "ps5 쓰시는 분들 패드 몇개 있으신가요?",
-          "url": "https://www.clien.net/service/board/park/19299140",
-          "source": "clien"
+          "title": "BYD동호회 수준",
+          "url": "https://www.dogdrip.net/736839119",
+          "source": "dogdrip"
         },
         {
-          "title": "애초에 그타6 보고 플스 산게 아님",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481796",
-          "source": "dcinside"
+          "title": "BYD 동호회 수준",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050457",
+          "source": "bobaedream"
         }
       ]
     },
     {
       "rank": 14,
-      "keyword": "부동산",
-      "category": "돈",
-      "score": 31,
+      "keyword": "백화점",
+      "category": "연예",
+      "score": 21,
+      "mentions": 3,
+      "sources": [
+        "bobaedream",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        21
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "백화점 근무복에 민원 넣은 고객...그 결과.jpg",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050384",
+          "source": "bobaedream"
+        },
+        {
+          "title": "낭만낭만 백화점 근무복에 민원 넣은 고객님...jpg",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481974",
+          "source": "dcinside"
+        },
+        {
+          "title": "백화점 주차요원 복장 보고 민원 넣은 고객",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050458",
+          "source": "bobaedream"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "keyword": "애플",
+      "category": "테크",
+      "score": 21,
+      "mentions": 2,
+      "sources": [
+        "fmkorea",
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        21
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 16,
+      "keyword": "다이소",
+      "category": "기타",
+      "score": 19,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        19
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 17,
+      "keyword": "정부",
+      "category": "시사",
+      "score": 18,
       "mentions": 2,
       "sources": [
         "clien"
@@ -495,48 +618,255 @@
       "delta": null,
       "streak": 1,
       "spark": [
-        33,
-        28,
-        28,
-        0,
+        18
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 18,
+      "keyword": "김민석",
+      "category": "시사",
+      "score": 18,
+      "mentions": 2,
+      "sources": [
+        "clien"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
         18,
         0,
         0,
         0,
+        9,
         0,
-        31
+        0,
+        18
       ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "부동산 떨어질 조짐이 보이니 불만의 목소리가 더 커지네요",
-          "url": "https://www.clien.net/service/board/park/19299125",
-          "source": "clien"
-        },
-        {
-          "title": "부동산이 하락하면 자화자찬 할까요",
-          "url": "https://www.clien.net/service/board/park/19299108",
-          "source": "clien"
-        }
-      ]
+      "sensitive": true,
+      "samples": []
     },
     {
-      "rank": 15,
-      "keyword": "윤석열",
+      "rank": 19,
+      "keyword": "자살",
       "category": "시사",
-      "score": 21,
+      "score": 18,
       "mentions": 2,
       "sources": [
-        "dcinside"
+        "bobaedream",
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        18
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 20,
+      "keyword": "마운자로",
+      "category": "시사",
+      "score": 18,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dogdrip"
       ],
       "delta": -8,
       "streak": 2,
       "spark": [
+        27,
         20,
-        21
+        26,
+        27,
+        14,
+        6,
+        0,
+        7,
+        0,
+        0,
+        39,
+        18
       ],
-      "sensitive": true,
-      "samples": []
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "마운자로 개발사 “다음 목표는 암 치료제...역량 총동원 중”",
+          "url": "https://www.dogdrip.net/736807145",
+          "source": "dogdrip"
+        },
+        {
+          "title": "마운자로 때문에 헬스장이 망한다고?",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050388",
+          "source": "bobaedream"
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "keyword": "이진우",
+      "category": "연예",
+      "score": 13,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        13
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "싱글벙글 이진우(리트만점자) \"진짜\" 대학 떴다...JPG",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481966",
+          "source": "dcinside"
+        },
+        {
+          "title": "이진우 '리트' 본 이유 \"책 내려는데 마침 만점자 없길래\"",
+          "url": "https://www.dogdrip.net/736802866",
+          "source": "dogdrip"
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "keyword": "챗GPT",
+      "category": "테크",
+      "score": 12,
+      "mentions": 2,
+      "sources": [
+        "inven",
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        12
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "수능 세계사 잼민이가 gpt를 후두려까네 ㅋㅋㅋ",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77534495",
+          "source": "ruliweb"
+        },
+        {
+          "title": "현카 효율표 (챗지피티)",
+          "url": "https://www.inven.co.kr/board/maple/5974/7462175",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "keyword": "이라333",
+      "category": "게임",
+      "score": 12,
+      "mentions": 4,
+      "sources": [
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        12
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "이라333입니다.",
+          "url": "https://www.inven.co.kr/board/maple/5974/7463466",
+          "source": "inven"
+        },
+        {
+          "title": "이라333님 너무 마음 쓰지 마세요. 오빠가 있잖아요^^",
+          "url": "https://www.inven.co.kr/board/maple/5974/7465038",
+          "source": "inven"
+        },
+        {
+          "title": "이라333 영상 멀쩡한데?",
+          "url": "https://www.inven.co.kr/board/maple/5974/7465105",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "keyword": "트릭컬",
+      "category": "게임",
+      "score": 12,
+      "mentions": 4,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        7,
+        8,
+        11,
+        11,
+        14,
+        9,
+        11,
+        11,
+        0,
+        0,
+        0,
+        12
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "트릭컬) 반다이 아크릴 대표님의 사심이 들어간거",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77534760",
+          "source": "ruliweb"
+        },
+        {
+          "title": "트릭컬)에슈르...에르핀....코미...",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77534631",
+          "source": "ruliweb"
+        },
+        {
+          "title": "트릭컬)2년 뒤 50개+@ 추가되는 굿즈",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77534624",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "keyword": "방송인",
+      "category": "게임",
+      "score": 10,
+      "mentions": 3,
+      "sources": [
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "그냥 솔직하게 말해 방송인 용돈컵이 꼴보기 싫다고",
+          "url": "https://www.inven.co.kr/board/maple/5974/7463718",
+          "source": "inven"
+        },
+        {
+          "title": "방송인 인기투표가 뭐가문제임?",
+          "url": "https://www.inven.co.kr/board/maple/5974/7463263",
+          "source": "inven"
+        }
+      ]
     }
   ]
 }
