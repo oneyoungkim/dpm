@@ -301,7 +301,7 @@ export function fromTrends(file: TrendsFile | null, skipped: string[], now = new
       tags: [item.keyword],
       keywords: [item.keyword],
       eventIds: [],
-      sourceHints: ["본인·소속 단체 공식 발표", "통신사(연합뉴스·로이터) 보도"],
+      sourceHints: ["본인·소속 단체 공식 발표", "뉴시스·뉴스1·로이터 등 통신사 보도(연합뉴스는 쓰지 않음)"],
       notes,
       required: false,
       role: "normal",
