@@ -3693,6 +3693,233 @@
           "sensitive": false
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-27T19:32:01.830Z",
+      "keywords": [
+        {
+          "keyword": "뮤지컬",
+          "rank": 1,
+          "score": 100,
+          "sensitive": true
+        },
+        {
+          "keyword": "준표햄",
+          "rank": 2,
+          "score": 80,
+          "sensitive": false
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 3,
+          "score": 71,
+          "sensitive": false
+        },
+        {
+          "keyword": "이동연",
+          "rank": 4,
+          "score": 60,
+          "sensitive": false
+        },
+        {
+          "keyword": "국정원",
+          "rank": 5,
+          "score": 57,
+          "sensitive": true
+        },
+        {
+          "keyword": "뮤지컬배우",
+          "rank": 6,
+          "score": 54,
+          "sensitive": false
+        },
+        {
+          "keyword": "주식",
+          "rank": 7,
+          "score": 47,
+          "sensitive": false
+        },
+        {
+          "keyword": "김준표",
+          "rank": 8,
+          "score": 47,
+          "sensitive": false
+        },
+        {
+          "keyword": "존박",
+          "rank": 9,
+          "score": 42,
+          "sensitive": false
+        },
+        {
+          "keyword": "데블스",
+          "rank": 10,
+          "score": 33,
+          "sensitive": false
+        },
+        {
+          "keyword": "최민희",
+          "rank": 11,
+          "score": 32,
+          "sensitive": true
+        },
+        {
+          "keyword": "우정잉",
+          "rank": 12,
+          "score": 28,
+          "sensitive": false
+        },
+        {
+          "keyword": "신태일",
+          "rank": 13,
+          "score": 26,
+          "sensitive": true
+        },
+        {
+          "keyword": "중국",
+          "rank": 14,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 15,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 16,
+          "score": 18,
+          "sensitive": false
+        },
+        {
+          "keyword": "김민석",
+          "rank": 17,
+          "score": 17,
+          "sensitive": true
+        },
+        {
+          "keyword": "쇼핑몰",
+          "rank": 18,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "수익",
+          "rank": 19,
+          "score": 13,
+          "sensitive": false
+        },
+        {
+          "keyword": "삼성",
+          "rank": 20,
+          "score": 13,
+          "sensitive": false
+        },
+        {
+          "keyword": "소방관",
+          "rank": 21,
+          "score": 12,
+          "sensitive": true
+        },
+        {
+          "keyword": "플레이스테이션",
+          "rank": 22,
+          "score": 12,
+          "sensitive": false
+        },
+        {
+          "keyword": "급식",
+          "rank": 23,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "담배",
+          "rank": 24,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "특검",
+          "rank": 25,
+          "score": 10,
+          "sensitive": true
+        },
+        {
+          "keyword": "민주당",
+          "rank": 26,
+          "score": 9,
+          "sensitive": true
+        },
+        {
+          "keyword": "쌀숭이들",
+          "rank": 27,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "정지",
+          "rank": 28,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "블루아카이브",
+          "rank": 29,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "이라333",
+          "rank": 30,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "성범죄",
+          "rank": 31,
+          "score": 7,
+          "sensitive": true
+        },
+        {
+          "keyword": "머스크",
+          "rank": 32,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "트릭컬",
+          "rank": 33,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "로스트아크",
+          "rank": 34,
+          "score": 6,
+          "sensitive": false
+        },
+        {
+          "keyword": "블프팩",
+          "rank": 35,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "MCU",
+          "rank": 36,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "서울",
+          "rank": 37,
+          "score": 5,
+          "sensitive": false
+        }
+      ]
     }
   ]
 }
