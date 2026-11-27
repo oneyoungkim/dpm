@@ -8,9 +8,9 @@ export const BRAND = {
   nameKo: "각",
   /** 끝에 슬래시 없이. 도메인을 연결하면 NEXT_PUBLIC_SITE_URL만 바꾼다. */
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://dpm-five.vercel.app").replace(/\/$/, ""),
-  tagline: "볼 각, 뜰 각, 읽을 각.",
+  tagline: "지금 뜰 각, 챙겨 볼 각",
   description:
-    "남자 커뮤니티에서 지금 가장 많이 나오는 말, 이번 주에 볼 경기와 출시, 하루 두 편 매거진을 한곳에서.",
+    "커뮤니티 인기 키워드 순위, 30일 경기·출시 일정과 중계 채널, 하루 두 편 매거진.",
   /** 공개 문의 메일. 비어 있으면 소개 페이지가 문의 줄을 숨긴다. */
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   /** 애드센스 게시자 ID("ca-pub-…"). 비어 있으면 광고 코드를 아예 싣지 않는다. */

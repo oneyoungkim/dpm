@@ -1634,3 +1634,643 @@ body {
     animation: none;
   }
 }
+
+/* ── 메인 이벤트 카드(첫 화면 맨 위) ───────────────── */
+
+:root {
+  /* 모션은 전부 이 곡선 하나, 160~420ms */
+  --ease-gak: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.mev {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "head count"
+    "info count"
+    "actions count";
+  column-gap: 32px;
+  padding: 26px 28px 24px 30px;
+  border: 1px solid var(--line-strong);
+  background:
+    linear-gradient(150deg, rgba(255, 36, 56, 0.1), transparent 42%),
+    var(--surface);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+/* 왼쪽 빨간 기둥(장식) */
+.mev::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+}
+
+.mev-head {
+  grid-area: head;
+  min-width: 0;
+}
+
+.mev-head .eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.1em;
+}
+
+.mev-league {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #9aa1a5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mev-league i {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.mev-title {
+  margin: 10px 0 0;
+  font-size: clamp(30px, 4.4vw, 52px);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.mev-info {
+  grid-area: info;
+  min-width: 0;
+  margin-top: 16px;
+}
+
+.mev-when {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  color: #c2c6c8;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.mev-when span::before {
+  content: "·";
+  margin-right: 10px;
+  color: var(--muted);
+}
+
+.mev-reason {
+  margin: 6px 0 0;
+  color: #a9afb3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mev-actions {
+  grid-area: actions;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mev-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 160ms var(--ease-gak),
+    border-color 160ms var(--ease-gak),
+    color 160ms var(--ease-gak);
+}
+
+.mev-btn:hover {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
+.mev-btn-primary {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: #050607;
+}
+
+.mev-btn-primary:hover {
+  color: #050607;
+}
+
+.mev-btn:active {
+  transform: scale(0.98);
+}
+
+.mev-count {
+  grid-area: count;
+  align-self: center;
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+  text-align: right;
+}
+
+/* ── 남은 시간(Countdown) ── */
+
+.cd-dday {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  color: var(--signal);
+  font-family: var(--narrow);
+  font-size: clamp(64px, 8.6vw, 108px);
+  font-style: italic;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.cd-live .cd-dday {
+  color: var(--accent);
+}
+
+/* LIVE 점: 반복해도 되는 유일한 움직임 */
+.cd-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  animation: gak-live 1.4s ease-in-out infinite;
+}
+
+/* 숫자만 위아래로 잘라 보여 준다. 기울인 글자 끝이 잘리지 않게 오른쪽 여유를 둔다. */
+.cd-roll {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.08em;
+  overflow-x: visible;
+  overflow-y: clip;
+}
+
+.cd-in {
+  display: inline-block;
+  animation: gak-roll-in 320ms var(--ease-gak) both;
+}
+
+.cd-out {
+  position: absolute;
+  inset: 0 0.08em 0 auto;
+  animation: gak-roll-out 320ms var(--ease-gak) both;
+}
+
+.cd-left {
+  display: block;
+  min-height: 1.45em;
+  margin-top: 10px;
+  color: #c2c6c8;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+/* ── 일정 줄: 소개 글 링크 ── */
+
+.strip-list-reads .strip-item {
+  grid-template-columns: 76px minmax(0, 1fr) auto 58px 64px;
+}
+
+.strip-read {
+  color: var(--signal);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.strip-read:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* /schedule 일정 카드의 소개 글 링크 */
+.event-read {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.event-read a {
+  color: var(--signal);
+  text-decoration: none;
+}
+
+.event-read a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 메인 이벤트 카드 바로 뒤의 일정 줄은 덜 띄운다. 카드가 없으면 맨 위라 붙인다. */
+.reveal:has(.mev) + .reveal .strip {
+  margin-top: 40px;
+}
+
+.home > .reveal:first-of-type .strip {
+  margin-top: 0;
+}
+
+/* 광고가 없을 때도 일정 줄과 순위판 사이를 띄운다(광고 여백과는 겹쳐 접힌다). */
+.home .home-top {
+  margin-top: 56px;
+}
+
+/* ── 모션 ──────────────────────────────────────────── */
+
+/* 첫 화면 묶음: 불러올 때 한 번, 묶음마다 50ms 간격. CSS만으로 돌아 JS가 없어도 끝나면 보인다. */
+.reveal {
+  animation: gak-rise 360ms var(--ease-gak) both;
+  animation-delay: calc(var(--rise-i, 0) * 50ms);
+}
+
+/* 화면 아래쪽 묶음: JS가 붙은 뒤에만 숨겼다가(Reveal) 보일 때 올라온다. */
+.reveal-wait {
+  animation: none;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* 숨어 있는 동안 안쪽 애니메이션도 멈춰 두면, 보일 때 처음부터 다시 돈다. */
+.reveal-wait * {
+  animation: none !important;
+}
+
+.reveal-in {
+  animation-delay: 0ms;
+}
+
+/* 순위판: 줄이 30ms 간격으로 나타나고, 막대가 0에서 제 길이까지 자란다. */
+.rank-board .rank-row {
+  animation: gak-row-in 260ms var(--ease-gak) both;
+  animation-delay: calc(var(--row-i, 0) * 30ms + 120ms);
+}
+
+.rank-board .rank-bar i {
+  transform-origin: left center;
+  animation: gak-bar-grow 420ms var(--ease-gak) both;
+  animation-delay: calc(var(--row-i, 0) * 30ms + 180ms);
+}
+
+.rank-board .rank-row .rank-delta-up,
+.rank-board .rank-row .rank-delta-down,
+.rank-board .rank-row .rank-delta-new {
+  transform-origin: right center;
+  animation-duration: 300ms;
+  animation-timing-function: var(--ease-gak);
+  animation-fill-mode: both;
+  animation-delay: calc(var(--row-i, 0) * 30ms + 300ms);
+}
+
+/* 오른 것은 아래에서 4px 올라와 멈추고, 내린 것은 위에서 4px 내려와 멈춘다. */
+.rank-board .rank-row .rank-delta-up {
+  animation-name: gak-nudge-up;
+}
+
+.rank-board .rank-row .rank-delta-down {
+  animation-name: gak-nudge-down;
+}
+
+/* NEW: 한 번 밝아졌다 가라앉는다. */
+.rank-board .rank-row .rank-delta-new {
+  animation-name: gak-new-glow;
+  animation-duration: 420ms;
+}
+
+/* 올려놓을 때: 일정 줄 */
+.strip-item {
+  transition:
+    transform 180ms var(--ease-gak),
+    border-color 180ms var(--ease-gak);
+}
+
+.strip-item:hover {
+  transform: translateY(-2px);
+  border-bottom-color: rgba(255, 36, 56, 0.42);
+}
+
+/* 올려놓을 때: 글 카드 */
+.mag-card-link {
+  transition: transform 200ms var(--ease-gak);
+}
+
+.mag-card-link:hover,
+.mag-card-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.mag-card .cover img {
+  transition: transform 320ms var(--ease-gak);
+}
+
+.mag-card-link:hover .cover img,
+.mag-card-link:focus-visible .cover img {
+  transform: scale(1.02);
+}
+
+.mag-card-row {
+  transition: border-color 200ms var(--ease-gak);
+}
+
+.mag-card-row:has(.mag-card-link:hover) {
+  border-top-color: rgba(255, 36, 56, 0.42);
+}
+
+/* 화살표(→)는 3px 밀린다. */
+.block-more span,
+.rank-board-more span,
+.strip-read span,
+.event-read span,
+.mev-btn span {
+  display: inline-block;
+  transition: transform 160ms var(--ease-gak);
+}
+
+.block-more:hover span,
+.rank-board-more:hover span,
+.strip-read:hover span,
+.event-read a:hover span,
+.mev-btn:hover span,
+.block-more:focus-visible span,
+.rank-board-more:focus-visible span,
+.strip-read:focus-visible span,
+.event-read a:focus-visible span,
+.mev-btn:focus-visible span {
+  transform: translateX(3px);
+}
+
+@keyframes gak-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes gak-row-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+/* to를 비워 두면 제 길이(width)까지 자란다. */
+@keyframes gak-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes gak-nudge-up {
+  from {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes gak-nudge-down {
+  from {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes gak-new-glow {
+  0% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.14);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gak-roll-in {
+  from {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+}
+
+@keyframes gak-roll-out {
+  to {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+}
+
+@keyframes gak-live {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.78);
+  }
+}
+
+/* ── 메인 이벤트 카드·일정 줄: 좁은 화면 ── */
+
+@media (max-width: 560px) {
+  .mev {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "head"
+      "count"
+      "info"
+      "actions";
+    padding: 20px 16px 18px 19px;
+  }
+
+  .mev-title {
+    font-size: 30px;
+  }
+
+  /* 모바일은 제목 아래에 D-day와 남은 시간을 한 줄로 */
+  .mev-count {
+    margin-top: 16px;
+    padding: 14px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    text-align: left;
+  }
+
+  .cd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 14px;
+  }
+
+  .cd-dday {
+    justify-content: flex-start;
+    font-size: 56px;
+  }
+
+  .cd-left {
+    margin-top: 0;
+  }
+
+  .mev-actions .mev-btn {
+    flex: 1 1 auto;
+  }
+
+  .strip-list-reads .strip-item {
+    grid-template-columns: 58px minmax(0, 1fr) 44px 48px;
+  }
+
+  .home .home-top {
+    margin-top: 44px;
+  }
+}
+
+/* 움직임 줄이기: 전부 끄고 내용은 처음부터 보인다. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal *,
+  .cd-dot,
+  .cd-in {
+    animation: none !important;
+  }
+
+  .reveal-wait {
+    opacity: 1;
+    transform: none;
+  }
+
+  .cd-out {
+    display: none;
+  }
+
+  .strip-item,
+  .mag-card-link,
+  .mag-card .cover img,
+  .mev-btn,
+  .block-more span,
+  .rank-board-more span,
+  .strip-read span,
+  .event-read span,
+  .mev-btn span {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ── 중계 줄: 일정 카드·일정 줄·메인 이벤트 ─────────── */
+/* "중계 쿠팡플레이 유료" 한 줄. 좁은 화면에선 글자 단위로 줄바꿈해 넘치지 않는다. 움직임 없음. */
+
+.bc {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.bc-label {
+  margin-right: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.bc-name {
+  color: var(--text);
+}
+
+a.bc-name {
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a.bc-name:hover {
+  text-decoration-color: currentColor;
+}
+
+.bc-sep {
+  color: var(--muted);
+}
+
+/* 이름 옆 작은 "유료" 꼬리표. .strip-main small 규칙을 이기도록 .bc 로 한 겹 더 감싼다. */
+.bc .bc-paid {
+  display: inline;
+  margin-left: 4px;
+  padding: 0 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.4;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.bc-note {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.bc-note::before {
+  content: "·";
+  margin: 0 6px;
+}
+
+/* 첫 화면 일정 줄: 제목 아래 작은 줄. 칸 배치는 그대로 둔다. */
+.bc-strip {
+  display: block;
+  margin: 0;
+  font-size: 11px;
+}
+
+/* 메인 이벤트 카드: 날짜 줄 아래 */
+.bc-hero {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.bc-hero .bc-label {
+  font-size: 12px;
+}
+
+/* 일정 화면 작은 카드: 글 묶음이 이미 4px 간격이라 바깥 여백을 뺀다. */
+.event-card-copy .bc {
+  margin: 0;
+}

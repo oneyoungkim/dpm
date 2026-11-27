@@ -4,13 +4,14 @@ import { addDays, todayKey } from "@/lib/kst";
 import { ScheduleBrowser } from "@/components/ScheduleBrowser";
 import { buildPreviewEvents } from "@/lib/preview-events";
 import { isCuratedEvent } from "@/lib/curation";
+import { articlesByEventId } from "@/lib/articles";
 
 /** 크롤러가 events.json 을 갈아끼우면 최대 10분 뒤 반영된다. */
 export const revalidate = 600;
 
 export const metadata: Metadata = {
   title: "30일 일정",
-  description: "축구·야구·UFC·LCK 경기와 게임 출시, 신제품 발표까지. 앞으로 30일 가운데 볼 것만 골랐습니다.",
+  description: "축구·야구·UFC·LCK 중계 일정부터 게임 출시, 신제품 발표까지. 앞으로 30일 주요 일정을 모았습니다.",
   alternates: { canonical: "/schedule" },
 };
 
@@ -59,6 +60,7 @@ export default function SchedulePage() {
           featuredId={featured?.id}
           curatedCount={curated.length}
           liveCount={curated.filter((event) => event.status === "진행중").length}
+          articles={Object.fromEntries(articlesByEventId())}
         />
       )}
       <p className="schedule-stamp">마지막 수집 {generated ?? "대기 중"} · 한국 시간 기준</p>

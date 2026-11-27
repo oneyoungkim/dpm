@@ -78,6 +78,11 @@ export interface SportEvent {
   round?: string;
   /** 중계/상세 링크 */
   link?: string;
+  /**
+   * 이 경기만의 한국 중계처. 수집기가 경기별로 확인했을 때만 채운다.
+   * 비어 있으면 화면은 lib/broadcast.ts 의 리그 단위 중계를 쓴다.
+   */
+  broadcast?: { name: string; url?: string }[];
   /** 0~100. 클수록 "오늘 이건 봐야 함". lib/hype.ts 참고 */
   hype: number;
   /** 하이프 점수가 왜 높은지 사람이 읽는 한 줄 이유 */

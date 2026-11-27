@@ -47,9 +47,9 @@ export function InterestPicker({
       >
         <div className="interest-panel-head">
           <div>
-            <p className="eyebrow">TUNE YOUR RADAR</p>
-            <h2 id="interest-title">당신의 심장을 뛰게 하는 것은?</h2>
-            <p>강한 신호만 고르세요. 선택한 관심사로 나만의 30일 레이더를 만듭니다.</p>
+            <p className="eyebrow">MY TOPICS</p>
+            <h2 id="interest-title">관심 있는 종목 고르기</h2>
+            <p>고른 종목의 30일 일정만 따로 모아 보여 줍니다.</p>
           </div>
           <button type="button" onClick={onClose} className="interest-close" aria-label="관심사 선택 닫기">
             닫기
@@ -97,7 +97,7 @@ export function InterestPicker({
             <strong>{selected.size}</strong>개 선택
           </p>
           <button type="button" onClick={onSave} disabled={selected.size === 0} className="interest-save">
-            내 레이더 켜기
+            저장하고 보기
           </button>
         </div>
       </section>

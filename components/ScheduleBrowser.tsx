@@ -18,10 +18,10 @@ type FeedView = "curated" | "mine" | "saved";
 type BucketKey = "today" | "tomorrow" | "week" | "later";
 
 const BUCKETS: Array<{ key: BucketKey; index: string; label: string; description: string; limit: number }> = [
-  { key: "today", index: "01", label: "오늘", description: "지금 터지는 것", limit: 6 },
-  { key: "tomorrow", index: "02", label: "내일", description: "다음 신호", limit: 6 },
-  { key: "week", index: "03", label: "이번 주", description: "7일 안의 메인 이벤트", limit: 10 },
-  { key: "later", index: "04", label: "그 이후", description: "레이더에 잡힌 다음 순간", limit: 12 },
+  { key: "today", index: "01", label: "오늘", description: "오늘 · 진행 중", limit: 6 },
+  { key: "tomorrow", index: "02", label: "내일", description: "내일부터", limit: 6 },
+  { key: "week", index: "03", label: "이번 주", description: "7일 내 주요 경기·출시", limit: 10 },
+  { key: "later", index: "04", label: "그 이후", description: "다음 주 이후 주요 일정", limit: 12 },
 ];
 
 function bucketFor(event: SportEvent, today: string): BucketKey {
@@ -109,6 +109,7 @@ export function ScheduleBrowser({
   featuredId,
   curatedCount,
   liveCount,
+  articles = {},
 }: {
   events: SportEvent[];
   today: string;
@@ -116,6 +117,8 @@ export function ScheduleBrowser({
   featuredId?: string;
   curatedCount: number;
   liveCount: number;
+  /** 일정 id → 소개 글. 서버에서 넘기므로 Map 대신 일반 객체. */
+  articles?: Record<string, { slug: string; title: string }>;
 }) {
   const [view, setView] = useState<FeedView>("curated");
   const [category, setCategory] = useState<InterestCategory | null>(null);
@@ -247,7 +250,7 @@ export function ScheduleBrowser({
               <p className="eyebrow">볼 각 / 앞으로 30일</p>
               <h1 id="spotlight-title">30일 일정</h1>
             </div>
-            <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />달력에 표시할 것만 골랐습니다.</p>
+            <p className="hero-deck">결승전, 대작 출시, 신제품 발표.<br />챙겨 볼 일정만 추렸습니다.</p>
           </div>
           <EventCard
             event={featured}
@@ -257,13 +260,13 @@ export function ScheduleBrowser({
             onShare={handleShare}
             shared={sharedId === featured.id}
             featured
+            article={articles[featured.id]}
           />
           <div className="signal-ticker" aria-label="다가오는 이벤트 요약">
-            <span className="ticker-label"><i aria-hidden /> GAK SIGNAL</span>
-            <span><strong>{curatedCount}</strong> CURATED</span>
-            <span><strong>{liveCount}</strong> LIVE NOW</span>
-            <span><strong>30</strong> DAYS AHEAD</span>
-            <span className="ticker-copy">SPORTS / GAME / TECH / BIG MOMENTS</span>
+            <span className="ticker-label"><i aria-hidden /> 앞으로 30일</span>
+            <span>주요 일정 <strong>{curatedCount}</strong></span>
+            <span>지금 진행 중 <strong>{liveCount}</strong></span>
+            <span className="ticker-copy">스포츠 · 게임 · 테크</span>
           </div>
         </section>
       ) : null}
@@ -333,9 +336,9 @@ export function ScheduleBrowser({
           <span className="radar-icon" aria-hidden><i /></span>
           <span>
             <small>PERSONAL RADAR</small>
-            <strong>원하는 것만 더 세게 받아보세요.</strong>
+            <strong>보고 싶은 종목만 골라 보세요.</strong>
           </span>
-          <em>내 레이더 켜기 →</em>
+          <em>관심만 보기 →</em>
         </button>
       )}
 
@@ -350,7 +353,7 @@ export function ScheduleBrowser({
         <section className="empty-state compact-empty">
           <p className="eyebrow">NOTHING HERE YET</p>
           <h2>{emptyTitle}</h2>
-          <p>{view === "mine" ? "관심사를 더 선택하거나 지금 뜨는 것을 확인해보세요." : "마음에 드는 카드에서 ‘기대 걸기’를 눌러 모아보세요."}</p>
+          <p>{view === "mine" ? "지금은 일정이 없습니다. 관심 종목을 더 골라 보세요." : "보고 싶은 일정에서 ‘일정 저장’을 눌러 모아 보세요."}</p>
           <button
             type="button"
             onClick={view === "mine" ? openInterestPicker : () => chooseView("curated")}
@@ -392,6 +395,7 @@ export function ScheduleBrowser({
                         onToggleSaved={toggleSaved}
                         onShare={handleShare}
                         shared={sharedId === event.id}
+                        article={articles[event.id]}
                       />
                     ))}
                   </div>
@@ -410,7 +414,7 @@ export function ScheduleBrowser({
       <div className="all-events-toggle">
         <div>
           <strong>{showAll ? "전체 판 보기" : "선별 모드"}</strong>
-          <span>{showAll ? "수집된 모든 신호를 펼쳤습니다." : "강한 신호와 핵심 격투기 일정을 보여드립니다."}</span>
+          <span>{showAll ? "전체 일정을 보여 줍니다." : "주요 일정과 핵심 격투기 경기만 보여 줍니다."}</span>
         </div>
         <button type="button" onClick={() => setShowAll((value) => !value)} aria-pressed={showAll}>
           {showAll ? "선별 모드" : "전체 판 보기"}

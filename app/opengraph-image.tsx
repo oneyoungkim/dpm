@@ -8,7 +8,7 @@ export const alt = `${BRAND.name} — ${BRAND.tagline}`;
 
 export default async function Image() {
   return new ImageResponse(
-    <OgFrame color="#c7ff16" label="순위 · 일정 · 매거진" title={BRAND.tagline} foot="남자 커뮤니티에서 지금 가장 많이 나오는 말" />,
+    <OgFrame color="#c7ff16" label="순위 · 일정 · 매거진" title={BRAND.tagline} foot="지금 남자 커뮤니티에서 뜨는 말" />,
     { ...size, fonts: await ogFonts() },
   );
 }

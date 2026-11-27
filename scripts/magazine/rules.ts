@@ -91,6 +91,9 @@ export const OPENING_GREETING = [
 /** 제목에 쓰지 않는 것(6장) */
 export const TITLE_BANNED = [/!/, /충격/, /소름/];
 
+/** 일정 소개 글의 꼬리표(2장). 이 꼬리표를 단 글은 eventIds 에 다룬 일정의 id 가 있어야 한다 */
+export const EVENT_KICKERS = ["프리뷰"];
+
 // ─── 5장 문장 규칙 ──────────────────────────────────────
 
 export const PHRASE_RULES: PhraseRule[] = [

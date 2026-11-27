@@ -12,6 +12,7 @@ import {
   BANNED_SOURCE_HOSTS,
   CAUTION_SOURCE_HOSTS,
   CONNECTOR_OPENERS,
+  EVENT_KICKERS,
   LIMITS,
   OPENING_GREETING,
   PHRASE_RULES,
@@ -325,6 +326,14 @@ function checkOne(path: string, raw: string, corpus: Corpus, checkedSlugs: Map<s
   const keywords = arr("keywords");
   report.slug = slug || null;
 
+  // 1-1. 프리뷰 글은 다룬 일정을 eventIds 로 밝힌다(화면에서 일정 카드와 글을 잇는 데 쓴다)
+  const kicker = str("kicker").trim();
+  const eventIds = arr("eventIds").map((id) => id.trim()).filter(Boolean);
+  /** 메인 이벤트 소개 글: 하루 한 편은 반드시 나가야 하므로 분류 연속·최근 겹침 오류에서 뺀다(2장) */
+  const isEventIntro = EVENT_KICKERS.includes(kicker) && eventIds.length > 0;
+  if (EVENT_KICKERS.includes(kicker) && !eventIds.length)
+    add("error", "preview-event-ids", "2", parsed.fmLine("kicker"), kicker, `꼬리표가 "${kicker}"인 글은 eventIds 에 다룬 일정의 id 를 넣는다(data/events.json)`);
+
   // 2. 파일 이름
   const name = basename(path);
   const nameMatch = name.match(/^(\d{4}-\d{2}-\d{2})-([a-z0-9]+(?:-[a-z0-9]+)*)\.md$/);
@@ -486,7 +495,16 @@ function checkOne(path: string, raw: string, corpus: Corpus, checkedSlugs: Map<s
       add(rule.mode === "first-hit" ? "error" : "warning", rule.id, rule.section, hit.line, hit.text, `${rule.title}: "${hit.label}". ${rule.hint}`);
   }
 
-  // 10. 최근 글과 겹침, 같은 분류 세 편 연속(2장)
+  // 10. 최근 글과 겹침, 같은 분류 세 편 연속(2장). 메인 이벤트 소개 글은 겹침을 경고로만, 분류 연속은 보지 않는다.
+  //     대신 같은 일정을 두 번 소개하지 않는다(기간 제한 없이 모든 글).
+  if (isEventIntro) {
+    for (const { path: otherPath, article } of corpus.articles) {
+      if (otherPath === path) continue;
+      const dup = article.eventIds.filter((id) => eventIds.includes(id));
+      if (dup.length)
+        add("error", "preview-duplicate-event", "2", parsed.fmLine("eventIds"), `${dup.join(", ")} (${article.file})`, "이미 소개한 일정. 같은 일정을 두 번 소개하지 않는다(당일 새 사실은 저녁 편 키워드 글로)");
+    }
+  }
   const published = Date.parse(publishedAt);
   if (!Number.isNaN(published)) {
     const myTags = new Set(tags.map(normalizeTag));
@@ -496,11 +514,11 @@ function checkOne(path: string, raw: string, corpus: Corpus, checkedSlugs: Map<s
       if (days > LIMITS.recentTitleDays) continue;
       const similarity = titleSimilarity(title, article.title);
       if (similarity >= LIMITS.titleSimilarity)
-        add("error", "recent-overlap", "2", parsed.fmLine("title"), `${article.title} (${article.file})`, `최근 ${LIMITS.recentTitleDays}일 안의 글과 제목이 겹침(${Math.round(similarity * 100)}%). 새 사실이 없으면 쓰지 않는다`);
+        add(isEventIntro ? "warning" : "error", "recent-overlap", "2", parsed.fmLine("title"), `${article.title} (${article.file})`, `최근 ${LIMITS.recentTitleDays}일 안의 글과 제목이 겹침(${Math.round(similarity * 100)}%). 새 사실이 없으면 쓰지 않는다`);
       const shared = article.tags.filter((tag) => myTags.has(normalizeTag(tag)));
       if (shared.length >= LIMITS.tagOverlap)
         add(
-          days <= LIMITS.recentTagErrorDays ? "error" : "warning",
+          days <= LIMITS.recentTagErrorDays && !isEventIntro ? "error" : "warning",
           "recent-overlap",
           "2",
           parsed.fmLine("tags"),
@@ -512,7 +530,7 @@ function checkOne(path: string, raw: string, corpus: Corpus, checkedSlugs: Map<s
       .filter(({ path: p, article }) => p !== path && Date.parse(article.publishedAt) < published)
       .sort((a, b) => b.article.publishedAt.localeCompare(a.article.publishedAt))
       .slice(0, 2);
-    if (category && before.length === 2 && before.every(({ article }) => article.category === category))
+    if (!isEventIntro && category && before.length === 2 && before.every(({ article }) => article.category === category))
       add("error", "category-streak", "2", parsed.fmLine("category"), category, `직전 두 편(${before.map((b) => b.article.file).join(", ")})과 같은 분류. 같은 분류를 세 편 연달아 내지 않는다`);
   }
 

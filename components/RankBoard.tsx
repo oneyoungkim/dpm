@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import type { TrendKeyword, TrendsFile } from "@/lib/trends";
 import { TREND_COLOR } from "@/lib/category-style";
 import { RankDelta } from "./RankDelta";
@@ -23,7 +24,7 @@ export function RankBoard({ file, keywords }: { file: TrendsFile; keywords: Tren
     <section className="rank-board" aria-labelledby="rank-board-title">
       <header className="rank-board-head">
         <div>
-          <p className="eyebrow">뜰 각 / 커뮤니티 키워드</p>
+          <p className="eyebrow">뜰 각 / 커뮤니티</p>
           <h2 id="rank-board-title">지금 뜨는 말</h2>
         </div>
         <p className="rank-board-meta">
@@ -36,8 +37,13 @@ export function RankBoard({ file, keywords }: { file: TrendsFile; keywords: Tren
         <p className="rank-empty">첫 집계를 기다리는 중입니다.</p>
       ) : (
         <ol className="rank-board-list">
-          {keywords.map((item) => (
-            <li key={item.keyword} className={item.rank <= 3 ? "rank-row rank-row-top" : "rank-row"}>
+          {keywords.map((item, index) => (
+            <li
+              key={item.keyword}
+              className={item.rank <= 3 ? "rank-row rank-row-top" : "rank-row"}
+              // 줄마다 30ms씩 늦게 나타난다(gak.css .rank-board .rank-row)
+              style={{ "--row-i": index } as CSSProperties}
+            >
               <span className="rank-num">{String(item.rank).padStart(2, "0")}</span>
               <span className="rank-word">
                 <strong>{item.keyword}</strong>

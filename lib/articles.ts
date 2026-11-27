@@ -175,3 +175,15 @@ export function relatedArticles(article: Article, limit = 3, now: Date = new Dat
     .slice(0, limit)
     .map((entry) => entry.other);
 }
+
+/** 일정 id → 그 일정을 다룬 글(소개 글). 한 일정에 글이 여럿이면 가장 최근 글. */
+export function articlesByEventId(now: Date = new Date()): Map<string, { slug: string; title: string }> {
+  const map = new Map<string, { slug: string; title: string }>();
+  // loadArticles는 최신순이라 처음 만난 글이 가장 최근 글이다.
+  for (const article of loadArticles(now)) {
+    for (const id of article.eventIds) {
+      if (!map.has(id)) map.set(id, { slug: article.slug, title: article.title });
+    }
+  }
+  return map;
+}

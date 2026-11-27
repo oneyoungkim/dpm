@@ -1,7 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
 import { ARTICLE_CATEGORIES, loadAllArticles, type Article, type ArticleCategory } from "../../lib/articles";
 import { loadEvents } from "../../lib/events";
+import { mainEventsToCover, type MainEventTier } from "../../lib/main-event";
+import { diffDays } from "../../lib/kst";
 import { TREND_CATEGORIES, type TrendCategory, type TrendKeyword, type TrendsFile } from "../../lib/trends";
 import { INTEREST_CATEGORIES, SPORTS, type InterestCategory, type SportEvent } from "../../lib/types";
 import { TOPIC_RULES } from "./rules";
@@ -10,24 +12,35 @@ import { normalizeTag, titleSimilarity } from "./check";
 /**
  * 다음 글감 후보를 점수순으로 낸다.
  *
- *   npm run magazine:pick -- --slot morning          아침 편: 일정·키워드 우선
- *   npm run magazine:pick -- --slot evening          저녁 편: 썰·장비·숫자로 보기 우선
+ *   npm run magazine:pick -- --slot morning          아침 편: 메인 이벤트 소개 글
+ *   npm run magazine:pick -- --slot evening          저녁 편: 키워드("왜 난리인가")·상시 글
  *   npm run magazine:pick -- --slot evening --json   기계가 읽는 결과
  *   --limit 10                                       몇 개까지 낼지(기본 10)
  *
+ * 하루 한 편은 반드시 메인 이벤트 소개 글이다(EDITORIAL 2장).
+ *   아침 편: lib/main-event.ts 의 mainEventsToCover 첫 일정을 맨 위 후보(required: true)로,
+ *            그다음 차례 일정 2개를 대체 후보로 낸다. 키워드·상시 글감은 그 아래에
+ *            "일정을 셋 다 못 쓸 때만" 표시(role: "fallback")를 달고 둔다.
+ *   저녁 편: 일정 후보를 내지 않는다. 단, 오늘 날짜 글 가운데 eventIds 가 있는 글이 하나도 없으면
+ *            아침 편과 같은 출력으로 메인 이벤트 소개를 대신 맡는다.
+ *   이미 소개한 일정 = 지금까지 낸 모든 글의 eventIds(기간 제한 없음).
+ *
  * 재료
  *   data/trends.json   민감하지 않고 커뮤니티 2곳 이상에서 나온 키워드
- *   data/events.json   지금부터 7일 안, 하이프 70 이상
+ *   data/events.json   메인 이벤트 차례(lib/main-event.ts 기준)
  *   scripts/magazine/evergreen.json   언제 써도 되는 글감
  * 빼는 것: 최근 14일 글의 태그·키워드와 겹치는 글감, 이미 쓴 글과 제목이 겹치는 상시 글감,
- *          EDITORIAL 3장 금지어가 든 글감. 직전 두 편과 같은 분류는 점수를 깎는다.
+ *          EDITORIAL 3장 금지어가 든 글감. 직전 두 편과 같은 분류는 점수를 깎는다
+ *          (메인 이벤트 후보에는 분류 감점을 걸지 않는다).
  * 파일이 없거나 비어 있으면 그 재료만 건너뛴다.
  */
 
-type Slot = "morning" | "evening";
+export type Slot = "morning" | "evening";
 type Kind = "trend" | "event" | "evergreen";
+/** main-event: 이번 회차에 써야 하는 일정, alternate: 그 일정을 못 쓸 때 차례로, fallback: 일정을 셋 다 못 쓸 때만, normal: 보통 후보 */
+type Role = "main-event" | "alternate" | "fallback" | "normal";
 
-interface Candidate {
+export interface Candidate {
   kind: Kind;
   id: string;
   category: ArticleCategory;
@@ -43,6 +56,9 @@ interface Candidate {
   sourceHints: string[];
   /** 점수 계산 설명(사람이 읽는 조각들) */
   notes: string[];
+  /** 이번 회차에 반드시 써야 하는 후보(메인 이벤트 첫 일정)만 true */
+  required: boolean;
+  role: Role;
 }
 
 interface Evergreen {
@@ -57,14 +73,17 @@ interface Evergreen {
 
 const DAY_MS = 86_400_000;
 const RECENT_DAYS = 14;
-const EVENT_DAYS = 7;
-const EVENT_MIN_HYPE = 70;
 const TREND_MIN_SOURCES = 2;
+/** 메인 이벤트 첫 일정 뒤에 붙이는 대체 후보 수 */
+const MAIN_EVENT_ALTERNATES = 2;
 
-/** 아침은 일정·키워드, 저녁은 상시 글감에 더 쳐 준다. */
-const SLOT_WEIGHT: Record<Slot, Record<Kind, number>> = {
-  morning: { trend: 1.25, event: 1.3, evergreen: 0.8 },
-  evening: { trend: 0.6, event: 0.6, evergreen: 1.25 },
+/**
+ * 키워드·상시 글감 무게. 일정 후보는 점수와 상관없이 맨 위에 놓이므로 무게를 두지 않는다.
+ * 메인 이벤트를 맡은 회차는 아침 무게를 쓴다.
+ */
+const SLOT_WEIGHT: Record<Slot, Record<Exclude<Kind, "event">, number>> = {
+  morning: { trend: 1.25, evergreen: 0.8 },
+  evening: { trend: 1.15, evergreen: 1.0 },
 };
 
 /** 직전 한 편과 같은 분류, 직전 두 편과 모두 같은 분류(세 편 연속은 EDITORIAL 2장이 막는다) */
@@ -119,6 +138,12 @@ function dailyJitter(seed: string): number {
 
 function kstDate(d: Date): string {
   return new Date(d.getTime() + 9 * 3_600_000).toISOString().slice(0, 10);
+}
+
+/** 일정 시각을 한국 시간 "YYYY-MM-DD HH:MM"으로(소스마다 Z·+09:00 표기가 섞여 있다) */
+function kstStamp(iso: string): string {
+  const t = Date.parse(iso);
+  return Number.isNaN(t) ? iso.slice(0, 16).replace("T", " ") : new Date(t + 9 * 3_600_000).toISOString().slice(0, 16).replace("T", " ");
 }
 
 // ─── 재료 읽기 ─────────────────────────────────────────
@@ -205,6 +230,8 @@ function fromTrends(file: TrendsFile | null, skipped: string[]): Candidate[] {
       eventIds: [],
       sourceHints: ["본인·소속 단체 공식 발표", "통신사(연합뉴스·로이터) 보도"],
       notes: [],
+      required: false,
+      role: "normal",
     });
   }
   return out;
@@ -216,19 +243,102 @@ function eventCategory(event: SportEvent): ArticleCategory | null {
   return bySport[event.sport] ?? null;
 }
 
-function fromEvents(now: Date, skipped: string[]): { candidates: Candidate[]; note: string } {
-  const file = loadEvents();
-  if (!file.events.length) return { candidates: [], note: "data/events.json 없음 또는 0건" };
-  const from = now.getTime() - DAY_MS / 4; // 몇 시간 전에 시작한 것까지는 아침 편으로 다룰 수 있다
-  const to = now.getTime() + EVENT_DAYS * DAY_MS;
-  const seen = new Map<string, Candidate>();
-  let inWindow = 0;
-  for (const event of file.events) {
-    const starts = Date.parse(event.startsAt);
-    if (Number.isNaN(starts) || starts < from || starts > to) continue;
-    if (event.status === "종료" || event.status === "취소") continue;
-    inWindow++;
-    if (event.hype < EVENT_MIN_HYPE) continue;
+/** 같은 발표가 여러 건으로 들어온 것을 하나로 보기 위한 열쇠 */
+function announcementKey(event: Pick<SportEvent, "title">): string {
+  return event.title.toLowerCase().replace(/[^a-z0-9가-힣]/g, "").slice(0, 28);
+}
+
+export interface MainEventSummary {
+  eventId: string;
+  title: string;
+  startsAt: string;
+  hype: number;
+  tier: MainEventTier;
+  category: ArticleCategory;
+  reason: string;
+}
+
+export interface MainEventField {
+  /** 이번 회차가 메인 이벤트 소개 글을 반드시 써야 하면 true */
+  required: boolean;
+  eventId: string | null;
+  title: string | null;
+  startsAt: string | null;
+  hype: number | null;
+  tier: MainEventTier | null;
+  category: ArticleCategory | null;
+  /** 고른 이유, 또는 required 가 false 인 이유 */
+  reason: string;
+  alternates: MainEventSummary[];
+}
+
+export interface MainEventPlan {
+  /** 이번 회차가 메인 이벤트 소개를 맡는가(아침, 또는 저녁이 대신 맡을 때) */
+  covers: boolean;
+  /** 맨 위 후보 + 대체 후보(맡지 않으면 빈 배열) */
+  candidates: Candidate[];
+  mainEvent: MainEventField;
+  note: string;
+}
+
+type ArticleLike = Pick<Article, "publishedAt" | "eventIds" | "file">;
+
+/** 오늘(KST) 날짜로 낸 글 가운데 일정(eventIds)을 다룬 글 */
+export function todaysEventArticles(articles: ArticleLike[], today: string): ArticleLike[] {
+  return articles.filter((article) => article.publishedAt.slice(0, 10) === today && article.eventIds.length > 0);
+}
+
+/**
+ * 이번 회차의 메인 이벤트 후보를 정한다.
+ * articles 는 지금까지 낸 글 전부(초안 제외). 그 eventIds 가 곧 "이미 소개한 일정"이다.
+ * 걸러진 일정(매거진 분류로 못 옮김, 금지 주제, 이미 소개한 일정과 같은 발표, 앞 후보와 같은 발표)은
+ * skipped 에 적고 다음 차례로 넘어간다.
+ */
+export function planMainEvent(
+  input: { events: SportEvent[]; articles: ArticleLike[]; now: Date; slot: Slot },
+  skipped: string[],
+): MainEventPlan {
+  const { events, articles, now, slot } = input;
+  const today = kstDate(now);
+  const empty = (reason: string): MainEventField => ({
+    required: false,
+    eventId: null,
+    title: null,
+    startsAt: null,
+    hype: null,
+    tier: null,
+    category: null,
+    reason,
+    alternates: [],
+  });
+
+  if (slot === "evening") {
+    const done = todaysEventArticles(articles, today);
+    if (done.length) {
+      const files = done.map((a) => a.file).join(", ");
+      return {
+        covers: false,
+        candidates: [],
+        mainEvent: empty(`오늘 낸 일정 글이 있음(${files}). 저녁 편은 키워드·상시 글`),
+        note: `오늘 일정 글 ${done.length}편(${files}), 저녁 편은 메인 이벤트를 맡지 않음`,
+      };
+    }
+  }
+  const takeover = slot === "evening";
+
+  if (!events.length) {
+    const reason = "data/events.json 없음 또는 0건";
+    return { covers: true, candidates: [], mainEvent: empty(reason), note: reason };
+  }
+
+  const coveredIds = new Set(articles.flatMap((article) => article.eventIds));
+  const coveredKeys = new Set(events.filter((event) => coveredIds.has(event.id)).map(announcementKey));
+  const queue = mainEventsToCover(events, today, coveredIds);
+
+  const chosen: { candidate: Candidate; tier: MainEventTier; event: SportEvent }[] = [];
+  const chosenKeys = new Map<string, Candidate>();
+  for (const { event, tier } of queue) {
+    if (chosen.length > MAIN_EVENT_ALTERNATES) break;
     const category = eventCategory(event);
     if (!category) {
       skipped.push(`일정 "${event.title}": 매거진 분류로 옮길 수 없음(${event.category ?? event.sport})`);
@@ -239,34 +349,77 @@ function fromEvents(now: Date, skipped: string[]): { candidates: Candidate[]; no
       skipped.push(`일정 "${event.title}": 금지 주제 ${banned}`);
       continue;
     }
-    const days = Math.max(0, (starts - now.getTime()) / DAY_MS);
-    const dDay = Math.ceil(days) === 0 ? "오늘" : `D-${Math.ceil(days)}`;
+    const key = announcementKey(event);
+    if (coveredKeys.has(key)) {
+      skipped.push(`일정 "${event.title}"(${event.id}): 이미 소개한 일정과 같은 발표`);
+      continue;
+    }
+    const twin = chosenKeys.get(key);
+    if (twin) {
+      skipped.push(`일정 "${event.title}"(${event.id}): 같은 발표가 여러 건이라 앞 후보 하나로 합침`);
+      if (!twin.notes.includes("같은 발표가 여러 건이라 하나로 합침")) twin.notes.push("같은 발표가 여러 건이라 하나로 합침");
+      continue;
+    }
+    const starts = Date.parse(event.startsAt);
+    const days = Number.isNaN(starts) ? 0 : Math.max(0, (starts - now.getTime()) / DAY_MS);
+    const dDayN = diffDays(today, event.dateKey);
+    const dDay = dDayN <= 0 ? "오늘" : `D-${dDayN}`;
     const confidence = event.confidence === "rumored" ? 0.7 : event.confidence === "expected" ? 0.9 : 1;
+    const first = chosen.length === 0;
     const candidate: Candidate = {
       kind: "event",
       id: `event:${event.id}`,
       category,
       format: "프리뷰",
       title: `${event.title} 프리뷰`,
-      score: (event.hype - days * 3) * confidence,
-      reason: `${dDay}(${event.startsAt.slice(0, 16).replace("T", " ")}), 하이프 ${event.hype}${event.hypeReason ? `(${event.hypeReason})` : ""}, ${event.league}${event.confidence && event.confidence !== "confirmed" ? `, 확정도 ${event.confidence}` : ""}`,
+      // 순서는 mainEventsToCover 차례를 따른다. 점수는 참고로만 남긴다.
+      score: Math.round((event.hype - days * 3) * confidence * 10) / 10,
+      reason: `메인 이벤트 ${tier} · ${dDay}(${kstStamp(event.startsAt)} KST), 하이프 ${event.hype}${event.hypeReason ? `(${event.hypeReason})` : ""}, ${event.league}${event.confidence && event.confidence !== "confirmed" ? `, 확정도 ${event.confidence}` : ""}`,
       tags: (event.tags ?? []).slice(0, 6),
       keywords: [],
       eventIds: [event.id],
       sourceHints: [event.sourceUrl ?? event.link ?? "주최 측 공식 공지", "주최 측 공식 공지"].filter((v, i, a) => a.indexOf(v) === i),
-      notes: [],
+      notes: [first ? "메인 이벤트: 이번 회차에 이 일정을 소개한다" : `대체 후보 ${chosen.length}: 앞 일정에서 근거 3개를 못 찾을 때`],
+      required: first,
+      role: first ? "main-event" : "alternate",
     };
-    // 같은 발표가 여러 건으로 들어온 경우 하나만 남긴다
-    const key = event.title.toLowerCase().replace(/[^a-z0-9가-힣]/g, "").slice(0, 28);
-    const prev = seen.get(key);
-    if (!prev || prev.score < candidate.score) {
-      if (prev) candidate.notes.push("같은 발표가 여러 건이라 하나로 합침");
-      seen.set(key, candidate);
-    }
+    chosenKeys.set(key, candidate);
+    chosen.push({ candidate, tier, event });
   }
+
+  const tierCount = (tier: MainEventTier) => queue.filter((p) => p.tier === tier).length;
+  const note =
+    `data/events.json ${events.length}건, 이미 소개한 일정 ${coveredIds.size}개, 소개할 차례 ${queue.length}건` +
+    `(이번 주 ${tierCount("이번 주")}, 30일 안 ${tierCount("30일 안")}, 이번 주(문턱 낮춤) ${tierCount("이번 주(문턱 낮춤)")})` +
+    `, 후보로 낸 것 ${chosen.length}건${takeover ? ", 오늘 일정 글이 없어 저녁 편이 대신 맡음" : ""}`;
+
+  if (!chosen.length) {
+    const reason = queue.length
+      ? `소개할 차례인 일정 ${queue.length}건이 모두 걸러짐(뺀 것 참고)`
+      : "7일 안 하이프 55 이상, 30일 안 하이프 70 이상인 일정 가운데 아직 소개하지 않은 것이 없음";
+    return { covers: true, candidates: [], mainEvent: empty(reason), note };
+  }
+
+  const summary = ({ candidate, tier, event }: (typeof chosen)[number]): MainEventSummary => ({
+    eventId: event.id,
+    title: event.title,
+    startsAt: event.startsAt,
+    hype: event.hype,
+    tier,
+    category: candidate.category,
+    reason: candidate.reason,
+  });
+  const [head, ...rest] = chosen;
   return {
-    candidates: [...seen.values()],
-    note: `data/events.json ${file.events.length}건 중 7일 안 ${inWindow}건, 하이프 ${EVENT_MIN_HYPE} 이상 후보 ${seen.size}건`,
+    covers: true,
+    candidates: chosen.map((c) => c.candidate),
+    mainEvent: {
+      required: true,
+      ...summary(head),
+      reason: `${takeover ? "오늘 낸 글 가운데 일정 글이 없어 저녁 편이 메인 이벤트를 맡음. " : ""}${head.candidate.reason}`,
+      alternates: rest.map(summary),
+    },
+    note,
   };
 }
 
@@ -302,6 +455,8 @@ function fromEvergreen(topics: Evergreen[], today: string, slot: Slot, all: Arti
       eventIds: [],
       sourceHints: topic.sourceHints,
       notes: [],
+      required: false,
+      role: "normal",
     });
   }
   return out;
@@ -344,7 +499,7 @@ function main() {
   const now = new Date();
   const today = kstDate(now);
 
-  // 초안(draft: true)은 아직 낸 글이 아니므로 최근 글·직전 두 편에서 뺀다
+  // 초안(draft: true)은 아직 낸 글이 아니므로 최근 글·직전 두 편·이미 소개한 일정에서 뺀다
   const all = loadAllArticles().filter((a) => !a.draft);
   const recent = all.filter((a) => Math.abs(now.getTime() - Date.parse(a.publishedAt)) <= RECENT_DAYS * DAY_MS);
   const lastTwo = [...all].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, 2);
@@ -353,12 +508,17 @@ function main() {
   const skipped: string[] = [];
   const trends = readTrends();
   const evergreen = readEvergreen();
-  const events = fromEvents(now, skipped);
-  const pool = [
-    ...fromTrends(trends.file, skipped),
-    ...events.candidates,
-    ...fromEvergreen(evergreen.topics, today, slot, all, skipped),
-  ];
+  const plan = planMainEvent({ events: loadEvents().events, articles: all, now, slot }, skipped);
+  // 메인 이벤트를 맡은 회차는 아침 무게, 아니면 그 회차 무게
+  const weights = SLOT_WEIGHT[plan.covers ? "morning" : slot];
+  const pool = [...fromTrends(trends.file, skipped), ...fromEvergreen(evergreen.topics, today, slot, all, skipped)];
+
+  // 메인 이벤트 후보에는 최근 태그 겹침·분류 감점을 걸지 않는다(검사도 프리뷰 글은 이 둘을 오류로 보지 않는다).
+  // 겹침은 글을 쓸 때 각도를 바꾸라는 참고로만 남긴다.
+  for (const candidate of plan.candidates) {
+    const overlap = overlapsRecent(candidate, recentSet);
+    if (overlap) candidate.notes.push(`참고: ${overlap}. 같은 이야기를 되풀이하지 않게 각도를 바꾼다`);
+  }
 
   const kept: Candidate[] = [];
   for (const candidate of pool) {
@@ -367,7 +527,7 @@ function main() {
       skipped.push(`${candidate.title}: ${overlap}`);
       continue;
     }
-    candidate.score *= SLOT_WEIGHT[slot][candidate.kind];
+    candidate.score *= weights[candidate.kind as Exclude<Kind, "event">];
     if (lastTwo.length === 2 && lastTwo.every((a) => a.category === candidate.category)) {
       candidate.score *= SAME_AS_LAST_TWO;
       candidate.notes.push(`직전 두 편이 모두 ${candidate.category}라 크게 깎음(세 편 연속 금지)`);
@@ -375,14 +535,19 @@ function main() {
       candidate.score *= SAME_AS_LAST;
       candidate.notes.push(`직전 두 편 가운데 ${candidate.category}가 있어 깎음`);
     }
+    if (plan.mainEvent.required) {
+      candidate.role = "fallback";
+      candidate.notes.push("일정을 셋 다 못 쓸 때만");
+    }
     kept.push(candidate);
   }
 
-  // 같은 분류가 줄줄이 나오지 않게, 위에서부터 고르며 반복 분류를 깎는다
-  const ranked: Candidate[] = [];
+  // 같은 분류가 줄줄이 나오지 않게, 위에서부터 고르며 반복 분류를 깎는다(메인 이벤트 후보는 빼고 센다)
+  const ranked: Candidate[] = [...plan.candidates];
   const remaining = [...kept];
   const used = new Map<string, number>();
-  while (remaining.length && ranked.length < limit) {
+  const totalLimit = Math.max(limit, plan.candidates.length);
+  while (remaining.length && ranked.length < totalLimit) {
     remaining.sort(
       (a, b) =>
         b.score * REPEAT_IN_LIST ** (used.get(b.category) ?? 0) - a.score * REPEAT_IN_LIST ** (used.get(a.category) ?? 0),
@@ -400,20 +565,34 @@ function main() {
 
   const inputs = {
     trends: trends.note,
-    events: events.note,
+    events: plan.note,
     evergreen: evergreen.note,
     recentArticles: `최근 ${RECENT_DAYS}일 글 ${recent.length}편, 직전 두 편 분류: ${lastTwo.map((a) => a.category).join(", ") || "없음"}`,
   };
+  const { mainEvent } = plan;
 
   if (json) {
-    console.log(JSON.stringify({ slot, date: today, generatedAt: now.toISOString(), inputs, candidates: ranked, skipped }, null, 2));
+    console.log(
+      JSON.stringify({ slot, date: today, generatedAt: now.toISOString(), mainEvent, inputs, candidates: ranked, skipped }, null, 2),
+    );
     return;
   }
-  console.log(`매거진 글감 후보 · ${slot === "morning" ? "아침 편(일정·키워드 우선)" : "저녁 편(썰·장비·숫자 우선)"} · ${today} KST\n`);
+  const label = plan.covers
+    ? `${slot === "morning" ? "아침 편" : "저녁 편(대신 맡음)"}(메인 이벤트 소개)`
+    : "저녁 편(키워드·상시 글)";
+  console.log(`매거진 글감 후보 · ${label} · ${today} KST\n`);
   for (const line of Object.values(inputs)) console.log(`  재료  ${line}`);
   console.log("");
+  if (mainEvent.required) {
+    console.log(`  메인 이벤트  ${mainEvent.title} (${mainEvent.eventId}, ${mainEvent.tier}, 하이프 ${mainEvent.hype})`);
+    mainEvent.alternates.forEach((alt, i) => console.log(`  대체 ${i + 1}      ${alt.title} (${alt.eventId}, ${alt.tier}, 하이프 ${alt.hype})`));
+  } else {
+    console.log(`  메인 이벤트  없음: ${mainEvent.reason}`);
+  }
+  console.log("");
   ranked.forEach((c, i) => {
-    console.log(`${String(i + 1).padStart(2)}. [${c.category}·${c.format}] ${c.title}  (점수 ${c.score})`);
+    const mark = c.role === "main-event" ? " ★반드시" : c.role === "alternate" ? " (대체)" : c.role === "fallback" ? " (일정을 셋 다 못 쓸 때만)" : "";
+    console.log(`${String(i + 1).padStart(2)}. [${c.category}·${c.format}] ${c.title}  (점수 ${c.score})${mark}`);
     console.log(`    이유: ${c.reason}`);
     if (c.notes.length) console.log(`    조정: ${c.notes.join(" / ")}`);
     console.log(`    근거 찾을 곳: ${c.sourceHints.join(", ")}`);
@@ -422,4 +601,5 @@ function main() {
   if (skipped.length) console.log(`\n뺀 것 ${skipped.length}개${skipped.length > 8 ? " (앞 8개만)" : ""}:\n  ${skipped.slice(0, 8).join("\n  ")}`);
 }
 
-main();
+// selftest 가 함수만 가져다 쓸 수 있게, 직접 돌렸을 때만 실행한다
+if (process.argv[1] && resolve(process.argv[1]) === resolve(__filename)) main();
