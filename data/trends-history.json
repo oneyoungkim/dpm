@@ -5017,6 +5017,197 @@
           "sensitive": true
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-28T11:32:09.845Z",
+      "keywords": [
+        {
+          "keyword": "김준표",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "첼시",
+          "rank": 2,
+          "score": 85,
+          "sensitive": false
+        },
+        {
+          "keyword": "퀸와사비",
+          "rank": 3,
+          "score": 84,
+          "sensitive": true
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 4,
+          "score": 65,
+          "sensitive": false
+        },
+        {
+          "keyword": "듀오",
+          "rank": 5,
+          "score": 56,
+          "sensitive": true
+        },
+        {
+          "keyword": "김민석",
+          "rank": 6,
+          "score": 55,
+          "sensitive": true
+        },
+        {
+          "keyword": "무시알라",
+          "rank": 7,
+          "score": 53,
+          "sensitive": false
+        },
+        {
+          "keyword": "집회",
+          "rank": 8,
+          "score": 53,
+          "sensitive": true
+        },
+        {
+          "keyword": "머스크",
+          "rank": 9,
+          "score": 51,
+          "sensitive": false
+        },
+        {
+          "keyword": "맨유",
+          "rank": 10,
+          "score": 43,
+          "sensitive": false
+        },
+        {
+          "keyword": "이동연",
+          "rank": 11,
+          "score": 39,
+          "sensitive": false
+        },
+        {
+          "keyword": "공무원",
+          "rank": 12,
+          "score": 39,
+          "sensitive": false
+        },
+        {
+          "keyword": "택시",
+          "rank": 13,
+          "score": 37,
+          "sensitive": false
+        },
+        {
+          "keyword": "경찰",
+          "rank": 14,
+          "score": 31,
+          "sensitive": true
+        },
+        {
+          "keyword": "정수장",
+          "rank": 15,
+          "score": 31,
+          "sensitive": true
+        },
+        {
+          "keyword": "예비군",
+          "rank": 16,
+          "score": 29,
+          "sensitive": true
+        },
+        {
+          "keyword": "삼성전자",
+          "rank": 17,
+          "score": 27,
+          "sensitive": false
+        },
+        {
+          "keyword": "한글",
+          "rank": 18,
+          "score": 27,
+          "sensitive": false
+        },
+        {
+          "keyword": "국민연금",
+          "rank": 19,
+          "score": 25,
+          "sensitive": true
+        },
+        {
+          "keyword": "현기차",
+          "rank": 20,
+          "score": 25,
+          "sensitive": false
+        },
+        {
+          "keyword": "서빙로봇",
+          "rank": 21,
+          "score": 24,
+          "sensitive": true
+        },
+        {
+          "keyword": "로스트아크",
+          "rank": 22,
+          "score": 23,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 23,
+          "score": 23,
+          "sensitive": false
+        },
+        {
+          "keyword": "백종원",
+          "rank": 24,
+          "score": 23,
+          "sensitive": false
+        },
+        {
+          "keyword": "최민희",
+          "rank": 25,
+          "score": 20,
+          "sensitive": true
+        },
+        {
+          "keyword": "솔플모드",
+          "rank": 26,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "극우",
+          "rank": 27,
+          "score": 12,
+          "sensitive": true
+        },
+        {
+          "keyword": "창원",
+          "rank": 28,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 29,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본인",
+          "rank": 30,
+          "score": 9,
+          "sensitive": true
+        },
+        {
+          "keyword": "미국",
+          "rank": 31,
+          "score": 8,
+          "sensitive": true
+        }
+      ]
     }
   ]
 }
