@@ -4683,6 +4683,197 @@
           "sensitive": false
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-28T07:31:52.644Z",
+      "keywords": [
+        {
+          "keyword": "GTA6",
+          "rank": 1,
+          "score": 100,
+          "sensitive": false
+        },
+        {
+          "keyword": "첼시",
+          "rank": 2,
+          "score": 80,
+          "sensitive": false
+        },
+        {
+          "keyword": "김준표",
+          "rank": 3,
+          "score": 76,
+          "sensitive": false
+        },
+        {
+          "keyword": "무시알라",
+          "rank": 4,
+          "score": 51,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 5,
+          "score": 50,
+          "sensitive": false
+        },
+        {
+          "keyword": "맨유",
+          "rank": 6,
+          "score": 50,
+          "sensitive": false
+        },
+        {
+          "keyword": "퀸와사비",
+          "rank": 7,
+          "score": 47,
+          "sensitive": true
+        },
+        {
+          "keyword": "공무원",
+          "rank": 8,
+          "score": 44,
+          "sensitive": false
+        },
+        {
+          "keyword": "이동연",
+          "rank": 9,
+          "score": 41,
+          "sensitive": false
+        },
+        {
+          "keyword": "우정잉",
+          "rank": 10,
+          "score": 37,
+          "sensitive": false
+        },
+        {
+          "keyword": "데블스",
+          "rank": 11,
+          "score": 28,
+          "sensitive": false
+        },
+        {
+          "keyword": "민주당",
+          "rank": 12,
+          "score": 26,
+          "sensitive": true
+        },
+        {
+          "keyword": "블루아카이브",
+          "rank": 13,
+          "score": 25,
+          "sensitive": false
+        },
+        {
+          "keyword": "리만가설",
+          "rank": 14,
+          "score": 24,
+          "sensitive": false
+        },
+        {
+          "keyword": "쿠팡",
+          "rank": 15,
+          "score": 22,
+          "sensitive": false
+        },
+        {
+          "keyword": "버핏",
+          "rank": 16,
+          "score": 21,
+          "sensitive": false
+        },
+        {
+          "keyword": "이서진",
+          "rank": 17,
+          "score": 20,
+          "sensitive": true
+        },
+        {
+          "keyword": "소방관",
+          "rank": 18,
+          "score": 19,
+          "sensitive": true
+        },
+        {
+          "keyword": "코스프레",
+          "rank": 19,
+          "score": 16,
+          "sensitive": false
+        },
+        {
+          "keyword": "트럼프",
+          "rank": 20,
+          "score": 15,
+          "sensitive": true
+        },
+        {
+          "keyword": "서울",
+          "rank": 21,
+          "score": 14,
+          "sensitive": false
+        },
+        {
+          "keyword": "사기",
+          "rank": 22,
+          "score": 14,
+          "sensitive": true
+        },
+        {
+          "keyword": "대전",
+          "rank": 23,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "정지",
+          "rank": 24,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "메이플스토리",
+          "rank": 25,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 26,
+          "score": 8,
+          "sensitive": false
+        },
+        {
+          "keyword": "트릭컬",
+          "rank": 27,
+          "score": 7,
+          "sensitive": false
+        },
+        {
+          "keyword": "미국",
+          "rank": 28,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "러시아",
+          "rank": 29,
+          "score": 5,
+          "sensitive": true
+        },
+        {
+          "keyword": "랜서",
+          "rank": 30,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "중국",
+          "rank": 31,
+          "score": 4,
+          "sensitive": true
+        }
+      ]
     }
   ]
 }
