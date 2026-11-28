@@ -5883,6 +5883,149 @@
           "sensitive": true
         }
       ]
+    },
+    {
+      "generatedAt": "2026-11-28T19:31:39.160Z",
+      "keywords": [
+        {
+          "keyword": "카리나",
+          "rank": 1,
+          "score": 100,
+          "sensitive": true
+        },
+        {
+          "keyword": "맨유",
+          "rank": 2,
+          "score": 80,
+          "sensitive": false
+        },
+        {
+          "keyword": "이강인",
+          "rank": 3,
+          "score": 75,
+          "sensitive": false
+        },
+        {
+          "keyword": "김민재",
+          "rank": 4,
+          "score": 59,
+          "sensitive": false
+        },
+        {
+          "keyword": "첼시",
+          "rank": 5,
+          "score": 52,
+          "sensitive": false
+        },
+        {
+          "keyword": "AI",
+          "rank": 6,
+          "score": 49,
+          "sensitive": false
+        },
+        {
+          "keyword": "감스트",
+          "rank": 7,
+          "score": 44,
+          "sensitive": false
+        },
+        {
+          "keyword": "와사비",
+          "rank": 8,
+          "score": 44,
+          "sensitive": false
+        },
+        {
+          "keyword": "민주당",
+          "rank": 9,
+          "score": 43,
+          "sensitive": true
+        },
+        {
+          "keyword": "아이폰 듀오",
+          "rank": 10,
+          "score": 38,
+          "sensitive": true
+        },
+        {
+          "keyword": "김민석",
+          "rank": 11,
+          "score": 36,
+          "sensitive": true
+        },
+        {
+          "keyword": "퀸와사비",
+          "rank": 12,
+          "score": 30,
+          "sensitive": false
+        },
+        {
+          "keyword": "로스트아크",
+          "rank": 13,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "한글",
+          "rank": 14,
+          "score": 20,
+          "sensitive": false
+        },
+        {
+          "keyword": "GTA6",
+          "rank": 15,
+          "score": 19,
+          "sensitive": false
+        },
+        {
+          "keyword": "마라톤",
+          "rank": 16,
+          "score": 17,
+          "sensitive": false
+        },
+        {
+          "keyword": "브렌트포드",
+          "rank": 17,
+          "score": 13,
+          "sensitive": false
+        },
+        {
+          "keyword": "코스프레",
+          "rank": 18,
+          "score": 11,
+          "sensitive": false
+        },
+        {
+          "keyword": "클로드",
+          "rank": 19,
+          "score": 10,
+          "sensitive": false
+        },
+        {
+          "keyword": "이재명",
+          "rank": 20,
+          "score": 9,
+          "sensitive": true
+        },
+        {
+          "keyword": "솔플모드",
+          "rank": 21,
+          "score": 9,
+          "sensitive": false
+        },
+        {
+          "keyword": "블프팩",
+          "rank": 22,
+          "score": 5,
+          "sensitive": false
+        },
+        {
+          "keyword": "일본",
+          "rank": 23,
+          "score": 4,
+          "sensitive": false
+        }
+      ]
     }
   ]
 }
