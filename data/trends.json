@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T01:31:49.511Z",
+  "generatedAt": "2026-11-28T03:32:13.107Z",
   "sources": [
     {
       "id": "fmkorea",
@@ -19,7 +19,7 @@
       "id": "ruliweb",
       "name": "루리웹",
       "url": "https://bbs.ruliweb.com/best/all",
-      "posts": 63,
+      "posts": 62,
       "ok": true
     },
     {
@@ -47,7 +47,7 @@
       "id": "clien",
       "name": "클리앙",
       "url": "https://www.clien.net/service/board/park",
-      "posts": 24,
+      "posts": 20,
       "ok": true
     }
   ],
@@ -57,14 +57,14 @@
       "keyword": "민주당",
       "category": "시사",
       "score": 100,
-      "mentions": 4,
+      "mentions": 7,
       "sources": [
         "bobaedream",
         "clien",
         "dcinside"
       ],
-      "delta": 1,
-      "streak": 4,
+      "delta": 0,
+      "streak": 5,
       "spark": [
         14,
         21,
@@ -75,6 +75,7 @@
         9,
         19,
         85,
+        100,
         100
       ],
       "sensitive": true,
@@ -82,9 +83,40 @@
     },
     {
       "rank": 2,
+      "keyword": "국정원",
+      "category": "시사",
+      "score": 76,
+      "mentions": 4,
+      "sources": [
+        "bobaedream",
+        "dcinside",
+        "dogdrip",
+        "inven"
+      ],
+      "delta": 2,
+      "streak": 9,
+      "spark": [
+        24,
+        0,
+        0,
+        18,
+        42,
+        20,
+        38,
+        57,
+        53,
+        69,
+        64,
+        76
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 3,
       "keyword": "최민희",
       "category": "시사",
-      "score": 98,
+      "score": 66,
       "mentions": 5,
       "sources": [
         "bobaedream",
@@ -92,7 +124,7 @@
         "dcinside"
       ],
       "delta": -1,
-      "streak": 9,
+      "streak": 10,
       "spark": [
         23,
         17,
@@ -102,26 +134,26 @@
         32,
         51,
         100,
-        98
+        98,
+        66
       ],
       "sensitive": true,
       "samples": []
     },
     {
-      "rank": 3,
+      "rank": 4,
       "keyword": "GTA6",
       "category": "게임",
-      "score": 71,
-      "mentions": 4,
+      "score": 58,
+      "mentions": 7,
       "sources": [
         "bobaedream",
         "dcinside",
         "ruliweb"
       ],
-      "delta": 2,
-      "streak": 24,
+      "delta": 0,
+      "streak": 25,
       "spark": [
-        52,
         100,
         100,
         100,
@@ -132,13 +164,14 @@
         71,
         47,
         56,
-        71
+        71,
+        58
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "GTA 6 국가별 초기 판매량 / 한국 44만장",
-          "url": "https://bbs.ruliweb.com/best/board/300001/read/2367294",
+          "title": "GTA6)고도의 3인 합체 필살기",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544889",
           "source": "ruliweb"
         },
         {
@@ -154,65 +187,18 @@
       ]
     },
     {
-      "rank": 4,
-      "keyword": "국정원",
-      "category": "시사",
-      "score": 64,
-      "mentions": 3,
-      "sources": [
-        "dcinside",
-        "dogdrip",
-        "inven"
-      ],
-      "delta": 0,
-      "streak": 8,
-      "spark": [
-        34,
-        24,
-        0,
-        0,
-        18,
-        42,
-        20,
-        38,
-        57,
-        53,
-        69,
-        64
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "중국에서 잡힌 국정원 휴민트 사건 요약",
-          "url": "https://www.dogdrip.net/736936183",
-          "source": "dogdrip"
-        },
-        {
-          "title": "최근 국정원 휴민트사건 요약이라함",
-          "url": "https://www.inven.co.kr/board/lostark/6271/4343988",
-          "source": "inven"
-        },
-        {
-          "title": "단독] 국정원, 정보원 석방 위해 中에 '대만 정보' 제공 시도...美 '발칵'",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482051",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
       "rank": 5,
       "keyword": "블루아카이브",
       "category": "게임",
-      "score": 56,
-      "mentions": 5,
+      "score": 41,
+      "mentions": 7,
       "sources": [
         "inven",
         "ruliweb"
       ],
       "delta": 1,
-      "streak": 13,
+      "streak": 14,
       "spark": [
-        33,
         46,
         9,
         8,
@@ -223,13 +209,14 @@
         8,
         10,
         55,
-        56
+        56,
+        41
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "블루아카)역사와 전통의 베스트 치트키 학생짤들",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77543843",
+          "title": "블루아카) 이오리의 특별한 생일 선물을 주는 선생님.manhwa",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544945",
           "source": "ruliweb"
         },
         {
@@ -246,26 +233,24 @@
     },
     {
       "rank": 6,
-      "keyword": "리만가설",
+      "keyword": "리만 가설",
       "category": "테크",
-      "score": 56,
+      "score": 41,
       "mentions": 2,
       "sources": [
         "clien",
         "dogdrip"
       ],
-      "delta": -2,
-      "streak": 3,
+      "delta": null,
+      "streak": 1,
       "spark": [
-        25,
-        56,
-        56
+        41
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "리만가설 증명에서 클로드의 독창적 방법",
-          "url": "https://www.clien.net/service/board/park/19299529",
+          "title": "리만 가설 증명에 대해 : 단순함은 세계의 성질일까, 우리 뇌의 한계일까",
+          "url": "https://www.clien.net/service/board/park/19299576",
           "source": "clien"
         },
         {
@@ -277,44 +262,16 @@
     },
     {
       "rank": 7,
-      "keyword": "뮤지컬",
-      "category": "연예",
-      "score": 41,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": 4,
-      "streak": 8,
-      "spark": [
-        31,
-        77,
-        0,
-        100,
-        100,
-        93,
-        100,
-        100,
-        100,
-        43,
-        41
-      ],
-      "sensitive": true,
-      "samples": []
-    },
-    {
-      "rank": 8,
       "keyword": "소방관",
       "category": "게임",
-      "score": 40,
-      "mentions": 2,
+      "score": 30,
+      "mentions": 3,
       "sources": [
         "dogdrip",
         "inven"
       ],
-      "delta": 4,
-      "streak": 7,
+      "delta": 1,
+      "streak": 8,
       "spark": [
         15,
         11,
@@ -322,23 +279,40 @@
         12,
         19,
         41,
-        40
+        40,
+        30
       ],
-      "sensitive": true,
-      "samples": []
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "충격적이라는 소방관 삼촌 현재 상황.jpg",
+          "url": "https://www.dogdrip.net/736968693",
+          "source": "dogdrip"
+        },
+        {
+          "title": "???: 소방관 꿀 빠는거 맞는데?",
+          "url": "https://www.inven.co.kr/board/lostark/6271/4344200",
+          "source": "inven"
+        },
+        {
+          "title": "소방관 삼촌의 무거운 얘기",
+          "url": "https://www.inven.co.kr/board/lostark/6271/4344933",
+          "source": "inven"
+        }
+      ]
     },
     {
-      "rank": 9,
+      "rank": 8,
       "keyword": "이서진",
       "category": "연예",
-      "score": 40,
+      "score": 26,
       "mentions": 2,
       "sources": [
         "dcinside",
         "ruliweb"
       ],
-      "delta": null,
-      "streak": 1,
+      "delta": 0,
+      "streak": 2,
       "spark": [
         11,
         0,
@@ -347,7 +321,8 @@
         0,
         28,
         0,
-        40
+        40,
+        26
       ],
       "sensitive": false,
       "samples": [
@@ -359,121 +334,18 @@
       ]
     },
     {
-      "rank": 10,
-      "keyword": "의사고시",
-      "category": "시사",
-      "score": 30,
-      "mentions": 2,
-      "sources": [
-        "bobaedream",
-        "dcinside"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        30
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "20명에서 137명, 만점자 7배 증가한 의사고시 근황.",
-          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050650",
-          "source": "bobaedream"
-        },
-        {
-          "title": "20명에서 137명, 만점자 7배 증가한 의사고시 근황.채널A",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482094",
-          "source": "dcinside"
-        }
-      ]
-    },
-    {
-      "rank": 11,
-      "keyword": "니케",
-      "category": "게임",
-      "score": 21,
-      "mentions": 3,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        21
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "니케)이거 야겜임",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77543833",
-          "source": "ruliweb"
-        },
-        {
-          "title": "니케) 지휘관과 마리안의 결혼식",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77543759",
-          "source": "ruliweb"
-        },
-        {
-          "title": "니케) 브래디 디테일 돌겠네",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77543988",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 12,
-      "keyword": "소전2",
-      "category": "게임",
-      "score": 19,
-      "mentions": 6,
-      "sources": [
-        "ruliweb"
-      ],
-      "delta": null,
-      "streak": 1,
-      "spark": [
-        7,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        19
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "소전2)베프리가 꼴펜보다 작았어??",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77514048",
-          "source": "ruliweb"
-        },
-        {
-          "title": "소전2,중섭)렌틴-그런 고철덩어리로 우리 엘리트를 이길수 있을거 생각하냐!!",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77537852",
-          "source": "ruliweb"
-        },
-        {
-          "title": "소전2) 지휘관에게 은밀한 취미를 들킨 센타우레이시♡",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77543993",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 13,
+      "rank": 9,
       "keyword": "머스크",
       "category": "테크",
-      "score": 17,
+      "score": 23,
       "mentions": 2,
       "sources": [
+        "clien",
         "dcinside"
       ],
-      "delta": 4,
-      "streak": 13,
+      "delta": 3,
+      "streak": 14,
       "spark": [
-        85,
         12,
         17,
         18,
@@ -484,14 +356,15 @@
         7,
         23,
         18,
-        17
+        17,
+        23
       ],
       "sensitive": false,
       "samples": [
         {
-          "title": "캬 삼성이 일론머스크에게 갑질 ㅋㅋㅋㅋㅋ",
-          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481980",
-          "source": "dcinside"
+          "title": "??? : 그록 Bot에 월 5000불 결제할 의사있다, '머스크, 오케이'",
+          "url": "https://www.clien.net/service/board/park/19299587",
+          "source": "clien"
         },
         {
           "title": "싱글벙글 최근 일론 머스크를 당황하게한 이재용 회장 일화",
@@ -501,19 +374,322 @@
       ]
     },
     {
-      "rank": 14,
-      "keyword": "트릭컬",
-      "category": "게임",
-      "score": 17,
-      "mentions": 4,
+      "rank": 10,
+      "keyword": "공무원",
+      "category": "시사",
+      "score": 23,
+      "mentions": 2,
       "sources": [
+        "dcinside",
         "ruliweb"
       ],
-      "delta": 5,
-      "streak": 2,
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        23
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "제발 AI 안경이라도 써서 공무원 와달라는 사람들.jpg",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544872",
+          "source": "ruliweb"
+        },
+        {
+          "title": "싱글벙글 공무원한테 랩으로 발린 쇼미더머니 우승자",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=481996",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "keyword": "일본",
+      "category": "시사",
+      "score": 22,
+      "mentions": 7,
+      "sources": [
+        "dcinside",
+        "inven",
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
       "spark": [
         12,
         0,
+        4,
+        6,
+        7,
+        3,
+        8,
+        18,
+        0,
+        0,
+        0,
+        22
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "일본: 한국 그래봐야 운 좋게 잠깐 반짝한 애들이라 다시 몰락할 거 ㅋㅋㅋ",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544403",
+          "source": "ruliweb"
+        },
+        {
+          "title": "일본 레테 코스프레",
+          "url": "https://www.inven.co.kr/board/maple/5974/7467115",
+          "source": "inven"
+        },
+        {
+          "title": "일본 온천 차원이 달라! 레지오넬라균 기준치 200배 초과 적발!",
+          "url": "https://gall.dcinside.com/board/view/?id=dcbest&no=482143",
+          "source": "dcinside"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "keyword": "이대통령",
+      "category": "시사",
+      "score": 22,
+      "mentions": 2,
+      "sources": [
+        "clien",
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        22
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 13,
+      "keyword": "대마도",
+      "category": "기타",
+      "score": 21,
+      "mentions": 2,
+      "sources": [
+        "dogdrip",
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "속보) 스시자로 대마도 진출 시작.jpg",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544949",
+          "source": "ruliweb"
+        },
+        {
+          "title": "대마도 배송 막힌 소식을 들은 일본병원",
+          "url": "https://www.dogdrip.net/736962974",
+          "source": "dogdrip"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "keyword": "선거",
+      "category": "시사",
+      "score": 19,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        19
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 15,
+      "keyword": "쌀숭이들",
+      "category": "게임",
+      "score": 18,
+      "mentions": 2,
+      "sources": [
+        "dcinside",
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        8,
+        0,
+        0,
+        0,
+        18
+      ],
+      "sensitive": true,
+      "samples": []
+    },
+    {
+      "rank": 16,
+      "keyword": "블프",
+      "category": "게임",
+      "score": 10,
+      "mentions": 5,
+      "sources": [
+        "inven"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        6,
+        0,
+        0,
+        0,
+        12,
+        0,
+        0,
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "블프팩을 샀더니",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771661",
+          "source": "inven"
+        },
+        {
+          "title": "나도 블프 변신팩 결과!!",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771739",
+          "source": "inven"
+        },
+        {
+          "title": "블프 성물 대박~",
+          "url": "https://www.inven.co.kr/board/lineagem/5019/771716",
+          "source": "inven"
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "keyword": "원신",
+      "category": "게임",
+      "score": 10,
+      "mentions": 2,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "원신) ㅋㅋㅋㅋ 요즘 유행하는 그 우산 템플런인ㄱ......어?",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544853",
+          "source": "ruliweb"
+        },
+        {
+          "title": "원신)회식자리에서 주책떠는 늙은이들",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542819",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "keyword": "서울",
+      "category": "기타",
+      "score": 10,
+      "mentions": 2,
+      "sources": [
+        "bobaedream",
+        "dogdrip"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        6,
+        0,
+        5,
+        0,
+        0,
+        0,
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "도보로 서울에서 부산 일주일 컷에 도전 해본 13만 유튜버",
+          "url": "https://www.dogdrip.net/736887238",
+          "source": "dogdrip"
+        },
+        {
+          "title": "서울 마라톤 근황",
+          "url": "https://www.bobaedream.co.kr/view?code=best&No=1050662",
+          "source": "bobaedream"
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "keyword": "니케",
+      "category": "게임",
+      "score": 10,
+      "mentions": 2,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": -6,
+      "streak": 2,
+      "spark": [
+        21,
+        10
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "니케) 크리스마스 브레디, 실존하는 복장이네",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544830",
+          "source": "ruliweb"
+        },
+        {
+          "title": "[니케] 픽업 모집 안내 - 키리 : 블라인드 루돌프",
+          "url": "https://bbs.ruliweb.com/best/board/320108/read/2297773",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "keyword": "트릭컬",
+      "category": "게임",
+      "score": 8,
+      "mentions": 2,
+      "sources": [
+        "ruliweb"
+      ],
+      "delta": -4,
+      "streak": 3,
+      "spark": [
         10,
         8,
         0,
@@ -523,96 +699,50 @@
         6,
         0,
         15,
-        17
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "[트릭컬]교주1억명중 9000만명이 좋아한다는 펫",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77539690",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬)역시나 드디어 이야기는 우주를 향해서군",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77527731",
-          "source": "ruliweb"
-        },
-        {
-          "title": "트릭컬)란은 일단 설정상으론 엘리아스 돌아다니고 있나보네",
-          "url": "https://bbs.ruliweb.com/best/board/300143/read/77542989",
-          "source": "ruliweb"
-        }
-      ]
-    },
-    {
-      "rank": 15,
-      "keyword": "로스트아크",
-      "category": "게임",
-      "score": 17,
-      "mentions": 2,
-      "sources": [
-        "inven"
-      ],
-      "delta": 1,
-      "streak": 10,
-      "spark": [
-        6,
-        5,
-        5,
-        12,
-        7,
-        11,
-        6,
-        11,
-        24,
-        17
-      ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "로스트아크에 피가 낭자하고 공포가 만연하다.",
-          "url": "https://www.inven.co.kr/board/lostark/6271/4343810",
-          "source": "inven"
-        }
-      ]
-    },
-    {
-      "rank": 16,
-      "keyword": "메이플스토리",
-      "category": "게임",
-      "score": 15,
-      "mentions": 2,
-      "sources": [
-        "inven"
-      ],
-      "delta": 2,
-      "streak": 2,
-      "spark": [
-        30,
         17,
+        8
+      ],
+      "sensitive": false,
+      "samples": [
+        {
+          "title": "(트릭컬) 하아... 진짜 쉽파...",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77544001",
+          "source": "ruliweb"
+        },
+        {
+          "title": "트릭컬)ㄹㅇ 파티마pv 보고 현실에서 \"예?\"라고 반사적으로 튀어나옴",
+          "url": "https://bbs.ruliweb.com/best/board/300143/read/77495471",
+          "source": "ruliweb"
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "keyword": "중국",
+      "category": "시사",
+      "score": 3,
+      "mentions": 2,
+      "sources": [
+        "dcinside"
+      ],
+      "delta": null,
+      "streak": 1,
+      "spark": [
+        20,
         12,
-        6,
-        9,
         7,
+        5,
+        19,
+        0,
+        11,
+        20,
         8,
+        44,
         0,
-        0,
-        17,
-        15
+        3
       ],
-      "sensitive": false,
-      "samples": [
-        {
-          "title": "하 씨 왜 정지당한 사람들 대부분 여친 와이프 가족이 메이플 같이하는거지?",
-          "url": "https://www.inven.co.kr/board/maple/5974/7466896",
-          "source": "inven"
-        },
-        {
-          "title": "메이플스토리 직업 강함 순위 티어표(근거 추가)",
-          "url": "https://www.inven.co.kr/board/maple/5974/7467573",
-          "source": "inven"
-        }
-      ]
+      "sensitive": true,
+      "samples": []
     }
   ],
   "fmkoreaSearch": null
