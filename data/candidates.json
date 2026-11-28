@@ -1,66 +1,6 @@
 {
-  "generatedAt": "2026-11-27T03:23:01.986Z",
+  "generatedAt": "2026-11-28T03:00:23.714Z",
   "events": [
-    {
-      "id": "3d301ea1f46e6fc1275a",
-      "title": "‘90s style sci-fi horror Derelikt launches Nov 13 on PS5",
-      "category": "게임",
-      "tags": [
-        "Derelikt",
-        "launch",
-        "PS5"
-      ],
-      "series": "Derelikt",
-      "startsAt": "2026-11-13T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/02/90s-style-sci-fi-horror-derelikt-launches-nov-13-on-ps5/",
-      "reason": "공식 게시물에서 Derelikt가 PS5에 11월 13일 출시된다고 명시합니다."
-    },
-    {
-      "id": "c29a30d9176f14b4e28c",
-      "title": "The Inner Circle 38·ONE Friday Fights 178 2026년 11월 13일",
-      "category": "격투기",
-      "tags": [
-        "ONE Friday Fights",
-        "The Inner Circle",
-        "무에타이",
-        "루마네 스타디움",
-        "방콕"
-      ],
-      "series": "ONE Championship",
-      "startsAt": "2026-11-13T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "scheduled",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "ONE Championship",
-      "sourceUrl": "https://www.onefc.com/events/one-friday-fights-178",
-      "reason": "ONE Championship 공식 이벤트 페이지에 ‘Nov 13’(다음 이벤트)로 개최일이 명시되어 있음."
-    },
-    {
-      "id": "9f22757f1c1e9d6cb166",
-      "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
-      "category": "게임",
-      "tags": [
-        "Where Winds Meet",
-        "Hutuo Battlefield",
-        "내러티브 아크",
-        "글로벌 기념 업데이트"
-      ],
-      "series": "Where Winds Meet",
-      "startsAt": "2026-11-13T12:00:00+09:00",
-      "timeTbd": true,
-      "eventMode": "release-window",
-      "datePrecision": "date",
-      "confidence": "confirmed",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
-      "reason": "Where Winds Meet의 Hutuo Battlefield 내러티브 아크가 11월 13일에 출시된다고 안내합니다."
-    },
     {
       "id": "569373aece36734afd8f",
       "title": "PFL 두바이(11월 14일): Nemkov vs Bilostenniy",
@@ -426,6 +366,22 @@
       "reason": "공식 게시물에서 11월 23일부터 27일까지의 XBOX 신규 게임 일정을 언급한다."
     },
     {
+      "id": "428294a4e30f823cc68d",
+      "title": "Next Week on XBOX: New Games for November 30 to December 4",
+      "titleKo": "Xbox 위클리: 11/30-12/4 신규 게임",
+      "category": "게임",
+      "tags": [],
+      "series": "Xbox Wire",
+      "startsAt": "2026-11-30T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/27/next-week-on-xbox-new-games-for-november-30-to-december-4/",
+      "reason": "해당 주간 코너에서 11월 30일부터 12월 4일까지 출시 예정 게임을 소개한다."
+    },
+    {
       "id": "4f317775550a11f5d602",
       "title": "How Remedies Shape Progression in Hela: Of Mice & Magic",
       "category": "게임",
@@ -606,13 +562,14 @@
     },
     {
       "id": "29ff86bcda9e2b7dbf64",
-      "title": "ONE 174: Shanghai — 12/12/2026",
-      "titleKo": "ONE 174: Shanghai",
+      "title": "ONE 174: Shanghai (12월 12일)",
+      "titleKo": "ONE 174: Shanghai (12월 12일)",
       "category": "격투기",
       "tags": [
         "ONE 174",
-        "Shanghai",
-        "ONE Championship"
+        "MMA",
+        "ONE Championship",
+        "상하이"
       ],
       "series": "ONE Championship",
       "startsAt": "2026-12-12T12:00:00+09:00",
@@ -622,7 +579,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/news/one-championship-returns-to-china-with-one-174-shanghai-on-december-12",
-      "reason": "공식 기사에서 ONE 174: Shanghai의 개최일을 2026년 12월 12일(토)로 명시함(시간 미공개)."
+      "reason": "공식 ONE 기사에 ‘Saturday, December 12’로 개최 날짜가 명시됨(시간은 미정)."
     },
     {
       "id": "c6f47e7520af0c6a03b6",
@@ -703,6 +660,25 @@
       "source": "Apple Newsroom",
       "sourceUrl": "https://www.apple.com/newsroom/2026/11/apple-tv-becomes-the-new-us-home-of-f1-academy-the-all-female-racing-series/",
       "reason": "F1 ACADEMY를 애플TV가 2027년부터 미국에서 스트리밍한다고 발표했다."
+    },
+    {
+      "id": "c4b687a31a0822f86e63",
+      "title": "Introducing Hounded: Crafting the dog adventure coming to PS5 in 2027",
+      "titleKo": "Hounded: Crafting 개 모험 PS5 2027 출시",
+      "category": "게임",
+      "tags": [
+        "PS5",
+        "Hounded"
+      ],
+      "series": "PlayStation Blog",
+      "startsAt": "2027-01-01T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "release-window",
+      "datePrecision": "date",
+      "confidence": "expected",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/17/introducing-hounded-crafting-the-dog-adventure-coming-to-ps5-in-2027/",
+      "reason": "원문에 2027년 PS5 출시가 명시되어 있어 해당 범위 이벤트로 추출했다."
     },
     {
       "id": "7149a949a2ad9050bdd0",
@@ -957,14 +933,37 @@
       "reason": "ONE 공식 기사에 ‘March 20’ 개최일이 명시됨."
     },
     {
+      "id": "e04364a857fecf2e9455",
+      "title": "Goobne ROAD FC 080 (2027년 3월 21일)",
+      "titleKo": "Goobne ROAD FC 080 (2027년 3월 21일)",
+      "category": "격투기",
+      "tags": [
+        "ROAD FC",
+        "Goobne ROAD FC",
+        "서울",
+        "장충체육관"
+      ],
+      "series": "ROAD FC",
+      "startsAt": "2027-03-21T12:00:00+09:00",
+      "timeTbd": true,
+      "eventMode": "scheduled",
+      "datePrecision": "date",
+      "confidence": "confirmed",
+      "source": "ROAD FC",
+      "sourceUrl": "https://www.roadfc.com/main/news/news_view.php?key=JTI1MjUzRFVqTnhBVE0%3D",
+      "reason": "공식 ROAD FC 뉴스에 ‘March 21, 2027’로 2027 스케줄 개막이 명시됨(시간은 미정)."
+    },
+    {
       "id": "719c9ff2811df1782da1",
-      "title": "ONE: Qatar (Aspire Dome, Doha) — 3/26/2027",
-      "titleKo": "ONE: Qatar",
+      "title": "ONE: Qatar (도하)",
+      "titleKo": "ONE: Qatar (도하)",
       "category": "격투기",
       "tags": [
         "ONE Championship",
         "MMA",
-        "쿠웨이트가 아닌 카타르(Doha)"
+        "Muay Thai",
+        "킥복싱",
+        "서브미션 그래플링"
       ],
       "series": "ONE Championship",
       "startsAt": "2027-03-26T12:00:00+09:00",
@@ -974,7 +973,7 @@
       "confidence": "confirmed",
       "source": "ONE Championship",
       "sourceUrl": "https://www.onefc.com/events/one-qatar",
-      "reason": "공식 이벤트 페이지에 2027년 3월 26일(금)로 개최일이 명시되어 있음(시간은 미공개)."
+      "reason": "공식 ONE Championship 이벤트 페이지에 ‘Friday, March 26, 2027’로 날짜가 명시됨(시간은 미정)."
     },
     {
       "id": "dd0a32b34a26cd8a6a9b",
