@@ -23,9 +23,11 @@
     "magazine:selftest": "tsx scripts/magazine/selftest.ts",
     "magazine:polish": "tsx scripts/magazine/polish.ts",
     "magazine:serve": "tsx scripts/magazine/serve.ts",
-    "seo:indexnow": "tsx scripts/seo/indexnow.ts"
+    "seo:indexnow": "tsx scripts/seo/indexnow.ts",
+    "app:selftest": "tsx scripts/app/alerts-selftest.ts"
   },
   "dependencies": {
+    "@capacitor/core": "8.6.3",
     "fast-xml-parser": "^5.10.1",
     "gray-matter": "^4.0.3",
     "next": "^16.3.1",

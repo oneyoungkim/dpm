@@ -26,6 +26,11 @@ export const BRAND = {
   ],
   /** 공개 문의 메일. 비어 있으면 소개 페이지가 문의 줄을 숨긴다. */
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
+  /**
+   * 개인정보 처리방침의 문의 메일(앱 스토어 지원 연락처와 같은 주소).
+   * 이 주소는 처리방침에만 싣는다. 값은 버셀 환경 변수로만 넣고 저장소에는 적지 않는다.
+   */
+  privacyEmail: process.env.NEXT_PUBLIC_PRIVACY_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   /** 애드센스 게시자 ID("ca-pub-…"). 비어 있으면 광고 코드를 아예 싣지 않는다. */
   adsenseClient: process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "",
   /** 검색 등록 확인 코드(구글 서치 콘솔, 네이버 서치어드바이저) */

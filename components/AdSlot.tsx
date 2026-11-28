@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { BRAND } from "@/lib/brand";
+import { isApp } from "@/lib/app/native";
 
 /**
  * 광고 자리.
@@ -40,7 +41,8 @@ export function AdSlot({
   const live = Boolean(BRAND.adsenseClient && slot);
 
   useEffect(() => {
-    if (!live || pushed.current) return;
+    // 앱 안에서는 광고를 싣지 않는다(자리는 app-shell.css 가 숨긴다).
+    if (!live || pushed.current || isApp()) return;
     pushed.current = true;
     try {
       (window.adsbygoogle = window.adsbygoogle ?? []).push({});

@@ -9,10 +9,14 @@ import { isCuratedEvent } from "@/lib/curation";
 import { EventCard } from "./EventCard";
 import { InterestPicker } from "./InterestPicker";
 import { BRAND } from "@/lib/brand";
-
-const SAVED_STORAGE_KEY = "matchday.saved.v1";
-const LEGACY_ALARM_KEY = "matchday.alarms.v1";
-const INTEREST_STORAGE_KEY = "matchday.interests.v1";
+import {
+  INTEREST_STORAGE_KEY,
+  LEGACY_ALARM_KEY,
+  PREFS_RESTORED_EVENT,
+  SAVED_STORAGE_KEY,
+  notifyPrefsChanged,
+} from "@/lib/app/prefs";
+import { shareLink } from "@/lib/app/native";
 
 type FeedView = "curated" | "mine" | "saved";
 type BucketKey = "today" | "tomorrow" | "week" | "later";
@@ -36,28 +40,35 @@ function useSavedEvents() {
   const [saved, setSaved] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    try {
-      const current = localStorage.getItem(SAVED_STORAGE_KEY);
-      const legacy = localStorage.getItem(LEGACY_ALARM_KEY);
-      const ids = current ? (JSON.parse(current) as string[]) : legacy ? (JSON.parse(legacy) as string[]) : [];
-      setSaved(new Set(ids));
-    } catch {
-      // 저장소가 막혀 있어도 탐색 기능은 정상적으로 동작한다.
-    }
+    const read = () => {
+      try {
+        const current = localStorage.getItem(SAVED_STORAGE_KEY);
+        const legacy = localStorage.getItem(LEGACY_ALARM_KEY);
+        const ids = current ? (JSON.parse(current) as string[]) : legacy ? (JSON.parse(legacy) as string[]) : [];
+        setSaved(new Set(ids));
+      } catch {
+        // 저장소가 막혀 있어도 탐색 기능은 정상적으로 동작한다.
+      }
+    };
+    read();
+    // 앱이 휴대폰 저장소에서 값을 되살리면 다시 읽는다.
+    window.addEventListener(PREFS_RESTORED_EVENT, read);
+    return () => window.removeEventListener(PREFS_RESTORED_EVENT, read);
   }, []);
 
   const toggleSaved = (id: string) => {
-    setSaved((previous) => {
-      const next = new Set(previous);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      try {
-        localStorage.setItem(SAVED_STORAGE_KEY, JSON.stringify([...next]));
-      } catch {
-        // 저장 실패 시 현재 탭에서는 상태를 유지한다.
-      }
-      return next;
-    });
+    const adding = !saved.has(id);
+    const next = new Set(saved);
+    if (adding) next.add(id);
+    else next.delete(id);
+    setSaved(next);
+    try {
+      localStorage.setItem(SAVED_STORAGE_KEY, JSON.stringify([...next]));
+    } catch {
+      // 저장 실패 시 현재 탭에서는 상태를 유지한다.
+    }
+    // 앱에서는 이것을 듣고 시작 전 알림을 건다.
+    notifyPrefsChanged({ reason: adding ? "saved-add" : "saved-remove", eventId: id });
   };
 
   return { saved, toggleSaved };
@@ -70,23 +81,28 @@ function useInterests() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(INTEREST_STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw) as string[];
-        const valid = parsed.filter((value): value is InterestCategory =>
-          INTEREST_CATEGORIES.includes(value as InterestCategory),
-        );
-        if (valid.length > 0) {
-          setInterests(new Set(valid));
-          setConfigured(true);
+    const read = () => {
+      try {
+        const raw = localStorage.getItem(INTEREST_STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw) as string[];
+          const valid = parsed.filter((value): value is InterestCategory =>
+            INTEREST_CATEGORIES.includes(value as InterestCategory),
+          );
+          if (valid.length > 0) {
+            setInterests(new Set(valid));
+            setConfigured(true);
+          }
         }
+      } catch {
+        // 기본 추천 관심사로 계속 진행한다.
+      } finally {
+        setReady(true);
       }
-    } catch {
-      // 기본 추천 관심사로 계속 진행한다.
-    } finally {
-      setReady(true);
-    }
+    };
+    read();
+    window.addEventListener(PREFS_RESTORED_EVENT, read);
+    return () => window.removeEventListener(PREFS_RESTORED_EVENT, read);
   }, []);
 
   const saveInterests = (next: Set<InterestCategory>) => {
@@ -97,6 +113,7 @@ function useInterests() {
     } catch {
       // 현재 탭에서는 선택을 유지한다.
     }
+    notifyPrefsChanged({ reason: "interests" });
   };
 
   return { interests, configured, ready, saveInterests };
@@ -136,6 +153,34 @@ export function ScheduleBrowser({
       setView("mine");
     }
   }, [configured, ready]);
+
+  // 알림·앱 탭에서 들어올 때: ?view=saved|mine 으로 보기를 고르고, ?pick=1 이면 관심 종목 고르기를 연다.
+  useEffect(() => {
+    if (!ready) return;
+    const params = new URLSearchParams(window.location.search);
+    const wantedView = params.get("view");
+    if (wantedView === "saved" || wantedView === "mine") setView(wantedView);
+    if (params.get("pick") === "1") {
+      setDraftInterests(new Set(interests));
+      setPickerOpen(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- 처음 한 번만 본다
+  }, [ready]);
+
+  // #ev-… 로 들어오면 그 카드로 내려가 잠깐 빛나게 한다(알림을 눌렀을 때).
+  useEffect(() => {
+    if (!ready) return;
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash.startsWith("ev-")) return;
+    const timer = window.setTimeout(() => {
+      const target = document.getElementById(hash);
+      if (!target) return;
+      target.scrollIntoView({ block: "center", behavior: "smooth" });
+      target.classList.add("event-flash");
+      window.setTimeout(() => target.classList.remove("event-flash"), 2400);
+    }, 120);
+    return () => window.clearTimeout(timer);
+  }, [ready, view]);
 
   const openInterestPicker = useCallback(() => {
     setDraftInterests(new Set(interests));
@@ -214,14 +259,12 @@ export function ScheduleBrowser({
     const days = diffDays(today, event.dateKey);
     const dday = event.status === "진행중" ? "LIVE" : days === 0 ? "TODAY" : `D-${days}`;
     const text = `${event.title} · ${dday}\n${event.series ?? event.league} · ${BRAND.name}`;
-    try {
-      if (navigator.share) await navigator.share({ title: event.title, text, url: window.location.href });
-      else await navigator.clipboard.writeText(`${text}\n${window.location.href}`);
-      setSharedId(event.id);
-      window.setTimeout(() => setSharedId(null), 1800);
-    } catch {
-      // 사용자가 공유 시트를 닫은 경우를 포함해 조용히 원래 화면으로 돌아간다.
-    }
+    const url = `${BRAND.url}/schedule#ev-${encodeURIComponent(event.id)}`;
+    // 앱에서는 휴대폰 공유 시트, 웹에서는 브라우저 공유(없으면 복사). 시트를 닫으면 조용히 돌아간다.
+    const result = await shareLink({ title: event.title, text, url });
+    if (result === "failed") return;
+    setSharedId(event.id);
+    window.setTimeout(() => setSharedId(null), 1800);
   };
 
   const toggleExpanded = (key: BucketKey) => {

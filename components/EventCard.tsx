@@ -31,6 +31,11 @@ function TeamMark({ team, large = false }: { team: Team; large?: boolean }) {
   );
 }
 
+/** 알림·공유 링크가 가리키는 카드 자리(#ev-…) */
+export function eventAnchorId(eventId: string): string {
+  return `ev-${eventId}`;
+}
+
 function ddayLabel(event: SportEvent, today: string) {
   if (event.status === "진행중") return "LIVE";
   const days = diffDays(today, event.dateKey);
@@ -145,7 +150,7 @@ export function EventCard({
 
   if (featured) {
     return (
-      <article className="feature-card">
+      <article className="feature-card" id={eventAnchorId(event.id)}>
         <div className={`feature-glow ${style.bar}`} aria-hidden />
         <div className="feature-scanlines" aria-hidden />
         <div className="feature-redline" aria-hidden />
@@ -215,7 +220,7 @@ export function EventCard({
   }
 
   return (
-    <article className={live ? "event-card event-card-live" : "event-card"}>
+    <article className={live ? "event-card event-card-live" : "event-card"} id={eventAnchorId(event.id)}>
       <div className="event-card-top">
         <span className={live ? "dday dday-live" : "dday"}>
           {live && <span className="live-pip" aria-hidden />}

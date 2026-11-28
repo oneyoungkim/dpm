@@ -3,11 +3,21 @@ import Script from "next/script";
 import "./globals.css";
 import "./redline.css";
 import "./gak.css";
+import "./app-shell.css";
 import { BRAND, SITE_TITLE } from "@/lib/brand";
 import { siteJsonLd } from "@/lib/structured-data";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { JsonLd } from "@/components/JsonLd";
+import { AppBridge } from "@/components/app/AppBridge";
+import { AppTabBar } from "@/components/app/AppTabBar";
+import { WebOnly } from "@/components/app/WebOnly";
+
+/**
+ * 휴대폰 앱 안이면(사용자 에이전트에 "GakApp/") 첫 그림 전에 <html class="in-app">을 단다.
+ * 앱은 화면 끝까지 그리므로 viewport-fit=cover 도 이때 붙인다. 웹 방문자에게는 아무 일도 없다.
+ */
+const APP_SHELL_SCRIPT = `(function(){try{var u=navigator.userAgent;if(u.indexOf("GakApp/")<0)return;var d=document.documentElement;d.classList.add("in-app",/Android/i.test(u)?"in-app-android":"in-app-ios");var m=document.querySelector('meta[name="viewport"]');if(m){if(m.content.indexOf("viewport-fit")<0)m.content+=", viewport-fit=cover"}else{m=document.createElement("meta");m.name="viewport";m.content="width=device-width, initial-scale=1, viewport-fit=cover";document.head.appendChild(m)}}catch(e){}})();`;
 
 /**
  * 사이트 공통 메타데이터.
@@ -69,8 +79,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: APP_SHELL_SCRIPT }} />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
@@ -87,14 +98,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <SiteFooter />
         </div>
+        <AppTabBar />
+        <AppBridge />
         {BRAND.adsenseClient ? (
-          <Script
-            id="adsense"
-            async
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${BRAND.adsenseClient}`}
-          />
+          // 앱 안에서는 광고를 싣지 않는다(애드센스는 앱 웹뷰에 그대로 넣을 수 없다).
+          <WebOnly>
+            <Script
+              id="adsense"
+              async
+              strategy="afterInteractive"
+              crossOrigin="anonymous"
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${BRAND.adsenseClient}`}
+            />
+          </WebOnly>
         ) : null}
       </body>
     </html>
