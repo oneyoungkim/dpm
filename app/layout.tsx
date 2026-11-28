@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import "./redline.css";
 import "./gak.css";
@@ -100,6 +101,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <AppTabBar />
         <AppBridge />
+        {/* 방문 통계(Vercel Web Analytics): 쿠키 없이 페이지 조회·유입 경로·나라·기기만 묶음으로 센다 */}
+        <Analytics />
         {BRAND.adsenseClient ? (
           // 앱 안에서는 광고를 싣지 않는다(애드센스는 앱 웹뷰에 그대로 넣을 수 없다).
           <WebOnly>
