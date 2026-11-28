@@ -117,6 +117,15 @@ const LICENSE_URL: Record<ArticleImage["license"], string> = {
   "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
 };
 
+/** 출처 표기 "사진: 홍길동 / Wikimedia Commons" → "홍길동" */
+export function photoAuthor(credit: string): string {
+  const name = credit
+    .replace(/^\s*사진\s*[:·]\s*/, "")
+    .replace(/\s*\/\s*Wikimedia Commons.*$/i, "")
+    .trim();
+  return name || credit.trim();
+}
+
 /** 구글 디스커버가 큰 사진으로 쓰려면 가로 1200px 이상이어야 한다. */
 const MIN_IMAGE_WIDTH = 1200;
 
@@ -138,6 +147,10 @@ export function articleImages(article: Article): Json[] {
       caption: photo.alt,
       creditText: photo.credit,
       license: LICENSE_URL[photo.license],
+      // 구글 이미지 메타데이터 권장 칸(서치콘솔 11-28 경고): 저작자·저작권 표기·이용 허락 페이지
+      creator: { "@type": "Person", name: photoAuthor(photo.credit) },
+      copyrightNotice: `${photoAuthor(photo.credit)} / Wikimedia Commons (${photo.license})`,
+      acquireLicensePage: photo.sourceUrl,
     });
   }
   images.push({
